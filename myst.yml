@@ -14,6 +14,6 @@ site:
   #   logo: site_logo.png
   nav: []
   actions:
-    - title: Hands-On Advanced Physics: Lab Essentials
+    - title: Hands-On Advanced Physics
       url: https://veillette.github.io/hands-on/
   domains: []
