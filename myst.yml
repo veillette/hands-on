@@ -40,7 +40,7 @@ build:
           title: Chapter 6 - Case Studies
         - file: Chapter7.md
           title: Chapter 7 - Case Studies
-     - part: Appendices
+    - part: Appendices
       chapters:
         - file: Appendix1.md
           title: Appendix 1 
