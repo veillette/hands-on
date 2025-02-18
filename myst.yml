@@ -4,7 +4,7 @@ project:
   title: hands-on
   github: https://github.com/veillette/hands-on
   toc:
-    - file: preamble.md
+    - file: Preamble.md
       title: Preface
     - title: Main Content
       children:
