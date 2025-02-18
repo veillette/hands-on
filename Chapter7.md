@@ -1,337 +1,146 @@
-# Writing Scientific Reports\label{ch7}
-## Good Writing Does Matter
-It is almost impossible to overestimate the importance of good scientific writing.
-The best experimentation in the world can be of little or no value if it is not communicated to other people and communicated well by clear and attractive writing.
-Although communication may sometimes be verbal, in the overwhelming majority of cases people learn about our work from the printed page.
-Our obligation to become as literate as we can is therefore not trivial, and it should be regarded as an essential and integral part of our experimenting activities.
-Our writing must be sufficiently good to attract and retain the interest and attention of our readers.
-This chapter contains some hints on how this may be achieved, and the sample report in Appendix {ref}`A4` is an example of the ways in which the suggestions can be implemented in practice.
+# Writing Scientific Reports
 
-It is almost impossible to tell a person how to write well.
-It would be very convenient if we could lay out a short list of instructions and guarantee, thereby, fluent, lucid, and literate prose, but the list is not available.
-Each of us has different ways of expressing thoughts, and each must allow his or her writing style to develop in its own way.
-This needs extensive practice, and we should regard report writing in the introductory physics laboratory as an excellent opportunity to obtain it.
-We may end up acquiring different writing styles, but provided the message is clear, the diversity can be enriching rather than damaging.
+## Why Quality Scientific Writing Matters
 
-We now turn to some practical considerations concerning the actual writing of reports.
-Although there is no list of explicit instructions for good writing, there is one principle that will make the production of good, readable prose more likely.
-Whether one is preparing a report for internal circulation in a private organization or a paper for publication in the open literature, there is one
-person whose interests must claim the writer's first attention-the person who will actually read the report.
-As far as the report is concerned, that person is the most important person in the world.
-We are well advised to concentrate our attention on him or her.
-Our readers are very likely people we do not know, perhaps in some far-distant part of the world and very likely knowing nothing about us or our work except the report that they hold in their hands.
-We probably have only one chance to influence them as they read our report-and the report must do it alone.
-We cannot stand beside our readers, adding explanation and clarification if they encounter difficulty in understanding what we have written.
-Not only must the report stand on its own, the outcome of the reading can be
-highly significant.
-The public recognition of our work, the opportunity for others to benefit from it, our own reputation, and perhaps even our chances of employment or promotion may depend on these few minutes spent by our readers as they work their way through our report.
-Do we have to be persuaded further that we should take writing seriously?
+The value of excellent scientific writing cannot be overstated. Even groundbreaking experimental work loses its impact if poorly communicated. While verbal presentations occasionally suffice, most scientific communication happens through written documents. Developing strong writing skills should be considered a fundamental component of your experimental toolkit. Your writing must engage readers and maintain their attention throughout. This chapter offers guidance on effective scientific writing, with a practical example of these principles provided in Appendix A4.
 
-It has been common in the past to recommend a detached, depersonalized mode of expression characterized by the use of the passive voice and impersonal constructions.
-There seems to be little point in perpetuating such stilted language.
-We can simply tell our readers what we did in our experiment -- for example: ``We measured the time of fall using an electronic timer that was accurate to 1 millisecond.'' Since there is no single ``right'' way to write a report of an experiment, we should feel free to use such language and modes of expression as allow us to express our thoughts in the most clear, attractive, and persuasive way possible.
-For invaluable advice regarding writing style, consult the little book by Strunk and White that is listed in the Bibliography.
+Learning to write well cannot be reduced to a simple checklist. Each person develops their own distinctive writing style through practice. The introductory physics laboratory provides an excellent opportunity to develop these skills. Our writing styles may differ, but clarity remains the essential common element that makes diverse approaches valuable rather than problematic.
 
-We now consider the various sections of the report in turn, all as seen through the eyes of our all-important reader.
+When approaching scientific report writing, one guiding principle stands above all others: focus on your reader. Whether preparing an internal technical document or a manuscript for publication, prioritize the needs of the person who will read your work. From their perspective, you are communicating across distance and time, with only your written words to convey your message. You cannot clarify misunderstandings or add explanations as they read. Your report must stand independently and communicate effectively on first reading. The reception of your work, its scientific impact, and potentially your professional advancement may hinge on how effectively readers understand your report during their brief engagement with it. This perspective should emphasize the importance of taking writing seriously.
+
+Contemporary scientific writing has largely moved away from impersonal, passive constructions. Instead, straightforward language often works best: "We measured the fall time using a millisecond-precision electronic timer." With no single "correct" approach to report writing, choose language that communicates most clearly and engagingly. For additional guidance on effective writing, consider consulting Strunk and White's classic text referenced in the Bibliography.
+
+Let's examine each report section from the reader's perspective.
 
 ## Title
-The title is probably the first part of the report to draw the attention of readers.
-Because they are almost always busy people with many items competing for their attention, our report will capture their interest only if the title is informative, appropriate, and attractive.
-It should not be too long, yet it should specify quite explicitly the topic of the work.
-For example, if the purpose of
-the experiment is to measure the specific heat of a fluid by using continuous-flow calorimetry, we can use this fact directly as a title: ``Measurement of the Specific Heat of Water by Using Continuous-Flow Calorimetry.'' Notice that three questions are answered in this title:
-1. Is the work experimental or theoretical?
-That is, are we reporting a measurement
-or a calculation?
-2. What is the topic of the work?
-3. What general method did we use?
 
-Attention to these three items will almost invariably result in a good choice of title.
+The title typically provides readers their first impression of your work. Since potential readers are usually busy professionals with competing demands on their attention, your title must be informative, appropriate, and engaging. While keeping it concise, make the topic explicit. For instance, if measuring a fluid's specific heat using continuous-flow calorimetry, a straightforward title works well: "Measurement of the Specific Heat of Water Using Continuous-Flow Calorimetry." This title effectively answers three key questions:
+1. Is this experimental or theoretical work?
+2. What specific topic does it address?
+3. What methodology was employed?
+
+Addressing these elements typically results in an effective title.
 
 ## Format
-The sections that follow analyze the various parts of a report.
-The various subsections that are described under each section heading should not themselves be used as headings in actual reports.
-Although practice obviously varies with circumstances, reporting on most normal work in the introductory physics laboratory needs only the minimum of division.
-The sections of a report that are essential are the following:
 
+The following sections analyze report components in detail. Note that the subsection headers discussed here should not appear in your actual report. Most standard physics laboratory reports require only minimal sectioning. Essential sections typically include:
 
+INTRODUCTION  
+PROCEDURE  
+RESULTS  
+DISCUSSION  
 
-\noindent INTRODUCTION
+These core divisions provide a solid organizational framework. Format headings prominently, perhaps using capital letters. Use subsections sparingly, only when necessary for clarity in longer or more complex reports. Depending on experimental requirements, you might include additional main sections such as:
 
+THEORY  
+SAMPLE PREPARATION  
+UNCERTAINTY CALCULATIONS  
 
-PROCEDURE
+Your report should present a clear, logical progression of ideas. If detailed information might disrupt this flow, consider placing it in an appendix. This approach preserves the information for interested readers while maintaining the report's coherence.
 
-
-RESULTS
-
-
-DISCUSSION
-
-
-
-These divisions can be used as a basic starting point.
-The headings should be neat, clear, and written to stand out clearly, for example by using block capitals.
-Subsections within each of these main sections should be used only when the length or complexity of the report makes them indispensable for clarity.
-Other main sections may be introduced in accordance with the requirements of particular experiments.
-Suggested possibilities are the following:
-
-
-
-\noindent THEORY
-
-
-SAMPLE PREPARATION
-
-
-UNCERTAINTY CALCULATIONS
-
-
-
-To make the report as inviting to read and as easy to understand as
-possible, it should contain a clear, logical thread of argument, and we should
-not allow anything to disrupt that development of thought.
-If we feel that we
-must include some particular piece of description that is so lengthy and detailed that it would interrupt the smooth development of the main argument, we should consider making it an appendix to the report.
-In that way all the detail is available to any reader who wants it, but the main continuity of thought is not broken.
-
-Let us turn now to the details of each section of the report.
+Now let's examine each section's specific requirements.
 
 ## Introduction
-The various components that make up an informative introduction are in order of presentation, as follows.
 
-
+An effective introduction typically includes these components in sequence:
 
 - Topic Statement
 - Review of Existing Information
 - Application of Information to Specific Experiment
 - Summary of Experimental Intention
 
-\subsection*{Topic Statement}
-With a good title, we can assume that we now have our readers' attention and that they have picked up the report.
-However, they are almost certainly starting from zero, or close to it, as far as our particular experiment is concerned.
-As they start to read, our first task is to orient their thinking toward the particular area of study.
-We are not going to succeed in this by diving immediately into unorganized detail about the experiment.
-Think instead of the most general statement that can be made about the experiment and state it directly.
-For example: ``It is possible to measure gravitational acceleration by using the oscillation of a simple pendulum.'' In this way readers are taken from their initial state of ignorance to direct awareness of the specific topic of the work.
+### Topic Statement
 
-\subsection*{Review of Existing Information}
-At this point, readers need some reminder of the basic information relating to this particular area.
-We can meet this need by giving them a brief summary of the existing state of knowledge relevant to the experiment.
-The summary may include as necessary, some aspects of the history of the subject, a summary of early experimental work, or both.
-Two items are not discretionary and must be included in every report on an experiment.
-One is a clear statement of the system and the experimental circumstances with which the report deals; and the second is a description of the model or models used.
+With a well-crafted title having captured reader attention, remember that readers likely begin with minimal knowledge of your specific experiment. Rather than immediately diving into experimental details, begin with a broad framing statement. For example: "It is possible to measure gravitational acceleration by observing a simple pendulum's oscillation." This approach guides readers from their initial unfamiliarity to a clear understanding of your work's focus.
 
-It is generally best to give this summary of existing information quite briefly for fear of obscuring the main line of argument, but it should be sufficiently detailed so that readers can understand the rest of the report.
-In the interests of brevity and clarity, the derivation of standard theoretical results associated with the model should not be included.
-(The way in which these standard results are manipulated to refer to our particular system is another matter, however, because that is specific to the experiment.
-This is the topic of later discussion.) The behavior of the model, as represented by important equations, should be quoted, and it is important at this stage to mention any
-assumptions contained in the model that may limit the validity of the equations.
-For example: ``It can be proved that in the limit of vanishingly small amplitude of oscillation, the period of oscillation of a simple pendulum, considered to be a point mass at the end of a massless, inextensible string, is given by ... . '' To compensate for the omission of standard derivations it may be desirable to include in the references a source in which the complete derivation can be found.
+### Review of Existing Information
 
-\subsection*{Application of Information to Specific Experiment}
-Readers are now equipped to understand all that follows in the report, and their natural reaction at this point will be to wonder: ``How does all this refer to this particular experiment?'' We therefore supply a paragraph or two to show how the basic information, such as an equation representing the behavior of the model, can be converted to provide a foundation for our particular experiment.
-Commonly, this involves some procedure such as putting the basic equation into straight-line form (or some suitable equivalent) and identifying the ways in which the model can be tested against the system.
-We can also point out at this stage the information that will become available from the
-parameters of the graph (such as slope and intercept in the case of straight-line plotting).
-Readers thereby become fully aware of how our final answer will be obtained.
+At this point, readers need contextual background. Provide a concise summary of relevant knowledge, potentially including historical context or previous experimental findings. Two elements must appear in every experimental report: a clear description of the system and experimental conditions, and an explanation of the theoretical model(s) employed.
 
-\subsection*{Summary of Experimental Intention}
-It is helpful to readers to conclude the introduction with a summary of our specific intention in the experiment.
-For example: ``Thus, by measuring the variation of index of refraction with wavelength, we shall be able to test Cauchy's model using a graph of `n` vs. `1/\lambda^2`; the values of Cauchy's coefficients A and B that are appropriate to our glass specimen will then be obtained,
-respectively, from the intercept and slope of the graph.'' Such a statement is satisfying to the readers because, particularly in a long and complicated experiment report with a lengthy introduction, it offers them a review in summary form of the whole course of the experiment, and it enables them to make sense of the subsequent description of the actual conduct of the experiment.
+Keep this background information concise to maintain focus on your main argument, while ensuring readers have sufficient context to understand your work. Standard theoretical derivations should be omitted, but the resulting equations and their limitations should be included. For example: "It can be demonstrated that for vanishingly small oscillation amplitudes, a simple pendulum (modeled as a point mass on a massless, inextensible string) has a period given by...". If readers might need derivation details, cite an appropriate reference.
 
-\subsection*{Statement of Experimental Purpose}
-No mention has yet been made of the traditional statement of purpose for the experiment.
-It has been omitted so far because, although it should appear somewhere in the introduction, there is no universally suitable location.
-If the topic of the experiment is familiar, the statement of purpose can form an acceptable topic statement right at the beginning of the introduction.
-For example:
-``It is the purpose of this experiment to measure the acceleration of gravity by timing the fall of a freely falling object.'' Under suitable circumstances such a statement of purpose can make an excellent topic statement.
-On the other hand, the basic purpose of an experiment might involve matters
-so complicated and unfamiliar that a statement of it would be completely incomprehensible unless it followed a substantial amount of preparatory material.
-It is easy to imagine a complicated theoretical description that could profitably conclude with the phrase: ``... and it is the purpose of this experiment to determine a value for the coefficient `k` in equation 10.'' It does not
-matter a great deal where the statement of purpose comes, so long as it is included and comes at a point in the introduction where it fits well and makes good sense to the readers.
+### Application of Information to Specific Experiment
 
-The introduction has performed a number of services for our readers.
-Right at the beginning the topic statement has directed their attention to our particular area of work.
-They have then been reminded of the existing state of knowledge in that area.
-Next, they have been shown how that applies to our
-particular experiment.
-Finally, they have been given a concluding summary of our specific experimental intention.
-They are now ready to hear how we actually did the experiment.
+Having established context, readers will wonder how this background relates to your specific experiment. Explain how general principles apply to your particular work. This often involves showing how theoretical equations can be transformed into a useful experimental framework, such as rearranging equations into straight-line form for graphical analysis. Identify how system-model comparisons will be made and what information can be extracted from parameters like slopes and intercepts. This preparation ensures readers understand how your final results will be obtained.
+
+### Summary of Experimental Intention
+
+Conclude your introduction by summarizing your specific experimental goals. For example: "Thus, by measuring refractive index variation with wavelength, we can test Cauchy's model using n versus 1/λ² graphical analysis. The Cauchy coefficients A and B for our glass specimen will be determined from the graph's intercept and slope, respectively." This summary provides readers with a framework for understanding the experimental procedure that follows, particularly valuable in complex reports with extended introductions.
+
+### Statement of Experimental Purpose
+
+While not mentioned above, include a clear purpose statement somewhere in your introduction. Its placement depends on context. For familiar topics, it can effectively serve as your opening topic statement: "The purpose of this experiment is to measure gravitational acceleration by timing a freely falling object." For complex topics, the purpose statement might better follow explanatory material: "...and the purpose of this experiment is to determine coefficient k in equation 10." The statement's placement is flexible, provided it appears where readers can readily comprehend it.
+
+A well-crafted introduction accomplishes several goals: directing reader attention to your research area, providing necessary background, explaining how this context applies to your specific work, and clearly stating your experimental objectives. This prepares readers for understanding your experimental process.
 
 ## Procedure
-The report's introductory section takes the form of a descriptive sequence that proceeds from \textit{general to specific}.
-We start with a topic statement that is the most general remark about the experiment we can make; and we end with a completely specific statement of intention.
-Such a sequence is designed to suit readers' requirements in the introductory section, and a similar sequence is equally suitable for the procedure section.
-If we were to start the description of procedure by launching immediately into a mass of unorganized detail, we would succeed only in irritating our readers.
-How can they appreciate the great care we took in some experimental detail if they are not aware even of our choice of measured variables?
-We should be as considerate of our readers' mental efforts when we write the procedure section as we were in the introduction.
-A second sequence from general to specific is clearly called for.
 
-\subsection*{Outline of Procedure}
-To set the scene for the subsequent description of the details of procedure and measurement, we first offer readers a review of the whole course of the experiment.
-If the experiment really consisted of
- the measurement of the variation of electrical resistance of a copper wire with temperature over the
-range `20^{\circ}\textrm{C}-100^{\circ}\textrm{C}`, we say just that to provide the readers with a framework
-into which they can fit all subsequent description of detail.
-If we start the description of procedure by saying that we connected terminal A to terminal B, switched on power supply C, read voltmeter D, and the like, we shall have lost their attention in two lines.
+Like the introduction, your procedure section should progress from general to specific. Diving immediately into technical details would confuse readers who lack an overview of your approach. Maintain the same consideration for reader comprehension here as in your introduction, again moving from broader concepts to specific details.
 
-\subsection*{Specific Measurement Details}
-Now that the readers know the general course of the experiment, they are ready to be told the specific methods by which we measured each of the required quantities, carried out sample preparation, and performed other steps.
-This can be done quite simply by stating each in turn until we have completed the list.
-We must make sure that no significant method of measurement is omitted; in such a thing as a timing measurement It is almost certainly important that we used an electronic timer with millisecond accuracy rather than a stopwatch that could be read to 0.2 second, and our readers need to know that we did so.
-If a quantity in the experiment could be measured by using some standard and familiar technique, it may be sufficient to mention it by name.
-For example: ``The resistances were measured using a Wheatstone bridge accurate to 0.01 \
-remembering that the overall precision of the experiment is a different topic that will appear in a subsequent section of the report.
+### Outline of Procedure
 
-\subsection*{Precautions}
-After readers have learned the methods by which we made each measurement, they may recall the difficulties or possibilities for error that are inherent in particular procedures.
-They therefore need reassurance that we, too, had thought of these possibilities and had been sufficiently careful to take the necessary precautions.
-As we offer that reassurance, however, we need not go to extremes.
-Care should obviously be taken with \textit{all} measurements; there is no point in making superfluous claims to virtue in describing routine and obvious precautions.
-There are times, however, when special
-care to avoid some particular source of error is a genuinely important part of the experiment, and it is reasonable to draw attention to this before we close the procedure section.
+Begin by providing an overview of your experimental approach. If your experiment measured copper wire resistance variation with temperature between 20°C and 100°C, state this clearly to establish a framework for subsequent details. Starting instead with specific connections and instrument readings would quickly lose reader attention without this contextual foundation.
 
-\subsection*{Apparatus Diagrams}
-Good diagrams of experimental apparatus are an essential part of any good report.
-Although a published paper requires drawings of professional quality, such resources may not be available in introductory work.
-However, we should early acquire the habit of taking care with drawings of apparatus.
-Even if sophisticated drawing aids are not available, it is not too much to expect the use of a ruler.
-Neatness and clarity are important, and good, legible labeling assists enormously in understanding the experiment.
-Good diagrams can also help experimenters to write reports.
-Reference to a good, clear, well-labeled diagram can save paragraphs of written description and provide detail that would be intolerably tedious to read if it were included in the text.
-Reference to diagrams can be inserted at any appropriate point in the text, but reference to a general diagram of the apparatus as a whole can make a neat and convenient beginning for a procedure section.
-For example: ``Using the apparatus shown in Figure 1, we measured the variation of time of fall of a ball bearing with height over the range 20 cm to 150 cm.'' Figure {ref}`free_fall_apparatus` is an example of an acceptable apparatus diagram.
-```{figure} figures/ch7/free_fall_apparatus.png
-:A completed free-fall apparatus diagram.
-:free_fall_apparatus
-```
+### Specific Measurement Details
+
+With the general experimental approach established, readers can now appreciate specific measurement methodologies. Systematically describe how each required quantity was measured. Ensure no significant measurement approach is omitted; readers need to know whether you used a millisecond-precision electronic timer or a 0.2-second resolution stopwatch. Standard techniques may require only brief mention: "Resistances were measured using a Wheatstone bridge accurate to 0.01%." You might discuss measurement accuracy here, while reserving discussion of overall experimental precision for later sections.
+
+### Precautions
+
+After describing measurement methods, readers may wonder about potential errors inherent in these techniques. Assure them that you anticipated these issues and took appropriate precautions. Exercise judgment here—routine precautions need not be elaborated, but special measures taken to address significant error sources deserve mention before concluding this section.
+
+### Apparatus Diagrams
+
+Well-executed apparatus diagrams substantially enhance report quality. While professional publications require polished illustrations, even student reports benefit from careful diagramming. Use straightforward tools like rulers to ensure neatness, with clear labels to aid comprehension. Good diagrams save considerable explanatory text and provide details that would be tedious to describe verbally. Reference diagrams at appropriate points in your text; an overview diagram works particularly well when introducing the procedure section: "Using the apparatus shown in Figure 1, we measured ball bearing fall times over heights ranging from 20 cm to 150 cm." Figure 1 demonstrates an acceptable apparatus diagram.
+
+![A completed free-fall apparatus diagram.](figures/ch7/free_fall_apparatus.png)
 
 ## Results
-\subsection*{Measured Values}
-At this point in the report, readers have all the information they need for understanding the experiment, and they are ready to receive the results directly.
-Because any good experiment almost inevitably involves the variation of some quantity with another, the results are sometimes best presented in a table, typically when there is not a mathematical model being used to model input variable trends.
-As always, neatness and clarity are of paramount importance.
-The headings should be explicit and should include, if possible, the name of the variable, its symbol, and the units of measurement.
-Attached to each numerical entry should be its uncertainty, unless some separate discussion of uncertainties makes the precision of the measurements absolutely clear.
-Tables should be clearly identified with a table number and a title.
-At this point it may be appropriate to refer to any graphs we have drawn of the basic variables.
-A simple statement will suffice.
-For example: ``A graph of the time of fall versus height is shown in Figure 2.'' Any tables of values that are so extensive and detailed that their inclusion in the main text of the report would disrupt the readers' train of thought should be relegated to an appendix.
-Following the main table or tables, list the measured values of all the other quantities in the experiment.
-As always, each should have its uncertainty attached, and the units of measurement should be clearly stated.
 
-\subsection*{Description of Measurement Uncertainties}
-The report should state explicitly the kind of uncertainties we are quoting.
-These are likely to be either estimated outer limits or statistical quantities such as a standard deviation or a standard deviation of the mean.
-In the case of statistical quantities, we must not omit mention of the number of readings in the sample from which the results were derived.
-If any quantities in our list of measured values were obtained by computation from some basic measurement or measurements, we must state clearly the type of calculation used to obtain the final uncertainty in the computed quantity.
-It is not necessary to give much, if any, of the arithmetic details, provided that our readers can see clearly the kind of calculation that was performed.
+### Measured Values
 
-\subsection*{Computation of Final Answer}
-If the experiment has been well designed, we will probably obtain our final answer by some graphical procedure.
-It is now time to tell the readers exactly what that procedure is.
-In simple cases, we may obtain the answer from the basic graph of one measured variable against the other, but even then we
-must be explicit about what we have done.
-For example: ``The value of the resistance was obtained from the slope of the graph (shown in Figure 3) of `V` versus `I` between 0.5 A and 1.5 A.'' If the answer was not the slope itself but was obtained from calculation with other measured quantities, we must state explicitly what we have done.
-For example: ``Our value for the coefficient of viscosity was obtained from the slope of the graph of `Q` versus `P` in combination with the measured values of `a` and `\ell` using Equation (3).''
+By now, readers understand your experimental context and methodology, and are ready for your findings. Since most valuable experiments examine relationships between variables, results often benefit from tabular presentation, particularly when not directly comparing to mathematical models. Maintain high standards of clarity in tables, with comprehensive headers including variable names, symbols, and measurement units. Include uncertainty values with measurements unless addressed separately. Properly identify tables with numbers and titles. Reference any graphical representations straightforwardly: "Figure 2 shows time of fall versus height." Place exceptionally detailed data tables in appendices to maintain narrative flow. Following primary results tables, list all other relevant measured quantities with their uncertainties and units.
 
-The readers will wonder what kind of calculation we performed to obtain the uncertainty in the final answer.
-We simply say what we have done.
-If we assess visually the possible range of slopes, we say just that.
-We can add, if necessary, that the basic uncertainty in slope was combined with other uncertainties, and state explicitly the method of calculation.
-If we obtained the slope by a least-squares calculation and incorporated any other standard deviations to obtain a final value for the uncertainty of the answer, we again state simply what we have done.
+### Description of Measurement Uncertainties
 
-Throughout the results section of the report, we do not trouble our busy readers with unnecessarily detailed calculations.
-They trust us to do simple arithmetic, but they want to know what kind of calculation we did.
-If we feel compelled, for some particular reason, to offer an unusual amount of detail regarding such calculations, we can always put it in an appendix where it will be available if wanted but where it will not obscure the clarity of the main report.
+Clearly specify what kind of uncertainties your values represent—whether estimated maximum limits or statistical measures like standard deviations. For statistical values, include the sample size. When reporting calculated quantities derived from measurements, explain the uncertainty calculation method without necessarily including arithmetic details, provided the approach is clear.
 
-## Graphs\label{7_7graphs}
-Those graphs were working documents designed as computational aids.
-For a precise experiment, the graphs are possibly quite large and finely drawn to permit precise extraction of information.
-On the other hand, it is extremely unlikely that our readers will want to do any numerical work of
-their own using the graphs in the report.
-These graphs serve mostly as illustrations.
-They allow the readers to see the behavior of the system so that they can judge for themselves the validity of our assertions about the results.
-```{figure} figures/ch7/Fig7_2.png
-:A completed graph.
-:pressure_graph
-```
+### Computation of Final Answer
 
-The graphs in the report must be clear, neat, and uncluttered so that readers do not have to work too hard to get the message.
-The points on the graphs should have their uncertainties clearly marked on them (by a box or a cross), and the axes should be clearly labeled.
-Both types of uncertainty
-and any symbols used in labeling the axes should be explicitly identified in some obvious way in or beside the graph; we do not want to cause our readers the irritation of hunting through the text to find out how to interpret the graph.
-Do not, however, fill up empty spaces on the graph with arithmetic calculations of slopes, and the like.
-Each graph should obviously have a clear title or, as is common in printed publications, a more extended caption.
-In addition to supplying identification, an extended caption has the added advantage of supplying a good location for the important details mentioned earlier.
-A sample of acceptable layouts for such an illustrative graph is given in Figure {ref}`pressure_graph`.
+Well-designed experiments typically yield final results through graphical analysis. Explain your analytical approach explicitly. Even for straightforward analyses, be specific: "We determined resistance from the slope of the V versus I graph (Figure 3) between 0.5A and 1.5A." If your result required additional calculations beyond graphical values, state this clearly: "We calculated the viscosity coefficient using the Q versus P graph slope combined with measured values of a and ℓ according to Equation (3)."
+
+Similarly, explain your approach to uncertainty calculation. Whether you visually estimated slope ranges, combined multiple uncertainty sources, or employed least-squares methods with statistical analysis, describe your approach without burdening readers with extensive calculations. If detailed calculations seem necessary, place them in an appendix where interested readers can access them without disrupting the main narrative.
+
+## Graphs
+
+The graphs you created during analysis served as computational tools, potentially requiring large formats and precise drawing for accurate measurement. However, graphs included in your report serve a different purpose—they illustrate results rather than providing readers raw analytical material. They help readers visualize system behavior and evaluate your interpretations.
+
+![A completed graph.](figures/ch7/Fig7_2.png)
+
+Report graphs should be clean, clear, and uncluttered. Plot points with visible uncertainty indicators (boxes or crosses) and clearly label axes. Identify uncertainty types and axis symbols directly on or near the graph to avoid forcing readers to search the text for interpretation. Avoid cluttering graphs with calculation details. Each graph should have a descriptive title or extended caption that can also incorporate important technical details. Figure 2 demonstrates acceptable graph formatting.
 
 ## Discussion
-\subsection*{Comparison Between Model and System}
-The discussion is an integral part of the report and not an afterthought.
-It has this importance because we have yet to describe the aspect of the experiment that we have, right from the beginning, regarded as the basic issue in experimenting -- the relationship between the system and the model.
-The outcome of that comparison is vital for the experiment, and our readers will be eager to hear what we have to say about it.
 
-We have already listed in Section {ref}`sec6_11` the various categories of experimental outcomes.
-Remembering that, in evaluating our results, we had to disengage ourselves from our hopes and aspirations for the experiment and accept objectively the actual outcome, so now, at the reporting stage, we must make a candid and unbiased statement of that outcome.
-We should make it a plain, simple statement of the actual situation.
-For example: ``The behavior of the model is represented by Equation (1), in which the variation of `Q` with `P` is a straight line passing through the origin.
-In the experiment the
-results do show a linear variation over part of the range, but instead of passing through the origin, the line that best fits the observations has a finite intercept on the `Q` axis.
-In addition, at the high end of the `P` scale.
-The observations show systematic deviation from linearity by an amount clearly in excess of the uncertainty of measurement.''
+### Comparison Between Model and System
 
-At this stage, it is sufficient to make this plain, factual statement.
-Because such comparison was the fundamental objective of the experiment, it is necessary for its outcome to be clearly, factually, and prominently stated.
-In the report, we shall be proceeding quite soon to matters of interpretation and opinion, and it is important that we start the discussion section with a plain statement of the actual, indisputable outcome of the experiment.
+The discussion constitutes an integral report component rather than an afterthought. Here you address the fundamental experimental question—the relationship between system and model. This comparison's outcome represents a critical experimental result that readers eagerly anticipate.
 
-That statement will raise some questions in the minds of the readers, and we must turn our attention to them now.
+Having evaluated your results objectively during analysis, present an unbiased assessment of system-model correspondence. Make a straightforward factual statement about what you observed. For example: "The model described by Equation (1) predicts a linear Q versus P relationship passing through the origin. Our experimental results show linear behavior through part of the range, but with a non-zero Q-axis intercept. Additionally, at higher P values, measurements systematically deviate from linearity beyond measurement uncertainty."
 
-\subsection*{Consequences of Discrepancies Between Model and System}
-One of these questions concerns the possibility of error in the final answer that could be caused by failure of correspondence between the system and the model.
-Some of these possibilities have already been mentioned in Section {ref}`sec4_5`, and readers need reassurance that we have protected the final answer from that kind of error.
-We should point out, for example, that an unexpected intercept will not contribute to error in a quantity that has been obtained from the slope alone, or that a systematic departure from linearity over part of a graph did not mandate an answer that was obtained from the linear segment only.
-Much of the skill in experimenting lies in the protection of the final answers from such sources of error, and we can be quite explicit about our
-claims to have done so.
+Begin with this objective assessment before proceeding to interpretation. Since system-model comparison represents your experiment's fundamental purpose, clearly state the actual results before introducing subjective elements.
 
-\subsection*{Speculation Concerning Discrepancies Between System and Model}
-In describing the report's earlier sections, we have stressed objective and factual reporting of the actual situation.
-Matters of opinion or conjecture should not have played a significant role in those parts of the report, and we have probably limited ourselves to such statements as would have been made
-by most impartial observers.
-Now, however, comes a stage at which we not only can but should introduce our own ideas.
-Our readers have in turn been informed about the actual degree of correspondence between the system and the model, and they have been reassured that the final answer has not been contaminated (as far as we were able to tell) by any failure of correspondence
-between the system and the model.
-Because we have met our basic obligations as experimenters, we could quite justifiably leave the report there.
-However, the interest of the readers will doubtless have been aroused by the description of any discrepancies between the model and the system.
-We
-presumably started with a model that was chosen to suit the system as closely as possible.
-If any failure of correspondence between the system and the model had been anticipated, such breakdown would have been incorporated into the experiment design, If we want to measure a coefficient of viscosity
-by using theories based on streamline flow, for example, we do not design an experiment to run under turbulent conditions (unless, for some separate purpose, we wish to detect the onset of turbulence).
-Any observed failure of correspondence, therefore, is bound to attract attention, and readers will want to know what we think about it.
-We are more familiar with the experiment than anyone else and are in a better position than others to guess the origin of discrepancies.
+This factual statement will naturally raise questions that require your attention.
 
-Sometimes a discrepancy has (at least superficially) an origin that is easy to identify.
-If we measure, for example, the flow rate of fluid through a pipe, a departure of the flow-rate measurements below linear behavior at high values of pressure difference may be ascribed quite confidently to the onset of turbulence.
-If the objective of the experiment included the detection of the onset of turbulence, such a statement could end the matter.
-At other times, however, more comment is needed.
-If, in the preceding example, our intention had been simply to measure the coefficient of viscosity from the linear part of the `Q, P` variation, readers might wonder why we had not been more successful in avoiding a region in which the streamline theory was clearly invalid.
-Perhaps we had been surprised by an unexpectedly early onset of turbulence; if so, we should be candid enough to admit it and perhaps speculate on the origin of that discrepancy.
-If the situation is genuinely puzzling, we may not be able to offer much in the way of speculation, but it is always worth trying.
-As has been said, as the experimenters, we have a better chance of speculating fruitfully than most others, and our ideas are almost certainly to be of interest and possible value to other workers.
+### Consequences of Discrepancies Between Model and System
 
-Sometimes, however, despite our best efforts we fail and are unable to offer any constructive ideas.
-We must be completely honest.
-If we are dealing with a well-tested system and a well-known, reliable model, and if we have tried and failed to resolve a failure of correspondence between them, our situation cannot but be of interest to other workers.
-We should tell them about it, and perhaps we
-shall all learn something from the resulting discussion.
+Readers will wonder whether model-system discrepancies affected your final results. Address how you protected your conclusions from potential errors arising from these discrepancies. Explain, for instance, how an unexpected intercept didn't compromise results derived solely from slope analysis, or how nonlinearity didn't affect conclusions drawn from the linear region. Demonstrate how your experimental approach safeguarded results against such complications.
 
-As we attempt to be creative regarding our experimental discrepancies, we should remember that we are doing something important.
-All models and theories go through processes of refinement, and these processes are based on the various stages of observed failure of the models.
-We should try to be
-responsible, therefore, as we speculate.
-Instead of having a fling at every wild idea we can imagine, we should try to make our suggestions have some logical connection with the evidence of the discrepancy.
-For example, if we have done an experiment on the oscillation of a load suspended from a
-spring, we could write: ``Since the unexpected intercept in the plot of `T^2` vs. `m` gives a finite value for `T` at `m = 0`, we have a clear indication of the presence of an extra mass that was not included in the measured values of load.'' Whether we can guess at the \textit{identity} of this extra mass is less important.
-We have at least offered a logically acceptable inference from the observed nature
-of the discrepancy, and further research and experimenting in this area will have been facilitated.
+### Speculation Concerning Discrepancies Between System and Model
+
+Earlier report sections emphasized objective reporting of observations and processes. Now, however, you should introduce thoughtful interpretation. Having informed readers about system-model correspondence and protected your results from discrepancy-related errors, you've fulfilled your core experimental responsibilities. However, readers will naturally be curious about any observed discrepancies. Since you selected a model expected to match your system closely, discrepancies warrant explanation. As the person most familiar with the experiment, you're uniquely positioned to interpret unexpected observations.
+
+Some discrepancies have readily identifiable causes. Flow rate measurements deviating from linearity at high pressure differences might confidently be attributed to turbulence onset. If detecting turbulence was an experimental objective, this observation fulfills your purpose. In other cases, more extensive interpretation may be needed. If measuring viscosity was your primary goal, readers might question why you didn't avoid conditions where laminar flow theory fails. Perhaps turbulence appeared at unexpectedly low pressures; candidly acknowledge this and consider potential causes.
+
+When confronting genuinely puzzling discrepancies, speculation remains valuable even if limited. Your insights, even tentative ones, likely benefit other researchers given your direct experimental experience. Conversely, if you cannot offer constructive ideas despite careful analysis, honest acknowledgment of unresolved discrepancies between well-established systems and models can itself contribute meaningfully to scientific discourse.
+
+When speculating about discrepancies, maintain scientific responsibility. Rather than offering disconnected hypotheses, develop interpretations logically connected to observed patterns. For instance: "The T² versus m plot's non-zero intercept at m=0 suggests the presence of additional unaccounted mass in our system." Identifying the specific source is less critical than recognizing the logical implications of your observations. Such reasoned inference facilitates further investigation by providing a structured framework for subsequent research.
