@@ -2,46 +2,39 @@ version: 1
 project:
   id: 11ed62b4-1bb1-4e06-a0af-69f30a5008fd
   title: hands-on
-  # description:
-  keywords: []
-  authors: []
   github: https://github.com/veillette/hands-on
-  # bibliography: []
-   # Main book content structure
   toc:
-    - file: preface.md
-    - title: Preface
+    - file: preamble.md
+      title: Preface
+    - title: Main Content
       children:
         - file: Chapter1.md
-        - title: Chapter 1 - Getting Started
+          title: Chapter 1 - Getting Started
         - file: Chapter2.md
-        - title: Chapter 2 - Core Concepts
+          title: Chapter 2 - Core Concepts
         - file: Chapter3.md
-        - title: Chapter 3 - Advanced Applications
+          title: Chapter 3 - Advanced Applications
         - file: Chapter4.md
-        - title: Chapter 4 - Case Studies
+          title: Chapter 4 - Case Studies
         - file: Chapter5.md
-        - title: Chapter 5 - Advanced Applications
+          title: Chapter 5 - Advanced Applications
         - file: Chapter6.md
-        - title: Chapter 6 - Case Studies
+          title: Chapter 6 - Case Studies
         - file: Chapter7.md
-        - title: Chapter 7 - Case Studies
+          title: Chapter 7 - Case Studies
     - title: Appendices
       children:
         - file: Appendix1.md
-        - title: Appendix 1 
+          title: Appendix 1 
         - file: Appendix2.md
-        - title: Appendix 2
+          title: Appendix 2
         - file: Appendix3.md
-        - title: Appendix 3
+          title: Appendix 3
         - file: Appendix4.md
-        - title: Appendix 4            
-
+          title: Appendix 4            
 site:
   template: book-theme
   title: Advanced lab textbook
-  # options:
-  #   logo: site_logo.png
   nav: []
   actions:
     - title: Hands-On Advanced Physics
