@@ -65,7 +65,7 @@ jobs:
           NODE_OPTIONS: "--max-old-space-size=4096"  # Prevent memory issues
       
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4  # Updated to v4 (latest version)
+        uses: actions/upload-pages-artifact@v3  # Using v3 which is currently available
         with:
           path: './_build/html'
       
