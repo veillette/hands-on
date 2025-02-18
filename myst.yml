@@ -7,20 +7,7 @@ project:
   authors: []
   github: https://github.com/veillette/hands-on
   # bibliography: []
-site:
-  template: book-theme
-  title: Advanced lab textbook
-  # options:
-  #   logo: site_logo.png
-  nav: []
-  actions:
-    - title: Hands-On Advanced Physics
-      url: https://veillette.github.io/hands-on/
-  domains: []
-  
-# Define the structure of your book
-build:
-  # Main book content structure
+   # Main book content structure
   toc:
     - file: preface.md
     - title: Preface
@@ -49,3 +36,14 @@ build:
         - title: Appendix 3
         - file: Appendix4.md
         - title: Appendix 4            
+
+site:
+  template: book-theme
+  title: Advanced lab textbook
+  # options:
+  #   logo: site_logo.png
+  nav: []
+  actions:
+    - title: Hands-On Advanced Physics
+      url: https://veillette.github.io/hands-on/
+  domains: []
