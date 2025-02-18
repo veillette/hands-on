@@ -17,3 +17,36 @@ site:
     - title: Hands-On Advanced Physics
       url: https://veillette.github.io/hands-on/
   domains: []
+  
+# Define the structure of your book
+build:
+  # Main book content structure
+  toc:
+    - file: index.md
+      title: Home
+    - part: Part I - Introduction
+      chapters:
+        - file: Chapter1.md
+          title: Chapter 1 - Getting Started
+        - file: Chapter2.md
+          title: Chapter 2 - Core Concepts
+        - file: Chapter3.md
+          title: Chapter 3 - Advanced Applications
+        - file: Chapter4.md
+          title: Chapter 4 - Case Studies
+        - file: Chapter5.md
+          title: Chapter 5 - Advanced Applications
+        - file: Chapter6.md
+          title: Chapter 6 - Case Studies
+        - file: Chapter7.md
+          title: Chapter 7 - Case Studies
+     - part: Appendices
+      chapters:
+        - file: Appendix1.md
+          title: Appendix 1 
+        - file: Appendix2.md
+          title: Appendix 2
+        - file: Appendix3.md
+          title: Appendix 3
+        - file: Appendix4.md
+          title: Appendix 4            
