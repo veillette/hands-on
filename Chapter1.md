@@ -39,16 +39,27 @@ When making scientific statements ourselves, we should use precise language. We 
 ## Purpose of Physics Laboratory
 
 What connection exists between physics laboratories and broader educational goals? Though physics teaching labs serve a familiar function, we might wonder how standard laboratory experiments can introduce general experimental principles. The answer lies not in the experiments themselves but in our approach to them.
+
 As we'll explore experimental methods further, it helps to view the subject under investigation as a system—any defined entity functioning in a specific way. We can influence systems through inputs (our control methods) and observe outputs (the system's measurable functions).
 Consider various examples: An economist might view a national economy as a system with inputs like tax rates and money supply, while outputs include unemployment and inflation rates. Though we desire specific output values, we cannot directly set them—we must work through inputs, often with complex and unpredictable relationships between the two.
+
 Some systems, while still complex, allow more successful control. An electrical power grid has inputs like generator operation and pricing, with outputs including power delivery and service reliability. These outputs remain determined by the system itself, not by direct management control.
+
 How does this relate to introductory physics labs? Why not immediately address important issues like mercury contamination in fish or fossil fuel impacts on climate? The challenge is that these represent extremely complex problems with disputed evidence and interpretation. Developing skills through simpler systems provides necessary preparation.
+
 An automobile engine represents a moderately complex system with inputs like fuel supply and ignition timing, and outputs including RPM and exhaust composition. The relationships become more predictable, though changing one input still affects multiple outputs.
 A simple pendulum offers an even clearer example—a system with minimal components (string, mass, support) and straightforward inputs (string length, initial conditions) and outputs (frequency, amplitude). The connections between inputs and outputs are direct and reproducible, making fundamental experimental principles visible.
+
 This reveals the value of introductory physics laboratories. Viewing a pendulum merely as "just a pendulum" leads to boredom. However, seeing it as a simplified version of real-world systems provides an excellent simulation environment. The physics laboratory offers practice with simple systems to develop expertise applicable to more complex real-world situations.
+
 The approach matters significantly. Following rigid instructions yields limited benefits. Since real-world experimental situations vary enormously—from biological sciences dominated by random fluctuations to astronomy with precise measurement but limited control—we need general experimental principles applicable across domains.
+
 Traditional laboratory approaches often prove inappropriate for this purpose. We should avoid viewing experiments as exercises in reproducing "correct" answers. Instead, we should objectively assess system properties and accept results as they come. Rather than following prescribed procedures, we must develop confidence in making independent experimental decisions—a crucial skill in real-world situations where guidance is rarely available.
+
 Experiment planning deserves significant emphasis, as this stage requires substantial skill. Preliminary planning isn't a distraction from measurement but essential preparation requiring dedicated time before measurements begin.
+
 Working within resource constraints develops important skills. Professional experimentation always faces limitations, and optimizing results within these boundaries represents a key experimental skill. Time restrictions and imperfect apparatus shouldn't be seen as defects but as realistic challenges. Good experimental evaluation requires separating valuable measurements from errors and uncertainties. Experimenters must identify error sources independently and evaluate residual uncertainty accurately—skills acquired only through realistic working conditions.
+
 Laboratory time becomes most productive when experiments are approached as independent problem-solving opportunities. Though errors will occur, learning from direct personal experience exceeds rigidly following established procedures. Experiment outcomes matter less than learning, though skill development requires seriously pursuing optimal results.
+
 Laboratory reports deserve similar constructive attention. Professional work has limited value unless results can be effectively communicated. Clear expression represents a responsibility beyond English department concerns. Report writing offers valuable practice in descriptive composition. Perfunctory reporting wastes opportunity, while detailed review and criticism provide essential improvement opportunities that become clear in hindsight.
