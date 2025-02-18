@@ -10,7 +10,7 @@ on:
 
 env:
   BASE_URL: /${{ github.event.repository.name }}
-  NODE_VERSION: '20.x'
+  NODE_VERSION: '22.x'
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
