@@ -67,15 +67,6 @@ jobs:
         env:
           NODE_OPTIONS: "--max-old-space-size=4096"  # Prevent memory issues
       
-      # Generate PDF export
-      - name: Generate PDF
-        run: |
-          myst build --pdf
-          cp _build/pdf/complete_textbook.pdf _build/downloads/
-          cp _build/pdf/complete_textbook.pdf _build/html/downloads/
-        env:
-          NODE_OPTIONS: "--max-old-space-size=4096"
-      
       # Generate EPUB export
       - name: Generate EPUB
         run: |
@@ -93,7 +84,16 @@ jobs:
           cp _build/docx/hands-on-physics-lab.docx _build/html/downloads/
         env:
           NODE_OPTIONS: "--max-old-space-size=4096"
-      
+
+      # Generate PDF export
+      - name: Generate PDF
+        run: |
+          myst build --pdf
+          cp _build/pdf/complete_textbook.pdf _build/downloads/
+          cp _build/pdf/complete_textbook.pdf _build/html/downloads/
+        env:
+          NODE_OPTIONS: "--max-old-space-size=4096"
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
