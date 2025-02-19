@@ -10,9 +10,10 @@ project:
       affiliations:
         - Department of Physics, Berea College
   github: https://github.com/veillette/hands-on
-  
-!include exports_and_actions.yml
+
 !include toc.yml
+!include exportsActions.yml
+
 
 site:
   template: book-theme
