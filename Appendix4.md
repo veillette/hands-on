@@ -186,7 +186,7 @@ The analysis yielded a coefficient of determination (R²) of 0.9996, indicating 
 ### Results Visualization
 Figure 1 shows the results of our computational analysis, including the experimental data points with uncertainties, the best-fit line, and the 95% confidence intervals derived from our statistical analysis.
 
-![Graph of m vs. T² with statistical analysis](spring_constant_analysis.png)
+![Graph of m vs. T² with statistical analysis](/figures/A4/spring_constant_analysis.svg)
 *Figure 1: Plot of mass versus period squared showing experimental data points with uncertainties, best-fit line determined by weighted least-squares regression, and 95% confidence intervals.*
 
 ### Parameter Determination
@@ -286,7 +286,7 @@ We can apply weighted least-squares regression analysis to determine k from the 
 ### Procedure
 We established a precision measurement system consisting of a helical spring suspended from a vibration-isolated support structure (Figure 2). The experimental apparatus included:
 
-![Experimental setup diagram](experimental_setup.png)
+![Experimental setup diagram](/figures/A4/FigA4_1R.jpg)
 *Figure 2: Schematic diagram of the experimental apparatus showing the spring suspension system, digital measurement tools, and vibration isolation measures.*
 
 The apparatus featured:
@@ -330,7 +330,7 @@ $$k = 9.69 \pm 0.12 \text{ N/m}$$
 
 With a coefficient of determination R² = 0.9996, demonstrating excellent agreement with our linear model. Figure 3 presents the graphical analysis of our results.
 
-![Graph of statistical analysis results](statistical_analysis_results.png)
+![Graph of statistical analysis results](/figures/A4/statistical_analysis_results.svg)
 *Figure 3: Statistical analysis of the m vs. T² relationship showing experimental data points with error bars, weighted least-squares regression line, and 95% confidence intervals.*
 
 ### Discussion
