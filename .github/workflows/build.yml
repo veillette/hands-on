@@ -66,25 +66,7 @@ jobs:
           myst build --html
         env:
           NODE_OPTIONS: "--max-old-space-size=4096"  # Prevent memory issues
-      
-      # Generate DOCX export
-      - name: Generate DOCX
-        run: |
-          myst build --docx
-          cp _build/docx/hands-on-physics-lab.docx _build/downloads/
-          cp _build/docx/hands-on-physics-lab.docx _build/html/downloads/
-        env:
-          NODE_OPTIONS: "--max-old-space-size=4096"
-
-      # Generate PDF export
-      - name: Generate PDF
-        run: |
-          myst build --pdf
-          cp _build/pdf/complete_textbook.pdf _build/downloads/
-          cp _build/pdf/complete_textbook.pdf _build/html/downloads/
-        env:
-          NODE_OPTIONS: "--max-old-space-size=4096"
-          
+                
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -93,37 +75,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      
-      # Create GitHub release with assets for tagged versions
-      - name: Create Release
-        if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v1
-        with:
-          files: |
-            _build/downloads/complete_textbook.pdf
-            _build/downloads/hands-on-physics-lab.docx
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-      # Validate links 
-      - name: Validate download links
-        if: github.ref == 'refs/heads/main'
-        run: |
-          echo "Validating download links (may fail on first deploy, will work on subsequent runs)"
-          SITE_URL="${{ steps.deployment.outputs.page_url }}"
-          
-          # Wait for deployment to complete
-          sleep 60
-          
-          # Attempt to validate links but don't fail the workflow
-          curl -f -L -o /dev/null "${SITE_URL}downloads/complete_textbook.pdf" || echo "PDF link validation failed but continuing"
-          curl -f -L -o /dev/null "${SITE_URL}downloads/hands-on-physics-lab.docx" || echo "DOCX link validation failed but continuing"
-        continue-on-error: true
-      
+        
       - name: Deployment summary
         run: |
           echo "🚀 Successfully deployed to ${{ steps.deployment.outputs.page_url }}"
-          echo "The following files are available for download:"
-          echo "- PDF: ${{ steps.deployment.outputs.page_url }}downloads/complete_textbook.pdf"
-          echo "- DOCX: ${{ steps.deployment.outputs.page_url }}downloads/hands-on-physics-lab.docx"
           echo "Build completed at $(date)"
