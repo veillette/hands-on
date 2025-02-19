@@ -71,7 +71,6 @@ This uncertainty value (±0.2 cm) represents the **absolute uncertainty** of our
 
 ```{list-table} Impact of Uncertainty in Different Contexts
 :header-rows: 1
-:widths: auto
 
 * - Context
   - Impact of ±0.2 cm
