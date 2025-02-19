@@ -11,10 +11,10 @@ project:
         - Department of Physics, Berea College
   github: https://github.com/veillette/hands-on
 
-!include toc.yml
-!include exportsActions.yml
-
-
+includes:
+  - path: exportsActions.yml
+  - path: toc.yml
+  
 site:
   template: book-theme
   title: "Advanced Laboratory Methods in Physics"
