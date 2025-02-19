@@ -38,16 +38,8 @@ site:
   template: book-theme
   title: "Advanced Laboratory Methods in Physics"
   description: "A comprehensive guide to advanced laboratory techniques and methods in physics"
-  repository:
-    url: https://github.com/veillette/hands-on
-    branch: main
   actions:
     - title: "Report a Correction"
       url: https://github.com/veillette/hands-on/issues/new?labels=correction
-      icon: "bug"
     - title: "Contribute"
       url: https://github.com/veillette/hands-on/blob/main/CONTRIBUTING.md
-      icon: "git-pull-request"
-  footer:
-    copyright: "© 2025 Physics Laboratory"
-    license: "Content licensed under CC BY-NC-SA 4.0"
