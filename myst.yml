@@ -43,17 +43,8 @@ site:
   template: book-theme
   title: "Advanced Laboratory Methods in Physics"
   actions:
-    - title: "Download PDF"
-      url: https://veillette.github.io/hands-on/downloads/complete_textbook.pdf
     - title: "Report a Correction"
       url: https://github.com/veillette/hands-on/issues/new?labels=correction
     - title: "Contribute"
       url: https://github.com/veillette/hands-on/blob/main/CONTRIBUTING.md
-exports:
-  - format: pdf
-    template: book
-    output: complete_textbook.pdf
-    files: "**/*.md"
-  - format: docx
-    output: hands-on-physics-lab.docx
-    files: "**/*.md"
+
