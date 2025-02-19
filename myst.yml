@@ -15,6 +15,10 @@ project:
     - format: pdf
       template: book
       output: complete_textbook.pdf
+    - format: epub
+      output: hands-on-physics-lab.epub
+    - format: docx
+      output: hands-on-physics-lab.docx
   
   toc:
     - file: Preamble.md
@@ -45,21 +49,61 @@ project:
           title: Appendix 3 - Difference Elements
         - file: Appendix4.md
           title: Appendix 4 - Sample Writeout
-
 site:
   template: book-theme
   title: "Advanced Laboratory Methods in Physics"
   options:
-#    logo: assets/images/lab_logo.png
-#    favicon: assets/images/favicon.ico
     primary_color: "#003366"
+    accent_color: "#F47C3C"
     syntax_highlighter:
       theme: github-light
-    footer: "© 2025. All rights reserved."
+    math:
+      renderer: mathjax
+    toc:
+      depth: 3
+      numbered: true
+    comments:
+      hypothesis: true
+    footer: "© 2025 Martin Veillette. Licensed under CC-BY-4.0. All rights reserved."
     show_myst_branding: false
+    header_links:
+      - title: "GitHub"
+        url: https://github.com/veillette/hands-on
+      - title: "Department Website"
+        url: https://www.berea.edu/physics
+  
   actions:
-    - title: "PDF"
+    - title: "Download PDF"
       url: https://veillette.github.io/hands-on/downloads/complete_textbook.pdf
+      icon: download
+    - title: "Download EPUB"
+      url: https://veillette.github.io/hands-on/downloads/hands-on-physics-lab.epub
+      icon: book
     - title: "Report a Correction"
       url: https://github.com/veillette/hands-on/issues/new?labels=correction
+      icon: edit
+    - title: "Contribute"
+      url: https://github.com/veillette/hands-on/blob/main/CONTRIBUTING.md
+      icon: code
   
+  pages:
+    - title: "About"
+      file: about.md
+    - title: "Contact"
+      file: contact.md
+  
+  search:
+    enabled: true
+    type: full-text
+  
+  analytics:
+    google:
+      tracking_id: UA-XXXXXXXXX-X
+  
+  social:
+#    twitter: "@BereaPhysics"
+    github: "veillette/hands-on"
+  
+  open_graph:
+    image: assets/images/og_image.png
+    description: "Learn advanced laboratory techniques and scientific thinking for physics students with this comprehensive guide."
