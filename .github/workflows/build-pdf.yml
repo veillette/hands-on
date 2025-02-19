@@ -1,5 +1,3 @@
-Fixed GitHub Actions Workflow
-
 name: Build PDF
 on:
   push:
