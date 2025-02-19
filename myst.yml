@@ -1,93 +1,59 @@
 version: 1
-title: "Hands-On Advanced Physics Laboratory"
-description: "A comprehensive guide to advanced laboratory techniques and scientific thinking for physics students."
-keywords: ["physics", "laboratory", "experimental design", "data analysis", "scientific writing"]
-authors:
-  - name: Martin Veillette
-    email: veillettem@berea.edu
-    affiliations:
-      - Department of Physics, Berea College
-github: https://github.com/veillette/hands-on
-license: CC-BY-4.0
-
-exports:
-  - format: pdf
-    template: book
-    output: complete_textbook.pdf
-    files: "**/*.md"  # This includes all Markdown files
-  - format: docx
-    output: hands-on-physics-lab.docx
-    files: "**/*.md"  # This includes all Markdown files
-
-# Define site-wide settings
-site:
-  title: "Advanced Laboratory Methods in Physics"
-  template: book-theme
-  actions:
-    - title: "Download PDF"
-      url: https://veillette.github.io/hands-on/downloads/complete_textbook.pdf
-      icon: file-pdf
-    - title: "Report a Correction"
-      url: https://github.com/veillette/hands-on/issues/new?labels=correction
-      icon: pencil
-    - title: "Contribute"
-      url: https://github.com/veillette/hands-on/blob/main/CONTRIBUTING.md
-      icon: github
-
-# Table of contents
-toc:
-  - file: Preamble.md
-    title: Preface
-  - title: Chapters
-    sections:
-      - file: Chapter1.md
-        title: Chapter 1 - Approach to Lab
-      - file: Chapter2.md
-        title: Chapter 2 - Measurements
-      - file: Chapter3.md
-        title: Chapter 3 - Statistics
-      - file: Chapter4.md
-        title: Chapter 4 - Nature of Thinking
-      - file: Chapter5.md
-        title: Chapter 5 - Designing Experiments
-      - file: Chapter6.md
-        title: Chapter 6 - Evaluating
-      - file: Chapter7.md
-        title: Chapter 7 - Writing
-  - title: Appendices
-    sections:
-      - file: Appendix1.md
-        title: Appendix 1 - Gaussian
-      - file: Appendix2.md
-        title: Appendix 2 - Least Squares
-      - file: Appendix3.md
-        title: Appendix 3 - Difference Elements
-      - file: Appendix4.md
-        title: Appendix 4 - Sample Writeout
-
-# Math configuration
-math:
-  renderer: mathjax
-
-# Site options
-options:
-  primary_color: "#003366"
-  accent_color: "#F47C3C"
-  syntax_highlighter:
-    theme: github-light
-  toc_depth: 3
-  numbered_sections: true
-  hypothesis: true
-  footer_text: "© 2025 Martin Veillette. Licensed under CC-BY-4.0. All rights reserved."
-  show_myst_branding: false
-  header_links:
-    - title: "GitHub"
-      url: https://github.com/veillette/hands-on
-  search:
-    enabled: true
-    type: full-text
-  analytics:
-    google:
-      tracking_id: UA-XXXXXXXXX-X
-  social:
-    github: "veillette/hands-on"
+config:
+  site:
+    template: book-theme
+    title: "Advanced Laboratory Methods in Physics"
+    actions:
+      - title: "Download PDF"
+        url: https://veillette.github.io/hands-on/downloads/complete_textbook.pdf
+      - title: "Report a Correction"
+        url: https://github.com/veillette/hands-on/issues/new?labels=correction
+      - title: "Contribute"
+        url: https://github.com/veillette/hands-on/blob/main/CONTRIBUTING.md
+  project:
+    id: 11ed62b4-1bb1-4e06-a0af-69f30a5008fd
+    title: "Hands-On Advanced Physics Laboratory"
+    description: "A comprehensive guide to advanced laboratory techniques and scientific thinking for physics students."
+    keywords: ["physics", "laboratory", "experimental design", "data analysis", "scientific writing"]
+    authors:
+      - name: Martin Veillette
+        email: veillettem@berea.edu
+        affiliations:
+          - Department of Physics, Berea College
+    github: https://github.com/veillette/hands-on
+  exports:
+    - format: pdf
+      template: book
+      output: complete_textbook.pdf
+    - format: docx
+      output: hands-on-physics-lab.docx
+      files: "**/*.md"
+  toc:
+    - file: Preamble.md
+      title: Preface
+    - title: Chapters
+      children:
+        - file: Chapter1.md
+          title: Chapter 1 - Approach to Lab
+        - file: Chapter2.md
+          title: Chapter 2 - Measurements
+        - file: Chapter3.md
+          title: Chapter 3 - Statistics
+        - file: Chapter4.md
+          title: Chapter 4 - Nature of Thinking
+        - file: Chapter5.md
+          title: Chapter 5 - Designing Experiments
+        - file: Chapter6.md
+          title: Chapter 6 - Evaluating
+        - file: Chapter7.md
+          title: Chapter 7 - Writing
+    - title: Appendices
+      children:
+        - file: Appendix1.md
+          title: Appendix 1 - Gaussian
+        - file: Appendix2.md
+          title: Appendix 2 - Least Squares
+        - file: Appendix3.md
+          title: Appendix 3 - Difference Elements
+        - file: Appendix4.md
+          title: Appendix 4 - Sample Writeout
