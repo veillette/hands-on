@@ -67,15 +67,6 @@ jobs:
         env:
           NODE_OPTIONS: "--max-old-space-size=4096"  # Prevent memory issues
       
-      # Generate EPUB export
-      - name: Generate EPUB
-        run: |
-          myst build --epub
-          cp _build/epub/hands-on-physics-lab.epub _build/downloads/
-          cp _build/epub/hands-on-physics-lab.epub _build/html/downloads/
-        env:
-          NODE_OPTIONS: "--max-old-space-size=4096"
-      
       # Generate DOCX export
       - name: Generate DOCX
         run: |
@@ -110,7 +101,6 @@ jobs:
         with:
           files: |
             _build/downloads/complete_textbook.pdf
-            _build/downloads/hands-on-physics-lab.epub
             _build/downloads/hands-on-physics-lab.docx
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -127,7 +117,6 @@ jobs:
           
           # Attempt to validate links but don't fail the workflow
           curl -f -L -o /dev/null "${SITE_URL}downloads/complete_textbook.pdf" || echo "PDF link validation failed but continuing"
-          curl -f -L -o /dev/null "${SITE_URL}downloads/hands-on-physics-lab.epub" || echo "EPUB link validation failed but continuing"
           curl -f -L -o /dev/null "${SITE_URL}downloads/hands-on-physics-lab.docx" || echo "DOCX link validation failed but continuing"
         continue-on-error: true
       
@@ -136,6 +125,5 @@ jobs:
           echo "🚀 Successfully deployed to ${{ steps.deployment.outputs.page_url }}"
           echo "The following files are available for download:"
           echo "- PDF: ${{ steps.deployment.outputs.page_url }}downloads/complete_textbook.pdf"
-          echo "- EPUB: ${{ steps.deployment.outputs.page_url }}downloads/hands-on-physics-lab.epub"
           echo "- DOCX: ${{ steps.deployment.outputs.page_url }}downloads/hands-on-physics-lab.docx"
           echo "Build completed at $(date)"
