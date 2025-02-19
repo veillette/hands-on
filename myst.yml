@@ -43,3 +43,6 @@ site:
       url: https://github.com/veillette/hands-on/issues/new?labels=correction
     - title: "Contribute"
       url: https://github.com/veillette/hands-on/blob/main/CONTRIBUTING.md
+  theme:
+    footer:
+      powered: false # Remove "Made with Myst"
