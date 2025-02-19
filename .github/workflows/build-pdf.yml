@@ -1,12 +1,12 @@
-name: Build PDF
+Fixed GitHub Actions Workflow
 
+name: Build PDF
 on:
   push:
     branches: [ main ]  # Or your default branch name
   pull_request:
     branches: [ main ]
   workflow_dispatch:  # Allows manual triggering
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -33,10 +33,25 @@ jobs:
         run: |
           myst build --pdf
       
+      - name: Debug - List build directories
+        run: |
+          echo "Listing _build directory:"
+          ls -la _build/ || echo "_build directory not found"
+          echo "Listing PDF directory if it exists:"
+          find _build -name "*.pdf" || echo "No PDF files found in _build"
+      
       - name: Copy PDF to downloads directory
         run: |
           mkdir -p _build/site/downloads
-          cp _build/pdf/complete_textbook.pdf _build/site/downloads/
+          # Find the PDF file and copy it (more flexible approach)
+          PDF_FILE=$(find _build -name "*.pdf" | head -n 1)
+          if [ -n "$PDF_FILE" ]; then
+            echo "Found PDF at: $PDF_FILE"
+            cp "$PDF_FILE" _build/site/downloads/textbook.pdf
+          else
+            echo "ERROR: No PDF file was generated!"
+            exit 1
+          fi
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
