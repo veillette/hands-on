@@ -330,7 +330,7 @@ $$k = 9.69 \pm 0.12 \text{ N/m}$$
 
 With a coefficient of determination R² = 0.9996, demonstrating excellent agreement with our linear model. Figure 3 presents the graphical analysis of our results.
 
-![Graph of statistical analysis results](/figures/A4/statistical_analysis_results.svg)
+![Graph of statistical analysis results](/figures/A4/spring_constant_analysis.svg)
 *Figure 3: Statistical analysis of the m vs. T² relationship showing experimental data points with error bars, weighted least-squares regression line, and 95% confidence intervals.*
 
 ### Discussion
