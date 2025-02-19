@@ -38,8 +38,6 @@ site:
   template: book-theme
   title: "Advanced Laboratory Methods in Physics"
   description: "A comprehensive guide to advanced laboratory techniques and methods in physics"
-  numbering:
-    headings: true
   actions:
     - title: "Report a Correction"
       url: https://github.com/veillette/hands-on/issues/new?labels=correction
@@ -51,8 +49,3 @@ site:
     logo_text: Advanced Lab
   nav: []
   domains: []
-html:
-  favicon : "figures/favicon.ico"
-  comments:
-    hypothesis: true
-    utterances: true
