@@ -1,0 +1,22 @@
+exports:
+  - format: pdf
+    template: book
+    output: complete_textbook.pdf
+  - format: epub
+    output: hands-on-physics-lab.epub
+  - format: docx
+    output: hands-on-physics-lab.docx
+
+actions:
+  - title: "Download PDF"
+    url: https://veillette.github.io/hands-on/downloads/complete_textbook.pdf
+    icon: download
+  - title: "Download EPUB"
+    url: https://veillette.github.io/hands-on/downloads/hands-on-physics-lab.epub
+    icon: book
+  - title: "Report a Correction"
+    url: https://github.com/veillette/hands-on/issues/new?labels=correction
+    icon: edit
+  - title: "Contribute"
+    url: https://github.com/veillette/hands-on/blob/main/CONTRIBUTING.md
+    icon: code
