@@ -1,34 +1,15 @@
 version: 1
-config:
-  site:
-    template: book-theme
-    title: "Advanced Laboratory Methods in Physics"
-    actions:
-      - title: "Download PDF"
-        url: https://veillette.github.io/hands-on/downloads/complete_textbook.pdf
-      - title: "Report a Correction"
-        url: https://github.com/veillette/hands-on/issues/new?labels=correction
-      - title: "Contribute"
-        url: https://github.com/veillette/hands-on/blob/main/CONTRIBUTING.md
-  project:
-    id: 11ed62b4-1bb1-4e06-a0af-69f30a5008fd
-    title: "Hands-On Advanced Physics Laboratory"
-    description: "A comprehensive guide to advanced laboratory techniques and scientific thinking for physics students."
-    keywords: ["physics", "laboratory", "experimental design", "data analysis", "scientific writing"]
-    authors:
-      - name: Martin Veillette
-        email: veillettem@berea.edu
-        affiliations:
-          - Department of Physics, Berea College
-    github: https://github.com/veillette/hands-on
-  exports:
-    - format: pdf
-      template: book
-      output: complete_textbook.pdf
-      files: "**/*.md"
-    - format: docx
-      output: hands-on-physics-lab.docx
-      files: "**/*.md"
+project:
+  id: 11ed62b4-1bb1-4e06-a0af-69f30a5008fd
+  title: "Hands-On Advanced Physics Laboratory"
+  description: "A comprehensive guide to advanced laboratory techniques and scientific thinking for physics students."
+  keywords: ["physics", "laboratory", "experimental design", "data analysis", "scientific writing"]
+  authors:
+    - name: Martin Veillette
+      email: veillettem@berea.edu
+      affiliations:
+        - Department of Physics, Berea College
+  github: https://github.com/veillette/hands-on
   toc:
     - file: Preamble.md
       title: Preface
@@ -58,3 +39,21 @@ config:
           title: Appendix 3 - Difference Elements
         - file: Appendix4.md
           title: Appendix 4 - Sample Writeout
+site:
+  template: book-theme
+  title: "Advanced Laboratory Methods in Physics"
+  actions:
+    - title: "Download PDF"
+      url: https://veillette.github.io/hands-on/downloads/complete_textbook.pdf
+    - title: "Report a Correction"
+      url: https://github.com/veillette/hands-on/issues/new?labels=correction
+    - title: "Contribute"
+      url: https://github.com/veillette/hands-on/blob/main/CONTRIBUTING.md
+exports:
+  - format: pdf
+    template: book
+    output: complete_textbook.pdf
+    files: "**/*.md"
+  - format: docx
+    output: hands-on-physics-lab.docx
+    files: "**/*.md"
