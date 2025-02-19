@@ -46,3 +46,5 @@ site:
   theme:
     footer:
       powered: false # Remove "Made with Myst"
+    logo:
+      path: "figures/A1/FigA1_1.png" # Replace with path to your logo
