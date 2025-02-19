@@ -58,7 +58,7 @@ $$\int_1^n \ln x \, dx = [x\ln x - x]_1^n = n\ln n - n + 1$$
 
 The integral approximates the sum $\ln 1 + \ln 2 + \ln 3 + ... + \ln n$, which equals $\ln(n!)$. 
 
-![Logarithm approximation](https://i.imgur.com/lgEiJFv.png)
+![Logarithm approximation](/figures/A1/FigA1_1.png)
 *The area under the curve of ln(x) approximates the sum of logarithms*
 
 Therefore:
@@ -133,7 +133,7 @@ This integral has been calculated numerically and tabulated. The table below sho
 | 2.0 | 0.48 |
 | 3.0 | 0.499 |
 
-![Gaussian Distribution Area](https://i.imgur.com/6mQHjKO.png)
+![Gaussian Distribution Area](/figures/A1/gaussian_area.svg)
 *Figure A1.1: The shaded area represents the probability of a deviation falling between 0 and x.*
 
 For the probability that a measurement falls within $\pm x/\sigma$ of the mean (the symmetric interval), we double these values.
