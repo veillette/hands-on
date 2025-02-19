@@ -56,12 +56,12 @@ site:
     syntax_highlighter:
       theme: github-light
     footer: "© 2025. All rights reserved."
+    show_myst_branding: false
   actions:
     - title: "Hands-On Advanced Physics"
       url: https://veillette.github.io/hands-on/
     - title: "Download PDF"
       url: https://veillette.github.io/hands-on/downloads/complete_textbook.pdf
 
-# Add this PDF configuration section
 pdf:
   branded: false
