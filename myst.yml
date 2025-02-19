@@ -60,3 +60,6 @@ site:
   actions:
     - title: "PDF"
       url: https://veillette.github.io/hands-on/downloads/complete_textbook.pdf
+    - title: "Report a Correction"
+      url: https://github.com/veillette/hands-on/issues/new?labels=correction
+  
