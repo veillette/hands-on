@@ -41,11 +41,6 @@ This textbook provides a thorough introduction to advanced laboratory methods in
 
 Visit the textbook website at [https://veillette.github.io/hands-on/](https://veillette.github.io/hands-on/)
 
-### Downloads
-
-- [PDF Version](https://veillette.github.io/hands-on/downloads/complete_textbook.pdf)
-- [EPUB Version](https://veillette.github.io/hands-on/downloads/hands-on-physics-lab.epub)
-
 ## Building Locally
 
 This textbook is built using [mystmd](https://mystmd.org/), a modern publishing system designed for scientific and technical content.
