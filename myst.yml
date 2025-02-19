@@ -11,9 +11,59 @@ project:
         - Department of Physics, Berea College
   github: https://github.com/veillette/hands-on
 
-includes:
-  - path: exportsActions.yml
-  - path: toc.yml
+exports:
+  - format: pdf
+    template: book
+    output: complete_textbook.pdf
+  - format: epub
+    output: hands-on-physics-lab.epub
+  - format: docx
+    output: hands-on-physics-lab.docx
+
+actions:
+  - title: "Download PDF"
+    url: https://veillette.github.io/hands-on/downloads/complete_textbook.pdf
+    icon: download
+  - title: "Download EPUB"
+    url: https://veillette.github.io/hands-on/downloads/hands-on-physics-lab.epub
+    icon: book
+  - title: "Report a Correction"
+    url: https://github.com/veillette/hands-on/issues/new?labels=correction
+    icon: edit
+  - title: "Contribute"
+    url: https://github.com/veillette/hands-on/blob/main/CONTRIBUTING.md
+    icon: code
+    
+toc:
+  - file: Preamble.md
+    title: Preface
+  - title: Chapters
+    children:
+      - file: Chapter1.md
+        title: Chapter 1 - Approach to Lab
+      - file: Chapter2.md
+        title: Chapter 2 - Measurements
+      - file: Chapter3.md
+        title: Chapter 3 - Statistics
+      - file: Chapter4.md
+        title: Chapter 4 - Nature of Thinking
+      - file: Chapter5.md
+        title: Chapter 5 - Designing Experiments
+      - file: Chapter6.md
+        title: Chapter 6 - Evaluating
+      - file: Chapter7.md
+        title: Chapter 7 - Writing
+  - title: Appendices
+    children:
+      - file: Appendix1.md
+        title: Appendix 1 - Gaussian
+      - file: Appendix2.md
+        title: Appendix 2 - Least Squares
+      - file: Appendix3.md
+        title: Appendix 3 - Difference Elements
+      - file: Appendix4.md
+        title: Appendix 4 - Sample Writeout
+        
   
 site:
   template: book-theme
