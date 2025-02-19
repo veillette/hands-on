@@ -1,4 +1,4 @@
-# Difference Tables and Finite Difference Calculus
+# Appendix 3: Difference Tables and Finite Difference Calculus
 
 ## Mathematical Foundations
 
