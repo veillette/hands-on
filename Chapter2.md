@@ -382,8 +382,8 @@ A value is reported as $583.2417 \pm 0.15$. Rewrite this with appropriate signif
 ```{admonition} Problem 8
 :class: question
 The resistance of a wire is measured at two temperatures:
-   - $R_1 = (125.3 \pm 0.4) \text{ \Omega}$ at $T_1 = 20°\text{C}$
-   - $R_2 = (138.1 \pm 0.4) \text{ \Omega}$ at $T_2 = 50°\text{C}$
+- $R_1 = (125.3 \,\pm\, 0.4)\,\Omega$ at $T_1 = 20\,^{\circ}\text{C}$
+- $R_2 = (138.1 \,\pm\, 0.4)\,\Omega$ at $T_2 = 50\,^{\circ}\text{C}$
    
 Calculate the temperature coefficient of resistance and its uncertainty using $\alpha = \frac{R_2-R_1}{R_1(T_2-T_1)}$.
 ```
