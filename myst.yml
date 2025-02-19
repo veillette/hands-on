@@ -50,18 +50,7 @@ site:
     primary_color: "#003366"
     syntax_highlighter:
       theme: github-light
-    math:
-      macros:
-        - \newcommand{\avg}[1]{\langle #1 \rangle}
-        - \newcommand{\vect}[1]{\boldsymbol{#1}}
     footer: "© 2025. All rights reserved."
-  nav:
-    - title: "Home"
-      url: /
-    - title: "Resources"
-      url: /resources
-    - title: "Contact"
-      url: /contact
   actions:
     - title: "Hands-On Advanced Physics"
       url: https://veillette.github.io/hands-on/
