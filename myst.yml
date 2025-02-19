@@ -40,10 +40,6 @@ site:
   description: "A comprehensive guide to advanced laboratory techniques and methods in physics"
   numbering:
     headings: true
-  options:
-    logo: ./figures/primary_rgb.png
-    logo_dark: ./figures/primary_white.png
-    logo_text: Modeling with Physics
   actions:
     - title: "Report a Correction"
       url: https://github.com/veillette/hands-on/issues/new?labels=correction
