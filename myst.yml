@@ -10,7 +10,13 @@ project:
       affiliations:
         - Department of Physics, Berea College
   github: https://github.com/veillette/hands-on
-  
+
+   # Add exports configuration here
+  exports:
+    - format: pdf
+      template: book
+      output: complete_textbook.pdf
+      
   toc:
     - file: Preamble.md
       title: Preface
