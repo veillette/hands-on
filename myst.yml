@@ -25,6 +25,7 @@ config:
     - format: pdf
       template: book
       output: complete_textbook.pdf
+      files: "**/*.md"
     - format: docx
       output: hands-on-physics-lab.docx
       files: "**/*.md"
