@@ -38,13 +38,25 @@ site:
   template: book-theme
   title: "Advanced Laboratory Methods in Physics"
   description: "A comprehensive guide to advanced laboratory techniques and methods in physics"
+  numbering:
+    headings: true
+  options:
+    logo: ./figures/primary_rgb.png
+    logo_dark: ./figures/primary_white.png
+    logo_text: Modeling with Physics
   actions:
     - title: "Report a Correction"
       url: https://github.com/veillette/hands-on/issues/new?labels=correction
     - title: "Contribute"
       url: https://github.com/veillette/hands-on/blob/main/CONTRIBUTING.md
-  theme:
-    footer:
-      powered: false # Remove "Made with Myst"
-    logo:
-      path: "figures/A1/FigA1_1.png" # Replace with path to your logo
+  options:
+    logo: ./figures/physics-logo-light.svg
+    logo_dark: ./figures/physics-logo-dark.svg
+    logo_text: Advanced Lab
+  nav: []
+  domains: []
+html:
+  favicon : "figures/favicon.ico"
+  comments:
+    hypothesis: true
+    utterances: true
