@@ -170,11 +170,11 @@ The planning process includes:
    With a clear precision goal—say, measuring g within 2%—you can work backward to determine requirements for each component measurement. For a pendulum experiment, if you need g within 2%, you might aim for uncertainties in length (ℓ) and period-squared (T²) below 1% each.
 
    If you can measure length with ±1mm uncertainty, the minimum acceptable length measurement would be:
-   $$\frac{0.1}{\ell} = 0.01 \quad \text{(ℓ in cm)}$$
+   $$\frac{0.1}{\ell} = 0.01 \quad \text{(\ell in cm)}$$
    $$\ell = 10 \text{ cm}$$
 
    Similarly, if timing uncertainty is ±0.2s, and period measurement requires 0.5% precision (for 1% in T²), the minimum timing interval would be:
-   $$\frac{0.2}{t} = 0.005$$
+   $$\frac{0.2 \text{s} }{t} = 0.005$$
    $$t = 40 \text{ seconds}$$
 
    This analysis helps ensure all measurements contribute meaningfully to your desired final precision. If any measurement appears limited to uncertainties exceeding your target, you'll need either more precise measurement methods or a revised precision goal.
