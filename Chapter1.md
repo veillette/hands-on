@@ -1,3 +1,11 @@
+---
+exports:
+  - format: docx
+  - format: pdf
+---
+
+
+Claude can make mistakes. Please double-check responses.
 # Approach to Laboratory Work
 
 While this textbook begins in physics labs, its scope extends far beyond. It serves as an introduction to experimental methodology that applies across all fields where we systematically study our world. 
