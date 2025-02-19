@@ -2,9 +2,8 @@
 
 A comprehensive guide to advanced laboratory techniques and scientific thinking for physics students.
 
-![Build Status](https://img.shields.io/github/workflow/status/veillette/hands-on/build)
-![License](https://img.shields.io/badge/license-CC--BY--4.0-blue)
-![Version](https://img.shields.io/github/v/release/veillette/hands-on)
+![License](https://img.shields.io/badge/License-CC--BY--4.0-green)
+
 
 ## Overview
 
