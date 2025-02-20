@@ -1,23 +1,21 @@
 name: MyST GitHub Pages Deploy with Multiple Exports
+
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
-  # Allows manual triggering from the Actions tab
   workflow_dispatch:
-  
+
 env:
   BASE_URL: /${{ github.event.repository.name }}
   NODE_VERSION: '22.x'
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write  # Changed to write to allow branch creation
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment
 concurrency:
   group: 'pages'
   cancel-in-progress: false
@@ -28,25 +26,25 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    timeout-minutes: 15  # Prevent runaway builds
-    
+    timeout-minutes: 15
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1  # Shallow clone for faster checkout
-      
+          fetch-depth: 0  # Changed to full history for branch creation
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-      
+
       - name: Install MyST Markdown
         run: npm install -g mystmd
-      
+
       - name: Cache build artifacts
         uses: actions/cache@v3
         with:
@@ -54,29 +52,55 @@ jobs:
           key: myst-build-${{ github.sha }}
           restore-keys: |
             myst-build-
-      
+
       - name: Create downloads directory
         run: |
           mkdir -p _build/downloads
           mkdir -p _build/html/downloads
-      
+
       - name: Build HTML Assets
         run: |
           echo "Building site with BASE_URL: $BASE_URL"
           myst build --html
         env:
-          NODE_OPTIONS: "--max-old-space-size=4096"  # Prevent memory issues
-                
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './_build/html'
-      
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-        
+          NODE_OPTIONS: "--max-old-space-size=4096"
+
+      - name: Create gh-pages branch if not exists
+        run: |
+          if ! git show-ref --quiet refs/heads/gh-pages; then
+            git checkout --orphan gh-pages
+            git rm -rf .
+            git commit --allow-empty -m "Initial gh-pages commit"
+            git checkout main
+          fi
+
+      - name: Deploy to gh-pages branch
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          
+          # Create a temporary directory and copy build files
+          mkdir -p /tmp/gh-pages
+          cp -r _build/html/* /tmp/gh-pages/
+          
+          # Switch to gh-pages branch
+          git checkout gh-pages
+          
+          # Remove existing files and copy new ones
+          rm -rf *
+          cp -r /tmp/gh-pages/* .
+          
+          # Add and commit changes
+          git add .
+          git commit -m "Deploy to GitHub Pages"
+          
+          # Push changes
+          git push origin gh-pages --force
+          
+          # Return to main branch
+          git checkout main
+
       - name: Deployment summary
         run: |
-          echo "🚀 Successfully deployed to ${{ steps.deployment.outputs.page_url }}"
+          echo "🚀 Successfully deployed to https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
           echo "Build completed at $(date)"
