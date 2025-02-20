@@ -21,19 +21,19 @@ project:
         - file: Chapter5.md
           title: Chapter 5 - Designing Experiments
         - file: Chapter6.md
-          title: Chapter 6 - Evaluating
+          title: Chapter 6 - Evaluating Results
         - file: Chapter7.md
-          title: Chapter 7 - Writing
+          title: Chapter 7 -  Scientific Writing
     - title: Appendices
       children:
         - file: Appendix1.md
-          title: Appendix 1 - Gaussian
+          title: Appendix 1 - Gaussian Distribution
         - file: Appendix2.md
-          title: Appendix 2 - Least Squares
+          title: Appendix 2 - Least Squares Fitting
         - file: Appendix3.md
           title: Appendix 3 - Difference Elements
         - file: Appendix4.md
-          title: Appendix 4 - Sample Writeup
+          title: Appendix 4 - Sample Laboratory Report
 site:
   template: book-theme
   title: "Advanced Laboratory Methods in Physics"
@@ -44,6 +44,7 @@ site:
     - title: "Contribute"
       url: https://github.com/veillette/hands-on/blob/main/CONTRIBUTING.md
   options:
+    favicon: ./figures/favicon.ico
     logo: ./figures/physics-logo-light.svg
     logo_dark: ./figures/physics-logo-dark.svg
     logo_text: Advanced Lab
