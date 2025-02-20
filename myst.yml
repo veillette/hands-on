@@ -6,7 +6,7 @@ project:
   keywords: ["physics", "laboratory", "experimental design", "data analysis", "scientific writing"]
   github: https://github.com/veillette/hands-on
   toc:
-    - file: Preamble.md
+    - file: Preface.md
       title: Preface
     - title: Chapters
       children:
