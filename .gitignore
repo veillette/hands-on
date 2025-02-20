@@ -1,6 +1,7 @@
 # Compiled output
 dist/
 _build/
+exports/
 
 # Node
 node_modules/

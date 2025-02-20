@@ -7,10 +7,11 @@ project:
   github: https://github.com/veillette/hands-on
   authors:
     - name: "Martin Veillette"
+  date: 2025-01-01
   exports:
-    - formats: pdf
-      template: plain_latex_book
-      output_folder: exports/textbook.pdf
+    - format: tex
+      template: lapreprint
+      output: exports/textbook.tex
       articles:
         - Preface.md
         - Chapter1.md
@@ -20,8 +21,31 @@ project:
         - Chapter5.md
         - Chapter6.md
         - Chapter7.md
+        - Appendix1.md
         - Appendix2.md
         - Appendix3.md
+        - Appendix4.md
+    - formats: pdf
+      template: lapreprint
+      output: exports/textbook.pdf
+      options:
+        numbered_sections: true
+        geometry:
+          - margin=1in
+        fontsize: 12pt
+      articles:
+        - Preface.md
+        - Chapter1.md
+        - Chapter2.md
+        - Chapter3.md
+        - Chapter4.md
+        - Chapter5.md
+        - Chapter6.md
+        - Chapter7.md
+        - Appendix1.md
+        - Appendix2.md
+        - Appendix3.md
+        - Appendix4.md
   toc:
     - file: Preface.md
       title: Preface
