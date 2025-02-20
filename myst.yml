@@ -5,6 +5,23 @@ project:
   description: "A comprehensive guide to advanced laboratory techniques and scientific thinking for physics students."
   keywords: ["physics", "laboratory", "experimental design", "data analysis", "scientific writing"]
   github: https://github.com/veillette/hands-on
+  authors:
+    - name: "Martin Veillette"
+  exports:
+    - formats: pdf
+      template: plain_latex_book
+      output_folder: exports/textbook.pdf
+      articles:
+        - Preface.md
+        - Chapter1.md
+        - Chapter2.md
+        - Chapter3.md
+        - Chapter4.md
+        - Chapter5.md
+        - Chapter6.md
+        - Chapter7.md
+        - Appendix2.md
+        - Appendix3.md
   toc:
     - file: Preface.md
       title: Preface
