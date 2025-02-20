@@ -33,7 +33,7 @@ project:
         - file: Appendix3.md
           title: Appendix 3 - Difference Elements
         - file: Appendix4.md
-          title: Appendix 4 - Sample Writeout
+          title: Appendix 4 - Sample Writeup
 site:
   template: book-theme
   title: "Advanced Laboratory Methods in Physics"
