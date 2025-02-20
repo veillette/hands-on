@@ -7,7 +7,9 @@ A comprehensive guide to advanced laboratory techniques and scientific thinking 
 
 ## Overview
 
-This textbook provides a thorough introduction to advanced laboratory methods in physics, focusing on experimental design, data analysis, scientific thinking, and technical writing. It is designed for upper-level undergraduate physics students and early graduate students.
+This textbook provides a thorough introduction to advanced laboratory methods in physics,
+focusing on experimental design, data analysis, scientific thinking, and technical writing.
+It is designed for upper-level undergraduate physics students.
 
 ## Features
 
@@ -16,7 +18,6 @@ This textbook provides a thorough introduction to advanced laboratory methods in
 - Guidance on scientific thinking and experimental design
 - Professional scientific writing instruction
 - Interactive examples and exercises
-- Downloadable in multiple formats (PDF, EPUB)
 
 ## Table of Contents
 
