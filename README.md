@@ -50,8 +50,8 @@ This textbook is built using [mystmd](https://mystmd.org/), a modern publishing 
 git clone https://github.com/veillette/hands-on.git
 cd hands-on
 
-# Install mystmd if not already installed
-npm install -g mystmd
+# Install packages such as mystmd if not already installed
+npm install
 
 # Build the site
 myst build
