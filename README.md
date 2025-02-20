@@ -73,7 +73,7 @@ Types of contributions we're looking for:
 
 ## License
 
-This work is licensed under a [Creative Commons Attribution 4.0 International License](LICENSE.md).
+This work is licensed under a [Creative Commons Attribution 4.0 International License](LICENSE).
 
 ## Contact
 
