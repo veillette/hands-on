@@ -9,6 +9,23 @@ project:
     - name: "Martin Veillette"
   date: 2025-01-01
   exports:
+    - format: typst
+      id: typstpdf
+  #   template: https://github.com/rowanc1/typst-book.git
+      output: exports/textbook_typst.pdf
+      articles:
+        - Preface.md
+        - Chapter1.md
+        - Chapter2.md
+        - Chapter3.md
+        - Chapter4.md
+        - Chapter5.md
+        - Chapter6.md
+        - Chapter7.md
+        - Appendix1.md
+        - Appendix2.md
+        - Appendix3.md
+        - Appendix4.md
     - format: tex
       template: lapreprint
       output: exports/textbook.tex
