@@ -232,7 +232,7 @@ Our experimental procedure followed these detailed steps:
 
 4. **Measurement procedure:**
    - The pan was attached to the spring and allowed to reach equilibrium
-   - Initial position was marked on a background grid for reference
+   - The initial position was marked on a background grid for reference
    - Calibrated weights were added incrementally (0.05 kg steps)
    - For each load configuration:
      * The system was displaced 2.0 cm downward using a release mechanism
