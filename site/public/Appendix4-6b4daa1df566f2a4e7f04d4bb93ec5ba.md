@@ -232,7 +232,7 @@ Our experimental procedure followed these detailed steps:
 
 4. **Measurement procedure:**
    - The pan was attached to the spring and allowed to reach equilibrium
-   - Initial position was marked on a background grid for reference
+   - The initial position was marked on a background grid for reference
    - Calibrated weights were added incrementally (0.05 kg steps)
    - For each load configuration:
      * The system was displaced 2.0 cm downward using a release mechanism
@@ -347,4 +347,4 @@ To investigate this effect further, we performed supplementary analysis by incor
 ### Conclusion
 The oscillation method, combined with modern computational analysis techniques, provides an accurate and precise means of determining spring constants. Our experiment achieved a final uncertainty of 1.2%, demonstrating the effectiveness of our experimental design and analysis methodology.
 
-The intercept likely indicates the presence of unaccounted mass in the system—possibly from the weight pan or the spring itself. Although we haven't tested these hypotheses directly, they provide reasonable explanations for the observed behavior. However, in order to aacount for our observation, the mass would need to be negative. The small negative intercept revealed through our analysis highlights an important pedagogical point: real physical systems often contain subtle effects not captured in simplified models. Identifying and explaining these effects represents an important aspect of experimental physics.
+The intercept likely indicates the presence of unaccounted mass in the system—possibly from the weight pan or the spring itself. Although we haven't tested these hypotheses directly, they provide reasonable explanations for the observed behavior. However, in order to account for our observation, the mass would need to be negative. The small negative intercept revealed through our analysis highlights an important pedagogical point: real physical systems often contain subtle effects not captured in simplified models. Identifying and explaining these effects represents an important aspect of experimental physics.
