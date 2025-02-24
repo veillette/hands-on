@@ -83,7 +83,7 @@ Once your observations are plotted, you're ready for the crucial step—comparin
 
 If you're working with a completely specified model without undetermined parameters, your goal is simply assessing how well model predictions match experimental observations. Draw the model's function on the same graph as your experimental points, using identical scales. This approach was illustrated earlier with falling object observations compared to the theoretical expression:
 
-t = 0.4515 x^(1/2)
+$$t = 0.4515 x^(1/2)$$
 
 How do you judge correspondence quality? This is where uncertainty intervals become crucial. Without them, the inevitable scatter in experimental points would make meaningful comparison impossible—what are the chances of a theoretical line passing exactly through multiple scattered points? When points represent possible value intervals rather than single values, logical assessment becomes possible.
 
@@ -129,7 +129,7 @@ In these cases, the model contains initially unknown quantities, so you cannot d
 
 Consider measuring current through and potential difference across a resistor to test Ohm's Law (V = IR). Without knowing resistance R, the model behavior encompasses all lines through the origin on the I-V plane described by:
 
-V = constant × I
+$$V = constant × I$$
 
 where the constant could be any positive value. In principle, you could draw all possible lines on your graph and determine: (1) the extent to which system and model behaviors overlap, and (2) the range of R values appropriate for your system (as illustrated in Figure 4.11).
 
@@ -149,17 +149,17 @@ In Figure 6.2(b), you might choose AB as your "best" line and determine that lin
 
 Once you've selected appropriate lines, determine their slopes numerically to calculate your desired parameter (like resistance R in our Ohm's Law example). For slope calculation, angle is irrelevant—you need the quantitative relationship between measured variables. For a line like AB in Figure 6.3, identify precise coordinates where it crosses graph grid intersections near its endpoints. If these coordinates are (I₁, V₁) and (I₂, V₂), calculate:
 
-slope = (V₂ - V₁)/(I₂ - I₁)
+$$slope = (V₂ - V₁)/(I₂ - I₁)$$
 
 For our example, R equals this slope directly. In more complex cases, you might need additional calculations involving other measured quantities to determine your final answer.
 
 Perform this process three times: once for your "best" line (AB) and once each for your upper and lower limiting lines (CF and ED). This gives your best value for R plus upper and lower limits beyond which you're "almost certain" the true value doesn't lie. Typically, these extreme values are roughly equidistant from your central value, allowing you to express your result as:
 
-R = value ± uncertainty
+$$R = value ± uncertainty$$
 
 Sometimes your "best" line and limiting lines won't appear equally spaced, usually because too few points prevent good line assessment. While sometimes experimenters feel compelled to express asymmetric uncertainties as:
 
-value (+ uncertainty₁ / - uncertainty₂)
+$$value (+ uncertainty₁ / - uncertainty₂)$$
 
 visual graph judgment rarely justifies such precision. If identifying a clear "best" line proves genuinely difficult, you can simply delineate the edges of the value band (lines ED and CF in Figure 6.3), calculate maximum and minimum slopes, and express your experimental result as the interval between these slopes, or as their average ± half their difference.
 
@@ -197,27 +197,27 @@ This criterion offers no automatic path to "truth" or "correct" answers—it's s
 
 Mathematically, we define the best line as that which minimizes:
 
-∑(P₁Q₁)²
+$$∑(P₁Q₁)²$$
 
 giving parameters (slope m and intercept b) for that line.
 
 If our line equation is y = mx + b, each deviation δyᵢ equals the difference between measured y value and the corresponding point on the line:
 
-δyᵢ = yᵢ - (mxᵢ + b)
+$$\delta yᵢ = yᵢ - (mxᵢ + b)$$
 
 The least squares criterion seeks to minimize:
 
-∑[yᵢ - (mxᵢ + b)]² = M
+$$∑[yᵢ - (mxᵢ + b)]² = M$$
 
 with conditions:
 
-∂M/∂m = 0 and ∂M/∂b = 0
+$$∂M/∂m = 0$$ and $$∂M/∂b = 0$$
 
 Solving these equations (full derivation in Appendix A2) yields formulas for the best-fit line parameters:
 
-m = [N∑(xᵢyᵢ) - ∑xᵢ∑yᵢ]/[N∑xᵢ² - (∑xᵢ)²]
+$$m = \left[N∑(xᵢyᵢ) - ∑xᵢ∑yᵢ\right]/\left[N∑xᵢ² - (∑xᵢ)²\right]$$
 
-b = [∑xᵢ²∑yᵢ - ∑xᵢ∑(xᵢyᵢ)]/[N∑xᵢ² - (∑xᵢ)²]
+$$b = \left[∑xᵢ²∑yᵢ - ∑xᵢ∑(xᵢyᵢ)\right]/ \left[N∑xᵢ² - (∑xᵢ)²\right]$$
 
 We've now replaced potentially questionable visual judgment with a mathematical procedure yielding results of well-defined significance and universal acceptability. Since this method has statistical foundations, we can expect more precise uncertainty calculations. The least squares principle immediately provides standard deviations for slope and intercept, giving uncertainties with known statistical significance.
 
@@ -227,9 +227,9 @@ Sy = √[∑(δyᵢ)²/(N-2)]
 
 Don't worry about the N-2 denominator rather than the familiar N or N-1; it results from applying standard deviation definition to line positioning on a plane. The standard deviations for slope and intercept are:
 
-Sm = Sy × √[N/(N∑xᵢ² - (∑xᵢ)²)]
+$$Sm = Sy × √[N/(N∑xᵢ² - (∑xᵢ)²)]$$
 
-Sb = Sy × √[∑xᵢ²/(N∑xᵢ² - (∑xᵢ)²)]
+$$Sb = Sy × √[∑xᵢ²/(N∑xᵢ² - (∑xᵢ)²)]$$
 
 Full derivations appear in Appendix A2.
 
