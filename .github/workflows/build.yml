@@ -42,6 +42,15 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Add frontmatter to markdown files
+        run: |
+          node scripts/add-frontmatter.js
+
+      - name: Install XeTeX and ImageMagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-fonts-extra imagemagick
+
       - name: Install MyST Markdown
         run: npm install -g mystmd
 
@@ -57,6 +66,11 @@ jobs:
         run: |
           mkdir -p _build/downloads
           mkdir -p _build/html/downloads
+
+      - name: Build PDF, DOCX, and md Assets
+        run: |
+          echo "Build PDF Assets, docx, and md"
+          myst build -a
 
       - name: Build HTML Assets
         run: |
