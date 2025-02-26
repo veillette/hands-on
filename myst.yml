@@ -12,44 +12,7 @@ project:
     - format: typst
       id: typstpdf
   #   template: https://github.com/rowanc1/typst-book.git
-      output: exports/textbook_typst.pdf
-      articles:
-        - content/Preface.md
-        - content/Chapter1.md
-        - content/Chapter2.md
-        - content/Chapter3.md
-        - content/Chapter4.md
-        - content/Chapter5.md
-        - content/Chapter6.md
-        - content/Chapter7.md
-        - content/Appendix1.md
-        - content/Appendix2.md
-        - content/Appendix3.md
-        - content/Appendix4.md
-    - format: tex
-      template: lapreprint
-      output: exports/textbook.tex
-      articles:
-        - content/Preface.md
-        - content/Chapter1.md
-        - content/Chapter2.md
-        - content/Chapter3.md
-        - content/Chapter4.md
-        - content/Chapter5.md
-        - content/Chapter6.md
-        - content/Chapter7.md
-        - content/Appendix1.md
-        - content/Appendix2.md
-        - content/Appendix3.md
-        - content/Appendix4.md
-    - formats: pdf
-      template: lapreprint
       output: exports/textbook.pdf
-      options:
-        numbered_sections: true
-        geometry:
-          - margin=1in
-        fontsize: 12pt
       articles:
         - content/Preface.md
         - content/Chapter1.md
