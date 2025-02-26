@@ -1,0 +1,31 @@
+jtex: v1
+title: 'Curvenote Docx Template'
+description: 'Template for docx curvenote exports'
+version: 1.0.0
+license: CC-BY-4.0
+source: 'https://github.com/curvenote/curvenote'
+thumbnail: ./thumbnail.png
+authors:
+  - name: 'Franklin Koch'
+    website: 'https://curvenote.com'
+    affiliations:
+      - 'curvenote'
+tags:
+  - paper
+parts: []
+doc:
+  - id: title
+    required: true
+  - id: authors
+  - id: bibliography
+options:
+  - id: hideFooter
+    type: boolean
+    default: false
+    description: Hide Curvenote logo footer on each page
+files:
+  - template.tex
+  - logo.png
+  - styles.xml
+packages:
+  - docx

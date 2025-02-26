@@ -1,0 +1,531 @@
+{
+  "input": {
+    "files": [],
+    "opts": {
+      "execute": false,
+      "pdf": false,
+      "tex": false,
+      "typst": false,
+      "docx": false,
+      "md": false,
+      "xml": false,
+      "meca": false,
+      "cff": false,
+      "site": false,
+      "html": false,
+      "all": true,
+      "doiBib": false,
+      "watch": false,
+      "force": false,
+      "checkLinks": false,
+      "strict": false,
+      "ci": false,
+      "maxSizeWebp": 1572864
+    },
+    "performSiteBuild": true
+  },
+  "exports": [
+    {
+      "format": "typst",
+      "id": "typstpdf",
+      "output": "/home/runner/work/hands-on/hands-on/exports/textbook.pdf",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Preface.md"
+        },
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter1.md"
+        },
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter2.md"
+        },
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter3.md"
+        },
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter4.md"
+        },
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter5.md"
+        },
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter6.md"
+        },
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter7.md"
+        },
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Appendix1.md"
+        },
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Appendix2.md"
+        },
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Appendix3.md"
+        },
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Appendix4.md"
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/myst.yml",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "md",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Preface.md",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Preface.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Preface.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "typst",
+      "template": "lapreprint-typst",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Preface.pdf",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Preface.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Preface.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "docx",
+      "template": "curvenote",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Preface.docx",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Preface.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Preface.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "md",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter1.md",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter1.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter1.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "typst",
+      "template": "lapreprint-typst",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter1.pdf",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter1.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter1.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "docx",
+      "template": "curvenote",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter1.docx",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter1.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter1.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "md",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter2.md",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter2.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter2.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "typst",
+      "template": "lapreprint-typst",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter2.pdf",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter2.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter2.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "docx",
+      "template": "curvenote",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter2.docx",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter2.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter2.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "md",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter3.md",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter3.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter3.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "typst",
+      "template": "lapreprint-typst",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter3.pdf",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter3.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter3.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "docx",
+      "template": "curvenote",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter3.docx",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter3.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter3.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "md",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter4.md",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter4.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter4.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "typst",
+      "template": "lapreprint-typst",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter4.pdf",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter4.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter4.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "docx",
+      "template": "curvenote",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter4.docx",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter4.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter4.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "md",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter5.md",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter5.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter5.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "typst",
+      "template": "lapreprint-typst",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter5.pdf",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter5.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter5.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "docx",
+      "template": "curvenote",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter5.docx",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter5.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter5.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "md",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter6.md",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter6.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter6.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "typst",
+      "template": "lapreprint-typst",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter6.pdf",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter6.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter6.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "docx",
+      "template": "curvenote",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter6.docx",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter6.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter6.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "md",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter7.md",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter7.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter7.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "typst",
+      "template": "lapreprint-typst",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter7.pdf",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter7.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter7.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "docx",
+      "template": "curvenote",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Chapter7.docx",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Chapter7.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Chapter7.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "md",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Appendix1.md",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Appendix1.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Appendix1.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "typst",
+      "template": "lapreprint-typst",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Appendix1.pdf",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Appendix1.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Appendix1.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "docx",
+      "template": "curvenote",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Appendix1.docx",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Appendix1.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Appendix1.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "md",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Appendix2.md",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Appendix2.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Appendix2.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "typst",
+      "template": "lapreprint-typst",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Appendix2.pdf",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Appendix2.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Appendix2.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "docx",
+      "template": "curvenote",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Appendix2.docx",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Appendix2.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Appendix2.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "md",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Appendix3.md",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Appendix3.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Appendix3.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "typst",
+      "template": "lapreprint-typst",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Appendix3.pdf",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Appendix3.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Appendix3.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "docx",
+      "template": "curvenote",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Appendix3.docx",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Appendix3.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Appendix3.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "md",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Appendix4.md",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Appendix4.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Appendix4.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "typst",
+      "template": "lapreprint-typst",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Appendix4.pdf",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Appendix4.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Appendix4.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    },
+    {
+      "format": "docx",
+      "template": "curvenote",
+      "output": "/home/runner/work/hands-on/hands-on/content/exports/Appendix4.docx",
+      "articles": [
+        {
+          "file": "/home/runner/work/hands-on/hands-on/content/Appendix4.md",
+          "level": 0
+        }
+      ],
+      "$file": "/home/runner/work/hands-on/hands-on/content/Appendix4.md",
+      "$project": "/home/runner/work/hands-on/hands-on"
+    }
+  ],
+  "buildSite": true
+}
