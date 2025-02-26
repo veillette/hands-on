@@ -44,7 +44,7 @@ jobs:
 
       - name: Add frontmatter to markdown files
         run: |
-          node scripts/add-frontmatter.js
+          node scripts/addFrontMatter.js
 
       - name: Install XeTeX and ImageMagick
         run: |
@@ -79,6 +79,10 @@ jobs:
         env:
           NODE_OPTIONS: "--max-old-space-size=4096"
 
+      - name: Clean up frontmatter to markdown files
+        run: |
+          node scripts/cleanFrontMatter.js
+          
       - name: Deploy to gh-pages branch
         run: |
           git config --global user.name "GitHub Actions"
@@ -87,6 +91,7 @@ jobs:
           # Create a temporary directory and copy build files
           mkdir -p /tmp/gh-pages
           cp -r _build/* /tmp/gh-pages/
+          cp -r exports/* /tmp/gh-pages/
           
           # Switch to gh-pages branch
           git checkout gh-pages
