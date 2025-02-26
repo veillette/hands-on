@@ -91,7 +91,6 @@ jobs:
           # Create a temporary directory and copy build files
           mkdir -p /tmp/gh-pages
           cp -r _build/* /tmp/gh-pages/
-          cp -r exports/* /tmp/gh-pages/
           
           # Switch to gh-pages branch
           git checkout gh-pages
