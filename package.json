@@ -7,14 +7,26 @@
     "type": "git",
     "url": "https://github.com/veillette/hands-on"
   },
-  "author": "Martin Veillette",
+  "bugs": {
+    "url": "https://github.com/veillette/hands-on/issues"
+  },
+  "homepage": "https://veillette.github.io/hands-on",
+  "author": {
+    "name": "Martin Veillette",
+    "url": "https://github.com/veillette"
+  },
   "license": "Commons Attribution-NonCommercial-ShareAlike 4.0 International",
   "dependencies": {
     "mystmd": "^1.3.23"
   },
   "scripts": {
-    "export": "myst build --pdf",
+    "export": "myst build -a",
+    "build": "myst build --html",
     "clean": "myst clean",
-    "serve": "myst start"
+    "serve": "myst start",
+    "pdf": "myst build --pdf",
+    "docx": "myst build --docx",
+    "addFrontMatter": "cd $HOME/hands-on/ && node ./scripts/addFrontMatter.js",
+    "removeFrontMatter": "cd $HOME/hands-on/ && node ./scripts/cleanFrontMatter.js"
   }
 }
