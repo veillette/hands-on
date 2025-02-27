@@ -52,7 +52,8 @@ jobs:
           sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-fonts-extra 
           sudo apt-get install -y imagemagick
           sudo apt-get install -y cargo
-          sudo cargo install --locked typst-cli
+          # Install a version of typst-cli that's compatible with rustc 1.75.0
+          sudo cargo install --locked typst-cli@0.11.1
 
       - name: Install MyST Markdown
         run: npm install -g mystmd
