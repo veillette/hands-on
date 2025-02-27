@@ -211,13 +211,13 @@ $$\sum_i \left[y_i - (mx_i + b) \right]^2 = \chi$$
 
 with conditions:
 
-$$ \frac{\partial M}{\partial m} = 0$$ and $$\frac{\partial M}{\partial b} = 0$$
+$ \frac{\partial M}{\partial m} = 0$ and $\frac{\partial M}{\partial b} = 0$
 
 Solving these equations (full derivation in Appendix A2) yields formulas for the best-fit line parameters:
 
-$$m = \left[N∑(xᵢyᵢ) - ∑xᵢ∑yᵢ\right]/\left[N∑xᵢ² - (∑xᵢ)²\right]$$
+$$m = \frac{N\sum(x_iy_i) - \sum x_i\sum y_i}{N\sum x_i^2 - (\sum x_i)^2}$$
 
-$$b = \left[∑xᵢ²∑yᵢ - ∑xᵢ∑(xᵢyᵢ)\right]/ \left[N∑xᵢ² - (∑xᵢ)²\right]$$
+$$b = \frac{\sum x_i^2 \sum y_i - \sum x_i\sum (x_i y_i)}{N\sum x_i^2 - (\sum x_i)^2}$$
 
 We've now replaced potentially questionable visual judgment with a mathematical procedure yielding results of well-defined significance and universal acceptability. Since this method has statistical foundations, we can expect more precise uncertainty calculations. The least squares principle immediately provides standard deviations for slope and intercept, giving uncertainties with known statistical significance.
 
