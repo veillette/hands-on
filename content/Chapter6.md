@@ -197,21 +197,21 @@ This criterion offers no automatic path to "truth" or "correct" answers—it's s
 
 Mathematically, we define the best line as that which minimizes:
 
-$$∑(P₁Q₁)²$$
+$$ \sum_i \left( P_i Q_i \right)^2$$
 
 giving parameters (slope m and intercept b) for that line.
 
-If our line equation is y = mx + b, each deviation δyᵢ equals the difference between measured y value and the corresponding point on the line:
+If our line equation is $y = mx + b$, each deviation $\delta y_i$ equals the difference between measured y value and the corresponding point on the line:
 
-$$\delta yᵢ = yᵢ - (mxᵢ + b)$$
+$$\delta y_i = y_i - (m x_i  + b)$$
 
 The least squares criterion seeks to minimize:
 
-$$∑[yᵢ - (mxᵢ + b)]² = M$$
+$$\sum_i \left[y_i - (mx_i + b) \right]^2 = \chi$$
 
 with conditions:
 
-$$∂M/∂m = 0$$ and $$∂M/∂b = 0$$
+$$ \frac{\partial M}{\partial m} = 0$$ and $$\frac{\partial M}{\partial b} = 0$$
 
 Solving these equations (full derivation in Appendix A2) yields formulas for the best-fit line parameters:
 
@@ -223,13 +223,13 @@ We've now replaced potentially questionable visual judgment with a mathematical 
 
 These standard deviations are calculated using the standard deviation of y-value deviations from the best line, Sy:
 
-Sy = √[∑(δyᵢ)²/(N-2)]
+$$S_y = \sqrt{\frac{\sum(\delta y_i)^2}{N-2}}$$
 
 Don't worry about the N-2 denominator rather than the familiar N or N-1; it results from applying standard deviation definition to line positioning on a plane. The standard deviations for slope and intercept are:
 
-$$Sm = Sy × √[N/(N∑xᵢ² - (∑xᵢ)²)]$$
+$$S_m = S_y \sqrt{\frac{N}{N\sum x_i^2 - (\sum x_i)^2}}$$
 
-$$Sb = Sy × √[∑xᵢ²/(N∑xᵢ² - (∑xᵢ)²)]$$
+$$S_b = S_y \sqrt{\frac{\sum x_i^2}{N\sum x_i^2 - (\sum x_i)^2}}$$
 
 Full derivations appear in Appendix A2.
 
@@ -267,11 +267,11 @@ With appropriate caution regarding potential limitations, here are some common f
 
 As discussed in experiment planning chapters, logarithmic plotting helps identify power law relationships. Consider the function:
 
-y = xᵃ
+$$y = x^a$$
 
 Taking logarithms of both sides:
 
-log y = a·log x
+$$log y = a·log x$$
 
 A graph of log y versus log x produces a straight line with slope a. To test whether observations follow a power law, plot them as log y versus log x. If points align with a straight line, you can conclude a simple power function (positive/negative, integral/fractional as determined by the graph) fits your observations well. The appropriate power value comes from the graph's slope, with uncertainty limits depending on plotted point uncertainties.
 
@@ -281,11 +281,11 @@ Such graphs can use ordinary paper (plotting actual log x and log y values) or l
 
 Many physical phenomena follow exponential relationships:
 
-y = ae^(bx)
+$$y = ae^{bx} $$
 
 Taking natural logarithms:
 
-ln y = ln a + bx
+$$\ln y = \ln a + bx$$
 
 This creates a straight line when plotting ln y versus x (a "semi-log plot"). If you suspect an exponential function might apply to your system, create a semi-log plot using either ordinary graph paper (calculating ln y values) or semi-log paper (with one logarithmic and one linear scale). Appropriate a and b values come from the intercept and slope, with uncertainties determined by measurement precision.
 
@@ -293,7 +293,7 @@ This creates a straight line when plotting ln y versus x (a "semi-log plot"). If
 
 If neither power laws nor exponential functions adequately match your observations, the chances of finding a more complex function that fits well are slim. In such cases, polynomial approximations often prove useful:
 
-y = a₀ + a₁x + a₂x² + ...
+$$y = a_0 + a_1 x + a_2 x^2 + \cdots $$
 
 While such representations essentially admit ignorance about underlying system mechanisms, they still offer empirical modeling advantages—facilitating computation and providing bases for interpolation and extrapolation.
 
