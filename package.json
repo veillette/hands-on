@@ -23,7 +23,7 @@
     "export": "myst build -a",
     "build": "myst build --html",
     "clean": "myst clean",
-    "serve": "myst start",
+    "serve": "npx serve _build/html",
     "pdf": "myst build --pdf",
     "docx": "myst build --docx",
     "addFrontMatter": "cd $HOME/hands-on/ && node ./scripts/addFrontMatter.js",
