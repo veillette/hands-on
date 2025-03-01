@@ -5,7 +5,7 @@
 When we make multiple measurements of a quantity that contains random fluctuation, we need a method to determine the most probable value. The principle of least squares provides this method by finding the value that minimizes the squared deviations from our measurements.
 
 :::{iframe} https://phet.colorado.edu/sims/html/least-squares-regression/latest/least-squares-regression_en.html
-:placeholder: https://phet.colorado.edu/sims/html/least-squares-regression/latest/least-squares-regression-600.png
+:placeholder: ../figures/phet/least-squares-regression-600.png
 :width: 100%
 Let's explore the principle of least squares with this interactive simulation.
 :::
