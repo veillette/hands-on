@@ -68,11 +68,11 @@ jobs:
       - name: Install Typst
         if: steps.cache-typst.outputs.cache-hit != 'true'
         run: |
-        # Download pre-built binary instead of building from source
-        curl -L -o typst.tar.xz https://github.com/typst/typst/releases/download/v0.11.1/typst-x86_64-unknown-linux-musl.tar.xz
-        tar -xf typst.tar.xz
-        sudo mv typst-x86_64-unknown-linux-musl/typst /usr/local/bin/
-        rm -rf typst-x86_64-unknown-linux-musl typst.tar.xz
+          # Download pre-built binary instead of building from source
+          curl -L -o typst.tar.xz https://github.com/typst/typst/releases/download/v0.11.1/typst-x86_64-unknown-linux-musl.tar.xz
+          tar -xf typst.tar.xz
+          sudo mv typst-x86_64-unknown-linux-musl/typst /usr/local/bin/
+          rm -rf typst-x86_64-unknown-linux-musl typst.tar.xz
       
       - name: Install MyST Markdown
         run: npm install -g mystmd
