@@ -117,8 +117,8 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
-
+        uses: actions/deploy-pages@v4
+        
       - name: Deployment summary
         run: |
           echo "🚀 Successfully deployed to https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
