@@ -8,53 +8,53 @@ project:
   authors:
     - name: "Martin Veillette"
   date: 2025-01-01
-  exports:
-    - format: typst
-      id: typstpdf
-  #   template: https://github.com/rowanc1/typst-book.git
-      output: exports/textbook.pdf
-      articles:
-        - content/Preface.md
-        - content/Chapter1.md
-        - content/Chapter2.md
-        - content/Chapter3.md
-        - content/Chapter4.md
-        - content/Chapter5.md
-        - content/Chapter6.md
-        - content/Chapter7.md
-        - content/Appendix1.md
-        - content/Appendix2.md
-        - content/Appendix3.md
-        - content/Appendix4.md
-  toc:
-    - file: content/Preface.md
-      title: Preface
-    - title: Chapters
-      children:
-        - file: content/Chapter1.md
-          title: Chapter 1 - Approach to Lab
-        - file: content/Chapter2.md
-          title: Chapter 2 - Measurements
-        - file: content/Chapter3.md
-          title: Chapter 3 - Statistics
-        - file: content/Chapter4.md
-          title: content/Chapter 4 - Nature of Thinking
-        - file: content/Chapter5.md
-          title: Chapter 5 - Designing Experiments
-        - file: content/Chapter6.md
-          title: Chapter 6 - Evaluating Results
-        - file: content/Chapter7.md
-          title: Chapter 7 -  Scientific Writing
-    - title: Appendices
-      children:
-        - file: content/Appendix1.md
-          title: Appendix 1 - Gaussian Distribution
-        - file: content/Appendix2.md
-          title: Appendix 2 - Least Squares Fitting
-        - file: content/Appendix3.md
-          title: Appendix 3 - Difference Elements
-        - file: content/Appendix4.md
-          title: Appendix 4 - Sample Laboratory Report
+exports:
+  - format: typst
+    id: typstpdf
+    # template: https://github.com/rowanc1/typst-book.git
+    output: exports/textbook.pdf
+articles:
+  - content/Preface.md
+  - content/Chapter1.md
+  - content/Chapter2.md
+  - content/Chapter3.md
+  - content/Chapter4.md
+  - content/Chapter5.md
+  - content/Chapter6.md
+  - content/Chapter7.md
+  - content/Appendix1.md
+  - content/Appendix2.md
+  - content/Appendix3.md
+  - content/Appendix4.md
+toc:
+  - file: content/Preface.md
+    title: Preface
+  - title: Chapters
+    children:
+      - file: content/Chapter1.md
+        title: Chapter 1 - Approach to Lab
+      - file: content/Chapter2.md
+        title: Chapter 2 - Measurements
+      - file: content/Chapter3.md
+        title: Chapter 3 - Statistics
+      - file: content/Chapter4.md
+        title: Chapter 4 - Nature of Thinking
+      - file: content/Chapter5.md
+        title: Chapter 5 - Designing Experiments
+      - file: content/Chapter6.md
+        title: Chapter 6 - Evaluating Results
+      - file: content/Chapter7.md
+        title: Chapter 7 - Scientific Writing
+  - title: Appendices
+    children:
+      - file: content/Appendix1.md
+        title: Appendix 1 - Gaussian Distribution
+      - file: content/Appendix2.md
+        title: Appendix 2 - Least Squares Fitting
+      - file: content/Appendix3.md
+        title: Appendix 3 - Difference Elements
+      - file: content/Appendix4.md
+        title: Appendix 4 - Sample Laboratory Report
 site:
   template: book-theme
   title: "Advanced Laboratory Methods in Physics"
@@ -69,5 +69,5 @@ site:
     logo: ./figures/physics-logo-light.svg
     logo_dark: ./figures/physics-logo-dark.svg
     logo_text: Advanced Lab
-  nav: []
-  domains: []
+    nav: []
+    domains: []
