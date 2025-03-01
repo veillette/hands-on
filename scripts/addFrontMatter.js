@@ -50,18 +50,21 @@ async function addFrontmatterToMarkdownFiles() {
 exports:
   - format: md
     output: exports/${chapterName}.md
+    id: ${chapterName}md
   - format: pdf
     template: lapreprint-typst
     output: exports/${chapterName}.pdf
+    id: ${chapterName}pdf
   - format: docx
     template: curvenote
     output: exports/${chapterName}.docx
+    id: ${chapterName}docx
 downloads:
-  - file: ./exports/${chapterName}.md
+  - id: ${chapterName}md
     title: markdown
-  - file: ./exports/${chapterName}.pdf
+  - id: ${chapterName}pdf
     title: PDF
-  - file: ./exports/${chapterName}.docx
+  - id: ${chapterName}docx
     title: docx
 ---`;
 
