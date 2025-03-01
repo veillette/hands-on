@@ -68,10 +68,12 @@ jobs:
       - name: Install Typst
         if: steps.cache-typst.outputs.cache-hit != 'true'
         run: |
-          sudo apt-get install -y cargo
-          # Install a version of typst-cli that's compatible with rustc 1.75.0
-          cargo install --locked typst-cli@0.11.1
-
+        # Download pre-built binary instead of building from source
+        curl -L -o typst.tar.xz https://github.com/typst/typst/releases/download/v0.11.1/typst-x86_64-unknown-linux-musl.tar.xz
+        tar -xf typst.tar.xz
+        sudo mv typst-x86_64-unknown-linux-musl/typst /usr/local/bin/
+        rm -rf typst-x86_64-unknown-linux-musl typst.tar.xz
+      
       - name: Install MyST Markdown
         run: npm install -g mystmd
 
