@@ -66,6 +66,8 @@ downloads:
     title: PDF
   - id: ${chapterName}docx
     title: docx
+edit_url: https://github.com/veillette/hands-on/blob/main/content/${chapterName}.md
+abstract: ""
 ---`;
 
       // Check if file already has frontmatter
