@@ -27,6 +27,6 @@
     "pdf": "myst build --pdf",
     "docx": "myst build --docx",
     "addFrontMatter": "cd $HOME/hands-on/ && node ./scripts/addFrontMatter.js",
-    "removeFrontMatter": "cd $HOME/hands-on/ && node ./scripts/cleanFrontMatter.js"
+    "removeFrontMatter": "cd $HOME/hands-on/ && node scripts/removeFrontMatter.js"
   }
 }
