@@ -108,7 +108,7 @@ jobs:
 
       - name: Clean up frontmatter to markdown files
         run: |
-          node scripts/cleanFrontMatter.js
+          node scripts/removeFrontMatter.js
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
