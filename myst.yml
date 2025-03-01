@@ -68,16 +68,18 @@ site:
   title: "Advanced Laboratory Methods in Physics"
   description: "A comprehensive guide to advanced laboratory techniques and methods in physics"
   actions:
-    - title: "Report a Correction"
-      url: https://github.com/veillette/hands-on/issues/new?labels=correction
-    - title: "Contribute"
-      url: https://github.com/veillette/hands-on/blob/main/CONTRIBUTING.md
     - title: "PDF"
       url: exports/textbook.pdf
+  nav:
+    - title: "Contribute"
+      children:
+        - title: "Report Issue"
+          url: https://github.com/veillette/hands-on/issues/new?labels=correction
+        - title: "Join Project"
+          url: https://github.com/veillette/hands-on/blob/main/CONTRIBUTING.md
   options:
     favicon: ./figures/favicon.ico
     logo: ./figures/physics-logo-light.svg
     logo_dark: ./figures/physics-logo-dark.svg
     logo_text: Advanced Lab
-    nav: []
     domains: []
