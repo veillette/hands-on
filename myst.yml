@@ -8,24 +8,24 @@ project:
   authors:
     - name: "Martin Veillette"
   date: 2025-01-01
-exports:
-  - format: typst
-    id: typstpdf
-    # template: https://github.com/rowanc1/typst-book.git
-    output: exports/textbook.pdf
-articles:
-  - content/Preface.md
-  - content/Chapter1.md
-  - content/Chapter2.md
-  - content/Chapter3.md
-  - content/Chapter4.md
-  - content/Chapter5.md
-  - content/Chapter6.md
-  - content/Chapter7.md
-  - content/Appendix1.md
-  - content/Appendix2.md
-  - content/Appendix3.md
-  - content/Appendix4.md
+  exports:
+    - format: typst
+      id: typstpdf
+      # template: https://github.com/rowanc1/typst-book.git
+      output: exports/textbook.pdf
+      articles:
+        - content/Preface.md
+        - content/Chapter1.md
+        - content/Chapter2.md
+        - content/Chapter3.md
+        - content/Chapter4.md
+        - content/Chapter5.md
+        - content/Chapter6.md
+        - content/Chapter7.md
+        - content/Appendix1.md
+        - content/Appendix2.md
+        - content/Appendix3.md
+        - content/Appendix4.md
 toc:
   - file: content/Preface.md
     title: Preface
