@@ -4,6 +4,12 @@
 
 When we make multiple measurements of a quantity that contains random fluctuation, we need a method to determine the most probable value. The principle of least squares provides this method by finding the value that minimizes the squared deviations from our measurements.
 
+:::{iframe} https://phet.colorado.edu/sims/html/least-squares-regression/latest/least-squares-regression_en.html
+:placeholder: https://phet.colorado.edu/sims/html/least-squares-regression/latest/least-squares-regression-600.png
+:width: 100%
+Let's explore the principle of least squares with this interactive simulation.
+:::
+
 Let's say we make $N$ measurements, $x_i$, of a quantity. To find the value $X$ whose deviations from our measurements are minimized according to the principle of least squares, we need:
 
 $$\sum(x_i-X)^2 = \text{minimum}$$
