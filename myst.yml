@@ -72,6 +72,8 @@ site:
       url: https://github.com/veillette/hands-on/issues/new?labels=correction
     - title: "Contribute"
       url: https://github.com/veillette/hands-on/blob/main/CONTRIBUTING.md
+    - title: "PDF"
+      url: exports/textbook.pdf
   options:
     favicon: ./figures/favicon.ico
     logo: ./figures/physics-logo-light.svg
