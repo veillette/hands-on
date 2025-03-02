@@ -6,9 +6,8 @@ When we make multiple measurements of a quantity that contains random fluctuatio
 
 :::{phet} least-squares-regression
 :placeholder: ./figures/phet/least-squares-regression-600.png
-Let's explore the principle of least squares with this interactive simulation.
+Explore the principle of least squares with this interactive simulation.
 :::
-
 
 Let's say we make $N$ measurements, $x_i$, of a quantity. To find the value $X$ whose deviations from our measurements are minimized according to the principle of least squares, we need:
 
