@@ -7,6 +7,8 @@
  *   placeholder: Path to placeholder image for static exports
  *   lang: Language code (default: en)
  *   urlOptions: Additional URL parameters
+ * Directive Body (parsed)
+ *   If provided, this will be the iframe caption.
  */
 
 const phetDirective = {
@@ -18,7 +20,7 @@ const phetDirective = {
   },
   body: {
     type: 'markdown',
-    doc: 'Caption or description of the simulation',
+    doc: 'If provided, this will be the iframe caption',
   },
   options: {
     width: {
@@ -42,11 +44,11 @@ const phetDirective = {
       doc: 'Additional URL parameters, e.g. ?screens=2'
     },
   },
-  run(data) {
+  run: function( data ) {
     // Extract the simulation name from the argument
     const simulationName = data.arg;
 
-    if (!simulationName) {
+    if ( !simulationName ) {
       return [
         {
           type: 'paragraph',
@@ -74,16 +76,16 @@ const phetDirective = {
       type: 'iframe',
       src: phetUrl,
       width,
-      height,
+      height
     };
 
     // If a placeholder is provided, add it to the iframe
-    if (data.options?.placeholder) {
+    if ( data.options?.placeholder ) {
       iframe.placeholder = data.options.placeholder;
     }
 
     // If body content is provided, use it as the caption
-    if (data.body && data.body.length > 0) {
+    if ( data.body && data.body.length > 0 ) {
       return [
         iframe,
         {
@@ -93,8 +95,8 @@ const phetDirective = {
       ];
     }
 
-    return [iframe];
-  },
+    return [ iframe ];
+  }
 };
 
 // Export the plugin
