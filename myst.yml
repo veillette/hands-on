@@ -6,6 +6,9 @@ project:
   keywords: ["physics", "laboratory", "experimental design", "data analysis", "scientific writing"]
   github: https://github.com/veillette/hands-on
   license: CC-BY-NC-SA-4.0
+  jupyter:
+    binder: true
+    lite: true
   plugins:
     - type: javascript
       path: ./plugins/phet.mjs
