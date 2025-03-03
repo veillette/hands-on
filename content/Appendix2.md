@@ -43,10 +43,10 @@ According to the principle of least squares, we want to minimize the sum of the 
 $$\sum(\delta y_i)^2 = \sum[y_i - (mx_i + b)]^2$$
 
 Expanding this expression:
-$$\sum(\delta y_i)^2 = \sum[y_i^2 + m^2x_i^2 + b^2 - 2mx_iy_i - 2by_i + 2mx_ib]$$
+$$\sum(\delta y_i)^2 = \sum[y_i^2 + m^2 x_i^2 + b^2 - 2m x_i y_i - 2b y_i + 2m x_i b]$$
 
 Or more compactly:
-$$M = \sum y_i^2 + m^2\sum x_i^2 + Nb^2 + 2mb\sum x_i - 2m\sum x_iy_i - 2b\sum y_i$$
+$$M = \sum y_i^2 + m^2\sum x_i^2 + Nb^2 + 2mb\sum x_i - 2m\sum x_i y_i - 2b\sum y_i$$
 
 Where $M$ represents the sum of squared deviations that we want to minimize.
 
@@ -55,14 +55,14 @@ To find the optimal values of $m$ and $b$, we take partial derivatives with resp
 $$\frac{\partial M}{\partial m} = 0 \quad \text{and} \quad \frac{\partial M}{\partial b} = 0$$
 
 From the first condition:
-$$2m\sum x_i^2 + 2b\sum x_i - 2\sum(x_iy_i) = 0$$
+$$2m\sum x_i^2 + 2b\sum x_i - 2\sum(x_i y_i) = 0$$
 
 From the second condition:
 $$2Nb + 2m\sum x_i - 2\sum y_i = 0$$
 
 Solving these equations simultaneously gives us:
 
-$$m = \frac{N\sum(x_iy_i) - \sum x_i\sum y_i}{N\sum x_i^2 - (\sum x_i)^2}$$
+$$m = \frac{N \sum(x_i y_i) - \sum x_i\sum y_i}{N\sum x_i^2 - (\sum x_i)^2}$$
 
 $$b = \frac{\sum x_i^2 \sum y_i - \sum x_i\sum (x_i y_i)}{N\sum x_i^2 - (\sum x_i)^2}$$
 
@@ -94,15 +94,15 @@ $$\bar{x} = \frac{\sum (x_i/S_i^2)}{\sum (1/S_i^2)}$$
 
 The standard deviation of this weighted mean is:
 
-$$S^2 = \frac{\sum ((x-\bar{x})^2/S_i^2)}{(N-1)\sum(1/S_i^2)}$$
+$$S^2 = \frac{\sum ((x_i-\bar{x})^2/S_i^2)}{(N-1)\sum(1/S_i^2)}$$
 
 ### Straight-Line Fitting with Weighted Least Squares
 
 For observations with unequal precision, we modify our least squares approach by assigning weights. If the $y$ values have varying precision, but the $x$ values are considered exact, the equations for the slope and intercept become:
 
-$$m = \frac{\sum w \sum wxy - \sum wx\sum wy}{\sum w \sum wx^2-(\sum wx)^2}$$
+$$m = \frac{\sum w_i \sum w_i x_i y_i - \sum w_i x_i \sum w_i y_i }{\sum w_i \sum w_i x_i^2-(\sum w_i x_i )^2}$$
 
-$$b = \frac{\sum wy \sum wx^2 - \sum wx\sum wxy}{\sum w \sum wx^2-(\sum wx)^2}$$
+$$b = \frac{\sum w_i y_i \sum w_i x_i^2 - \sum w_i x_i \sum w_i x_i y_i }{\sum w_i  \sum w_i x_i ^2-(\sum w_i x_i)^2}$$
 
 Where $w_i$ represents the weight of each observation, calculated as:
 
@@ -116,14 +116,14 @@ And the standard deviations of the slope and intercept are:
 
 $$S_m^2 = \frac{S_y^2}{W}$$
 
-$$S_b^2 = S_y^2\left(\frac{1}{\sum w} + \frac{\bar{x}^2}{W}\right)$$
+$$S_b^2 = S_y^2\left(\frac{1}{\sum w_i} + \frac{\bar{x}^2}{W}\right)$$
 
 Where:
-$$W = \sum(w(x-\bar{x})^2)$$
+$$W = \sum(w_i (x_i-\bar{x})^2)$$
 
 And $\bar{x}$ is the weighted mean of the $x$ values:
 
-$$\bar{x} = \frac{\sum wx}{\sum w}$$
+$$\bar{x} = \frac{\sum w_i x_i }{\sum w_i}$$
 
 Weighted least squares is particularly valuable when measurements come from different sources with varying precision. By accounting for these differences in precision, we ensure that our fitted parameters are not unduly influenced by less reliable data points.
 
