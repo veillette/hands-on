@@ -5,7 +5,9 @@ project:
   description: "A comprehensive guide to advanced laboratory techniques and scientific thinking for physics students."
   keywords: ["physics", "laboratory", "experimental design", "data analysis", "scientific writing"]
   github: https://github.com/veillette/hands-on
-  license: CC-BY-NC-SA-4.0
+  license:
+    content: CC-BY-NC-SA-4.0
+    code: GPL-3.0-or-later
   jupyter:
     binder: true
     lite: true
