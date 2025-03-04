@@ -12,6 +12,10 @@ project:
   plugins:
     - type: javascript
       path: ./plugins/phet.mjs
+    - type: javascript
+      path: ./plugins/geogebra.mjs
+    - type: javascript
+      path: ./plugins/youtube.mjs 
   downloads:
     - id: typstpdf
       title: "Download PDF"
