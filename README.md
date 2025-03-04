@@ -23,19 +23,19 @@ This textbook provides a thorough introduction to advanced laboratory methods in
 
 ## 📋 Table of Contents
 
-- [**Preface**](https://veillette.github.io/hands-on/content/Preface.html)
-- [**Chapter 1: Approach to Laboratory Work**](https://veillette.github.io/hands-on/content/Chapter1.html)
-- [**Chapter 2: Measurement and Uncertainty**](https://veillette.github.io/hands-on/content/Chapter2.html)
-- [**Chapter 3: Statistics of Measurement**](https://veillette.github.io/hands-on/content/Chapter3.html)
-- [**Chapter 4: The Nature of Scientific Thinking**](https://veillette.github.io/hands-on/content/Chapter4.html)
-- [**Chapter 5: Designing Experiments: Principles and Methods**](https://veillette.github.io/hands-on/content/Chapter5.html)
-- [**Chapter 6: Evaluating Experimental Results**](https://veillette.github.io/hands-on/content/Chapter6.html)
-- [**Chapter 7: Writing Scientific Reports**](https://veillette.github.io/hands-on/content/Chapter7.html)
+- [**Preface**](https://veillette.github.io/hands-on/Preface.html)
+- [**Chapter 1: Approach to Laboratory Work**](https://veillette.github.io/hands-on/Chapter1.html)
+- [**Chapter 2: Measurement and Uncertainty**](https://veillette.github.io/hands-on/Chapter2.html)
+- [**Chapter 3: Statistics of Measurement**](https://veillette.github.io/hands-on/Chapter3.html)
+- [**Chapter 4: The Nature of Scientific Thinking**](https://veillette.github.io/hands-on/Chapter4.html)
+- [**Chapter 5: Designing Experiments: Principles and Methods**](https://veillette.github.io/hands-on/Chapter5.html)
+- [**Chapter 6: Evaluating Experimental Results**](https://veillette.github.io/hands-on/Chapter6.html)
+- [**Chapter 7: Writing Scientific Reports**](https://veillette.github.io/hands-on/Chapter7.html)
 - **Appendices**
-  - [Appendix 1: The Gaussian Distribution](https://veillette.github.io/hands-on/content/Appendix1.html)
-  - [Appendix 2: The Principle of Least Squares](https://veillette.github.io/hands-on/content/Appendix2.html)
-  - [Appendix 3: Difference Tables and Finite Difference Calculus](https://veillette.github.io/hands-on/content/Appendix3.html)
-  - [Appendix 4: Model Experiment](https://veillette.github.io/hands-on/content/Appendix4.html)
+  - [Appendix 1: The Gaussian Distribution](https://veillette.github.io/hands-on/Appendix1.html)
+  - [Appendix 2: The Principle of Least Squares](https://veillette.github.io/hands-on/Appendix2.html)
+  - [Appendix 3: Difference Tables and Finite Difference Calculus](https://veillette.github.io/hands-on/Appendix3.html)
+  - [Appendix 4: Model Experiment](https://veillette.github.io/hands-on/Appendix4.html)
 
 ## 🚀 Getting Started
 
