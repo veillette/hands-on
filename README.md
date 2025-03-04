@@ -23,19 +23,19 @@ This textbook provides a thorough introduction to advanced laboratory methods in
 
 ## 📋 Table of Contents
 
-- **Preface**
-- **Chapter 1: Approach to Lab**
-- **Chapter 2: Measurements**
-- **Chapter 3: Statistics**
-- **Chapter 4: Nature of Thinking**
-- **Chapter 5: Designing Experiments**
-- **Chapter 6: Evaluating Results**
-- **Chapter 7: Scientific Writing**
+- [**Preface**](https://veillette.github.io/hands-on/content/Preface.html)
+- [**Chapter 1: Approach to Laboratory Work**](https://veillette.github.io/hands-on/content/Chapter1.html)
+- [**Chapter 2: Measurement and Uncertainty**](https://veillette.github.io/hands-on/content/Chapter2.html)
+- [**Chapter 3: Statistics of Measurement**](https://veillette.github.io/hands-on/content/Chapter3.html)
+- [**Chapter 4: The Nature of Scientific Thinking**](https://veillette.github.io/hands-on/content/Chapter4.html)
+- [**Chapter 5: Designing Experiments: Principles and Methods**](https://veillette.github.io/hands-on/content/Chapter5.html)
+- [**Chapter 6: Evaluating Experimental Results**](https://veillette.github.io/hands-on/content/Chapter6.html)
+- [**Chapter 7: Writing Scientific Reports**](https://veillette.github.io/hands-on/content/Chapter7.html)
 - **Appendices**
-  - Appendix 1: Gaussian Distribution
-  - Appendix 2: Least Squares Fitting
-  - Appendix 3: Difference Elements
-  - Appendix 4: Sample Laboratory Report
+  - [Appendix 1: The Gaussian Distribution](https://veillette.github.io/hands-on/content/Appendix1.html)
+  - [Appendix 2: The Principle of Least Squares](https://veillette.github.io/hands-on/content/Appendix2.html)
+  - [Appendix 3: Difference Tables and Finite Difference Calculus](https://veillette.github.io/hands-on/content/Appendix3.html)
+  - [Appendix 4: Model Experiment](https://veillette.github.io/hands-on/content/Appendix4.html)
 
 ## 🚀 Getting Started
 
@@ -47,7 +47,7 @@ Visit the textbook website at [https://veillette.github.io/hands-on/](https://ve
 
 This textbook is built using [mystmd](https://mystmd.org/), a modern publishing system designed for scientific and technical content.
 
-``` bash
+```console
 # Clone the repository
 git clone https://github.com/veillette/hands-on.git
 cd hands-on
@@ -60,27 +60,25 @@ myst build --html
 
 # Preview locally (available at http://localhost:3000 by default)
 myst start
-
-# To stop the preview server when finished
-# Press Ctrl+C in your terminal
-
 ```
 
-## Contributing
+## 👥 Contributing
 
 We welcome contributions from the physics education community! Please see our [Contributing Guide](CONTRIBUTING.md) for details on how to help improve this textbook.
 
 Types of contributions we're looking for:
-- Error corrections
-- Clarity improvements
-- Additional examples
-- New problem sets
-- Enhanced visualizations
+- 🐛 Error corrections
+- 📖 Clarity improvements
+- 🧪 Additional examples
+- 📝 New problem sets
+- 📊 Enhanced visualizations
+- 💡 Modern laboratory techniques
 
-## License
+
+## 📄 License
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License](LICENSE).
 
-## Contact
+## 📬 Contact
 
 For questions, corrections, or suggestions, please [open an issue](https://github.com/veillette/hands-on/issues/new)
