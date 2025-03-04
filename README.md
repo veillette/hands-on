@@ -4,6 +4,7 @@ A comprehensive guide to advanced laboratory techniques and scientific thinking 
 
 ![License](https://img.shields.io/badge/License-CC--BY--4.0-green)
 ![Python](https://img.shields.io/badge/Python-3.12%2B-blue)
+![Build](https://img.shields.io/github/actions/workflow/status/veillette/hands-on/build.yml?branch=main)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 ![PRs](https://img.shields.io/badge/PRs-Welcome-brightgreen)
 ![mystmd](https://img.shields.io/badge/Built%20with-mystmd-8A2BE2)
