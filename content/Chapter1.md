@@ -74,3 +74,19 @@ Working within resource constraints develops important skills. Professional expe
 Laboratory time becomes most productive when experiments are approached as independent problem-solving opportunities. Though errors will occur, learning from direct personal experience exceeds rigidly following established procedures. Experiment outcomes matter less than learning, though skill development requires seriously pursuing optimal results.
 
 Laboratory reports deserve similar constructive attention. Professional work has limited value unless results can be effectively communicated. Clear expression represents a responsibility beyond English department concerns. Report writing offers valuable practice in descriptive composition. Perfunctory reporting wastes opportunity, while detailed review and criticism provide essential improvement opportunities that become clear in hindsight.
+
+## Glossary
+
+:::{glossary}
+system
+: The physical entity or phenomenon being studied in an experiment.
+
+model
+: A conceptual or mathematical representation created to describe the behavior of a system.
+
+experimental method
+: The systematic approach to designing, conducting, and analyzing experiments.
+
+scientific literacy
+: The ability to understand and evaluate scientific information and methodology.
+:::

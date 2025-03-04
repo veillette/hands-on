@@ -234,6 +234,39 @@ This gives us statistical guidance: measurements beyond 3σ from the mean deserv
 
 Be cautious about rejecting data simply because it doesn't match expectations. Many scientific breakthroughs began with "outlier" measurements that revealed new phenomena. Unless clear evidence of measurement error exists, the safest approach is to retain all observations.
 
+## Glossary
+:::{glossary}
+Gaussian distribution
+: Also called normal distribution or bell curve; a probability distribution that is symmetric about the mean.
+
+standard deviation
+: A measure of the amount of variation or dispersion in a set of values.
+
+standard error of the mean
+: The standard deviation of the sampling distribution of the mean.
+
+histogram
+: A graphical representation of data distribution that organizes measurements into bins.
+
+mean
+: The sum of all values divided by the number of values, commonly known as the average.
+
+median
+: The middle value when all measurements are arranged in numerical order.
+
+mode
+: The most frequently occurring value in a dataset.
+
+sample
+: A subset of measurements taken from a larger population.
+
+population
+: The complete set of all possible measurements of a quantity.
+
+outlier
+: A data point that differs significantly from other observations in a dataset.
+:::
+
 ## Problems
 
 The following observations of angles (in minutes of arc) were made while measuring the thickness of a liquid helium film. Assume the observations show random uncertainty following a Gaussian distribution:

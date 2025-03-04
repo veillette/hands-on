@@ -244,3 +244,32 @@ Purely algebraic calculations would incorporate values from all measurements reg
 Importantly, this approach lets us obtain accurate parameter values even without knowing the source of discrepancies between model and system. We need only identify discrepancies and ensure they don't contaminate our results; investigating their causes can come later.
 
 While we've focused on determining constants from slopes, straight-line graphs actually provide two independent pieces of information – slope and intercept. This allows experiments to determine two separate quantities within a model, a capability we'll explore further in later chapters.
+
+
+## Glossary
+
+:::{glossary}
+causation
+: A relationship where one event (the cause) brings about another event (the effect).
+
+correlation
+: A statistical measure that expresses the extent to which two variables are related.
+
+empirical model
+: A model derived directly from experimental data without necessarily having a theoretical basis.
+
+theoretical model
+: A model derived from fundamental principles or theories.
+
+interpolation
+: Estimating a value within the range of known values.
+
+extrapolation
+: Estimating a value beyond the range of known values.
+
+power law
+: A functional relationship where one quantity varies as a power of another.
+
+exponential relationship
+: A relationship where a quantity grows or decays at a rate proportional to its current value.
+:::

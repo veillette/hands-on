@@ -288,6 +288,38 @@ When facing such complexity, conventional concepts like "proof" require modifica
 
 We'll examine correlation analysis further in Chapter 6 when discussing experimental evaluation.
 
+## Glossary
+
+:::{glossary}
+independent variable
+: The variable that is deliberately manipulated in an experiment.
+
+dependent variable
+: The variable that is measured to determine the effect of changes in the independent variable.
+
+control variable
+: A variable that is kept constant during an experiment.
+
+experimental design
+: The planned approach to conducting an experiment, including selection of variables and measurement methods.
+
+dimensional analysis
+: A method for checking equations and deriving relationships between variables based on their physical dimensions.
+
+null-effect measurement
+: A measurement strategy that focuses on differences between similar systems to detect subtle effects.
+
+control group
+: A group in an experiment that does not receive the treatment or factor being tested.
+
+experimental group
+: A group in an experiment that receives the treatment or factor being tested.
+
+confounding variable
+: A variable that influences both the independent and dependent variables, potentially leading to misleading results.
+:::
+
+
 ## Problems
 
 ## Practice Problems

@@ -350,3 +350,31 @@ Consider two experimental scenarios. First, measuring current through a resistor
 Philosophers have warned for centuries that simultaneous events aren't necessarily causally related. However, accumulated experience with this experiment, involving multiple repetitions and careful control of other variables, gradually convinces us potential difference and current are genuinely related. Only philosophical purists would dispute that potential difference causes current flow.
 
 The situation differs dramatically in less clear-cut cases. Another experiment might yield results like Figure 6.6(b), typical when studying, for instance, university student cold incidence versus daily vitamin C consumption. Can we conclude cold frequency depends on vitamin C dosage? We might conduct a well-designed experiment with 100 students receiving vitamin
+
+## Glossary
+
+:::{glossary}
+least squares method
+: A mathematical procedure for finding the best-fitting curve to a given set of points by minimizing the sum of the squares of the residuals.
+
+residual
+: The difference between an observed value and the predicted value from a model.
+
+graphical analysis
+: The use of graphs to identify patterns, trends, and relationships in data.
+
+linearization
+: The process of transforming a non-linear relationship into a linear form for easier analysis.
+
+correlation coefficient
+: A numerical measure of the strength and direction of the linear relationship between two variables.
+
+weighted least squares
+: A variant of the least squares method that gives different weights to different data points based on their precision.
+
+goodness of fit
+: A measure of how well a mathematical model fits a set of observations.
+
+degrees of freedom
+: The number of values in the final calculation that are free to vary.
+:::

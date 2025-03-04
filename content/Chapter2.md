@@ -337,6 +337,34 @@ We should:
 3. Avoid mismatched precision statements like "12.3456 ± 0.2" or "12 ± 0.00001"
 ```
 
+## Glossary
+
+:::{glossary}
+absolute uncertainty
+: The uncertainty of a measurement expressed in the same units as the measurement itself.
+
+relative uncertainty
+: The uncertainty of a measurement expressed as a fraction or percentage of the measured value.
+
+systematic error
+: Errors that affect all measurements in a consistent way, often due to calibration issues or methodological flaws.
+
+precision
+: The degree of reproducibility or agreement between repeated measurements.
+
+accuracy
+: The closeness of a measurement to the true value.
+
+significant figures
+: The digits in a measurement that carry meaningful information about the precision of the measurement.
+
+zero error
+: A systematic error where an instrument gives a non-zero reading when the true value is zero.
+
+propagation of uncertainty
+: The process of determining how uncertainties in individual measurements combine to affect the uncertainty in a calculated result.
+:::
+
 ## Problems
 
 ```{admonition} Problem 1

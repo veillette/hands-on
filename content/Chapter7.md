@@ -144,3 +144,29 @@ Some discrepancies have readily identifiable causes. Flow rate measurements devi
 When confronting genuinely puzzling discrepancies, speculation remains valuable even if limited. Your insights, even tentative ones, likely benefit other researchers given your direct experimental experience. Conversely, if you cannot offer constructive ideas despite careful analysis, honest acknowledgment of unresolved discrepancies between well-established systems and models can itself contribute meaningfully to scientific discourse.
 
 When speculating about discrepancies, maintain scientific responsibility. Rather than offering disconnected hypotheses, develop interpretations logically connected to observed patterns. For instance: "The T² versus m plot's non-zero intercept at m=0 suggests the presence of additional unaccounted mass in our system." Identifying the specific source is less critical than recognizing the logical implications of your observations. Such reasoned inference facilitates further investigation by providing a structured framework for subsequent research.
+
+
+## Glossary
+
+:::{glossary}
+laboratory report
+: A formal document presenting the methodology, results, and conclusions of an experiment.
+
+introduction
+: The section of a laboratory report that establishes the context and purpose of the experiment.
+
+procedure
+: The section of a laboratory report describing the experimental methods and equipment used.
+
+results
+: The section of a laboratory report presenting the data and calculations from the experiment.
+
+discussion
+: The section of a laboratory report analyzing the results and comparing them to theoretical predictions.
+
+conclusion
+: The section of a laboratory report summarizing the findings and their significance.
+
+error bar
+: A graphical representation of the variability of data used on graphs to indicate the uncertainty in a reported measurement.
+:::
