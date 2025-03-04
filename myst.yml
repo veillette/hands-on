@@ -15,13 +15,19 @@ project:
     - type: javascript
       path: ./plugins/geogebra.mjs
     - type: javascript
-      path: ./plugins/youtube.mjs 
+      path: ./plugins/youtube.mjs
   downloads:
     - id: typstpdf
       title: "Download PDF"
   authors:
     - name: "Martin Veillette"
   date: 2025-01-01
+  abbreviations:
+      EMF: Electromotive Force - The electrical potential energy provided by a non-electrical source per unit of charge.
+      RPM: Revolutions Per Minute - A measure of rotational speed.
+      SI: Système International (d'Unités) - The international standard system of units.
+      M1: Class M1 - A standard for calibrated weights.
+      fps: Frames Per Second - Used in video recording context.
   exclude:
     - _build/**
     - exports/**
