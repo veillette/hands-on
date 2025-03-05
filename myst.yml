@@ -18,6 +18,8 @@ project:
       path: ./plugins/geogebra.mjs
     - type: javascript
       path: ./plugins/youtube.mjs
+    - type: javascript
+      path: ./plugins/jupyterlite.mjs
   downloads:
     - id: typstpdf
       title: "Download PDF"
