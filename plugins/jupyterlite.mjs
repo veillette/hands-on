@@ -21,7 +21,7 @@ const jupyterliteDirective = {
     doc: 'Optional title or identifier for the REPL'
   },
   body: {
-    type: 'markdown',
+    type: 'String',
     doc: 'The code to be executed in the notebook'
   },
   options: {
@@ -73,14 +73,16 @@ const jupyterliteDirective = {
     const id = `jupyterlite-${Math.random().toString(36).substring(2, 11)}`;
 
     // Define base URL for JupyterLite
-    const jupyterliteBaseUrl = 'https://veillette.github.io/jupyterlite/lab/index.html';
-
+    const jupyterliteBaseUrl = 'https://veillette.github.io/jupyterlite/repl/index.html';
+    console.log(encodedCode);
+    debugger;
     // Construct URL with parameters
     const querystringParams = new URLSearchParams({
       kernel: kernel,
       toolbar: showToolbar ? 'true' : 'false',
       theme: theme,
       code: encodedCode,
+      id: id,
       autorun: autorun ? 'true' : 'false'
     }).toString();
 
