@@ -20,6 +20,8 @@ project:
       path: ./plugins/youtube.mjs
     - type: javascript
       path: ./plugins/jupyterlite.mjs
+    - type: javascript
+      path: ./plugins/pyodide.mjs
   downloads:
     - id: typstpdf
       title: "Download PDF"
