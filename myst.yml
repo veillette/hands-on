@@ -11,6 +11,13 @@ project:
   jupyter:
     binder: true
     lite: true
+  requirements:
+    - python >= 3.10
+    - matplotlib >= 3.5
+    - typst
+    - texlive-xetex texlive-fonts-recommended texlive-fonts-extra
+    - imagemagick
+    - nodejs >= 22.0
   plugins:
     - type: javascript
       path: ./plugins/phet.mjs
