@@ -1,25 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
   <!-- Dark background -->
-  <rect width="150" height="150" fill="#000000"/>
-  
+  <rect width="150" height="150" fill="none"/>
+
   <!-- Atom representation -->
   <circle cx="75" cy="75" r="8" fill="none" stroke="#ffffff" stroke-width="2"/>
   <ellipse cx="75" cy="75" rx="35" ry="20" fill="none" stroke="#ffffff" stroke-width="2" transform="rotate(30 75 75)"/>
   <ellipse cx="75" cy="75" rx="35" ry="20" fill="none" stroke="#ffffff" stroke-width="2" transform="rotate(90 75 75)"/>
   <ellipse cx="75" cy="75" rx="35" ry="20" fill="none" stroke="#ffffff" stroke-width="2" transform="rotate(150 75 75)"/>
-  
+
   <!-- Light beam experiment -->
   <line x1="15" y1="115" x2="50" y2="115" stroke="#ffffff" stroke-width="2"/>
   <path d="M50 105 L50 125 L65 115 Z" fill="#ffffff"/>
   <path d="M65 115 L135 115 L135 105 L85 105 Z" fill="#ffffff" opacity="0.3"/>
   <path d="M65 115 L135 115 L135 125 L85 125 Z" fill="#ffffff" opacity="0.3"/>
-  
+
   <!-- Circuit element -->
   <rect x="110" y="30" width="20" height="30" fill="none" stroke="#ffffff" stroke-width="2" rx="3"/>
   <line x1="120" y1="10" x2="120" y2="30" stroke="#ffffff" stroke-width="2"/>
   <line x1="120" y1="60" x2="120" y2="80" stroke="#ffffff" stroke-width="2"/>
   <line x1="110" y1="10" x2="130" y2="10" stroke="#ffffff" stroke-width="2"/>
-  
+
   <!-- Pendulum -->
   <line x1="20" y1="20" x2="20" y2="80" stroke="#ffffff" stroke-width="2"/>
   <line x1="10" y1="20" x2="30" y2="20" stroke="#ffffff" stroke-width="2"/>
