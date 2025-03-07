@@ -2,7 +2,13 @@
   "name": "hands-on-advanced-physics-laboratory",
   "version": "0.0.1",
   "description": "A comprehensive guide to advanced laboratory techniques and scientific thinking for physics students.",
-  "keywords": ["physics", "laboratory", "experimental design", "data analysis", "scientific writing"],
+  "keywords": [
+    "physics",
+    "laboratory",
+    "experimental design",
+    "data analysis",
+    "scientific writing"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/veillette/hands-on"
@@ -17,7 +23,7 @@
   },
   "license": "Commons Attribution-NonCommercial-ShareAlike 4.0 International",
   "dependencies": {
-    "mystmd": "^1.3.24"
+    "mystmd": "^1.3.25"
   },
   "scripts": {
     "export": "myst build -a",
