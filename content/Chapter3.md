@@ -39,7 +39,7 @@ While histograms provide excellent visualization, we often need to distill our m
 The **mode** represents the most frequently occurring value in our measurements - the highest point on the histogram. For continuous measurements, it's the value at the center of the interval containing the most observations. When measurements form a distribution with two distinct peaks, we call it **bimodal** and may report both modal values.
 
 ### Median
-The **median** represents the middle value when all measurements are arranged in numerical order. Half the measurements lie above the median, and half below. Geometrically, the median is the point that divides the area under the histogram into equal halves. The median often appears in socioeconomic statistics, as in "the median household income is $58,500."
+The **median** represents the middle value when all measurements are arranged in numerical order. Half the measurements lie above the median, and half below. Geometrically, the median is the point that divides the area under the histogram into equal halves. The median often appears in socioeconomic statistics, as in "the median household income is $58 500."
 
 ### Mean
 The **mean** (or arithmetic average) is calculated by summing all measurements and dividing by their number:
@@ -170,9 +170,9 @@ When reporting statistical results, always include the sample size to allow othe
 
 When calculating derived quantities from measurements with statistical uncertainty, we need to determine how these uncertainties propagate to the final result. Unlike the worst-case scenario approach used earlier, statistical treatment allows more realistic uncertainty estimation.
 
-For a function $z = f(x,y)$ where $x$ and $y$ are measured with standard deviations $S_x$ and $S_y$, the standard deviation of $z$ is:
+For a function $z = f(x,y)$ where $x$ and $y$ are measured with standard deviations, a.k.a. errors,  $\Delta_x$ and $\Delta_y$, the standard deviation of $z$ is:
 
-$$S_z = \sqrt{\left(\frac{\partial z}{\partial x}\right)^2S_x^2 + \left(\frac{\partial z}{\partial y}\right)^2S_y^2}$$
+$$\Delta_z = \sqrt{\left(\frac{\partial z}{\partial x}\right)^2 \Delta_x^2 + \left(\frac{\partial z}{\partial y}\right)^2 \Delta_y^2}$$
 
 This formula assumes:
 1. The uncertainties in $x$ and $y$ are independent
@@ -183,29 +183,67 @@ Let's examine some common cases:
 
 ### Sum or Difference
 For $z = x ± y$:
-$$S_z = \sqrt{S_x^2 + S_y^2}$$
+$$\Delta_z = \sqrt{\Delta_x^2 + \Delta_y^2}$$
 
-This explains why the standard deviation of a mean (effectively an average of N independent measurements of the same quantity) is $S/\sqrt{N}$.
+This formula reveals a fundamental aspect of error propagation when combining measurements through addition or subtraction. The uncertainties add in quadrature rather than directly, which typically results in a smaller total uncertainty than simple addition would suggest. 
+
+
+Here's a separate comment about difference measurements:
+
+"### Critical Note on Difference Measurements
+For $z = x - y$:
+$$\Delta_z = \sqrt{\Delta_x^2 + \Delta_y^2}$$
+
+This principle directly connects to the standard deviation of a mean. When we calculate the mean of N independent measurements of the same quantity, we are effectively computing:
+
+$$\bar{x} = \frac{1}{N}(x_1 + x_2 + ... + x_N)$$
+
+Each measurement $x_i$ has the same uncertainty $\Delta x$. Applying the error propagation formula for a sum and accounting for the factor of $\frac{1}{N}$, we get:
+
+$$\Delta_{\bar{x}} = \frac{1}{N}\sqrt{N(\Delta x)^2} = \frac{\Delta x}{\sqrt{N}}$$
+
+This explains why the standard deviation of the mean decreases by a factor of $\sqrt{N}$ as we increase the number of measurements. This relationship demonstrates one of the core principles in experimental physics: averaging multiple independent measurements improves precision, but with diminishing returns. To halve the uncertainty, we need to quadruple the number of measurements.
+
+The $\frac{1}{\sqrt{N}}$ scaling is a direct consequence of how independent random uncertainties combine in quadrature rather than linearly, reflecting the statistical nature of measurement errors and the underlying probability distributions.
+
+:::{Note}
+While uncertainties add in quadrature (which is generally favorable compared to direct addition), this formula highlights a critical challenge in difference measurements. When two quantities of similar magnitude are subtracted, the absolute uncertainty of the result remains comparable to the original measurements' uncertainties, but the relative uncertainty can become dramatically larger.
+
+Consider measuring the difference between two nearly equal quantities, each with uncertainty: if $x \approx y$, then $z = x - y$ will be small, but $\Delta_z$ remains substantial. This means the relative uncertainty $\frac{\Delta_z}{z}$ can become extremely large or even dominate the measurement.
+
+This explains why difference measurements between similar-sized quantities require exceptional precision in the original measurements. In experimental physics, this challenge appears in many contexts: measuring small temperature differences, detecting slight frequency shifts, or determining small changes in position. When designing experiments that involve subtraction of similar quantities, experimentalists must account for this fundamental limitation and employ specialized techniques like differential measurements, lock-in amplification, or null methods to achieve the required precision."
+:::
 
 ### Product
 For $z = xy$:
-$$S_z = \sqrt{y^2S_x^2 + x^2S_y^2}$$
+$$\Delta_z = \sqrt{y^2 \Delta_x^2 + x^2 \Delta_y^2}$$
 
 In relative terms:
-$$\frac{S_z}{z} = \sqrt{\left(\frac{S_x}{x}\right)^2 + \left(\frac{S_y}{y}\right)^2}$$
+$$\frac{\Delta_z}{z} = \sqrt{\left(\frac{\Delta_x}{x}\right)^2 + \left(\frac{\Delta_y}{y}\right)^2}$$
+
+### Division
+
+For $z = x/y$:
+
+$$\Delta_z = \sqrt{ \frac{1}{y^2} \Delta_x^2 + \frac{1}{x^2} \Delta_y^2}$$
+
+In relative terms:
+$$\frac{\Delta_z}{z} = \sqrt{\left(\frac{\Delta_x}{x}\right)^2 + \left(\frac{\Delta_y}{y}\right)^2}$$
+
+We can see that in relative terms, the result is the same for both product and division. This pattern reveals that when we express uncertainty as a fraction of the measured value (relative uncertainty), the mathematical form is identical whether we multiply or divide quantities. This means the relative uncertainty in a product or quotient is found by adding the relative uncertainties of the individual measurements in quadrature (taking the square root of the sum of squares). This symmetry simplifies error propagation calculations and highlights a fundamental principle in experimental physics: the relative impact of measurement uncertainties follows consistent mathematical patterns regardless of whether we are multiplying or dividing physical quantities 
 
 ### Power Function
 For $z = x^a$:
-$$S_z = |a|x^{a-1}S_x$$
+$$\Delta_z = |a|x^{a-1}\Delta_x$$
 
 In relative terms:
-$$\frac{S_z}{z} = |a|\frac{S_x}{x}$$
+$$\frac{\Delta_z}{z} = |a|\frac{\Delta_x}{x}$$
 
 This shows that raising a measurement to a power multiplies its relative uncertainty by that power's magnitude. Squares double relative uncertainty, while square roots halve it.
 
 ### General Power Function
 For $z = x^ay^b$:
-$$\frac{S_z}{z} = \sqrt{\left(a\frac{S_x}{x}\right)^2 + \left(b\frac{S_y}{y}\right)^2}$$
+$$\frac{ \Delta_z}{z} = \sqrt{\left(a\frac{ \Delta_x}{x}\right)^2 + \left(b\frac{ \Delta_y}{y}\right)^2}$$
 
 ## Combining Different Types of Uncertainty
 
@@ -213,7 +251,7 @@ Sometimes we need to combine measurements having different types of uncertainty 
 
 A practical approach converts the estimated maximum bounds to an equivalent standard deviation. If a measurement $x$ has bounds $±\delta x$ representing near-certainty (essentially 100% confidence), and we want to treat it as compatible with a standard deviation (representing 68% confidence), we can use:
 
-$$S_x ≈ \frac{2}{3}\delta x$$
+$$ \Delta_x ≈ \frac{2}{3}\delta x$$
 
 This approximation comes from recognizing that for a rectangular probability distribution (equal likelihood anywhere within bounds), approximately 68% of values fall within the central 2/3 of the range.
 
@@ -295,4 +333,4 @@ The following observations of angles (in minutes of arc) were made while measuri
 14. If the population standard deviation must be known within 5% of its true value, how many measurements would be required?
 15. Repeated measurements of a copper wire diameter yielded a mean of 0.62 mm with a sample standard deviation of 0.04 mm. Calculate the standard deviation for the wire's cross-sectional area.
 16. The wavelengths of sodium's yellow spectral lines were measured as 589.11×10⁻⁹ m and 589.68×10⁻⁹ m, each with a standard deviation of 0.15×10⁻⁹ m. Calculate the standard deviation of their wavelength difference.
-17. A simple pendulum is used to determine g using T=2π√(ℓ/g). Twenty measurements of T gave a mean of 1.82 s and standard deviation of 0.06 s. Ten measurements of ℓ gave a mean of 0.823 m and standard deviation of 0.014 m. Calculate the standard error of the mean for g.
+17. A simple pendulum is used to determine g using $T=2 \pi \sqrt{\frac{\ell/g}}$. Twenty measurements of T gave a mean of 1.82 s and standard deviation of 0.06 s. Ten measurements of $\ell$ gave a mean of 0.823 m and standard deviation of 0.014 m. Calculate the standard error of the mean for g.
