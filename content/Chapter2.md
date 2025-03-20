@@ -241,7 +241,73 @@ $$\delta z = \left|\frac{x}{\sqrt{x^2 + y^2}}\right|\delta x + \left|\frac{y}{\s
 ```
 
 
-## Significant Figures
+I'll add a new section to the Chapter 2 content about significant figures, incorporating the sentiment from the example while creating original content. Here's my addition:
+
+## Understanding Significant Figures: Purpose Over Rules
+
+When working with measurements, significant figures serve a critical purpose that goes beyond mere rule-following. They communicate the quality and reliability of your measurements to others. While textbooks often present lengthy lists of rules about significant figures, it's more valuable to understand their fundamental purpose.
+
+At their core, significant figures represent **the digits that are known with certainty, plus one additional digit that represents your best estimate**. This approach emerges naturally from the measurement process itself.
+
+```{admonition} The Essence of Significant Figures
+:class: tip
+Think of significant figures as telling a story about your measurement:
+- They indicate which digits you're confident about
+- They show where your certainty ends
+- They communicate this information efficiently to others
+```
+
+Consider how you might record a measurement from a graduated cylinder. When the liquid level falls between markings, you don't simply write down the nearest mark. Instead, you estimate to one digit beyond what the scale directly shows. That estimated digit—the last significant figure—carries valuable information about your measurement.
+
+Rather than memorizing a complex set of rules about zeroes and calculations, focus first on the fundamental principle: significant figures reflect the precision of measurement. When you understand this purpose, many of the rules become intuitive rather than arbitrary.
+
+```{run-python} Exploring Significant Figures
+# Let's write a simple function to estimate significant figures in a measurement
+def count_sig_figs(measurement_str):
+    """Estimate the number of significant figures in a measurement"""
+    # Remove any units that might be present
+    measurement_str = measurement_str.split()[0]
+    
+    # Handle scientific notation
+    if 'e' in measurement_str.lower():
+        base, exponent = measurement_str.lower().split('e')
+        return count_sig_figs(base)
+    
+    # Count significant digits according to basic rules
+    digits = ''.join(c for c in measurement_str if c.isdigit())
+    if '.' in measurement_str:
+        # With decimal point, trailing zeros are significant
+        # Remove leading zeros
+        digits = digits.lstrip('0')
+        return len(digits)
+    else:
+        # Without decimal point, trailing zeros might not be significant
+        # This is ambiguous without more context
+        digits = digits.lstrip('0')
+        # Remove trailing zeros as they're ambiguous
+        digits = digits.rstrip('0')
+        return len(digits)
+
+# Test with some examples
+examples = ["12.34", "0.0056", "1200", "1200.0", "0.1200"]
+for example in examples:
+    print(f"Measurement: {example}, Significant figures: {count_sig_figs(example)}")
+```
+
+When propagating significant figures through calculations, focus on mastering the multiplication rule first:
+- The result of multiplication or division should have the same number of significant figures as the measurement with the fewest significant figures.
+
+Other rules for addition, logarithms, and special functions become easier to learn once you've established this foundation.
+
+### A Practical Approach to Zeroes
+
+Zeroes often cause the most confusion when determining significant figures. Instead of memorizing rules, consider where the number came from:
+
+- A measurement of 4.70 mL from a graduated cylinder has three significant figures because you estimated the last digit (confirming zero tenths)
+- A measurement of 4.7 mL has two significant figures, indicating you didn't estimate beyond the tenths place
+- A measurement of 470 mL is ambiguous without context—it could have two or three significant figures
+
+When teaching or learning significant figures, focusing on their purpose—communicating measurement quality—provides a more meaningful framework than simply memorizing rules. This understanding helps you make appropriate judgments when recording and working with experimental data.
 
 Calculations often produce more digits than are justified by our measurement precision. We must quote results sensibly.
 
