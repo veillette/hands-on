@@ -123,25 +123,24 @@ Rarely does a single measurement complete our work. Usually, we need to calculat
 - Gravitational acceleration from a pendulum's length and period
 ```
 
-In each case, uncertainty in primary measurements creates uncertainty in calculated results. For this section, we'll assume our uncertainty ranges represent intervals within which we're "almost certain" the true values lie. We'll calculate the maximum possible uncertainty by assuming the worst-case scenario - that all component uncertainties combine to maximize the final uncertainty.
+When calculating uncertainties in derived quantities, we will focus on finding the maximum possible uncertainty by considering the absolute values of all component uncertainties. This approach ensures we account for the worst-case scenario where all uncertainties combine to produce the largest possible error in our final result.
 
 ## Uncertainty in Single-Variable Functions
 
-Consider a measured quantity $x_0$ with uncertainty $\pm\delta x$, and a calculated result $z = f(x)$. The range of possible values for $x$ (from $x_0-\delta x$ to $x_0+\delta x$) creates a corresponding range for $z$ from $z_0-\delta z$ to $z_0+\delta z$.
+Consider a measured quantity $x$ with uncertainty $\pm\delta x$, and a calculated result $z = f(x)$. The maximum possible uncertainty in $z$ is determined by considering how much $z$ could change when $x$ varies by $\pm\delta x$.
 
 ```{admonition} Calculus Approach
 :class: tip
-We can determine $\delta z$ using calculus. Since $\delta z$ and $\delta x$ are effectively components of the derivative $dz/dx$, we can write:
+Using calculus, we can determine the maximum uncertainty $\delta z$ using the absolute value of the derivative:
 
-$$\delta z = \frac{d(f(x))}{dx}\delta x$$
+$$\delta z = \left|\frac{d(f(x))}{dx}\right|\delta x$$
+
+This ensures we capture the maximum possible variation in our result.
 ```
 
-This straightforward approach works well even for complex functions. Consider $z = \frac{x}{x^2+4}$:
+For example, if $z = \frac{x}{x^2+4}$:
 
-$$\frac{dz}{dx} = \frac{(x^2+4) - x(2x)}{(x^2+4)^2} = \frac{4-x^2}{(x^2+4)^2}$$
-
-Therefore:
-$$\delta z = \frac{4-x^2}{(x^2+4)^2}\delta x$$
+$$\delta z = \left|\frac{4-x^2}{(x^2+4)^2}\right|\delta x$$
 
 Let's examine several common function types:
 
@@ -150,8 +149,7 @@ Let's examine several common function types:
 ```{admonition} Power Functions
 :class: note
 For $z = x^n$:
-$$\frac{dz}{dx} = nx^{n-1}$$
-$$\delta z = nx^{n-1}\delta x$$
+$$\delta z = |nx^{n-1}|\delta x$$
 
 Expressed as relative uncertainty:
 $$\frac{\delta z}{z} = n\frac{\delta x}{x}$$
@@ -171,12 +169,7 @@ This reveals an important principle: the relative uncertainty in the result equa
 ```{admonition} Exponential Functions
 :class: note
 For $z = e^x$:
-$$\frac{dz}{dx} = e^x$$
-$$\delta z = e^x \delta x$$
-```
-
-```{warning}
-Exponential functions can be extremely sensitive to uncertainty, especially as the exponent grows larger than 1.
+$$\delta z = |e^x|\delta x = e^x\delta x$$
 ```
 
 ### Logarithmic Functions
@@ -184,8 +177,7 @@ Exponential functions can be extremely sensitive to uncertainty, especially as t
 ```{admonition} Logarithmic Functions
 :class: note
 For $z = \ln x$:
-$$\frac{dz}{dx} = \frac{1}{x}$$
-$$\delta z = \frac{\delta x}{x}$$
+$$\delta z = \left|\frac{1}{x}\right|\delta x = \frac{\delta x}{|x|}$$
 ```
 
 ### Trigonometric Functions
@@ -193,130 +185,61 @@ $$\delta z = \frac{\delta x}{x}$$
 ```{admonition} Trigonometric Functions
 :class: note
 For $z = \sin x$:
-$$\frac{dz}{dx} = \cos x$$
-$$\delta z = (\cos x)\delta x$$
-```
+$$\delta z = |\cos x|\delta x$$
 
-```{tip}
-When using this result, remember that angle uncertainty ($\delta x$) must be expressed in radians.
+For $z = \cos x$:
+$$\delta z = |\sin x|\delta x$$
 ```
 
 ## Uncertainty in Multi-Variable Functions
 
-When calculating uncertainty for functions with multiple variables, we could take a pessimistic approach - assuming all component uncertainties combine in the worst possible way. Or we could recognize that some errors might partially cancel others. For now, we'll calculate maximum possible uncertainty.
+When dealing with functions of multiple variables, we calculate the maximum possible uncertainty by taking the sum of the absolute values of all contributing uncertainties. This approach ensures we account for the worst possible case where all uncertainties combine to maximize the final uncertainty.
 
-### Sum of Variables
+### Sum and Difference of Variables
 
-```{admonition} Sum of Variables
+```{admonition} Sum and Difference
 :class: note
-For $z = x + y$:
+For both addition ($z = x + y$) and subtraction ($z = x - y$):
 
-The uncertainty is obtained from:
-$$z_0 \pm \delta z = (x_0 \pm \delta x) + (y_0 \pm \delta y)$$
+The maximum uncertainty is the sum of the absolute uncertainties:
+$$\delta z = |\delta x| + |\delta y|$$
 
-Maximum uncertainty occurs when all component uncertainties have the same sign:
-$$\delta z = \delta x + \delta y$$
-
-The absolute uncertainties simply add together.
+This accounts for the worst case where uncertainties combine to maximize the total uncertainty.
 ```
 
-### Difference of Variables
+### Products and Quotients
 
-```{admonition} Difference of Variables
+```{admonition} Products and Quotients
 :class: note
-For $z = x - y$:
+For a product ($z = xy$):
+$$\delta z = |y|\delta x + |x|\delta y$$
 
-Similarly:
-$$z_0 \pm \delta z = (x_0 \pm \delta x) - (y_0 \pm \delta y)$$
-
-Maximum uncertainty occurs when $\delta x$ is positive and $\delta y$ is negative:
-$$\delta z = \delta x + \delta y$$
+For a quotient ($z = x/y$):
+$$\delta z = \left|\frac{1}{y}\right|\delta x + \left|\frac{x}{y^2}\right|\delta y$$
 ```
 
-```{warning}
-This highlights a critical issue: when subtracting similar quantities, relative uncertainty can become enormous. If $x$ and $y$ have similar values, their difference will be small, but the uncertainty remains the sum of their individual uncertainties.
-```
-
-```{admonition} Example of Poor Measurement Strategy
-:class: caution
-Measuring the thickness of a wall by measuring distances from a far point to each side would be absurdly imprecise.
-```
-
-```{tip}
-The solution? Whenever possible, measure differences directly. Don't measure two large values and subtract them when you can measure their difference directly.
-```
-
-## Calculus Approach for Multi-Variable Functions
+## General Approach for Multi-Variable Functions
 
 ```{admonition} General Approach
 :class: note
-For a function $z = f(x,y)$, we can use partial derivatives to calculate uncertainty:
+For any function $z = f(x,y,...)$, the maximum uncertainty is found by summing the absolute values of all partial derivatives multiplied by their respective uncertainties:
 
-$$\delta z = \frac{\partial f}{\partial x}\delta x + \frac{\partial f}{\partial y}\delta y$$
+$$\delta z = \left|\frac{\partial f}{\partial x}\right|\delta x + \left|\frac{\partial f}{\partial y}\right|\delta y + ...$$
 
-These derivatives are evaluated at the measured values $x_0$ and $y_0$. If any derivative is negative, we choose signs to maximize $\delta z$.
+This ensures we capture the maximum possible uncertainty in our final result.
 ```
 
-### Products
+### Complex Functions
 
-```{admonition} Products
-:class: note
-For $z = xy$:
-$$\frac{\partial z}{\partial x} = y, \frac{\partial z}{\partial y} = x$$
-$$\delta z = y\delta x + x\delta y$$
+For more complex functions, break them down into simpler components and apply the chain rule, always using absolute values to ensure maximum uncertainty:
 
-As relative uncertainty:
-$$\frac{\delta z}{z} = \frac{\delta x}{x} + \frac{\delta y}{y}$$
+```{admonition} Example
+:class: example
+For $z = \sqrt{x^2 + y^2}$:
+
+$$\delta z = \left|\frac{x}{\sqrt{x^2 + y^2}}\right|\delta x + \left|\frac{y}{\sqrt{x^2 + y^2}}\right|\delta y$$
 ```
 
-```{important}
-For products, relative uncertainties add together.
-```
-
-### General Power Functions
-
-```{admonition} General Power Functions
-:class: note
-For $z = x^a y^b$:
-
-Taking logarithms:
-$$\log z = a\log x + b\log y$$
-
-Differentiating:
-$$\frac{\delta z}{z} = a\frac{\delta x}{x} + b\frac{\delta y}{y}$$
-```
-
-```{tip}
-This approach works for any number of variables with any powers, including negative powers (representing division).
-```
-
-### Implicit Differentiation
-
-```{admonition} Implicit Differentiation
-:class: note
-For complex relationships, implicit differentiation often simplifies uncertainty calculation. Consider the thin-lens equation:
-$$\frac{1}{f} = \frac{1}{s} + \frac{1}{s'}$$
-
-To find uncertainty in focal length, differentiate implicitly:
-$$-\frac{df}{f^2} = \frac{ds}{s^2} + \frac{ds'}{s'^2}$$
-```
-
-```{tip}
-This gives us $df/f$ directly without having to solve for $f$ explicitly.
-```
-
-## Compensating Errors
-
-Sometimes variables are not independent. Consider calculating refractive index using:
-$$n = \frac{\sin\left(\frac{A+D_m}{2}\right)}{\sin\left(\frac{A}{2}\right)}$$
-
-```{warning}
-If we have uncertainties in both $A$ and $D_m$, we cannot treat the numerator and denominator as independent variables. An increase in $A$ affects both the numerator and denominator in ways that partially compensate each other.
-```
-
-```{tip}
-The solution is either to rewrite the equation with truly independent variables or return to the fundamental partial derivative approach. Watch for such compensating errors, as incorrect treatment can introduce significant calculation errors.
-```
 
 ## Significant Figures
 
