@@ -89,7 +89,7 @@ project:
         - file: content/Appendix2.md
           title: Appendix 2 - Least Squares Fitting
         - file: content/Appendix3.md
-          title: Appendix 3 - Difference Elements
+          title: Appendix 3 - Python and Jupyter
         - file: content/Appendix4.md
           title: Appendix 4 - Sample Laboratory Report
 site:
