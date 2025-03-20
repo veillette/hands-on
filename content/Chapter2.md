@@ -208,7 +208,6 @@ This accounts for the worst case where uncertainties combine to maximize the tot
 ```
 :::{iframe} https://preview.p5js.org/veillette/embed/0tDJ0eSDw
 :width: 800
-:height: 800
 :::
 
 ### Products and Quotients
