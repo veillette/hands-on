@@ -54,22 +54,31 @@ While convention often suggests plotting input variables horizontally and output
 ### Practical Considerations
 Your plotting choices should consider both experimental requirements and practical convenience. Generally, plot variables in their simplest form, leaving complex arithmetic for the final calculation stage.
 
-For example, when determining viscosity using fluid flow through a pipe, Poiseuille's equation gives us:
-
-$$Q = \frac{P\pi a^4}{8\eta\ell}$$
-
+For example, when analyzing the period of a physical pendulum, the equation is given by:
+$$T = 2\pi\sqrt{\frac{I}{mgd}}$$
 Where:
-- Q = flow rate (volume/time)
-- P = pressure difference
-- a = pipe radius
-- ℓ = pipe length
-- η = viscosity coefficient
+- $T$ = period of oscillation
+- $I$ = moment of inertia about the pivot point
+- $m$ = mass of the pendulum
+- $g$ = acceleration due to gravity
+- $d$ = distance from pivot to center of mass
 
-You might consider plotting Q versus (πa⁴/8ℓ)P to get a slope of 1/η, but this introduces unnecessary complications. Each pressure measurement would require multiplication by πa⁴/8ℓ, and uncertainties in a and ℓ would artificially inflate the uncertainty in your compound quantity.
+For a compound pendulum with multiple masses at different positions, the moment of inertia becomes more complex:
+$$I = \sum_{i=1}^{n} m_i\left(r_i^2 + \frac{k_i^2}{12}\right)$$
+Where:
+- $m_i$ = mass of each component
+- $r_i$ = distance from pivot to center of each component
+- $k_i$ = length of each component (for extended objects)
 
-A better approach: plot Q versus P directly, using πa⁴/8ηℓ as the slope. This simplifies both your plotting process and uncertainty analysis. After determining the slope, calculate η using:
+You might be tempted to plot $T$ versus $\sqrt{\frac{1}{d}}$ for different configurations, but this would require calculating the complex moment of inertia for each data point and introduce compounded uncertainties.
 
-$$\eta = \frac{\pi a^4}{8\ell \times \text{slope}}$$
+A better approach: square both sides of the original equation to get:
+$$T^2 = 4\pi^2\frac{I}{mgd}$$
+
+Then plot $T^2$ versus $\frac{1}{d}$ for a fixed configuration. This gives a straight line with slope $4\pi^2\frac{I}{mg}$. After measuring the slope, you can calculate the moment of inertia using:
+$$I = \frac{mg \times \text{slope}}{4\pi^2}$$
+
+This method simplifies your data collection and analysis while providing direct insight into the system's physical properties. By postponing the calculation of the moment of inertia until after finding the slope, you reduce error propagation and gain a clearer understanding of the pendulum's behavior.
 
 This principle—plot variables in their simplest form and leave arithmetic for the final calculation—will serve you well in experimental design.
 
@@ -79,10 +88,10 @@ Sometimes convenience or necessity requires plotting variables constructed from 
 $$T = 2\pi\sqrt{\frac{h^2+k^2}{gh}}$$
 
 Where:
-- T = oscillation period (output)
-- h = distance from center of mass to support point (input)
-- g = gravitational acceleration (unknown constant)
-- k = radius of gyration about center of mass (unknown constant)
+- $T$ = oscillation period (output)
+- $h$ = distance from center of mass to support point (input)
+- $g$ = gravitational acceleration (unknown constant)
+- $k$ = radius of gyration about center of mass (unknown constant)
 
 Converting this to linear form using single-variable functions of h and T proves impossible. However, using compound variables makes it possible. Starting by squaring both sides:
 
@@ -246,7 +255,7 @@ We can determine some relationships (Q contains P/η and r³) but not all (the e
 
 ## Difference-Type Measurements
 
-Sometimes clear relationships between variables aren't readily apparent, or input variables can't be easily isolated. The system might be influenced by many factors, making it difficult to detect the specific effect you're studying.
+Sometimes clear relationships between variables are not readily apparent, or input variables can't be easily isolated. The system might be influenced by many factors, making it difficult to detect the specific effect you're studying.
 
 ### Null-Effect Measurements in Physical Sciences
 When studying subtle effects potentially masked by external factors (like measuring tiny extensions in steel wire affected by temperature fluctuations), use **null-effect** measurements. Study two identical specimens simultaneously—one exposed to your variable of interest, one not—and measure the difference between them.
