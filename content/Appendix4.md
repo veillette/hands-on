@@ -38,10 +38,10 @@ We employ a systematic approach to experimental design following established bes
    $$m = \frac{k}{4\pi^2}T^2 + b$$
    
    Where:
-   - Vertical axis variable = m
-   - Horizontal axis variable = T²
-   - Slope = k/4π²
-   - Intercept = b (theoretically zero, but may reveal systematic effects)
+   - Vertical axis variable = $m$
+   - Horizontal axis variable = $T^2$
+   - Slope = $\frac{k}{4 \pi^2}$
+   - Intercept = $b$ (theoretically zero, but may reveal systematic effects)
    
    This transformation allows us to determine k directly from the slope using linear regression techniques.
 
@@ -79,7 +79,7 @@ We developed a comprehensive measurement protocol:
 2. **Data collection procedure**:
    - Attach the weight pan (mass recorded separately)
    - Add calibrated weights incrementally
-   - For each load, displace the system 2cm from equilibrium
+   - For each load, displace the system 2 cm from equilibrium
    - Release from rest and time 10 complete oscillations
    - Repeat measurements three times per load setting
    - Record ambient temperature and pressure
@@ -168,8 +168,8 @@ plt.fill_between(periods_squared,
                  linear_model(periods_squared, *popt) + prediction_intervals,
                  alpha=0.2, color='gray', label='95% confidence interval')
 
-plt.xlabel('Period squared, T² (s²)')
-plt.ylabel('Mass, m (kg)')
+plt.ylabel('Period squared, T² (s²)')
+plt.xlabel('Mass, m (kg)')
 plt.title('Determination of Spring Constant via Oscillation Method')
 plt.grid(True, alpha=0.3)
 plt.legend()
@@ -193,19 +193,19 @@ Figure 1 shows the results of our computational analysis, including the experime
 From our computational analysis, we obtained:
 
 **Best-fit parameters:**
-- Slope = 0.2455 ± 0.0031 kg/s²
-- Intercept = -0.0068 ± 0.0049 kg
+- Slope = 0.2486 ± 0.0045 kg/s²
+- Intercept = -0.0776 ± 0.0064 s²
 
 **Derived spring constant:**
-$$k = 4\pi^2 \times \text{slope} = 4\pi^2 \times 0.2455 = 9.69 \text{ N/m}$$
+$$k = 4\pi^2 \times \text{slope} = 4\pi^2 \times 0.2486 = 9.81 \text{ N/m}$$
 
 **Uncertainty propagation:**
-$$\Delta k = 4\pi^2 \times \Delta\text{slope} = 4\pi^2 \times 0.0031 = 0.12 \text{ N/m}$$
+$$\Delta k = 4\pi^2 \times \Delta\text{slope} = 4\pi^2 \times 0.0045 = 0.18 \text{ N/m}$$
 
 Our final result is:
-$$k = 9.69 \pm 0.12 \text{ N/m}$$
+$$k = 9.81 \pm 0.18 \text{ N/m}$$
 
-This gives us a relative uncertainty of 1.2%, significantly better than our target of 10%.
+This gives us a relative uncertainty of 1.8%, significantly better than our target of 10%.
 
 ## 4.3 Extended Procedure
 
@@ -216,7 +216,7 @@ Our experimental procedure followed these detailed steps:
    - The spring was pre-stretched with a 0.6 kg load for 30 minutes to minimize hysteresis effects
    - Weight calibration was verified using an analytical balance (±0.1 mg precision)
    - The support stand was secured to a vibration-isolated optical table
-   - Level adjustment was performed using a digital inclinometer
+   - Level adjustment was performed using a spirit level
 
 2. **Environmental control:**
    - Room temperature maintained at 22.0 ± 0.5°C
@@ -326,17 +326,17 @@ The measured relationship between load and oscillation period is presented in Ta
 | 0.50 ± 0.0001 | 10 | 15.20 ± 0.03 | 1.520 ± 0.003 | 2.310 ± 0.009 |
 
 Computational analysis of this data using weighted least-squares regression yielded:
-$$k = 9.69 \pm 0.12 \text{ N/m}$$
+$$k = 9.81 \pm 0.18 \text{ N/m}$$
 
 With a coefficient of determination R² = 0.9996, demonstrating excellent agreement with our linear model. Figure 3 presents the graphical analysis of our results.
 
 ![Graph of statistical analysis results](../figures/A4/spring_constant_analysis.svg)
-*Figure 3: Statistical analysis of the m vs. T² relationship showing experimental data points with error bars, weighted least-squares regression line, and 95% confidence intervals.*
+*Figure 3: Statistical analysis of the T² vs m relationship showing experimental data points with error bars, weighted least-squares regression line, and 95% confidence intervals.*
 
 ### Discussion
-Our computational approach yielded a spring constant value of k = 9.69 ± 0.12 N/m, with a relative uncertainty of 1.2%—significantly better than our target of 10%. The high coefficient of determination (R² = 0.9996) confirms the excellent agreement between our experimental data and the theoretical model.
+Our computational approach yielded a spring constant value of k = 9.81 ± 0.18 N/m, with a relative uncertainty of 1.8%—significantly better than our target of 10%. The high coefficient of determination (R² = 0.9996) confirms the excellent agreement between our experimental data and the theoretical model.
 
-The regression analysis revealed a small negative intercept of -0.0068 ± 0.0049 kg, which is statistically consistent with zero within 1.4 standard deviations. However, this slight offset suggests the possibility of unaccounted masses in the system. Two plausible explanations include:
+The regression analysis revealed a small negative intercept of -0.0776 ± 0.0064 s², which is not statistically consistent with zero,even within five standard deviations. This slight offset suggests the possibility of unaccounted masses in the system. Two plausible explanations include:
 
 1. The effective mass contribution from the spring itself, which participates in the oscillation. For a uniform spring, theory predicts an effective mass contribution of approximately 1/3 of the spring's total mass.
 
