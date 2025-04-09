@@ -82,12 +82,12 @@ jobs:
       - name: Build PDF, DOCX, and md Assets
         run: |
           echo "Build PDF Assets, docx, and md"
-          myst build -a
+          npx myst build -a
 
       - name: Build HTML Assets
         run: |
           echo "Building site with BASE_URL: $BASE_URL"
-          myst build --html
+          npx myst build --html
         env:
           NODE_OPTIONS: "--max-old-space-size=4096"
 
