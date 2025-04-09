@@ -40,8 +40,11 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
 
+      - name: Install dependencies
+        run: npm ci
+
       - name: Cache LaTeX packages
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         id: cache-latex
         with:
           path: /var/lib/apt/lists
@@ -59,11 +62,8 @@ jobs:
         with:
           cache-dependency-path: requirements.typ
       
-      - name: Install MyST Markdown
-        run: npm install -g mystmd
-
       - name: Cache build artifacts
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ./_build
           key: myst-build-${{ github.sha }}
