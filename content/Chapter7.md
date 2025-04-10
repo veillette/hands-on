@@ -2,9 +2,21 @@
 
 ## Why Quality Scientific Writing Matters
 
-The value of excellent scientific writing cannot be overstated. Even groundbreaking experimental work loses its impact if poorly communicated. While verbal presentations occasionally suffice, most scientific communication happens through written documents. Developing strong writing skills should be considered a fundamental component of your experimental toolkit. Your writing must engage readers and maintain their attention throughout. This chapter offers guidance on effective scientific writing, with a practical example of these principles provided in Appendix A4.
+:::{important}
+The value of excellent scientific writing cannot be overstated. Even groundbreaking experimental work loses its impact if poorly communicated. While verbal presentations occasionally suffice, most scientific communication happens through written documents. Developing strong writing skills should be considered a fundamental component of your experimental toolkit.
+:::
 
+:::{note}
 Learning to write well cannot be reduced to a simple checklist. Each person develops their own distinctive writing style through practice. The introductory physics laboratory provides an excellent opportunity to develop these skills. Our writing styles may differ, but clarity remains the essential common element that makes diverse approaches valuable rather than problematic.
+:::
+
+:::{tip}
+When approaching scientific report writing, one guiding principle stands above all others: focus on your reader. Whether preparing an internal technical document or a manuscript for publication, prioritize the needs of the person who will read your work. From their perspective, you are communicating across distance and time, with only your written words to convey your message.
+:::
+
+:::{note}
+Contemporary scientific writing has largely moved away from impersonal, passive constructions. Instead, straightforward language often works best: "We measured the fall time using a millisecond-precision electronic timer." With no single "correct" approach to report writing, choose language that communicates most clearly and engagingly.
+:::
 
 When approaching scientific report writing, one guiding principle stands above all others: focus on your reader. Whether preparing an internal technical document or a manuscript for publication, prioritize the needs of the person who will read your work. From their perspective, you are communicating across distance and time, with only your written words to convey your message. You cannot clarify misunderstandings or add explanations as they read. Your report must stand independently and communicate effectively on first reading. The reception of your work, its scientific impact, and potentially your professional advancement may hinge on how effectively readers understand your report during their brief engagement with it. This perspective should emphasize the importance of taking writing seriously.
 
@@ -14,16 +26,27 @@ Let's examine each report section from the reader's perspective.
 
 ## Title
 
-The title typically provides readers their first impression of your work. Since potential readers are usually busy professionals with competing demands on their attention, your title must be informative, appropriate, and engaging. While keeping it concise, make the topic explicit. For instance, if measuring a fluid's specific heat using continuous-flow calorimetry, a straightforward title works well: "Measurement of the Specific Heat of Water Using Continuous-Flow Calorimetry." This title effectively answers three key questions:
+:::{important}
+The title typically provides readers their first impression of your work. Since potential readers are usually busy professionals with competing demands on their attention, your title must be informative, appropriate, and engaging.
+:::
+
+:::{tip}
+While keeping it concise, make the topic explicit. For instance, if measuring a fluid's specific heat using continuous-flow calorimetry, a straightforward title works well: "Measurement of the Specific Heat of Water Using Continuous-Flow Calorimetry." This title effectively answers three key questions:
 1. Is this experimental or theoretical work?
 2. What specific topic does it address?
 3. What methodology was employed?
+:::
 
 Addressing these elements typically results in an effective title.
 
 ## Format
 
-The following sections analyze report components in detail. Note that the subsection headers discussed here should not appear in your actual report. Most standard physics laboratory reports require only minimal sectioning. Essential sections typically include:
+:::{note}
+The following sections analyze report components in detail. Note that the subsection headers discussed here should not appear in your actual report. Most standard physics laboratory reports require only minimal sectioning.
+:::
+
+:::{important}
+Essential sections typically include:
 
 INTRODUCTION  
 PROCEDURE  
@@ -37,17 +60,20 @@ SAMPLE PREPARATION
 UNCERTAINTY CALCULATIONS  
 
 Your report should present a clear, logical progression of ideas. If detailed information might disrupt this flow, consider placing it in an appendix. This approach preserves the information for interested readers while maintaining the report's coherence.
+:::
 
 Now let's examine each section's specific requirements.
 
 ## Introduction
 
+:::{important}
 An effective introduction typically includes these components in sequence:
 
 - Topic Statement
 - Review of Existing Information
 - Application of Information to Specific Experiment
 - Summary of Experimental Intention
+:::
 
 ### Topic Statement
 
@@ -75,7 +101,9 @@ A well-crafted introduction accomplishes several goals: directing reader attenti
 
 ## Procedure
 
+:::{tip}
 Like the introduction, your procedure section should progress from general to specific. Diving immediately into technical details would confuse readers who lack an overview of your approach. Maintain the same consideration for reader comprehension here as in your introduction, again moving from broader concepts to specific details.
+:::
 
 ### Outline of Procedure
 
@@ -97,6 +125,14 @@ Well-executed apparatus diagrams substantially enhance report quality. While pro
 
 ## Results
 
+:::{important}
+By now, readers understand your experimental context and methodology, and are ready for your findings. Since most valuable experiments examine relationships between variables, results often benefit from tabular presentation, particularly when not directly comparing to mathematical models.
+:::
+
+:::{tip}
+Maintain high standards of clarity in tables, with comprehensive headers including variable names, symbols, and measurement units. Include uncertainty values with measurements unless addressed separately. Properly identify tables with numbers and titles.
+:::
+
 ### Measured Values
 
 By now, readers understand your experimental context and methodology, and are ready for your findings. Since most valuable experiments examine relationships between variables, results often benefit from tabular presentation, particularly when not directly comparing to mathematical models. Maintain high standards of clarity in tables, with comprehensive headers including variable names, symbols, and measurement units. Include uncertainty values with measurements unless addressed separately. Properly identify tables with numbers and titles. Reference any graphical representations straightforwardly: "Figure 2 shows time of fall versus height." Place exceptionally detailed data tables in appendices to maintain narrative flow. Following primary results tables, list all other relevant measured quantities with their uncertainties and units.
@@ -113,6 +149,14 @@ Similarly, explain your approach to uncertainty calculation. Whether you visuall
 
 ## Graphs
 
+:::{important}
+The graphs you created during analysis served as computational tools, potentially requiring large formats and precise drawing for accurate measurement. However, graphs included in your report serve a different purpose—they illustrate results rather than providing readers raw analytical material. They help readers visualize system behavior and evaluate your interpretations.
+:::
+
+:::{tip}
+Report graphs should be clean, clear, and uncluttered. Plot points with visible uncertainty indicators (boxes or crosses) and clearly label axes. Identify uncertainty types and axis symbols directly on or near the graph to avoid forcing readers to search the text for interpretation.
+:::
+
 The graphs you created during analysis served as computational tools, potentially requiring large formats and precise drawing for accurate measurement. However, graphs included in your report serve a different purpose—they illustrate results rather than providing readers raw analytical material. They help readers visualize system behavior and evaluate your interpretations.
 
 ![A completed graph.](../figures/ch7/Fig7_2.png)
@@ -120,6 +164,14 @@ The graphs you created during analysis served as computational tools, potentiall
 Report graphs should be clean, clear, and uncluttered. Plot points with visible uncertainty indicators (boxes or crosses) and clearly label axes. Identify uncertainty types and axis symbols directly on or near the graph to avoid forcing readers to search the text for interpretation. Avoid cluttering graphs with calculation details. Each graph should have a descriptive title or extended caption that can also incorporate important technical details. Figure 2 demonstrates acceptable graph formatting.
 
 ## Discussion
+
+:::{important}
+The discussion constitutes an integral report component rather than an afterthought. Here you address the fundamental experimental question—the relationship between system and model. This comparison's outcome represents a critical experimental result that readers eagerly anticipate.
+:::
+
+:::{tip}
+Having evaluated your results objectively during analysis, present an unbiased assessment of system-model correspondence. Make a straightforward factual statement about what you observed.
+:::
 
 ### Comparison Between Model and System
 
@@ -144,7 +196,6 @@ Some discrepancies have readily identifiable causes. Flow rate measurements devi
 When confronting genuinely puzzling discrepancies, speculation remains valuable even if limited. Your insights, even tentative ones, likely benefit other researchers given your direct experimental experience. Conversely, if you cannot offer constructive ideas despite careful analysis, honest acknowledgment of unresolved discrepancies between well-established systems and models can itself contribute meaningfully to scientific discourse.
 
 When speculating about discrepancies, maintain scientific responsibility. Rather than offering disconnected hypotheses, develop interpretations logically connected to observed patterns. For instance: "The T² versus m plot's non-zero intercept at m=0 suggests the presence of additional unaccounted mass in our system." Identifying the specific source is less critical than recognizing the logical implications of your observations. Such reasoned inference facilitates further investigation by providing a structured framework for subsequent research.
-
 
 ## Glossary
 
