@@ -586,9 +586,6 @@ Pandas
 curve_fit
 : A function from SciPy's optimize module used to fit a function to data with non-linear least squares.
 
-propagation of uncertainty
-: The process of determining how uncertainty in input variables affects the uncertainty in a derived quantity.
-
 residuals
 : The differences between observed values and the values predicted by a model.
 :::

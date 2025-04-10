@@ -206,13 +206,13 @@ This explains why the standard deviation of the mean decreases by a factor of $\
 
 The $\frac{1}{\sqrt{N}}$ scaling is a direct consequence of how independent random uncertainties combine in quadrature rather than linearly, reflecting the statistical nature of measurement errors and the underlying probability distributions.
 
-:::{Note}
+```{note}
 While uncertainties add in quadrature (which is generally favorable compared to direct addition), this formula highlights a critical challenge in difference measurements. When two quantities of similar magnitude are subtracted, the absolute uncertainty of the result remains comparable to the original measurements' uncertainties, but the relative uncertainty can become dramatically larger.
 
 Consider measuring the difference between two nearly equal quantities, each with uncertainty: if $x \approx y$, then $z = x - y$ will be small, but $\Delta_z$ remains substantial. This means the relative uncertainty $\frac{\Delta_z}{z}$ can become extremely large or even dominate the measurement.
 
-This explains why difference measurements between similar-sized quantities require exceptional precision in the original measurements. In experimental physics, this challenge appears in many contexts: measuring small temperature differences, detecting slight frequency shifts, or determining small changes in position. When designing experiments that involve subtraction of similar quantities, experimentalists must account for this fundamental limitation and employ specialized techniques like differential measurements, lock-in amplification, or null methods to achieve the required precision."
-:::
+This explains why difference measurements between similar-sized quantities require exceptional precision in the original measurements. In experimental physics, this challenge appears in many contexts: measuring small temperature differences, detecting slight frequency shifts, or determining small changes in position. When designing experiments that involve subtraction of similar quantities, experimentalists must account for this fundamental limitation and employ specialized techniques like differential measurements, lock-in amplification, or null methods to achieve the required precision.
+```
 
 ### Product
 For $z = xy$:
