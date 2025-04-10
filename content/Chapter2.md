@@ -264,7 +264,7 @@ Consider how you might record a measurement from a graduated cylinder. When the 
 
 Rather than memorizing a complex set of rules about zeroes and calculations, focus first on the fundamental principle: significant figures reflect the precision of measurement. When you understand this purpose, many of the rules become intuitive rather than arbitrary.
 
-```{run-python} Exploring Significant Figures
+```python Exploring Significant Figures
 # Let's write a simple function to estimate significant figures in a measurement
 def count_sig_figs(measurement_str):
     """Estimate the number of significant figures in a measurement"""
