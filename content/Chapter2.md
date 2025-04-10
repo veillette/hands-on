@@ -354,7 +354,7 @@ significant figures
 zero error
 : A systematic error where an instrument gives a non-zero reading when the true value is zero.
 
-propagation of uncertainty
+uncertainty propagation
 : The process of determining how uncertainties in individual measurements combine to affect the uncertainty in a calculated result.
 :::
 
