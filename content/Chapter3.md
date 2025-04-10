@@ -307,30 +307,114 @@ outlier
 
 ## Problems
 
+```{exercise}
+:label: prob-histogram
+
 The following observations of angles (in minutes of arc) were made while measuring the thickness of a liquid helium film. Assume the observations show random uncertainty following a Gaussian distribution:
 
 34, 35, 45, 40, 46, 38, 47, 36, 38, 34, 33, 36, 43, 43, 37, 38, 32, 38, 40, 33, 38, 40, 48, 39, 32, 36, 40, 40, 36, 34
 
-1. Construct a histogram of these observations.
-2. Determine the mode and median values.
-3. Calculate the mean value.
-4. Calculate the best estimate of the population standard deviation.
-5. Calculate the standard error of the mean.
-6. Calculate the standard deviation of the standard deviation.
-7. Determine: 
+Construct a histogram of these observations.
+```
+
+```{exercise}
+:label: prob-mode-median
+
+Determine the mode and median values.
+```
+
+```{exercise}
+:label: prob-mean
+
+Calculate the mean value.
+```
+
+```{exercise}
+:label: prob-standard-deviation
+
+Calculate the best estimate of the population standard deviation.
+```
+
+```{exercise}
+:label: prob-standard-error
+
+Calculate the standard error of the mean.
+```
+
+```{exercise}
+:label: prob-sd-of-sd
+
+Calculate the standard deviation of the standard deviation.
+```
+
+```{exercise}
+:label: prob-reading-probability
+
+Determine: 
    a) The range within which a single reading has a 68% probability of falling
    b) The range for 95% probability
-8. Within what limits does the true mean have:
+```
+
+```{exercise}
+:label: prob-true-mean
+
+Within what limits does the true mean have:
    a) A 68% probability of falling
    b) A 95% probability of falling
-9. Within what limits does the true population standard deviation have:
+```
+
+```{exercise}
+:label: prob-true-sd
+
+Within what limits does the true population standard deviation have:
    a) A 68% probability of falling
    b) A 95% probability of falling
-10. Calculate the value of parameter h in the Gaussian distribution equation.
-11. If a measurement of 55 arc-minutes had been included in the dataset, would you accept or reject it? Explain your reasoning.
-12. Randomly select two subsamples of five observations each from the dataset. Calculate their means and standard deviations. Compare these values with those calculated from the complete dataset.
-13. If the experiment requires that the standard error of the mean not exceed 1% of the mean value, how many measurements would be needed?
-14. If the population standard deviation must be known within 5% of its true value, how many measurements would be required?
-15. Repeated measurements of a copper wire diameter yielded a mean of 0.62 mm with a sample standard deviation of 0.04 mm. Calculate the standard deviation for the wire's cross-sectional area.
-16. The wavelengths of sodium's yellow spectral lines were measured as 589.11×10⁻⁹ m and 589.68×10⁻⁹ m, each with a standard deviation of 0.15×10⁻⁹ m. Calculate the standard deviation of their wavelength difference.
-17. A simple pendulum is used to determine g using $T=2 \pi \sqrt{\frac{\ell}{g}}$. Twenty measurements of T gave a mean of 1.82 s and standard deviation of 0.06 s. Ten measurements of $\ell$ gave a mean of 0.823 m and standard deviation of 0.014 m. Calculate the standard error of the mean for g.
+```
+
+```{exercise}
+:label: prob-gaussian-parameter
+
+Calculate the value of parameter h in the Gaussian distribution equation.
+```
+
+```{exercise}
+:label: prob-outlier
+
+If a measurement of 55 arc-minutes had been included in the dataset, would you accept or reject it? Explain your reasoning.
+```
+
+```{exercise}
+:label: prob-subsamples
+
+Randomly select two subsamples of five observations each from the dataset. Calculate their means and standard deviations. Compare these values with those calculated from the complete dataset.
+```
+
+```{exercise}
+:label: prob-sample-size-error
+
+If the experiment requires that the standard error of the mean not exceed 1% of the mean value, how many measurements would be needed?
+```
+
+```{exercise}
+:label: prob-sample-size-sd
+
+If the population standard deviation must be known within 5% of its true value, how many measurements would be required?
+```
+
+```{exercise}
+:label: prob-wire-area
+
+Repeated measurements of a copper wire diameter yielded a mean of 0.62 mm with a sample standard deviation of 0.04 mm. Calculate the standard deviation for the wire's cross-sectional area.
+```
+
+```{exercise}
+:label: prob-wavelength-difference
+
+The wavelengths of sodium's yellow spectral lines were measured as 589.11×10⁻⁹ m and 589.68×10⁻⁹ m, each with a standard deviation of 0.15×10⁻⁹ m. Calculate the standard deviation of their wavelength difference.
+```
+
+```{exercise}
+:label: prob-pendulum
+
+A simple pendulum is used to determine g using $T=2 \pi \sqrt{\frac{\ell}{g}}$. Twenty measurements of T gave a mean of 1.82 s and standard deviation of 0.06 s. Ten measurements of $\ell$ gave a mean of 0.823 m and standard deviation of 0.014 m. Calculate the standard error of the mean for g.
+```

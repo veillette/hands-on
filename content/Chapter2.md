@@ -359,28 +359,33 @@ propagation of uncertainty
 
 ## Problems
 
-```{admonition} Problem 1
-:class: question
+```{exercise}
+:label: prob-window-pane
+
 I measure a window pane's width between 68.3 cm and 68.9 cm. Express this as a central value with uncertainty, and calculate the relative uncertainty.
 ```
 
-```{admonition} Problem 2
-:class: question
+```{exercise}
+:label: prob-digital-scale
+
 A digital scale displays 235.8 g when weighing a sample. If the scale rounds to the nearest 0.1 g, what is the absolute uncertainty?
 ```
 
-```{admonition} Problem 3
-:class: question
+```{exercise}
+:label: prob-measuring-tape
+
 If my measuring tape has absolute uncertainty ±0.5 mm, what's the shortest distance I can measure while maintaining relative uncertainty below 0.5%?
 ```
 
-```{admonition} Problem 4
-:class: question
+```{exercise}
+:label: prob-rectangular-sheet
+
 I measure the dimensions of a rectangular sheet as $(25.4 \pm 0.2) \text{ cm} \times (18.6 \pm 0.2) \text{ cm}$. What is the absolute uncertainty in the calculated area?
 ```
 
-```{admonition} Problem 5
-:class: question
+```{exercise}
+:label: prob-capacitance
+
 A capacitance value is calculated using $C = \frac{\varepsilon_0 A}{d}$ with measurements:
    - Area $A = (0.025 \pm 0.001) \text{ m}^2$
    - Distance $d = (0.5 \pm 0.02) \text{ mm}$
@@ -389,18 +394,21 @@ A capacitance value is calculated using $C = \frac{\varepsilon_0 A}{d}$ with mea
 Calculate the value and uncertainty of $C$.
 ```
 
-```{admonition} Problem 6
-:class: question
+```{exercise}
+:label: prob-wave-velocity
+
 When determining wave velocity using $v = \lambda f$, I measure wavelength $\lambda = (0.75 \pm 0.05) \text{ m}$ and frequency $f = (440 \pm 5) \text{ Hz}$. Find the absolute and relative uncertainty in velocity.
 ```
 
-```{admonition} Problem 7
-:class: question
+```{exercise}
+:label: prob-significant-figures
+
 A value is reported as $583.2417 \pm 0.15$. Rewrite this with appropriate significant figures.
 ```
 
-```{admonition} Problem 8
-:class: question
+```{exercise}
+:label: prob-temperature-coefficient
+
 The resistance of a wire is measured at two temperatures:
 - $R_1 = (125.3 \,\pm\, 0.4)\,\Omega$ at $T_1 = 20°\text{C}$
 - $R_2 = (138.1 \,\pm\, 0.4)\,\Omega$ at $T_2 = 50°\text{C}$

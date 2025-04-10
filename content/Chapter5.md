@@ -331,88 +331,178 @@ confounding variable
 
 ## Problems
 
-## Practice Problems
+```{exercise}
+:label: prob-skydiver-hypothesis
 
-1. A research paper claims the terminal velocity of a skydiver depends solely on the skydiver's mass and gravitational acceleration. Evaluate the reasonableness of designing an experiment to test this hypothesis.
+A research paper claims the terminal velocity of a skydiver depends solely on the skydiver's mass and gravitational acceleration. Evaluate the reasonableness of designing an experiment to test this hypothesis.
+```
 
-2. A projectile is launched with initial velocity v at angle α to the horizontal. Its range may depend on the projectile's mass, initial velocity, launch angle, and gravitational acceleration. Determine the functional form of this relationship through dimensional analysis.
+```{exercise}
+:label: prob-projectile-dimensional-analysis
 
-3. The internal pressure in a soap bubble depends on the liquid's surface tension and the bubble's radius. Using dimensional analysis, determine the relationship between these variables.
+A projectile is launched with initial velocity v at angle α to the horizontal. Its range may depend on the projectile's mass, initial velocity, launch angle, and gravitational acceleration. Determine the functional form of this relationship through dimensional analysis.
+```
 
-4. A torsional oscillator's period depends on the support's torsional stiffness coefficient (torque per unit angular displacement) and the moment of inertia of the oscillating object. Find the functional relationship between these quantities.
+```{exercise}
+:label: prob-soap-bubble
 
-5. The central deflection of a beam with circular cross-section, supported at both ends and loaded at its center, depends on the applied force, distance between supports, beam radius, and the material's Young's modulus. Use dimensional analysis to determine the relationship.
+The internal pressure in a soap bubble depends on the liquid's surface tension and the bubble's radius. Using dimensional analysis, determine the relationship between these variables.
+```
+
+```{exercise}
+:label: prob-torsional-oscillator
+
+A torsional oscillator's period depends on the support's torsional stiffness coefficient (torque per unit angular displacement) and the moment of inertia of the oscillating object. Find the functional relationship between these quantities.
+```
+
+```{exercise}
+:label: prob-beam-deflection
+
+The central deflection of a beam with circular cross-section, supported at both ends and loaded at its center, depends on the applied force, distance between supports, beam radius, and the material's Young's modulus. Use dimensional analysis to determine the relationship.
+```
 
 *For problems 6-23, state which variables or combinations of variables should be plotted to verify the proposed relationship, and explain how to determine the unknown parameter(s) from your graph (slope, intercept, etc.).*
 
-6. The position of an object under constant acceleration follows:
-   $$s = \frac{1}{2}at^2$$
-   where s and t are measurable. Determine the acceleration a.
+```{exercise}
+:label: prob-constant-acceleration
 
-7. The fundamental vibration frequency of a stretched string is given by:
-   $$f = \frac{1}{2\ell}\sqrt{\frac{T}{m}}$$
-   where f, ℓ, and T can be measured. Determine m.
+The position of an object under constant acceleration follows:
+$$s = \frac{1}{2}at^2$$
+where s and t are measurable. Determine the acceleration a.
+```
 
-8. The exit velocity of an ideal fluid flowing through an opening in a tank follows:
-   $$v = \sqrt{\frac{2P}{\rho}}$$
-   where v and P are measurable. Determine fluid density ρ.
+```{exercise}
+:label: prob-string-frequency
 
-9. A conical pendulum's period is described by:
-   $$T = 2\pi\sqrt{\frac{\ell\cos\alpha}{g}}$$
-   where T and α are measurable, and ℓ is fixed and known. Determine g.
+The fundamental vibration frequency of a stretched string is given by:
+$$f = \frac{1}{2\ell}\sqrt{\frac{T}{m}}$$
+where f, ℓ, and T can be measured. Determine m.
+```
 
-10. The deflection of a cantilever beam follows:
-    $$d = \frac{4W\ell^3}{Yab^3}$$
-    where d, W, and ℓ are measurable, while a and b are fixed, known values. Determine Young's modulus Y.
+```{exercise}
+:label: prob-fluid-velocity
 
-11. The height of capillary rise in a tube follows:
-    $$h = \frac{2\sigma}{\rho gR}$$
-    where h and R are measurable, and ρ and g are known constants. Determine surface tension σ.
+The exit velocity of an ideal fluid flowing through an opening in a tank follows:
+$$v = \sqrt{\frac{2P}{\rho}}$$
+where v and P are measurable. Determine fluid density ρ.
+```
 
-12. The ideal gas law states:
-    $$pV = RT$$
-    where p and T are measurable, and V is fixed and known. Determine gas constant R.
+```{exercise}
+:label: prob-conical-pendulum
 
-13. The Doppler frequency shift for a moving source follows:
-    $$f = f_0\frac{v}{v-v_0}$$
-    where f and v₀ are measurable quantities, and f₀ is a known constant. Determine velocity v.
+A conical pendulum's period is described by:
+$$T = 2\pi\sqrt{\frac{\ell\cos\alpha}{g}}$$
+where T and α are measurable, and ℓ is fixed and known. Determine g.
+```
 
-14. Thermal expansion of a solid follows:
-    $$\ell = \ell_0(1+\alpha\Delta T)$$
-    where ℓ and ΔT are measurable, and ℓ₀ is unknown but constant. Determine coefficient of expansion α.
+```{exercise}
+:label: prob-cantilever-beam
 
-15. Snell's law of refraction states:
-    $$n_1\sin\theta_1 = n_2\sin\theta_2$$
-    where θ₁ and θ₂ are measurable angles, and n₁ is a known constant. Determine refractive index n₂.
+The deflection of a cantilever beam follows:
+$$d = \frac{4W\ell^3}{Yab^3}$$
+where d, W, and ℓ are measurable, while a and b are fixed, known values. Determine Young's modulus Y.
+```
 
-16. The thin lens equation states:
-    $$\frac{1}{f} = \frac{1}{s} + \frac{1}{s'}$$
-    where s and s' are measurable. Determine focal length f. Compare two possible plotting methods and explain which is preferable.
+```{exercise}
+:label: prob-capillary-rise
 
-17. The resonant frequency of a parallel LC circuit follows:
-    $$\omega = \frac{1}{\sqrt{LC}}$$
-    where ω and C are measurable. Determine inductance L.
+The height of capillary rise in a tube follows:
+$$h = \frac{2\sigma}{\rho gR}$$
+where h and R are measurable, and ρ and g are known constants. Determine surface tension σ.
+```
 
-18. Coulomb's law for electrostatic force is:
-    $$F = \frac{1}{4\pi\epsilon_0}\frac{q_1q_2}{r^2}$$
-    where F and r are measurable, while q₁ and q₂ are fixed, known values. Describe how to verify the form of this relationship.
+```{exercise}
+:label: prob-ideal-gas
 
-19. The force between parallel current-carrying conductors follows:
-    $$F = \frac{\mu_0}{4\pi}\frac{i_1i_2\ell^2}{r^2}$$
-    where F, i₁, i₂, and r are measurable quantities, while μ₀ and ℓ are constants. Describe how to verify this relationship.
+The ideal gas law states:
+$$pV = RT$$
+where p and T are measurable, and V is fixed and known. Determine gas constant R.
+```
 
-20. The charge remaining on a discharging capacitor follows:
-    $$Q = Q_0e^{-t/RC}$$
-    where Q and t are measurable, and R is known and fixed. Determine capacitance C.
+```{exercise}
+:label: prob-doppler-shift
 
-21. The impedance of a series RC circuit follows:
-    $$Z = \sqrt{R^2+\frac{1}{\omega^2C^2}}$$
-    where Z and ω are measurable. Determine resistance R and capacitance C.
+The Doppler frequency shift for a moving source follows:
+$$f = f_0\frac{v}{v-v_0}$$
+where f and v₀ are measurable quantities, and f₀ is a known constant. Determine velocity v.
+```
 
-22. The relativistic mass variation with velocity follows:
-    $$m = \frac{m_0}{\sqrt{1-\frac{v^2}{c^2}}}$$
-    where m and v are measurable. Determine rest mass m₀ and speed of light c.
+```{exercise}
+:label: prob-thermal-expansion
 
-23. The wavelengths in the Balmer series of hydrogen follow:
-    $$\frac{1}{\lambda} = R\left(\frac{1}{4}-\frac{1}{n^2}\right)$$
-    where λ and n are measurable. Determine Rydberg constant R.
+Thermal expansion of a solid follows:
+$$\ell = \ell_0(1+\alpha\Delta T)$$
+where ℓ and ΔT are measurable, and ℓ₀ is unknown but constant. Determine coefficient of expansion α.
+```
+
+```{exercise}
+:label: prob-snells-law
+
+Snell's law of refraction states:
+$$n_1\sin\theta_1 = n_2\sin\theta_2$$
+where θ₁ and θ₂ are measurable angles, and n₁ is a known constant. Determine refractive index n₂.
+```
+
+```{exercise}
+:label: prob-thin-lens
+
+The thin lens equation states:
+$$\frac{1}{f} = \frac{1}{s} + \frac{1}{s'}$$
+where s and s' are measurable. Determine focal length f. Compare two possible plotting methods and explain which is preferable.
+```
+
+```{exercise}
+:label: prob-lc-circuit
+
+The resonant frequency of a parallel LC circuit follows:
+$$\omega = \frac{1}{\sqrt{LC}}$$
+where ω and C are measurable. Determine inductance L.
+```
+
+```{exercise}
+:label: prob-coulombs-law
+
+Coulomb's law for electrostatic force is:
+$$F = \frac{1}{4\pi\epsilon_0}\frac{q_1q_2}{r^2}$$
+where F and r are measurable, while q₁ and q₂ are fixed, known values. Describe how to verify the form of this relationship.
+```
+
+```{exercise}
+:label: prob-parallel-conductors
+
+The force between parallel current-carrying conductors follows:
+$$F = \frac{\mu_0}{4\pi}\frac{i_1i_2\ell^2}{r^2}$$
+where F, i₁, i₂, and r are measurable quantities, while μ₀ and ℓ are constants. Describe how to verify this relationship.
+```
+
+```{exercise}
+:label: prob-discharging-capacitor
+
+The charge remaining on a discharging capacitor follows:
+$$Q = Q_0e^{-t/RC}$$
+where Q and t are measurable, and R is known and fixed. Determine capacitance C.
+```
+
+```{exercise}
+:label: prob-rc-circuit
+
+The impedance of a series RC circuit follows:
+$$Z = \sqrt{R^2+\frac{1}{\omega^2C^2}}$$
+where Z and ω are measurable. Determine resistance R and capacitance C.
+```
+
+```{exercise}
+:label: prob-relativistic-mass
+
+The relativistic mass variation with velocity follows:
+$$m = \frac{m_0}{\sqrt{1-\frac{v^2}{c^2}}}$$
+where m and v are measurable. Determine rest mass m₀ and speed of light c.
+```
+
+```{exercise}
+:label: prob-balmer-series
+
+The wavelengths in the Balmer series of hydrogen follow:
+$$\frac{1}{\lambda} = R\left(\frac{1}{4}-\frac{1}{n^2}\right)$$
+where λ and n are measurable. Determine Rydberg constant R.
+```

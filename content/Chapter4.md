@@ -245,6 +245,124 @@ Importantly, this approach lets us obtain accurate parameter values even without
 
 While we've focused on determining constants from slopes, straight-line graphs actually provide two independent pieces of information – slope and intercept. This allows experiments to determine two separate quantities within a model, a capability we'll explore further in later chapters.
 
+## Problems
+
+```{exercise}
+:label: prob-model-comparison
+
+Consider a pendulum experiment where the period T is measured at different lengths L. The measurements yield the following data:
+- L = 0.25 m, T = 1.01 s 
+- L = 0.50 m, T = 1.42 s
+- L = 0.75 m, T = 1.73 s
+- L = 1.00 m, T = 2.01 s
+
+The theoretical model predicts $T = 2\pi\sqrt{\frac{L}{g}}$, where g is the acceleration due to gravity.
+
+Plot the data in a way that creates a straight-line graph and determine the value of g from the slope.
+```
+
+```{exercise}
+:label: prob-model-assessment
+
+A scientist proposes that the current I in a circuit varies with voltage V according to the relationship $I = aV + bV^2$ where a and b are constants. The following measurements are collected:
+- V = 1.0 V, I = 3.2 mA
+- V = 2.0 V, I = 7.3 mA
+- V = 3.0 V, I = 12.4 mA
+- V = 4.0 V, I = 18.5 mA
+
+Describe two different methods to test whether this model adequately describes the data, and determine the constants a and b.
+```
+
+```{exercise}
+:label: prob-extrapolation
+
+A material's resistivity ρ is measured at various temperatures T, yielding the data:
+- T = 20°C, ρ = 1.72 × 10⁻⁸ Ω·m
+- T = 40°C, ρ = 1.85 × 10⁻⁸ Ω·m
+- T = 60°C, ρ = 1.97 × 10⁻⁸ Ω·m
+- T = 80°C, ρ = 2.10 × 10⁻⁸ Ω·m
+
+Assuming a linear relationship between ρ and T, estimate the resistivity at 100°C. Discuss the limitations of this extrapolation and what additional information would increase its reliability.
+```
+
+```{exercise}
+:label: prob-model-selection
+
+A chemical reaction produces gas at a rate that varies with time. The volume V of gas collected at different times t is measured:
+- t = 10 s, V = 12.5 mL
+- t = 20 s, V = 23.8 mL
+- t = 30 s, V = 33.9 mL
+- t = 40 s, V = 43.1 mL
+- t = 50 s, V = 51.6 mL
+- t = 60 s, V = 59.4 mL
+
+Examine the data to determine whether a linear model ($V = kt$) or a model with decreasing rate ($V = A(1-e^{-kt})$) better describes the reaction. Justify your conclusion using appropriate graphical analysis.
+```
+
+```{exercise}
+:label: prob-discrepancy-sources
+
+In an experiment to measure Young's modulus E for a wire, a student plots elongation ΔL versus applied force F and obtains a straight line that doesn't pass through the origin. The theoretical relationship is $\Delta L = \frac{FL}{AE}$ where L is the wire's length and A is its cross-sectional area.
+
+Identify three possible sources of discrepancy between the theoretical model and the experimental data, and explain how each might affect the results.
+```
+
+```{exercise}
+:label: prob-linearization
+
+The following relationship is proposed for a gas at constant temperature: $PV^n = C$ where P is pressure, V is volume, and n and C are constants.
+
+Explain how to transform this equation to create a linear relationship and describe how you would analyze experimental P-V data to determine the values of n and C.
+```
+
+```{exercise}
+:label: prob-competing-models
+
+Two models are proposed for the relationship between a projectile's range R and its launch angle θ:
+- Model A: $R = k\sin(2\theta)$
+- Model B: $R = k\sin(\theta)\cos(\theta)$
+
+Without performing calculations, discuss whether it's possible to experimentally distinguish between these models. What approach would you take?
+```
+
+```{exercise}
+:label: prob-interpolation-assessment
+
+A student measures the refractive index n of a solution at different concentrations c:
+- c = 0.1 mol/L, n = 1.34
+- c = 0.3 mol/L, n = 1.36
+- c = 0.5 mol/L, n = 1.38
+- c = 0.7 mol/L, n = 1.41
+- c = 0.9 mol/L, n = 1.44
+
+The student needs to determine the refractive index at c = 0.4 mol/L. Discuss the assumptions involved in interpolating this value and evaluate whether linear interpolation is appropriate.
+```
+
+```{exercise}
+:label: prob-model-refinement
+
+A simple model suggests that for small angles, a pendulum's period T is independent of its amplitude. A student measures the period at different amplitudes and obtains:
+- Amplitude = 5°, T = 1.51 s
+- Amplitude = 10°, T = 1.52 s
+- Amplitude = 15°, T = 1.53 s
+- Amplitude = 20°, T = 1.55 s
+- Amplitude = 25°, T = 1.57 s
+
+Discuss how this data could guide model refinement. Propose a refined model that might better describe the relationship between period and amplitude.
+```
+
+```{exercise}
+:label: prob-unknown-function
+
+A physicist discovers that a quantity y depends on a variable x but doesn't know the form of the function. She collects the following data:
+- x = 1, y = 1.0
+- x = 2, y = 1.4
+- x = 3, y = 1.7
+- x = 4, y = 2.0
+- x = 5, y = 2.2
+
+Describe how she could determine whether the relationship is: (a) linear, (b) logarithmic, (c) square root, or (d) exponential. What transformations would she apply to test each possibility?
+```
 
 ## Glossary
 
