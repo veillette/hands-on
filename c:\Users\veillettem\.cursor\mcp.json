@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "github": {
+      "url": "https://github.com/",
+      "prefix": "gh",
+      "description": "GitHub"
+    }
+  }
+} 
