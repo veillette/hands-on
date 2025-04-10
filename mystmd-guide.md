@@ -671,24 +671,6 @@ Embedding other specific types of content, like interactive charts (e.g., Plotly
 
 *Note: Enabling raw HTML or using iframes can have security implications. Ensure you only embed content from trusted sources.*
 
-## Version Control Integration
-
-MyST projects work well with version control systems like Git:
-
-### Git Integration
-
-Initialize a MyST project with Git:
-
-```bash
-myst init --git
-```
-
-### Collaboration Features
-
-- Track changes to documentation
-- Review documentation changes in pull requests
-- Automate documentation builds on commits
-- Version control for both content and configuration
 
 ## Deployment and Publishing
 
@@ -708,63 +690,4 @@ Create PDF documents:
 myst build pdf
 ```
 
-### Continuous Integration
 
-Set up automated builds using GitHub Actions or similar CI/CD tools:
-
-```yaml
-name: Build Documentation
-on: [push, pull_request]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Build MyST
-        run: |
-          pip install mystmd
-          myst build html
-```
-
-## Troubleshooting and Best Practices
-
-### Common Issues
-
-1. **Directive Syntax Errors**
-   - Ensure proper nesting of directives
-   - Check for matching delimiters
-   - Verify option syntax
-
-2. **Cross-Reference Problems**
-   - Verify label uniqueness
-   - Check for typos in references
-   - Ensure referenced content exists
-
-3. **Build Issues**
-   - Check dependency versions
-   - Verify configuration syntax
-   - Review build logs
-
-### Performance Optimization
-
-1. **Build Speed**
-   - Use caching for builds
-   - Optimize image sizes
-   - Minimize custom JavaScript
-
-2. **Output Size**
-   - Compress images
-   - Minimize CSS/JS
-   - Use lazy loading for images
-
-### Security Considerations
-
-1. **Content Security**
-   - Sanitize user input
-   - Use HTTPS for external resources
-   - Implement CSP headers
-
-2. **Access Control**
-   - Configure proper permissions
-   - Use authentication when needed
-   - Protect sensitive content
