@@ -311,7 +311,7 @@ Matching powers:
 - For L: 1 = a-b
 - For T: -1 = -2a
 
-Solving gives $a=½$, $b=-½$, yielding:
+Solving gives $a= \frac{1}{2}$, $b=-\frac{1}{2}$, yielding:
 
 $$v = (\text{dimensionless constant})\times\sqrt{\frac{T}{m}}$$
 
