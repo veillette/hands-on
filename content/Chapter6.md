@@ -21,7 +21,7 @@ Second, maintain unwavering objectivity. It's nearly impossible to approach an e
 :::
 
 :::{tip}
-In academic settings, students sometimes misunderstand experimental objectives, believing the goal is to reproduce known values. If your measurement of gravitational acceleration yields 9.60 m/s² instead of the textbook 9.81 m/s², you haven't failed—you've simply produced a measurement with its own characteristics and uncertainties. Rather than fretting over differences from established values, focus on making your own measurements as reliable as possible and accurately assessing their uncertainties.
+In academic settings, students sometimes misunderstand experimental objectives, believing the goal is to reproduce known values. If your measurement of gravitational acceleration yields 9.60 m/s² instead of the textbook 9.80 m/s², you haven't failed—you've simply produced a measurement with its own characteristics and uncertainties. Rather than fretting over differences from established values, focus on making your own measurements as reliable as possible and accurately assessing their uncertainties.
 :::
 
 :::{note}

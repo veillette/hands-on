@@ -79,6 +79,7 @@ Your plotting choices should consider both experimental requirements and practic
 For example, when analyzing the period of a physical pendulum, the equation is given by:
 $$T = 2\pi\sqrt{\frac{I}{mgd}}$$
 Where:
+
 - $T$ = period of oscillation
 - $I$ = moment of inertia about the pivot point
 - $m$ = mass of the pendulum
@@ -88,6 +89,7 @@ Where:
 For a compound pendulum with multiple masses at different positions, the moment of inertia becomes more complex:
 $$I = \sum_{i=1}^{n} m_i\left(r_i^2 + \frac{k_i^2}{12}\right)$$
 Where:
+
 - $m_i$ = mass of each component
 - $r_i$ = distance from pivot to center of each component
 - $k_i$ = length of each component (for extended objects)
@@ -117,6 +119,7 @@ Sometimes convenience or necessity requires plotting variables constructed from 
 $$T = 2\pi\sqrt{\frac{h^2+k^2}{gh}}$$
 
 Where:
+
 - $T$ = oscillation period (output)
 - $h$ = distance from center of mass to support point (input)
 - $g$ = gravitational acceleration (unknown constant)
@@ -136,6 +139,7 @@ Rearranging to isolate h²:
 $$h^2 = \frac{g}{4\pi^2}T^2h - k^2$$
 
 This gives us a linear equation where:
+
 - Vertical variable = h²
 - Horizontal variable = T²h
 - Slope = g/4π²
@@ -192,6 +196,7 @@ Plotting log y versus log x (a "log-log plot") yields a straight line with slope
 :::{admonition} Advantages of Logarithmic Plotting
 :class: tip
 This approach offers two key advantages over plotting y versus xⁿ directly:
+
 1. It accommodates very large variable ranges on reasonably sized graph paper
 2. It reveals when data follows a power law with an unexpected exponent
 :::
@@ -251,6 +256,7 @@ While this planning may seem excessive for simple laboratory exercises, it repre
 When investigating phenomena so new that theoretical models don't exist, or systems so complex that constructing theoretical models seems impossible (like national economies or biological systems), your experimental approach necessarily differs.
 
 Without an existing model to test, your motivations might include:
+
 - Simple curiosity
 - Practical information needs
 - Seeking guidance for theoretical model construction
@@ -281,6 +287,7 @@ This approach can't determine dimensionless constants (like π), but it reveals 
 :::{admonition} The Method of Dimensional Analysis
 :class: note
 The general method:
+
 1. Express the relationship as a proportionality with unknown exponents: z ∝ xᵃyᵇ
 2. Write dimensions of both sides using M, L, and T
 3. Create equations by matching powers of M, L, and T
@@ -292,6 +299,7 @@ For example, analyzing the velocity (v) of waves on a string under tension (T) w
 $$v \propto T^a m^b$$
 
 Dimensionally:
+
 - v: LT⁻¹
 - T (tension): MLT⁻²
 - m: ML⁻¹
@@ -300,6 +308,7 @@ Therefore:
 $$LT^{-1} = (MLT^{-2})^a (ML^{-1})^b = M^{a+b}L^{a-b}T^{-2a}$$
 
 Matching powers:
+
 - For M: 0 = a+b
 - For L: 1 = a-b
 - For T: -1 = -2a
@@ -366,6 +375,7 @@ In such cases, careful observational techniques become crucial. With well-define
 More challenging questions arise in complex systems: Does a manufacturing process change affect product quality? Do fluoridated water supplies improve dental health? Do nuclear power plants increase leukemia rates nearby?
 
 These questions present multiple challenges:
+
 - Little/no control over input variables
 - Wide variation in individual responses
 - Probabilistic rather than deterministic effects
