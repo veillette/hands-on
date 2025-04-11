@@ -30,6 +30,7 @@ Imagine needing to calculate how much paint to buy for a wall. Naturally, you'd 
 :::
 
 The critical insight here is that we're dealing with two entirely different categories: 
+
 1. The actual physical wall that needs painting
 2. A conceptual rectangle constructed from mathematical definitions
 
@@ -41,6 +42,7 @@ To avoid such errors, we would need to systematically check whether our conceptu
 
 :::{important}
 This distinction between reality and mental constructs lies at the heart of scientific thinking. In all scientific endeavors, we find ourselves navigating between two realms:
+
 - The physical world and our observations of it
 - Conceptual constructs built from definitions and assumptions
 :::
@@ -110,6 +112,7 @@ Generally, we choose theories based on adequacy for our purposes. When higher pr
 :::{admonition} Key Elements of Scientific Thinking
 :class: important
 To summarize our understanding so far, scientific thinking involves four key elements:
+
 1. Observation of physical phenomena
 2. Construction of conceptual models
 3. Systematic comparison between model properties and real-world properties
@@ -291,6 +294,7 @@ Which follows the form:
 $$\text{vertical variable} = \text{slope} \times \text{horizontal variable}$$
 
 Where:
+
 - vertical variable = $t$
 - horizontal variable = $x^{1/2}$
 - slope = 0.4515
@@ -327,6 +331,7 @@ This process tells us that observations are compatible with our model for a cert
 This graphical approach offers significant advantages beyond simply testing model validity. Consider measuring electrical resistance from voltage-current measurements. We could calculate $R = V/I$ for each measurement pair and average the results, but this algebraic approach can introduce serious errors:
 
 :::{warning}
+
 1. It doesn't allow us to visually assess model validity (whether V-I relationship is actually linear)
 2. It cannot handle data scatter effectively
 3. It cannot detect or compensate for systematic issues like unexpected intercepts or non-linearity at certain ranges
