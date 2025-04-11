@@ -224,7 +224,7 @@ The planning process includes:
 
 5. **Consider experimental precision**: Begin with a target precision level for your final result. This guides your measurement method selection. A request to "measure g using a pendulum" is meaningless without specifying whether you need 10% precision (achievable with simple equipment in minutes) or 0.01% precision (requiring sophisticated apparatus and days of work).
 
-   With a clear precision goal—say, measuring $g$ within 2%—you can work backward to determine requirements for each component measurement. For a pendulum experiment, if you need $g$ within 2%, you might aim for uncertainties in length ($ℓ$) and period-squared ($T^2$) below 1% each.
+   With a clear precision goal—say, measuring $g$ within 2%—you can work backward to determine requirements for each component measurement. For a pendulum experiment, if you need $g$ within 2%, you might aim for uncertainties in length ($\ell$) and period-squared ($T^2$) below 1% each.
 
    If you can measure length with ±1mm uncertainty, the minimum acceptable length measurement would be:
    $$\frac{0.001 \text{m}}{\ell} = 0.01$$
@@ -275,7 +275,7 @@ Even without established theories, consider any available hints about potentiall
 :class: important
 Even without a complete theory, dimensional analysis can provide valuable guidance by examining the physical dimensions of quantities involved in your experiment. Physical quantities are expressed in terms of basic dimensions: mass (M), length (L), and time (T).
 
-The fundamental principle: dimensional consistency must exist between both sides of any physical equation. For instance, if gravitational acceleration (g) relates to pendulum length (ℓ) and period (T), dimensional analysis reveals that g (with dimensions LT⁻²) must incorporate length to first power (L¹) and period squared (T⁻²):
+The fundamental principle: dimensional consistency must exist between both sides of any physical equation. For instance, if gravitational acceleration (g) relates to pendulum length ($\ell$) and period (T), dimensional analysis reveals that g (with dimensions LT⁻²) must incorporate length to first power (L¹) and period squared (T⁻²):
 
 $$g = (\text{dimensionless constant})\times\frac{\text{length}}{\text{period}^2}$$
 :::
@@ -317,7 +317,7 @@ $$v = (\text{dimensionless constant})\times\sqrt{\frac{T}{m}}$$
 
 :::{admonition} The Limitations of Dimensional Analysis
 :class: warning
-This powerful technique becomes more complex with many variables. When analyzing fluid flow rate ($Q$) through a tube with pressure difference ($P$), radius ($r$), length ($ℓ$), and viscosity ($η$), we get:
+This powerful technique becomes more complex with many variables. When analyzing fluid flow rate ($Q$) through a tube with pressure difference ($P$), radius ($r$), length ($\ell$), and viscosity ($η$), we get:
 
 $$Q \propto \frac{P}{\eta}\times r^3\times\left(\frac{r}{\ell}\right)^b$$
 
@@ -470,7 +470,7 @@ where $s$ and $t$ are measurable. Determine the acceleration $a$.
 
 The fundamental vibration frequency of a stretched string is given by:
 $$f = \frac{1}{2\ell}\sqrt{\frac{T}{m}}$$
-where $f$, $ℓ$, and $T$ can be measured. Determine $m$.
+where $f$, $\ell$, and $T$ can be measured. Determine $m$.
 ```
 
 ```{exercise}
@@ -478,7 +478,7 @@ where $f$, $ℓ$, and $T$ can be measured. Determine $m$.
 
 The exit velocity of an ideal fluid flowing through an opening in a tank follows:
 $$v = \sqrt{\frac{2P}{\rho}}$$
-where $v$ and $P$ are measurable. Determine fluid density $ρ$.
+where $v$ and $P$ are measurable. Determine fluid density $\rho$.
 ```
 
 ```{exercise}
@@ -486,7 +486,7 @@ where $v$ and $P$ are measurable. Determine fluid density $ρ$.
 
 A conical pendulum's period is described by:
 $$T = 2\pi\sqrt{\frac{\ell\cos\alpha}{g}}$$
-where $T$ and $α$ are measurable, and $ℓ$ is fixed and known. Determine $g$.
+where $T$ and $\alpha$ are measurable, and $\ell$ is fixed and known. Determine $g$.
 ```
 
 ```{exercise}
@@ -494,7 +494,7 @@ where $T$ and $α$ are measurable, and $ℓ$ is fixed and known. Determine $g$.
 
 The deflection of a cantilever beam follows:
 $$d = \frac{4W\ell^3}{Yab^3}$$
-where $d$, $W$, and $ℓ$ are measurable, while $a$ and $b$ are fixed, known values. Determine Young's modulus $Y$.
+where $d$, $W$, and $\ell$ are measurable, while $a$ and $b$ are fixed, known values. Determine Young's modulus $Y$.
 ```
 
 ```{exercise}
@@ -526,7 +526,7 @@ where $f$ and $v₀$ are measurable quantities, and $f₀$ is a known constant. 
 
 Thermal expansion of a solid follows:
 $$\ell = \ell_0(1+\alpha\Delta T)$$
-where $ℓ$ and $ΔT$ are measurable, and $ℓ₀$ is unknown but constant. Determine coefficient of expansion $α$.
+where $\ell$ and $\Delta T$ are measurable, and $\ell_0$ is unknown but constant. Determine coefficient of expansion $\alpha$.
 ```
 
 ```{exercise}
@@ -534,7 +534,7 @@ where $ℓ$ and $ΔT$ are measurable, and $ℓ₀$ is unknown but constant. Dete
 
 Snell's law of refraction states:
 $$n_1\sin\theta_1 = n_2\sin\theta_2$$
-where $θ₁$ and $θ₂$ are measurable angles, and $n₁$ is a known constant. Determine refractive index $n₂$.
+where $\theta_1$ and $\theta_2$ are measurable angles, and $n_1$ is a known constant. Determine refractive index $n_2$.
 ```
 
 ```{exercise}
@@ -550,7 +550,7 @@ where $s$ and $s'$ are measurable. Determine focal length $f$. Compare two possi
 
 The resonant frequency of a parallel LC circuit follows:
 $$\omega = \frac{1}{\sqrt{LC}}$$
-where $ω$ and $C$ are measurable. Determine inductance $L$.
+where $\omega$ and $C$ are measurable. Determine inductance $L$.
 ```
 
 ```{exercise}
@@ -558,7 +558,7 @@ where $ω$ and $C$ are measurable. Determine inductance $L$.
 
 Coulomb's law for electrostatic force is:
 $$F = \frac{1}{4\pi\epsilon_0}\frac{q_1q_2}{r^2}$$
-where $F$ and $r$ are measurable, while $q₁$ and $q₂$ are fixed, known values. Describe how to verify the form of this relationship.
+where $F$ and $r$ are measurable, while $q_1$ and $q_2$ are fixed, known values. Describe how to verify the form of this relationship.
 ```
 
 ```{exercise}
@@ -566,7 +566,7 @@ where $F$ and $r$ are measurable, while $q₁$ and $q₂$ are fixed, known value
 
 The force between parallel current-carrying conductors follows:
 $$F = \frac{\mu_0}{4\pi}\frac{i_1i_2\ell^2}{r^2}$$
-where $F$, $i₁$, $i₂$, and $r$ are measurable quantities, while $μ₀$ and $ℓ$ are constants. Describe how to verify this relationship.
+where $F$, $i_1$, $i_2$, and $r$ are measurable quantities, while $\mu_0$ and $\ell$ are constants. Describe how to verify this relationship.
 ```
 
 ```{exercise}
@@ -598,5 +598,4 @@ where m and v are measurable. Determine rest mass m₀ and speed of light c.
 
 The wavelengths in the Balmer series of hydrogen follow:
 $$\frac{1}{\lambda} = R\left(\frac{1}{4}-\frac{1}{n^2}\right)$$
-where $λ$ and $n$ are measurable. Determine Rydberg constant $R$.
-```
+where $\lambda$ and $n$ are measurable. Determine Rydberg constant $R$.
