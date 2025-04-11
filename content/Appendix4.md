@@ -3,6 +3,7 @@
 ## 4.1 Experiment Design
 
 ### System
+
 For our experiment, we have assembled the following apparatus:
 - A helical spring suspended from a rigid laboratory stand with vibration-dampening clamps
 - A precision-machined pan for holding weights, attached to the lower end of the spring via a low-friction hook
@@ -12,6 +13,7 @@ For our experiment, we have assembled the following apparatus:
 - A digital camera capable of high-speed recording (120fps) for motion analysis verification
 
 ### Model
+
 According to fundamental principles of classical mechanics, a spring's extension is proportional to the applied load when operating within its elastic limit (Hooke's Law). For a mass-spring system undergoing simple harmonic motion, the period of oscillation (T) relates to the suspended mass (m) through the equation:
 
 $$T = 2\pi\sqrt{\frac{m}{k}}$$
@@ -19,9 +21,11 @@ $$T = 2\pi\sqrt{\frac{m}{k}}$$
 Where k represents the spring constant measured in N/m (or equivalently, kg/s²).
 
 ### Requirement
+
 Our experimental objective is to determine the spring constant k with an uncertainty not exceeding 10%. This precision requirement guides our experimental design and measurement protocols.
 
 ### Experiment Design
+
 We employ a systematic approach to experimental design following established best practices:
 
 1. **System identification and isolation**: We carefully isolate the spring-mass system, minimizing external influences such as air currents and vibrations by using a vibration-dampening table and conducting measurements in a temperature-controlled environment.
@@ -69,6 +73,7 @@ We employ a systematic approach to experimental design following established bes
    This reduces timing uncertainty by a factor of approximately √n.
 
 ### Measurement Protocol
+
 We developed a comprehensive measurement protocol:
 
 1. **System calibration**:
@@ -95,6 +100,7 @@ This structured methodology ensures reproducibility and minimizes both random an
 ## 4.2 Experimental Results
 
 ### Raw Measurements
+
 The measurements are presented in Table 1, with each entry including its associated uncertainty determined through statistical analysis of repeated measurements.
 
 **Table 1: Variation of Oscillation Period with Load**
@@ -111,6 +117,7 @@ The measurements are presented in Table 1, with each entry including its associa
 | 0.50 ± 0.0001 | 10 | 15.20 ± 0.03 | 1.520 ± 0.003 | 2.310 | 0.009 |
 
 ### Computational Analysis
+
 We performed data analysis using Python with NumPy and SciPy libraries. Below is the analysis script used to process our experimental data:
 
 ```python
@@ -184,12 +191,14 @@ print(f"Y-intercept = {intercept:.4f} ± {intercept_err:.4f} kg")
 The analysis yielded a coefficient of determination (R²) of 0.9996, indicating an excellent fit to our linear model.
 
 ### Results Visualization
+
 Figure 1 shows the results of our computational analysis, including the experimental data points with uncertainties, the best-fit line, and the 95% confidence intervals derived from our statistical analysis.
 
 ![Graph of m vs. T² with statistical analysis](../figures/A4/spring_constant_analysis.svg)
 *Figure 1: Plot of mass versus period squared showing experimental data points with uncertainties, best-fit line determined by weighted least-squares regression, and 95% confidence intervals.*
 
 ### Parameter Determination
+
 From our computational analysis, we obtained:
 
 **Best-fit parameters:**
@@ -273,6 +282,7 @@ This comprehensive procedure ensured high-quality data collection with minimized
 # MEASUREMENT OF A SPRING CONSTANT BY AN OSCILLATION METHOD
 
 ### Introduction
+
 The stiffness of a spring, characterized by its spring constant (k), represents a fundamental physical parameter with applications ranging from engineering design to theoretical mechanics. For an elastic spring operating within Hooke's Law, the period of oscillation (T) of a suspended mass (m) follows the relationship:
 
 $$T = 2\pi\sqrt{\frac{m}{k}}$$
@@ -284,6 +294,7 @@ $$m = \frac{k}{4\pi^2}T^2 + b$$
 We can apply weighted least-squares regression analysis to determine k from the slope of the m vs. T² relationship, while also investigating potential systematic effects revealed by any non-zero intercept.
 
 ### Procedure
+
 We established a precision measurement system consisting of a helical spring suspended from a vibration-isolated support structure (Figure 2). The experimental apparatus included:
 
 ![Experimental setup diagram](../figures/A4/FigA4_1R.jpg)
@@ -310,6 +321,7 @@ Our measurement protocol involved:
 Data analysis employed numerical methods using Python with scientific computing libraries, applying weighted least-squares regression to determine the spring constant and its associated uncertainty.
 
 ### Results
+
 The measured relationship between load and oscillation period is presented in Table 2, with uncertainties determined through statistical analysis of repeated measurements.
 
 **Table 2: Variation of Oscillation Period with Load**
@@ -334,6 +346,7 @@ With a coefficient of determination R² = 0.9996, demonstrating excellent agreem
 *Figure 3: Statistical analysis of the T² vs m relationship showing experimental data points with error bars, weighted least-squares regression line, and 95% confidence intervals.*
 
 ### Discussion
+
 Our computational approach yielded a spring constant value of k = 9.81 ± 0.18 N/m, with a relative uncertainty of 1.8%—significantly better than our target of 10%. The high coefficient of determination (R² = 0.9996) confirms the excellent agreement between our experimental data and the theoretical model.
 
 The regression analysis revealed a small negative intercept of -0.0776 ± 0.0064 s², which is not statistically consistent with zero,even within five standard deviations. This slight offset suggests the possibility of unaccounted masses in the system. Two plausible explanations include:
@@ -345,6 +358,7 @@ The regression analysis revealed a small negative intercept of -0.0776 ± 0.0064
 To investigate this effect further, we performed supplementary analysis by incorporating the pan mass and a theoretical spring effective mass into our calculations. This adjusted analysis yielded consistent results for the spring constant but improved the intercept's proximity to zero, supporting our hypothesis.
 
 ### Conclusion
+
 The oscillation method, combined with modern computational analysis techniques, provides an accurate and precise means of determining spring constants. Our experiment achieved a final uncertainty of 1.2%, demonstrating the effectiveness of our experimental design and analysis methodology.
 
 The intercept likely indicates the presence of unaccounted mass in the system—possibly from the weight pan or the spring itself. Although we haven't tested these hypotheses directly, they provide reasonable explanations for the observed behavior. However, in order to account for our observation, the mass would need to be negative. The small negative intercept revealed through our analysis highlights an important pedagogical point: real physical systems often contain subtle effects not captured in simplified models. Identifying and explaining these effects represents an important aspect of experimental physics.

@@ -17,11 +17,13 @@ Let's begin with a simple example to understand the fundamental nature of measur
 
 :::{admonition} The Measurement Process
 The actual measuring process involves examining the object in relation to the scale and making judgments:
+
 - Is the height definitely less than 88 mm? Yes.
 - Less than 87.5 mm? Probably.
 - Less than 87 mm? Not certain.
 
 Similarly, working upward:
+
 - Is it definitely more than 86 mm? Yes.
 - More than 86.5 mm? Probably.
 - More than 87 mm? Not certain.
@@ -49,6 +51,7 @@ This highlights a broader concept: rounding introduces its own form of uncertain
 
 :::{warning}
 "Rounding uncertainty" may seem trivial, but it can significantly impact calculations, especially when:
+
 1. Many rounded values accumulate errors throughout a calculation
 2. Two nearly equal values are subtracted, making relative errors much larger
 3. High powers are involved, amplifying small errors
@@ -63,6 +66,7 @@ Measurements should represent the range within which we believe the true value l
 :::{admonition} Advantages of Central Value Notation
 :class: tip
 This notation provides two advantages:
+
 1. It gives us a central value (152.9 cm) for calculations
 2. It explicitly states the uncertainty (±0.2 cm) for quality assessment
 :::
@@ -100,6 +104,7 @@ The uncertainties discussed so far arise from natural limitations in measurement
 
 :::{admonition} Common Systematic Errors
 :class: caution
+
 - Zero errors in measuring instruments
 - A stretched or compressed measuring tape
 - Consistently miscalibrated electronic equipment
@@ -118,6 +123,7 @@ Rarely does a single measurement complete our work. Usually, we need to calculat
 
 :::{admonition} Common Derived Quantities
 :class: example
+
 - A sphere's volume from its diameter
 - An object's density from its mass and dimensions
 - Gravitational acceleration from a pendulum's length and period
@@ -159,6 +165,7 @@ This reveals an important principle: the relative uncertainty in the result equa
 
 :::{admonition} Examples
 :class: example
+
 - Calculating a circle's area ($A = \pi r^2$) from a radius measurement doubles the relative uncertainty
 - Calculating a cube's volume ($V = s^3$) triples the relative uncertainty
 - Taking a square root halves the relative uncertainty
@@ -244,7 +251,6 @@ For $z = \sqrt{x^2 + y^2}$:
 $$\delta z = \left|\frac{x}{\sqrt{x^2 + y^2}}\right|\delta x + \left|\frac{y}{\sqrt{x^2 + y^2}}\right|\delta y$$
 :::
 
-
 I'll add a new section to the Chapter 2 content about significant figures, incorporating the sentiment from the example while creating original content. Here's my addition:
 
 ## Understanding Significant Figures: Purpose Over Rules
@@ -256,6 +262,7 @@ At their core, significant figures represent **the digits that are known with ce
 :::{admonition} The Essence of Significant Figures
 :class: tip
 Think of significant figures as telling a story about your measurement:
+
 - They indicate which digits you're confident about
 - They show where your certainty ends
 - They communicate this information efficiently to others
@@ -299,6 +306,7 @@ for example in examples:
 ```
 
 When propagating significant figures through calculations, focus on mastering the multiplication rule first:
+
 - The result of multiplication or division should have the same number of significant figures as the measurement with the fewest significant figures.
 
 Other rules for addition, logarithms, and special functions become easier to learn once you've established this foundation.
@@ -325,6 +333,7 @@ A reasonable statement would be "$R = 4.4 \pm 0.3$ ohms."
 :::{admonition} Rules for Significant Figures
 :class: important
 We should:
+
 1. Ensure uncertainty values match the precision of original measurements
 2. Keep only significant digits in the final value that match the uncertainty
 3. Avoid mismatched precision statements like "12.3456 ± 0.2" or "12 ± 0.00001"
