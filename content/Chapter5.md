@@ -2,9 +2,7 @@
 
 ## Introduction to Experimental Design
 
-:::{important}
 In the previous chapter, we explored the various ways researchers compare models with real-world systems. The diversity we encountered suggests a crucial insight: there is no universal approach to planning experiments. The techniques and methodologies researchers employ necessarily depend on specific circumstances and objectives.
-:::
 
 Despite this diversity, certain fundamental principles remain valid across virtually all experimental situations. Perhaps most important among these is keeping your experimental purpose clearly in mind: **the fundamental requirement in experimentation, regardless of what else is happening, is to compare the properties of a physical system with the properties of one or more theoretical models**.
 
@@ -160,10 +158,10 @@ Compound variables also prove valuable with multiple input variables. When measu
 
 $$Q = mC\Delta T$$
 
-Where Q is heat generation rate, m is mass flow rate, C is specific heat, and ΔT is temperature difference.
+Where $Q$ is heat generation rate, $m$ is mass flow rate, $C$ is specific heat, and $\Delta T$ is temperature difference.
 
 :::{tip}
-Rather than plotting ΔT versus 1/m (with separate curves for different Q values) or ΔT versus Q (with separate curves for different m values), you could plot mΔT versus Q. This creates a single graph incorporating both input variables simultaneously, with slope C, enabling efficient model testing and parameter determination.
+Rather than plotting $\Delta T$ versus $1/m$ (with separate curves for different $Q$ values) or $\Delta T$ versus $Q$ (with separate curves for different $m$ values), you could plot $m\Delta T$ versus $Q$. This creates a single graph incorporating both input variables simultaneously, with slope $C$, enabling efficient model testing and parameter determination.
 :::
 
 If plotting with compound variables reveals unexpected patterns (scattered data or nonlinearity), you can always revert to plotting individual variable pairs to investigate further.
@@ -425,7 +423,6 @@ confounding variable
 : A variable that influences both the independent and dependent variables, potentially leading to misleading results.
 :::
 
-
 ## Problems
 
 ```{exercise}
@@ -577,7 +574,7 @@ where F, i₁, i₂, and r are measurable quantities, while μ₀ and ℓ are co
 
 The charge remaining on a discharging capacitor follows:
 $$Q = Q_0e^{-t/RC}$$
-where Q and t are measurable, and R is known and fixed. Determine capacitance C.
+where $Q$ and $t$ are measurable, and $R$ is known and fixed. Determine capacitance $C$.
 ```
 
 ```{exercise}

@@ -1,13 +1,15 @@
 # Evaluating Experimental Results
 
+Experimental data alone tells only part of the story. The ability to properly evaluate results is what transforms raw measurements into meaningful scientific knowledge - a fundamental skill that distinguishes casual observations from rigorous scientific inquiry. This chapter focuses on why this evaluation process is crucial: it validates your measurements through uncertainty analysis, connects physical systems with theoretical models, and ultimately determines whether your findings represent substantiated scientific knowledge or merely unverified observations.
+
 ## The Essential Final Analysis
 
-:::{important}
-Even after you've completed all the measurements for your experiment, an equally important phase still remains: evaluating what your results actually mean. This evaluation phase transforms raw data into meaningful scientific conclusions.
-:::
+Your primary objective in conducting an experiment is to make substantive statements about relationships between physical systems and theoretical models. This involves:
 
-:::{note}
-Your primary objective in conducting an experiment is to make substantive statements about relationships between physical systems and theoretical models. You must clearly identify what statements you want to make and ensure they are accurate, comprehensive, and fully supported by your measurements.
+The evaluation process involves several key analytical steps. First, you must identify patterns and trends in your data that either align with or deviate from theoretical predictions. Next, it's essential to quantify the strength of relationships between your measured variables to understand how they interact. You'll need to determine whether any observed effects are statistically significant, that is, ensuring your findings aren't simply due to random chance. Additionally, accounting for experimental uncertainties and understanding how they impact your conclusions is crucial for reliable results. Finally, you must critically assess whether your results support, refute, or suggest necessary modifications to existing theoretical models. This comprehensive analysis ensures your experimental findings contribute meaningful insights to scientific understanding.
+
+:::{important}
+Even after you've completed all the measurements for your experiment, an equally important phase still remains: evaluating what your results actually mean. This evaluation phase transforms raw data into meaningful scientific conclusions. The analysis stage is where you determine whether your experimental results validate or challenge existing theories, and potentially uncover new physical insights.
 :::
 
 ## Approaching Evaluation with the Right Mindset
@@ -29,7 +31,7 @@ When you measure quantities with established values, resist comparing your resul
 :::
 
 :::{important}
-If your gravitational acceleration measurement is 9.60 ± 0.30 m/s², recognize that the uncertainty is as significant as the central value. The 3% uncertainty might reflect equipment limitations rather than experimental shortcomings. Textbook values often appear without context about the sophisticated methods and equipment used to obtain them. Your aim should be honest, objective reporting of results with appropriate uncertainty limits—not perfect reproduction of established values in limited laboratory time.
+If your gravitational acceleration measurement is $9.60 \pm 0.30$ m/s², recognize that the uncertainty is as significant as the central value. The 3% uncertainty might reflect equipment limitations rather than experimental shortcomings. Textbook values often appear without context about the sophisticated methods and equipment used to obtain them. Your aim should be honest, objective reporting of results with appropriate uncertainty limits—not perfect reproduction of established values in limited laboratory time.
 :::
 
 ## The Evaluation Process: Four Essential Stages
@@ -59,13 +61,13 @@ Your approach depends on whether you're working with estimated uncertainties or 
 For pendulum length measurements using a meter stick, you've likely determined intervals within which you're confident your true values lie. Your results would appear as a set of values in the form: value ± uncertainty.
 :::
 
-Similarly, if you've counted oscillations and timed them with a stopwatch, you might express time measurements with their uncertainty ranges. However, the oscillation period T (your actual variable of interest) must be calculated from these measurements. If you counted 15 oscillations that took 18.4 ± 0.2 seconds, the period for a single oscillation would be:
+Similarly, if you've counted oscillations and timed them with a stopwatch, you might express time measurements with their uncertainty ranges. However, the oscillation period $T$ (your actual variable of interest) must be calculated from these measurements. If you counted 15 oscillations that took $18.4 \pm 0.2$ seconds, the period for a single oscillation would be:
 
-(1/15)(18.4 ± 0.2) = 1.227 ± 0.013 seconds
+$(1/15)(18.4 \pm 0.2) = 1.227 \pm 0.013$ seconds
 
 Notice that both the central value and uncertainty must be calculated through this division. This significant modification of uncertainty values is necessary whenever you perform arithmetic operations on basic measurements.
 
-Your final result will be a set of ℓ and T values with their associated uncertainties, preparing you for graphical analysis.
+Your final result will be a set of $\ell$ and $T$ values with their associated uncertainties, preparing you for graphical analysis.
 
 #### Working with Statistical Uncertainties
 
@@ -209,17 +211,17 @@ In Figure 6.2(b), you might choose AB as your "best" line and determine that lin
 
 Once you've selected appropriate lines, determine their slopes numerically to calculate your desired parameter (like resistance R in our Ohm's Law example). For slope calculation, angle is irrelevant—you need the quantitative relationship between measured variables. For a line like AB in Figure 6.3, identify precise coordinates where it crosses graph grid intersections near its endpoints. If these coordinates are (I₁, V₁) and (I₂, V₂), calculate:
 
-$$slope = (V₂ - V₁)/(I₂ - I₁)$$
+$$slope = (V_2 - V_1)/(I_2 - I_1)$$
 
-For our example, R equals this slope directly. In more complex cases, you might need additional calculations involving other measured quantities to determine your final answer.
+For our example, $R$ equals this slope directly. In more complex cases, you might need additional calculations involving other measured quantities to determine your final answer.
 
 Perform this process three times: once for your "best" line (AB) and once each for your upper and lower limiting lines (CF and ED). This gives your best value for R plus upper and lower limits beyond which you're "almost certain" the true value doesn't lie. Typically, these extreme values are roughly equidistant from your central value, allowing you to express your result as:
 
-$$R = value ± uncertainty$$
+$$R = value \pm uncertainty$$
 
 Sometimes your "best" line and limiting lines won't appear equally spaced, usually because too few points prevent good line assessment. While sometimes experimenters feel compelled to express asymmetric uncertainties as:
 
-$$value (+ uncertainty₁ / - uncertainty₂)$$
+$$value (+ uncertainty_1 / - uncertainty_2)$$
 
 visual graph judgment rarely justifies such precision. If identifying a clear "best" line proves genuinely difficult, you can simply delineate the edges of the value band (lines ED and CF in Figure 6.3), calculate maximum and minimum slopes, and express your experimental result as the interval between these slopes, or as their average ± half their difference.
 
@@ -363,7 +365,7 @@ Such graphs can use ordinary paper (plotting actual log x and log y values) or l
 :::{tip}
 Many physical phenomena follow exponential relationships:
 
-$$y = ae^{bx} $$
+$$y = a e^{b x}$$
 
 Taking natural logarithms:
 
