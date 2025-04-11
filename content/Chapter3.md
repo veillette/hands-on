@@ -6,6 +6,7 @@ When we make measurements, we often observe that repeated measurements of the sa
 
 :::{note}
 These variations can arise from many sources:
+
 - Environmental fluctuations
 - Instrument limitations
 - Human factors
@@ -25,11 +26,12 @@ When we make many measurements of the same quantity, the results often follow a 
 
 :::{admonition} Properties of the Gaussian Distribution
 :class: note
+
 - Symmetric about the mean
-- Characterized by two parameters: mean (μ) and standard deviation (σ)
-- About 68% of measurements fall within ±1σ of the mean
-- About 95% fall within ±2σ
-- About 99.7% fall within ±3σ
+- Characterized by two parameters: mean ($\mu$) and standard deviation ($\sigma$)
+- About 68% of measurements fall within $\pm 1 \sigma$ of the mean
+- About 95% fall within $\pm 2 \sigma$
+- About 99.7% fall within $\pm 3 \sigma$
 :::
 
 This distribution allows us to make meaningful statements about our measurements. For example, if we measure a length multiple times and find a mean of 10.5 cm with a standard deviation of 0.1 cm, we can say:
@@ -44,9 +46,10 @@ When we make measurements, we're typically working with a sample from a larger p
 
 :::{admonition} Key Concepts
 :class: note
-- Sample mean (x̄) estimates population mean (μ)
-- Sample standard deviation (s) estimates population standard deviation (σ)
-- Standard error of the mean (SEM) = s/√n
+
+- Sample mean (x̄) estimates population mean ($\mu$)
+- Sample standard deviation (s) estimates population standard deviation ($\sigma$)
+- Standard error of the mean (SEM) = $s/\sqrt{n}$
 :::
 
 The standard error of the mean tells us how precisely we've determined the population mean. As our sample size increases, this uncertainty decreases.
@@ -76,17 +79,7 @@ These rules assume the measurements are independent and the uncertainties are ra
 
 Sometimes our measurements include values that seem unusually different from the others. These outliers require careful consideration.
 
-:::{admonition} Handling Outliers
-:class: caution
-1. First, verify if the measurement was recorded correctly
-2. Check for obvious experimental problems
-3. Use statistical tests (e.g., Chauvenet's criterion) to assess significance
-4. Document any rejected measurements and the reason
-:::
-
-:::{warning}
-Never reject data simply because it doesn't fit your expectations. Every measurement tells a story.
-:::
+When handling potential outliers, we should follow a systematic approach. First, verify the measurement was recorded correctly and check for obvious experimental problems. For statistical assessment, methods like Chauvenet's criterion can be applied - this calculates the probability that a given measurement would occur based on the sample's mean and standard deviation, typically rejecting data points with less than 1/(2n) probability where n is the sample size. Any rejected measurements must be thoroughly documented with the reasoning. However, we must never reject data simply because it doesn't fit our expectations - every measurement provides valuable information about the experimental conditions.
 
 ## Glossary
 
