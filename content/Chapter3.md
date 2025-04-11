@@ -68,7 +68,7 @@ For addition/subtraction:
 $$\sigma_z^2 = \sigma_x^2 + \sigma_y^2$$
 
 For multiplication/division:
-$$\left(\frac{\sigma_z}{z}\right)^2 = \left(\frac{\sigma_x}{x}\right)^2 + \left(\frac{\sigma_y}{y}\right)^2$$
+$$ \left(\frac{\sigma_z}{z}\right)^2 = \left(\frac{\sigma_x}{x}\right)^2 + \left(\frac{\sigma_y}{y}\right)^2 $$ {#eq-error-prop}
 :::
 
 :::{note}
@@ -107,6 +107,7 @@ propagation of uncertainty
 
 ```{exercise}
 :label: prob-histogram
+:class: exercises
 
 Construct a histogram of the following measurements (in cm):
 12.3, 12.5, 12.4, 12.6, 12.3, 12.4, 12.5, 12.4, 12.3, 12.5
