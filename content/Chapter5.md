@@ -224,13 +224,13 @@ The planning process includes:
 
 5. **Consider experimental precision**: Begin with a target precision level for your final result. This guides your measurement method selection. A request to "measure g using a pendulum" is meaningless without specifying whether you need 10% precision (achievable with simple equipment in minutes) or 0.01% precision (requiring sophisticated apparatus and days of work).
 
-   With a clear precision goal—say, measuring g within 2%—you can work backward to determine requirements for each component measurement. For a pendulum experiment, if you need g within 2%, you might aim for uncertainties in length (ℓ) and period-squared (T²) below 1% each.
+   With a clear precision goal—say, measuring $g$ within 2%—you can work backward to determine requirements for each component measurement. For a pendulum experiment, if you need $g$ within 2%, you might aim for uncertainties in length ($ℓ$) and period-squared ($T^2$) below 1% each.
 
    If you can measure length with ±1mm uncertainty, the minimum acceptable length measurement would be:
-   $$\frac{0.001 \text{m}}{\ell} = 0.01 /$$
+   $$\frac{0.001 \text{m}}{\ell} = 0.01$$
    $$\ell = 0.1 \text{ m}$$
 
-   Similarly, if timing uncertainty is ±0.2s, and period measurement requires 0.5% precision (for 1% in T²), the minimum timing interval would be:
+   Similarly, if timing uncertainty is ±0.2s, and period measurement requires 0.5% precision (for 1% in $T^2$), the minimum timing interval would be:
    $$\frac{0.2 \text{s} }{t} = 0.005$$
    $$t = 40 \text{ seconds}$$
 
@@ -286,21 +286,21 @@ This approach can't determine dimensionless constants (like π), but it reveals 
 :class: note
 The general method:
 
-1. Express the relationship as a proportionality with unknown exponents: z ∝ xᵃyᵇ
+1. Express the relationship as a proportionality with unknown exponents: $z ∝ x^a y^b$
 2. Write dimensions of both sides using M, L, and T
 3. Create equations by matching powers of M, L, and T
 4. Solve for the unknown exponents
 :::
 
-For example, analyzing the velocity (v) of waves on a string under tension (T) with mass per unit length (m):
+For example, analyzing the velocity ($v$) of waves on a string under tension ($T$) with mass per unit length ($m$):
 
 $$v \propto T^a m^b$$
 
 Dimensionally:
 
-- v: LT⁻¹
-- T (tension): MLT⁻²
-- m: ML⁻¹
+- $v$: $LT^{-1}$
+- $T$ (tension): $MLT^{-2}$
+- $m$: $ML^{-1}$
 
 Therefore:
 $$LT^{-1} = (MLT^{-2})^a (ML^{-1})^b = M^{a+b}L^{a-b}T^{-2a}$$
@@ -311,17 +311,17 @@ Matching powers:
 - For L: 1 = a-b
 - For T: -1 = -2a
 
-Solving gives a=½, b=-½, yielding:
+Solving gives $a=½$, $b=-½$, yielding:
 
 $$v = (\text{dimensionless constant})\times\sqrt{\frac{T}{m}}$$
 
 :::{admonition} The Limitations of Dimensional Analysis
 :class: warning
-This powerful technique becomes more complex with many variables. When analyzing fluid flow rate (Q) through a tube with pressure difference (P), radius (r), length (ℓ), and viscosity (η), we get:
+This powerful technique becomes more complex with many variables. When analyzing fluid flow rate ($Q$) through a tube with pressure difference ($P$), radius ($r$), length ($ℓ$), and viscosity ($η$), we get:
 
 $$Q \propto \frac{P}{\eta}\times r^3\times\left(\frac{r}{\ell}\right)^b$$
 
-We can determine some relationships (Q contains P/η and r³) but not all (the exponent b remains undetermined). Even this partial solution provides valuable experimental guidance.
+We can determine some relationships ($Q$ contains $P/η$ and $r^3$) but not all (the exponent $b$ remains undetermined). Even this partial solution provides valuable experimental guidance.
 :::
 
 ## Difference-Type Measurements
@@ -434,7 +434,7 @@ A research paper claims the terminal velocity of a skydiver depends solely on th
 ```{exercise}
 :label: prob-projectile-dimensional-analysis
 
-A projectile is launched with initial velocity v at angle α to the horizontal. Its range may depend on the projectile's mass, initial velocity, launch angle, and gravitational acceleration. Determine the functional form of this relationship through dimensional analysis.
+A projectile is launched with initial velocity $v$ at angle $α$ to the horizontal. Its range may depend on the projectile's mass, initial velocity, launch angle, and gravitational acceleration. Determine the functional form of this relationship through dimensional analysis.
 ```
 
 ```{exercise}
@@ -462,7 +462,7 @@ The central deflection of a beam with circular cross-section, supported at both 
 
 The position of an object under constant acceleration follows:
 $$s = \frac{1}{2}at^2$$
-where s and t are measurable. Determine the acceleration a.
+where $s$ and $t$ are measurable. Determine the acceleration $a$.
 ```
 
 ```{exercise}
@@ -470,7 +470,7 @@ where s and t are measurable. Determine the acceleration a.
 
 The fundamental vibration frequency of a stretched string is given by:
 $$f = \frac{1}{2\ell}\sqrt{\frac{T}{m}}$$
-where f, ℓ, and T can be measured. Determine m.
+where $f$, $ℓ$, and $T$ can be measured. Determine $m$.
 ```
 
 ```{exercise}
@@ -478,7 +478,7 @@ where f, ℓ, and T can be measured. Determine m.
 
 The exit velocity of an ideal fluid flowing through an opening in a tank follows:
 $$v = \sqrt{\frac{2P}{\rho}}$$
-where v and P are measurable. Determine fluid density ρ.
+where $v$ and $P$ are measurable. Determine fluid density $ρ$.
 ```
 
 ```{exercise}
@@ -486,7 +486,7 @@ where v and P are measurable. Determine fluid density ρ.
 
 A conical pendulum's period is described by:
 $$T = 2\pi\sqrt{\frac{\ell\cos\alpha}{g}}$$
-where T and α are measurable, and ℓ is fixed and known. Determine g.
+where $T$ and $α$ are measurable, and $ℓ$ is fixed and known. Determine $g$.
 ```
 
 ```{exercise}
@@ -494,7 +494,7 @@ where T and α are measurable, and ℓ is fixed and known. Determine g.
 
 The deflection of a cantilever beam follows:
 $$d = \frac{4W\ell^3}{Yab^3}$$
-where d, W, and ℓ are measurable, while a and b are fixed, known values. Determine Young's modulus Y.
+where $d$, $W$, and $ℓ$ are measurable, while $a$ and $b$ are fixed, known values. Determine Young's modulus $Y$.
 ```
 
 ```{exercise}
@@ -502,7 +502,7 @@ where d, W, and ℓ are measurable, while a and b are fixed, known values. Deter
 
 The height of capillary rise in a tube follows:
 $$h = \frac{2\sigma}{\rho gR}$$
-where h and R are measurable, and ρ and g are known constants. Determine surface tension σ.
+where $h$ and $R$ are measurable, and $ρ$ and $g$ are known constants. Determine surface tension $σ$.
 ```
 
 ```{exercise}
@@ -510,7 +510,7 @@ where h and R are measurable, and ρ and g are known constants. Determine surfac
 
 The ideal gas law states:
 $$pV = RT$$
-where p and T are measurable, and V is fixed and known. Determine gas constant R.
+where $p$ and $T$ are measurable, and $V$ is fixed and known. Determine gas constant $R$.
 ```
 
 ```{exercise}
@@ -518,7 +518,7 @@ where p and T are measurable, and V is fixed and known. Determine gas constant R
 
 The Doppler frequency shift for a moving source follows:
 $$f = f_0\frac{v}{v-v_0}$$
-where f and v₀ are measurable quantities, and f₀ is a known constant. Determine velocity v.
+where $f$ and $v₀$ are measurable quantities, and $f₀$ is a known constant. Determine velocity $v$.
 ```
 
 ```{exercise}
@@ -526,7 +526,7 @@ where f and v₀ are measurable quantities, and f₀ is a known constant. Determ
 
 Thermal expansion of a solid follows:
 $$\ell = \ell_0(1+\alpha\Delta T)$$
-where ℓ and ΔT are measurable, and ℓ₀ is unknown but constant. Determine coefficient of expansion α.
+where $ℓ$ and $ΔT$ are measurable, and $ℓ₀$ is unknown but constant. Determine coefficient of expansion $α$.
 ```
 
 ```{exercise}
@@ -534,7 +534,7 @@ where ℓ and ΔT are measurable, and ℓ₀ is unknown but constant. Determine 
 
 Snell's law of refraction states:
 $$n_1\sin\theta_1 = n_2\sin\theta_2$$
-where θ₁ and θ₂ are measurable angles, and n₁ is a known constant. Determine refractive index n₂.
+where $θ₁$ and $θ₂$ are measurable angles, and $n₁$ is a known constant. Determine refractive index $n₂$.
 ```
 
 ```{exercise}
@@ -542,7 +542,7 @@ where θ₁ and θ₂ are measurable angles, and n₁ is a known constant. Deter
 
 The thin lens equation states:
 $$\frac{1}{f} = \frac{1}{s} + \frac{1}{s'}$$
-where s and s' are measurable. Determine focal length f. Compare two possible plotting methods and explain which is preferable.
+where $s$ and $s'$ are measurable. Determine focal length $f$. Compare two possible plotting methods and explain which is preferable.
 ```
 
 ```{exercise}
@@ -550,7 +550,7 @@ where s and s' are measurable. Determine focal length f. Compare two possible pl
 
 The resonant frequency of a parallel LC circuit follows:
 $$\omega = \frac{1}{\sqrt{LC}}$$
-where ω and C are measurable. Determine inductance L.
+where $ω$ and $C$ are measurable. Determine inductance $L$.
 ```
 
 ```{exercise}
@@ -558,7 +558,7 @@ where ω and C are measurable. Determine inductance L.
 
 Coulomb's law for electrostatic force is:
 $$F = \frac{1}{4\pi\epsilon_0}\frac{q_1q_2}{r^2}$$
-where F and r are measurable, while q₁ and q₂ are fixed, known values. Describe how to verify the form of this relationship.
+where $F$ and $r$ are measurable, while $q₁$ and $q₂$ are fixed, known values. Describe how to verify the form of this relationship.
 ```
 
 ```{exercise}
@@ -566,7 +566,7 @@ where F and r are measurable, while q₁ and q₂ are fixed, known values. Descr
 
 The force between parallel current-carrying conductors follows:
 $$F = \frac{\mu_0}{4\pi}\frac{i_1i_2\ell^2}{r^2}$$
-where F, i₁, i₂, and r are measurable quantities, while μ₀ and ℓ are constants. Describe how to verify this relationship.
+where $F$, $i₁$, $i₂$, and $r$ are measurable quantities, while $μ₀$ and $ℓ$ are constants. Describe how to verify this relationship.
 ```
 
 ```{exercise}
@@ -598,5 +598,5 @@ where m and v are measurable. Determine rest mass m₀ and speed of light c.
 
 The wavelengths in the Balmer series of hydrogen follow:
 $$\frac{1}{\lambda} = R\left(\frac{1}{4}-\frac{1}{n^2}\right)$$
-where λ and n are measurable. Determine Rydberg constant R.
+where $λ$ and $n$ are measurable. Determine Rydberg constant $R$.
 ```
