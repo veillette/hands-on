@@ -114,7 +114,16 @@ The uncertainties discussed so far arise from natural limitations in measurement
 These systematic errors, particularly **calibration errors**, require vigilance. Always check instrument zeros before measurement and verify calibration when possible.
 
 :::{warning}
-Don't be misled by sophisticated digital displays with multiple "precise" digits - our laboratory once received electronic timers claiming millisecond precision that actually contained calibration errors exceeding 12%! Approach all instruments with healthy skepticism.
+Don't be misled by sophisticated digital displays with multiple "precise" digits. When measuring current, all ammeters introduce their own internal resistance into the circuit. This resistance creates a voltage drop that alters the actual current flowing through the circuit, meaning the displayed current differs from what would flow without the meter.
+
+For example, a digital multimeter might display a "stable" current reading of 1.23 A, but the actual circuit current could be significantly different due to the meter's internal resistance. High-quality meters minimize this effect with very low internal resistance (often called "burden voltage"), but it can never be completely eliminated.
+
+Similarly, when measuring voltage, the meter draws some current to operate, potentially affecting the circuit's behavior. Always consider how your measuring instrument might be altering the very quantity you're trying to measure.
+
+Approach all instruments with healthy skepticism, recognizing that:
+1. Displayed precision often exceeds actual accuracy
+2. The act of measurement can change the system being measured
+3. Understanding instrument specifications (like internal resistance) is crucial for proper interpretation
 :::
 
 ## Calculating Uncertainty in Derived Quantities
@@ -250,8 +259,6 @@ For $z = \sqrt{x^2 + y^2}$:
 
 $$\delta z = \left|\frac{x}{\sqrt{x^2 + y^2}}\right|\delta x + \left|\frac{y}{\sqrt{x^2 + y^2}}\right|\delta y$$
 :::
-
-I'll add a new section to the Chapter 2 content about significant figures, incorporating the sentiment from the example while creating original content. Here's my addition:
 
 ## Understanding Significant Figures: Purpose Over Rules
 
