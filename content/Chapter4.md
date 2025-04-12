@@ -29,7 +29,7 @@ After identifying significant variables, we progress to a more sophisticated lev
 Imagine needing to calculate how much paint to buy for a wall. Naturally, you'd measure the wall's length and height, then multiply these values to determine the area. But pause to consider what this calculation actually represents. When we multiply length by height, we're calculating the area of a perfect rectangle – an abstract geometric concept that exists only in our minds. This imaginary rectangle might correspond closely to the real wall, or it might differ substantially.
 :::
 
-The critical insight here is that we're dealing with two entirely different categories: 
+The critical insight here is that we're dealing with two entirely different categories:
 
 1. The actual physical wall that needs painting
 2. A conceptual rectangle constructed from mathematical definitions

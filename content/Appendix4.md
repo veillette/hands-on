@@ -34,19 +34,19 @@ We employ a systematic approach to experimental design following established bes
 
 3. **Mathematical model transformation**: To facilitate statistical analysis, we transform our physical model into a linear relationship:
    $$T = 2\pi\sqrt{\frac{m}{k}}$$
-   
+
    Squaring both sides:
    $$T^2 = \frac{4\pi^2}{k}m$$
-   
+
    This can be represented in slope-intercept form:
    $$m = \frac{k}{4\pi^2}T^2 + b$$
-   
+
    Where:
    - Vertical axis variable = $m$
    - Horizontal axis variable = $T^2$
    - Slope = $\frac{k}{4 \pi^2}$
    - Intercept = $b$ (theoretically zero, but may reveal systematic effects)
-   
+
    This transformation allows us to determine k directly from the slope using linear regression techniques.
 
 4. **Measurement range optimization**: We carefully consider:
@@ -60,16 +60,16 @@ We employ a systematic approach to experimental design following established bes
    For time measurements with digital stopwatch uncertainty of ±0.01s, we need to minimize the relative uncertainty in period measurements. Since the uncertainty in T² is approximately twice the relative uncertainty in T, we require:
 
    $$\frac{\Delta T}{T} < 0.05$$
-   
+
    For a conservative uncertainty estimate of ±0.02s per period measurement:
    $$\frac{0.02 \text{s}}{T} < 0.05$$
-   
+
    Which yields:
    $$T > 0.4\text{ seconds}$$
-   
+
    To further reduce uncertainty, we time multiple oscillations (n=10) and calculate:
    $$T = \frac{t_{total}}{n}$$
-   
+
    This reduces timing uncertainty by a factor of approximately √n.
 
 ### Measurement Protocol
@@ -302,7 +302,7 @@ We established a precision measurement system consisting of a helical spring sus
 
 The apparatus featured:
 - A class-2 helical spring (wire diameter 0.8mm, mean coil diameter 10mm, 35 active coils)
-- Calibrated M1-class brass weights (0.05kg to 0.50kg, ±0.1mg tolerance) 
+- Calibrated M1-class brass weights (0.05kg to 0.50kg, ±0.1mg tolerance)
 - Lightweight aluminum pan (23.0g) with three-point suspension
 - Digital stopwatch with millisecond resolution
 - Meter rule with vernier scale for displacement measurements
