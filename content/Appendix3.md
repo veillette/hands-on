@@ -258,9 +258,10 @@ Jupyter supports Markdown for text formatting and LaTeX for equations:
 
 ```markdown
 # Heading 1
+
 ## Heading 2
 
-*italic text*
+_italic text_
 **bold text**
 
 - Bullet point
@@ -273,7 +274,7 @@ Jupyter supports Markdown for text formatting and LaTeX for equations:
 
 Inline equation: $E = mc^2$
 
-Display equation: 
+Display equation:
 $$F = G\frac{m_1 m_2}{r^2}$$
 ```
 
@@ -319,8 +320,8 @@ def model_function(L, g):
 
 # Perform the curve fitting
 params, params_covariance = curve_fit(
-    model_function, 
-    data['Length (m)'], 
+    model_function,
+    data['Length (m)'],
     data['Period² (s²)'],
     sigma=data['Period² Error (s²)'],
     absolute_sigma=True
@@ -337,24 +338,24 @@ plt.figure(figsize=(10, 6))
 
 # Plot the data points with error bars
 plt.errorbar(
-    data['Length (m)'], 
-    data['Period² (s²)'], 
+    data['Length (m)'],
+    data['Period² (s²)'],
     yerr=data['Period² Error (s²)'],
-    fmt='o', 
-    markersize=6, 
-    capsize=3, 
+    fmt='o',
+    markersize=6,
+    capsize=3,
     label='Experimental data'
 )
 
 # Plot the best fit line
 L_values = np.linspace(0, 0.55, 100)
 T2_fitted = model_function(L_values, g_fitted)
-plt.plot(L_values, T2_fitted, 'r-', 
+plt.plot(L_values, T2_fitted, 'r-',
          label=f'Best fit: T² = (4π²/g) * L, g = {g_fitted:.3f} m/s²')
 
 # Add the expected line for g = 9.81 m/s²
 T2_expected = model_function(L_values, 9.81)
-plt.plot(L_values, T2_expected, 'g--', 
+plt.plot(L_values, T2_expected, 'g--',
          label=f'Expected: g = 9.81 m/s²')
 
 # Customize the plot
@@ -373,11 +374,11 @@ data['Residual (s²)'] = data['Period² (s²)'] - data['Fitted Period² (s²)']
 # Plot the residuals
 plt.figure(figsize=(10, 4))
 plt.errorbar(
-    data['Length (m)'], 
-    data['Residual (s²)'], 
+    data['Length (m)'],
+    data['Residual (s²)'],
     yerr=data['Period² Error (s²)'],
-    fmt='o', 
-    markersize=6, 
+    fmt='o',
+    markersize=6,
     capsize=3
 )
 plt.axhline(y=0, color='r', linestyle='-')
@@ -391,6 +392,7 @@ plt.show()
 
 > [!note]
 > This example demonstrates how to:
+>
 > - Organize experimental data
 > - Propagate uncertainties
 > - Fit a theoretical model to data
@@ -403,35 +405,40 @@ plt.show()
 When approaching data analysis for physics experiments, a systematic workflow is helpful:
 
 1. **Data Import and Organization**
-    - Import raw data (CSV, Excel, etc.)
-    - Organize into appropriate data structures
-    - Perform basic validation and cleaning
+
+   - Import raw data (CSV, Excel, etc.)
+   - Organize into appropriate data structures
+   - Perform basic validation and cleaning
 
 2. **Exploratory Analysis**
-    - Calculate basic statistics (mean, standard deviation)
-    - Create initial visualizations
-    - Identify potential outliers or issues
+
+   - Calculate basic statistics (mean, standard deviation)
+   - Create initial visualizations
+   - Identify potential outliers or issues
 
 3. **Data Transformation**
-    - Convert units if necessary
-    - Create derived quantities
-    - Apply appropriate transformations (e.g., linearization)
+
+   - Convert units if necessary
+   - Create derived quantities
+   - Apply appropriate transformations (e.g., linearization)
 
 4. **Model Fitting**
-    - Define theoretical model
-    - Perform regression or curve fitting
-    - Extract parameters and their uncertainties
+
+   - Define theoretical model
+   - Perform regression or curve fitting
+   - Extract parameters and their uncertainties
 
 5. **Visualization**
-    - Create publication-quality plots
-    - Include error bars and uncertainty ranges
-    - Compare experimental results with theoretical predictions
+
+   - Create publication-quality plots
+   - Include error bars and uncertainty ranges
+   - Compare experimental results with theoretical predictions
 
 6. **Result Analysis and Interpretation**
-    - Evaluate goodness of fit
-    - Analyze residuals
-    - Calculate derived quantities with proper uncertainty propagation
-    - Compare results with established values or theories
+   - Evaluate goodness of fit
+   - Analyze residuals
+   - Calculate derived quantities with proper uncertainty propagation
+   - Compare results with established values or theories
 
 > [!tip]
 > For reproducibility, document each step of your analysis in your Jupyter Notebook with clear markdown explanations. This makes it easier to trace your reasoning and catch potential errors.
@@ -441,45 +448,51 @@ When approaching data analysis for physics experiments, a systematic workflow is
 ### Coding Best Practices
 
 1. **Comment your code**
+
    ```python
    # Calculate gravitational acceleration from the slope
    g = 4 * np.pi**2 / slope  # Converting from T² vs L to g
    ```
 
 2. **Use descriptive variable names**
+
    ```python
    # Good
    time_of_flight = distance_fallen / initial_velocity
-   
+
    # Avoid
    t = d / v
    ```
 
 3. **Structure your notebook logically**
-    - Start with imports and setup
-    - Follow with data loading and processing
-    - Continue with analysis and visualization
-    - End with conclusions
+   - Start with imports and setup
+   - Follow with data loading and processing
+   - Continue with analysis and visualization
+   - End with conclusions
 
 ### Data Visualization Tips
 
 1. **Always label your axes**
+
    ```python
    plt.xlabel('Time (s)')
    plt.ylabel('Displacement (m)')
    ```
 
 2. **Include units in labels**
+
    ```python
    plt.xlabel('Pressure (kPa)')
    ```
 
 3. **Use appropriate scales**
+
    ```python
    plt.xscale('log')  # For logarithmic scale
    ```
 
 4. **Add error bars when possible**
+
    ```python
    plt.errorbar(x, y, yerr=y_errors, fmt='o')
    ```
@@ -494,12 +507,14 @@ When approaching data analysis for physics experiments, a systematic workflow is
 ### Handling Experimental Uncertainties
 
 1. **Propagate uncertainties correctly**
+
    ```python
    # For y = a*x + b
    y_error = np.sqrt((a_error * x)**2 + b_error**2)
    ```
 
 2. **Use weighted fits when measurement uncertainties vary**
+
    ```python
    weights = 1 / (y_errors**2)
    params, params_covariance = curve_fit(model, x, y, sigma=y_errors, absolute_sigma=True)
@@ -520,14 +535,14 @@ When processing multiple datasets with similar structure, functions can help aut
 ```python
 def analyze_pendulum_data(filepath, output_folder=None):
     """Analyze pendulum data from a CSV file.
-    
+
     Parameters:
     -----------
     filepath : str
         Path to the CSV file containing length and period data
     output_folder : str, optional
         Folder to save output plots
-        
+
     Returns:
     --------
     dict
@@ -535,13 +550,13 @@ def analyze_pendulum_data(filepath, output_folder=None):
     """
     # Load data
     data = pd.read_csv(filepath)
-    
+
     # Perform analysis
     # ...
-    
+
     # Create and save plots
     # ...
-    
+
     return results
 ```
 
@@ -550,14 +565,16 @@ def analyze_pendulum_data(filepath, output_folder=None):
 Jupyter Notebooks can be shared in various ways:
 
 1. **Export as HTML, PDF, or other formats**
-    - In Jupyter: File > Export Notebook As...
+
+   - In Jupyter: File > Export Notebook As...
 
 2. **Version control with Git/GitHub**
-    - Notebooks are text files that can be tracked with version control
-    - GitHub renders notebooks directly in the browser
+
+   - Notebooks are text files that can be tracked with version control
+   - GitHub renders notebooks directly in the browser
 
 3. **Interactive sharing with Binder**
-    - Share executable versions of your notebooks online
+   - Share executable versions of your notebooks online
 
 > [!important]
 > When sharing your analysis, include the raw data files or clear instructions on how to obtain them.

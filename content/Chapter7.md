@@ -32,10 +32,11 @@ The title typically provides readers their first impression of your work. Since 
 
 :::{tip}
 While keeping it concise, make the topic explicit. For instance, if measuring a fluid's specific heat using continuous-flow calorimetry, a straightforward title works well: "Measurement of the Specific Heat of Water Using Continuous-Flow Calorimetry." This title effectively answers three key questions:
+
 1. Is this experimental or theoretical work?
 2. What specific topic does it address?
 3. What methodology was employed?
-:::
+   :::
 
 Addressing these elements typically results in an effective title.
 
@@ -51,13 +52,13 @@ Essential sections typically include:
 INTRODUCTION  
 PROCEDURE  
 RESULTS  
-DISCUSSION  
+DISCUSSION
 
 These core divisions provide a solid organizational framework. Format headings prominently, perhaps using capital letters. Use subsections sparingly, only when necessary for clarity in longer or more complex reports. Depending on experimental requirements, you might include additional main sections such as:
 
 THEORY  
 SAMPLE PREPARATION  
-UNCERTAINTY CALCULATIONS  
+UNCERTAINTY CALCULATIONS
 
 Your report should present a clear, logical progression of ideas. If detailed information might disrupt this flow, consider placing it in an appendix. This approach preserves the information for interested readers while maintaining the report's coherence.
 :::
@@ -73,7 +74,7 @@ An effective introduction typically includes these components in sequence:
 - Review of Existing Information
 - Application of Information to Specific Experiment
 - Summary of Experimental Intention
-:::
+  :::
 
 ### Topic Statement
 

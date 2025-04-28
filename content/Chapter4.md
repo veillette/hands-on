@@ -45,7 +45,7 @@ This distinction between reality and mental constructs lies at the heart of scie
 
 - The physical world and our observations of it
 - Conceptual constructs built from definitions and assumptions
-:::
+  :::
 
 These constructs are called **models**, and they pervade both scientific and everyday thinking. The painter envisioning a rectangular wall, the botanist categorizing a flower within a species, and the economist analyzing a national economy using equations – all are using models to represent reality.
 
@@ -117,7 +117,7 @@ To summarize our understanding so far, scientific thinking involves four key ele
 2. Construction of conceptual models
 3. Systematic comparison between model properties and real-world properties
 4. Progressive model refinement based on these comparisons
-:::
+   :::
 
 Let's now examine how we practically compare models with physical systems. Vague conceptual comparisons won't suffice; we need explicit, quantitative methods. This typically requires quantitative observation of the system alongside mathematical specification of the model.
 
@@ -146,7 +146,7 @@ We can distinguish between two broad categories of models:
 
 1. **Empirical models**: Based solely on observations without reference to underlying mechanisms
 2. **Theoretical models**: Constructed from fundamental principles about how the system operates
-:::
+   :::
 
 Let's examine each approach.
 
@@ -335,7 +335,7 @@ This graphical approach offers significant advantages beyond simply testing mode
 1. It doesn't allow us to visually assess model validity (whether V-I relationship is actually linear)
 2. It cannot handle data scatter effectively
 3. It cannot detect or compensate for systematic issues like unexpected intercepts or non-linearity at certain ranges
-:::
+   :::
 
 With a graphical approach, even with scattered data, we can confidently determine resistance from the slope of a line that best represents the overall trend. If measurements show an unexpected intercept or deviate from linearity in certain regions, we can still extract reliable resistance values from the linear portion, unaffected by these discrepancies.
 
@@ -355,7 +355,7 @@ While we've focused on determining constants from slopes, straight-line graphs a
 :label: prob-model-comparison
 
 Consider a pendulum experiment where the period T is measured at different lengths L. The measurements yield the following data:
-- L = 0.25 m, T = 1.01 s 
+- L = 0.25 m, T = 1.01 s
 - L = 0.50 m, T = 1.42 s
 - L = 0.75 m, T = 1.73 s
 - L = 1.00 m, T = 2.01 s

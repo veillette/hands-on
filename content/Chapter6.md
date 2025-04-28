@@ -43,7 +43,7 @@ The complete evaluation process consists of four key stages:
 2. Assess correspondence between experimental system and theoretical model
 3. Calculate values of the properties you set out to measure
 4. Estimate the overall precision of your experiment
-:::
+   :::
 
 Let's examine each stage in detail.
 

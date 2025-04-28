@@ -27,7 +27,7 @@ Similarly, working upward:
 - Is it definitely more than 86 mm? Yes.
 - More than 86.5 mm? Probably.
 - More than 87 mm? Not certain.
-:::
+  :::
 
 Through this dual process of approaching from above and below, we identify an interval - the smallest range within which we're confident the true value lies. This reveals measurement's essential nature: we don't determine exact values but rather intervals of possibility.
 
@@ -55,7 +55,7 @@ This highlights a broader concept: rounding introduces its own form of uncertain
 1. Many rounded values accumulate errors throughout a calculation
 2. Two nearly equal values are subtracted, making relative errors much larger
 3. High powers are involved, amplifying small errors
-:::
+   :::
 
 With modern calculators, it's wise to maintain extra digits throughout calculations, rounding appropriately only at the final step. Similarly, statements like "measured to the nearest millimeter" inadequately convey measurement uncertainty, as they establish only minimum bounds for the measurement interval.
 
@@ -69,7 +69,7 @@ This notation provides two advantages:
 
 1. It gives us a central value (152.9 cm) for calculations
 2. It explicitly states the uncertainty (±0.2 cm) for quality assessment
-:::
+   :::
 
 This uncertainty value (±0.2 cm) represents the **absolute uncertainty** of our measurement. However, the significance of any uncertainty depends on the measurement's magnitude. An uncertainty of ±0.2 cm would be:
 
@@ -109,7 +109,7 @@ The uncertainties discussed so far arise from natural limitations in measurement
 - A stretched or compressed measuring tape
 - Consistently miscalibrated electronic equipment
 - Temperature effects on measuring devices
-:::
+  :::
 
 These systematic errors, particularly **calibration errors**, require vigilance. Always check instrument zeros before measurement and verify calibration when possible.
 
@@ -121,10 +121,11 @@ For example, a digital multimeter might display a "stable" current reading of 1.
 Similarly, when measuring voltage, the meter draws some current to operate, potentially affecting the circuit's behavior. Always consider how your measuring instrument might be altering the very quantity you're trying to measure.
 
 Approach all instruments with healthy skepticism, recognizing that:
+
 1. Displayed precision often exceeds actual accuracy
 2. The act of measurement can change the system being measured
 3. Understanding instrument specifications (like internal resistance) is crucial for proper interpretation
-:::
+   :::
 
 ## Calculating Uncertainty in Derived Quantities
 
@@ -136,7 +137,7 @@ Rarely does a single measurement complete our work. Usually, we need to calculat
 - A sphere's volume from its diameter
 - An object's density from its mass and dimensions
 - Gravitational acceleration from a pendulum's length and period
-:::
+  :::
 
 When calculating uncertainties in derived quantities, we will focus on finding the maximum possible uncertainty by considering the absolute values of all component uncertainties. This approach ensures we account for the worst-case scenario where all uncertainties combine to produce the largest possible error in our final result.
 
@@ -178,7 +179,7 @@ This reveals an important principle: the relative uncertainty in the result equa
 - Calculating a circle's area ($A = \pi r^2$) from a radius measurement doubles the relative uncertainty
 - Calculating a cube's volume ($V = s^3$) triples the relative uncertainty
 - Taking a square root halves the relative uncertainty
-:::
+  :::
 
 ### Exponential Functions
 
@@ -273,7 +274,7 @@ Think of significant figures as telling a story about your measurement:
 - They indicate which digits you're confident about
 - They show where your certainty ends
 - They communicate this information efficiently to others
-:::
+  :::
 
 Consider how you might record a measurement from a graduated cylinder. When the liquid level falls between markings, you don't simply write down the nearest mark. Instead, you estimate to one digit beyond what the scale directly shows. That estimated digit—the last significant figure—carries valuable information about your measurement.
 
@@ -285,12 +286,12 @@ def count_sig_figs(measurement_str):
     """Estimate the number of significant figures in a measurement"""
     # Remove any units that might be present
     measurement_str = measurement_str.split()[0]
-    
+
     # Handle scientific notation
     if 'e' in measurement_str.lower():
         base, exponent = measurement_str.lower().split('e')
         return count_sig_figs(base)
-    
+
     # Count significant digits according to basic rules
     digits = ''.join(c for c in measurement_str if c.isdigit())
     if '.' in measurement_str:
@@ -344,7 +345,7 @@ We should:
 1. Ensure uncertainty values match the precision of original measurements
 2. Keep only significant digits in the final value that match the uncertainty
 3. Avoid mismatched precision statements like "12.3456 ± 0.2" or "12 ± 0.00001"
-:::
+   :::
 
 ## Glossary
 
@@ -407,7 +408,7 @@ A capacitance value is calculated using $C = \frac{\varepsilon_0 A}{d}$ with mea
    - Area $A = (0.025 \pm 0.001) \text{ m}^2$
    - Distance $d = (0.5 \pm 0.02) \text{ mm}$
    - $\varepsilon_0 = 8.85 \times 10^{-12} \text{ F/m}$ (exact)
-   
+
 Calculate the value and uncertainty of $C$.
 ```
 
@@ -429,6 +430,6 @@ A value is reported as $583.2417 \pm 0.15$. Rewrite this with appropriate signif
 The resistance of a wire is measured at two temperatures:
 - $R_1 = (125.3 \,\pm\, 0.4)\,\Omega$ at $T_1 = 20°\text{C}$
 - $R_2 = (138.1 \,\pm\, 0.4)\,\Omega$ at $T_2 = 50°\text{C}$
-   
+
 Calculate the temperature coefficient of resistance and its uncertainty using $\alpha = \frac{R_2-R_1}{R_1(T_2-T_1)}$.
 ```

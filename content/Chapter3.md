@@ -11,7 +11,7 @@ These variations can arise from many sources:
 - Instrument limitations
 - Human factors
 - Quantum effects (in some cases)
-:::
+  :::
 
 Consider measuring the radioactivity of a sample. Even with perfect equipment, the number of counts in a fixed time interval will vary randomly. Similarly, optical measurements might show fluctuations due to air currents or thermal effects.
 
@@ -32,7 +32,7 @@ When we make many measurements of the same quantity, the results often follow a 
 - About 68% of measurements fall within $\pm 1 \sigma$ of the mean
 - About 95% fall within $\pm 2 \sigma$
 - About 99.7% fall within $\pm 3 \sigma$
-:::
+  :::
 
 This distribution allows us to make meaningful statements about our measurements. For example, if we measure a length multiple times and find a mean of 10.5 cm with a standard deviation of 0.1 cm, we can say:
 
@@ -50,7 +50,7 @@ When we make measurements, we're typically working with a sample from a larger p
 - Sample mean (x̄) estimates population mean ($\mu$)
 - Sample standard deviation (s) estimates population standard deviation ($\sigma$)
 - Standard error of the mean (SEM) = $s/\sqrt{n}$
-:::
+  :::
 
 The standard error of the mean tells us how precisely we've determined the population mean. As our sample size increases, this uncertainty decreases.
 

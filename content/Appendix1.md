@@ -23,10 +23,11 @@ A deviation of $(2n-2)E$ is more likely because it can happen whenever exactly o
 
 > [!example] Concrete example
 > Imagine just 4 fluctuations (so $n=2$), each with magnitude $E=0.1$ units:
+>
 > - A deviation of $+0.4$ requires all fluctuations to be $+0.1$ (only 1 way)
 > - A deviation of $+0.2$ requires 3 positive and 1 negative fluctuation (4 possible ways)
 > - A deviation of $0$ requires 2 positive and 2 negative fluctuations (6 possible ways)
-    > And so on. Notice how the middle values are more likely!
+>   And so on. Notice how the middle values are more likely!
 
 More generally, if we want a total deviation $R$ equal to $2rE$ (where $r ≤ n$), this means that out of our $2n$ fluctuations, $(n+r)$ must be positive and $(n-r)$ must be negative. The number of ways to select $(n+r)$ positions from $2n$ positions is:
 
@@ -54,7 +55,7 @@ $$\int_1^n \ln x \, dx = [x\ln x - x]_1^n = n\ln n - n + 1$$
 The integral approximates the sum $\ln 1 + \ln 2 + \ln 3 + ... + \ln n$, which equals $\ln(n!)$.
 
 ![Logarithm approximation](../figures/A1/FigA1_1.png)
-*The area under the curve of ln(x) approximates the sum of logarithms*
+_The area under the curve of ln(x) approximates the sum of logarithms_
 
 Therefore:
 $$\ln(n!) \approx n\ln n - n$$
@@ -114,13 +115,13 @@ $$\int_0^x \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{x^2}{2\sigma^2}}dx$$
 This integral has been calculated numerically and tabulated. The table below shows these probabilities for different values of $x/\sigma$:
 
 | $x/\sigma$ | Probability of deviation between 0 and $x$ |
-|------------|--------------------------------------------|
-| 0.0 | 0.0 |
-| 0.5 | 0.19 |
-| 1.0 | 0.34 |
-| 1.5 | 0.43 |
-| 2.0 | 0.48 |
-| 3.0 | 0.499 |
+| ---------- | ------------------------------------------ |
+| 0.0        | 0.0                                        |
+| 0.5        | 0.19                                       |
+| 1.0        | 0.34                                       |
+| 1.5        | 0.43                                       |
+| 2.0        | 0.48                                       |
+| 3.0        | 0.499                                      |
 
 :::{note} Python Image: Click Me! 👈
 :class: dropdown
@@ -216,14 +217,16 @@ plt.tight_layout(rect=[0, 0.03, 1, 0.97])
 plt.savefig('gaussian_area.svg', dpi=300)
 plt.show()
 ```
+
 :::
 
 ![Gaussian Distribution Area](../figures/A1/gaussian_area.svg)
-*Figure A1.1: The shaded area represents the probability of a deviation falling between 0 and x.*
+_Figure A1.1: The shaded area represents the probability of a deviation falling between 0 and x._
 
 For the probability that a measurement falls within $\pm x/\sigma$ of the mean (the symmetric interval), we double these values.
 
 > [!key] Key values to remember
+>
 > - Approximately 68% of all measurements fall within $\pm 1\sigma$ of the mean
 > - Approximately 95% fall within $\pm 2\sigma$
 > - Approximately 99.7% fall within $\pm 3\sigma$ (the "three-sigma rule")

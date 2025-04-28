@@ -5,6 +5,7 @@
 ### System
 
 For our experiment, we have assembled the following apparatus:
+
 - A helical spring suspended from a rigid laboratory stand with vibration-dampening clamps
 - A precision-machined pan for holding weights, attached to the lower end of the spring via a low-friction hook
 - A set of calibrated brass weights (class M1 standard, ±0.1mg tolerance)
@@ -42,6 +43,7 @@ We employ a systematic approach to experimental design following established bes
    $$m = \frac{k}{4\pi^2}T^2 + b$$
 
    Where:
+
    - Vertical axis variable = $m$
    - Horizontal axis variable = $T^2$
    - Slope = $\frac{k}{4 \pi^2}$
@@ -50,6 +52,7 @@ We employ a systematic approach to experimental design following established bes
    This transformation allows us to determine k directly from the slope using linear regression techniques.
 
 4. **Measurement range optimization**: We carefully consider:
+
    - The available calibrated weights (0.05 kg to 0.50 kg)
    - The spring's elastic limit (determined through preliminary testing to be approximately 0.60 kg)
    - Practical constraints on timing oscillations (targeting relative timing uncertainty <1%)
@@ -77,11 +80,13 @@ We employ a systematic approach to experimental design following established bes
 We developed a comprehensive measurement protocol:
 
 1. **System calibration**:
+
    - Zero the digital scale used to verify weights
    - Calibrate the digital stopwatch against a reference timekeeper
    - Measure the unloaded spring length as reference
 
 2. **Data collection procedure**:
+
    - Attach the weight pan (mass recorded separately)
    - Add calibrated weights incrementally
    - For each load, displace the system 2 cm from equilibrium
@@ -137,7 +142,7 @@ def linear_model(x, slope, intercept):
 
 # Perform weighted least-squares fit
 weights = 1 / (uncertainties**2)
-popt, pcov = curve_fit(linear_model, periods_squared, masses, 
+popt, pcov = curve_fit(linear_model, periods_squared, masses,
                         sigma=uncertainties, absolute_sigma=True)
 
 slope, intercept = popt
@@ -155,22 +160,22 @@ r_squared = 1 - (ss_res / ss_tot)
 
 # Generate prediction intervals (95% confidence)
 t_value = stats.t.ppf(0.975, len(masses)-2)
-prediction_intervals = t_value * np.sqrt(1/weights + 
-                      (periods_squared - np.mean(periods_squared))**2 / 
+prediction_intervals = t_value * np.sqrt(1/weights +
+                      (periods_squared - np.mean(periods_squared))**2 /
                       np.sum(weights * (periods_squared - np.mean(periods_squared))**2))
 
 # Plot results with error bars and confidence intervals
 plt.figure(figsize=(10, 7))
-plt.errorbar(periods_squared, masses, xerr=uncertainties, fmt='o', 
+plt.errorbar(periods_squared, masses, xerr=uncertainties, fmt='o',
              markersize=6, capsize=3, label='Experimental data')
 
 # Plot best fit line
 x_fit = np.linspace(0.5, 2.5, 100)
-plt.plot(x_fit, linear_model(x_fit, *popt), 'r-', 
+plt.plot(x_fit, linear_model(x_fit, *popt), 'r-',
          label=f'Best fit: m = ({slope:.4f}±{slope_err:.4f})T² + ({intercept:.4f}±{intercept_err:.4f})')
 
 # Plot prediction intervals
-plt.fill_between(periods_squared, 
+plt.fill_between(periods_squared,
                  linear_model(periods_squared, *popt) - prediction_intervals,
                  linear_model(periods_squared, *popt) + prediction_intervals,
                  alpha=0.2, color='gray', label='95% confidence interval')
@@ -195,13 +200,14 @@ The analysis yielded a coefficient of determination (R²) of 0.9996, indicating 
 Figure 1 shows the results of our computational analysis, including the experimental data points with uncertainties, the best-fit line, and the 95% confidence intervals derived from our statistical analysis.
 
 ![Graph of m vs. T² with statistical analysis](../figures/A4/spring_constant_analysis.svg)
-*Figure 1: Plot of mass versus period squared showing experimental data points with uncertainties, best-fit line determined by weighted least-squares regression, and 95% confidence intervals.*
+_Figure 1: Plot of mass versus period squared showing experimental data points with uncertainties, best-fit line determined by weighted least-squares regression, and 95% confidence intervals._
 
 ### Parameter Determination
 
 From our computational analysis, we obtained:
 
 **Best-fit parameters:**
+
 - Slope = 0.2486 ± 0.0045 kg/s²
 - Intercept = -0.0776 ± 0.0064 s²
 
@@ -221,6 +227,7 @@ This gives us a relative uncertainty of 1.8%, significantly better than our targ
 Our experimental procedure followed these detailed steps:
 
 1. **Equipment preparation and verification:**
+
    - The spring was examined for damage or permanent deformation
    - The spring was pre-stretched with a 0.6 kg load for 30 minutes to minimize hysteresis effects
    - Weight calibration was verified using an analytical balance (±0.1 mg precision)
@@ -228,43 +235,47 @@ Our experimental procedure followed these detailed steps:
    - Level adjustment was performed using a spirit level
 
 2. **Environmental control:**
+
    - Room temperature maintained at 22.0 ± 0.5°C
    - Airflow minimized by closing vents and doors
    - Barometric pressure recorded (101.3 kPa)
    - Relative humidity monitored (45%)
 
 3. **Preliminary measurements:**
+
    - The unloaded length of the spring was measured (15.3 ± 0.1 cm)
    - The mass of the empty pan was determined (0.023 ± 0.0001 kg)
    - The spring's elastic limit was assessed through static loading tests
    - Natural frequency of the laboratory bench was measured to identify potential resonance issues
 
 4. **Measurement procedure:**
+
    - The pan was attached to the spring and allowed to reach equilibrium
    - The initial position was marked on a background grid for reference
    - Calibrated weights were added incrementally (0.05 kg steps)
    - For each load configuration:
-     * The system was displaced 2.0 cm downward using a release mechanism
-     * A digital stopwatch was used to time 10 complete oscillations
-     * The measurement was repeated three times with brief pauses between trials
-     * The system was allowed to return to equilibrium before the next trial
-     * Any observed damping was noted qualitatively
+     - The system was displaced 2.0 cm downward using a release mechanism
+     - A digital stopwatch was used to time 10 complete oscillations
+     - The measurement was repeated three times with brief pauses between trials
+     - The system was allowed to return to equilibrium before the next trial
+     - Any observed damping was noted qualitatively
    - High-speed video (120 fps) recorded select trials for verification
    - Between measurement sets, the spring was inspected for signs of fatigue
 
 5. **Data analysis methodology:**
+
    - Statistical treatment applied to repeated measurements:
-     * Mean values calculated for each measurement set
-     * Standard deviation determined as a measure of random uncertainty
-     * Standard error of the mean computed for each average period
+     - Mean values calculated for each measurement set
+     - Standard deviation determined as a measure of random uncertainty
+     - Standard error of the mean computed for each average period
    - Systematic uncertainties identified and quantified:
-     * Stopwatch calibration uncertainty (±0.01s)
-     * Mass calibration uncertainty (±0.0001 kg)
-     * Human reaction time variation (minimized through training)
+     - Stopwatch calibration uncertainty (±0.01s)
+     - Mass calibration uncertainty (±0.0001 kg)
+     - Human reaction time variation (minimized through training)
    - Computational analysis performed using Python libraries:
-     * NumPy for numerical operations
-     * SciPy.optimize for curve fitting with weighted least-squares
-     * Matplotlib for visualization with error representation
+     - NumPy for numerical operations
+     - SciPy.optimize for curve fitting with weighted least-squares
+     - Matplotlib for visualization with error representation
    - Uncertainty propagation calculated following standard error propagation formulas
    - Goodness-of-fit evaluated using coefficient of determination (R²)
    - Residual analysis performed to check for systematic patterns
@@ -298,9 +309,10 @@ We can apply weighted least-squares regression analysis to determine k from the 
 We established a precision measurement system consisting of a helical spring suspended from a vibration-isolated support structure (Figure 2). The experimental apparatus included:
 
 ![Experimental setup diagram](../figures/A4/FigA4_1R.jpg)
-*Figure 2: Schematic diagram of the experimental apparatus showing the spring suspension system, digital measurement tools, and vibration isolation measures.*
+_Figure 2: Schematic diagram of the experimental apparatus showing the spring suspension system, digital measurement tools, and vibration isolation measures._
 
 The apparatus featured:
+
 - A class-2 helical spring (wire diameter 0.8mm, mean coil diameter 10mm, 35 active coils)
 - Calibrated M1-class brass weights (0.05kg to 0.50kg, ±0.1mg tolerance)
 - Lightweight aluminum pan (23.0g) with three-point suspension
@@ -311,6 +323,7 @@ The apparatus featured:
 - Vibration-isolated optical table
 
 Our measurement protocol involved:
+
 1. Suspending the spring from the support stand and attaching the weight pan
 2. Adding calibrated weights incrementally from 0.10kg to 0.50kg
 3. Displacing the system 2.0cm from equilibrium using a release mechanism
@@ -343,7 +356,7 @@ $$k = 9.81 \pm 0.18 \text{ N/m}$$
 With a coefficient of determination R² = 0.9996, demonstrating excellent agreement with our linear model. Figure 3 presents the graphical analysis of our results.
 
 ![Graph of statistical analysis results](../figures/A4/spring_constant_analysis.svg)
-*Figure 3: Statistical analysis of the T² vs m relationship showing experimental data points with error bars, weighted least-squares regression line, and 95% confidence intervals.*
+_Figure 3: Statistical analysis of the T² vs m relationship showing experimental data points with error bars, weighted least-squares regression line, and 95% confidence intervals._
 
 ### Discussion
 

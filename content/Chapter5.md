@@ -122,7 +122,7 @@ Where:
 - $h$ = distance from center of mass to support point (input)
 - $g$ = gravitational acceleration (unknown constant)
 - $k$ = radius of gyration about center of mass (unknown constant)
-:::
+  :::
 
 Converting this to linear form using single-variable functions of h and T proves impossible. However, using compound variables makes it possible. Starting by squaring both sides:
 
@@ -152,7 +152,7 @@ This example demonstrates the superiority of linear analysis. The traditional ap
 3. It avoids the unreliability of shallow-angle intercepts
 4. It utilizes all data points rather than just those near intercepts
 5. It determines g and k independently, preventing error propagation
-:::
+   :::
 
 Compound variables also prove valuable with multiple input variables. When measuring specific heat using flow calorimetry, the heat balance equation is:
 
@@ -197,7 +197,7 @@ This approach offers two key advantages over plotting y versus xⁿ directly:
 
 1. It accommodates very large variable ranges on reasonably sized graph paper
 2. It reveals when data follows a power law with an unexpected exponent
-:::
+   :::
 
 For instance, if measurements follow y = x¹·⁸ rather than y = x², plotting y versus x² would show systematic deviation from linearity without revealing the true relationship. A log-log plot would still produce a straight line, immediately indicating a power relationship, with the slope revealing the actual exponent (1.8).
 
@@ -259,7 +259,7 @@ Without an existing model to test, your motivations might include:
 - Practical information needs
 - Seeking guidance for theoretical model construction
 - Developing an empirical model for calculation purposes
-:::
+  :::
 
 Even without detailed theoretical understanding, empirical models prove extremely valuable. They help organize thinking about complex systems and enable mathematical operations like interpolation, extrapolation, and forecasting.
 
@@ -290,7 +290,7 @@ The general method:
 2. Write dimensions of both sides using M, L, and T
 3. Create equations by matching powers of M, L, and T
 4. Solve for the unknown exponents
-:::
+   :::
 
 For example, analyzing the velocity ($v$) of waves on a string under tension ($T$) with mass per unit length ($m$):
 
@@ -380,7 +380,7 @@ These questions present multiple challenges:
 - Delayed responses to interventions
 - Inability to observe true null effects (we rarely have baseline measurements before interventions)
 - Numerous confounding factors
-:::
+  :::
 
 Your best approach: meticulous sampling procedures. Create artificial null-effect measurements by constructing treatment groups under the influence you're studying and control groups exempt from it but otherwise matched as closely as possible.
 
@@ -455,7 +455,7 @@ A torsional oscillator's period depends on the support's torsional stiffness coe
 The central deflection of a beam with circular cross-section, supported at both ends and loaded at its center, depends on the applied force, distance between supports, beam radius, and the material's Young's modulus. Use dimensional analysis to determine the relationship.
 ```
 
-*For problems 6-23, state which variables or combinations of variables should be plotted to verify the proposed relationship, and explain how to determine the unknown parameter(s) from your graph (slope, intercept, etc.).*
+_For problems 6-23, state which variables or combinations of variables should be plotted to verify the proposed relationship, and explain how to determine the unknown parameter(s) from your graph (slope, intercept, etc.)._
 
 ```{exercise}
 :label: prob-constant-acceleration
@@ -599,3 +599,4 @@ where m and v are measurable. Determine rest mass m₀ and speed of light c.
 The wavelengths in the Balmer series of hydrogen follow:
 $$\frac{1}{\lambda} = R\left(\frac{1}{4}-\frac{1}{n^2}\right)$$
 where $\lambda$ and $n$ are measurable. Determine Rydberg constant $R$.
+```
