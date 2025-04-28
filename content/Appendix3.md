@@ -498,6 +498,7 @@ When approaching data analysis for physics experiments, a systematic workflow is
    ```
 
 5. **Include a legend when plotting multiple series**
+
    ```python
    plt.plot(x, y1, 'b-', label='Measured')
    plt.plot(x, y2, 'r--', label='Theoretical')
@@ -521,6 +522,7 @@ When approaching data analysis for physics experiments, a systematic workflow is
    ```
 
 3. **Check residuals for patterns**
+
    ```python
    residuals = y_data - model(x_data, *params)
    plt.plot(x_data, residuals, 'o')
