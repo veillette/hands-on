@@ -34,7 +34,7 @@ This textbook provides a thorough introduction to advanced laboratory methods in
 - **Appendices**
   - [Appendix 1: The Gaussian Distribution](https://veillette.github.io/hands-on/appendix1)
   - [Appendix 2: The Principle of Least Squares](https://veillette.github.io/hands-on/appendix2)
-  - [Appendix 3: Difference Tables and Finite Difference Calculus](https://veillette.github.io/hands-on/appendix3)
+  - [Appendix 3: Introduction to Jupyter and Python for Data Analysis](https://veillette.github.io/hands-on/appendix3)
   - [Appendix 4: Model Experiment](https://veillette.github.io/hands-on/appendix4)
 
 ## 🚀 Getting Started
