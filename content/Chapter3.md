@@ -58,19 +58,21 @@ When we make measurements, we're typically working with a sample from a larger p
 
 - **Sample mean** ($\bar{x}$) estimates **population mean** ($\mu$)
 - **Sample standard deviation** ($s$) estimates **population standard deviation** ($\sigma$)
-- **Standard error of the mean** (SEM) = $\frac{s}{\sqrt{n}}$
-- **Sample size** ($n$) affects the precision of our estimates
+- **Standard error of the mean** (SEM) = $\frac{s}{\sqrt{N}}$
+- **Sample size** ($N$) affects the precision of our estimates
 :::
 
 The **sample mean** is calculated as:
-$$\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i$$
+$$\bar{x} = \frac{1}{N}\sum_{i=1}^{N} x_i$$
 
 The **sample standard deviation** is:
-$$s = \sqrt{\frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n-1}}$$
+$$s = \sqrt{\frac{\sum_{i=1}^{N}(x_i - \bar{x})^2}{N-1}}$$
 
-Note the $(n-1)$ in the denominator, known as Bessel's correction, which provides an unbiased estimate of the population standard deviation.
+where $N$ is the sample size and $x_i$ are individual measurements.
 
-The **standard error of the mean** tells us how precisely we've determined the population mean. As our sample size increases, this uncertainty decreases as $1/\sqrt{n}$.
+Note the $(N-1)$ in the denominator, known as Bessel's correction, which provides an unbiased estimate of the population standard deviation.
+
+The **standard error of the mean** tells us how precisely we've determined the population mean. As our sample size increases, this uncertainty decreases as $1/\sqrt{N}$.
 
 :::{warning}
 Don't confuse **standard deviation** (variation in individual measurements) with **standard error** (uncertainty in the mean). The standard deviation describes the spread of the data, while the standard error describes how precisely we know the mean.
@@ -82,7 +84,7 @@ This distinction is crucial and frequently misunderstood:
 
 - **Standard Deviation ($s$)**: Describes the variability of individual measurements around the sample mean. It tells us about the inherent scatter in our data.
 
-- **Standard Error of the Mean ($s_m = s/\sqrt{n}$)**: Describes the uncertainty in our estimate of the population mean. It tells us how precisely we know the "true" value.
+- **Standard Error of the Mean ($s_m = s/\sqrt{N}$)**: Describes the uncertainty in our estimate of the population mean. It tells us how precisely we know the "true" value.
 
 For example, if we measure the same quantity 25 times and get $s = 2.0$ units:
 - The standard deviation remains 2.0 units (describing individual measurement scatter)
@@ -106,13 +108,29 @@ $$\sigma_z^2 = \sigma_x^2 + \sigma_y^2$$
 **For multiplication/division**: $z = xy$ or $z = x/y$
 $$\left(\frac{\sigma_z}{z}\right)^2 = \left(\frac{\sigma_x}{x}\right)^2 + \left(\frac{\sigma_y}{y}\right)^2$$
 
-**For powers**: $z = x^n$
+**For powers**: $z = x^n$ where $n$ is a constant
 $$\frac{\sigma_z}{z} = |n| \frac{\sigma_x}{x}$$
 :::
 
 :::{note}
 These rules assume the measurements are independent and the uncertainties are random (not systematic). For systematic errors, the propagation rules are different.
 :::
+
+:::{example}
+If we measure a rectangle's length as $(25.4 \pm 0.2)$ cm and width as $(18.6 \pm 0.2)$ cm, what is the uncertainty in the area?
+**Solution**:
+1. Calculate the area: $A = L \times W = 25.4 \text{cm} \times 18.6 \text{cm} = 472.44 \text{cm}^2$
+2. Calculate relative uncertainties:    
+   - $\frac{\sigma_L}{L} = \frac{0.2}{25.4} \approx 0.00787$  
+   - $\frac{\sigma_W}{W} = \frac{0.2}{18.6} \approx 0.01075$           
+3. Combine relative uncertainties: Then use the multiplication rule:
+   $$\left(\frac{\sigma_A}{A}\right)^2 = (0.00787)^2 + (0.01075)^2 \approx 0.0000619 + 0.0001156 = 0.0001775$$
+   $$\frac{\sigma_A}{A} = \sqrt{0.0001775} \approx 0.0133$$
+   $$\sigma_A = 0.0133 \times 472.44 \approx
+   $$\sigma_A = \sqrt{0.0001775} \times 472.44 \text{cm}^2 \approx 6.3 \ \text{cm}^2$$
+4. Final result: $A = (472 \pm 6) \ \text{cm}^2$
+:::
+
 
 ### Statistical vs. Estimated Uncertainties
 
@@ -130,7 +148,7 @@ Sometimes our measurements include values that seem unusually different from the
 
 ### Chauvenet's Criterion
 
-Chauvenet's criterion provides a statistical method for identifying potential outliers. The criterion states that a measurement should be rejected if the probability of obtaining a deviation as large or larger is less than $1/(2n)$, where $n$ is the total number of measurements.
+Chauvenet's criterion provides a statistical method for identifying potential outliers. The criterion states that a measurement should be rejected if the probability of obtaining a deviation as large or larger is less than $1/(2N)$, where $N$ is the total number of measurements.
 
 **Procedure for Chauvenet's Criterion:**
 
@@ -138,10 +156,10 @@ Chauvenet's criterion provides a statistical method for identifying potential ou
 2. For each measurement $x_i$, calculate the deviation: $d_i = |x_i - \bar{x}|$
 3. Express this as a number of standard deviations: $t_i = d_i/s$
 4. Find the probability that a measurement would deviate by $t_i$ or more standard deviations (using Gaussian tables)
-5. If this probability is less than $1/(2n)$, the measurement is a candidate for rejection
+5. If this probability is less than $1/(2N)$, the measurement is a candidate for rejection
 
-**Example**: For $n = 10$ measurements, reject if probability < 0.05 (about $2\sigma$)
-For $n = 20$ measurements, reject if probability < 0.025 (about $2.2\sigma$)
+**Example**: For $N = 10$ measurements, reject if probability < 0.05 (about $2\sigma$)
+For $N = 20$ measurements, reject if probability < 0.025 (about $2.2\sigma$)
 
 :::{warning}
 **Important Guidelines for Outlier Rejection:**
@@ -176,7 +194,7 @@ Understanding how to make proper uncertainty statements is crucial for communica
 
 A confidence interval provides a range of values that likely contains the true population parameter. For a 95% confidence interval of the mean:
 
-$$\text{CI}_{95\%} = \bar{x} \pm 1.96 \times \frac{s}{\sqrt{n}}$$
+$$\text{CI}_{95\%} = \bar{x} \pm 1.96 \times \frac{s}{\sqrt{N}}$$
 
 This means we're 95% confident the true population mean lies within this range.
 
@@ -193,7 +211,7 @@ The size of our sample dramatically affects the reliability of our statistical e
 
 ### Effect on Standard Error
 
-The standard error of the mean decreases as $1/\sqrt{n}$:
+The standard error of the mean decreases as $1/\sqrt{N}$:
 - To halve the uncertainty in the mean, need 4 times as many measurements
 - To reduce uncertainty by factor of 10, need 100 times as many measurements
 
@@ -204,15 +222,15 @@ For small samples, our estimate of the population standard deviation is quite un
 $$\sigma_s \approx \frac{\sigma}{\sqrt{2(n-1)}}$$
 
 This means:
-- With $n = 5$: our $s$ estimate has ~35% uncertainty
-- With $n = 10$: our $s$ estimate has ~25% uncertainty  
-- With $n = 25$: our $s$ estimate has ~15% uncertainty
+- With $N = 5$: our $s$ estimate has ~35% uncertainty
+- With $N = 10$: our $s$ estimate has ~25% uncertainty  
+- With $N = 25$: our $s$ estimate has ~15% uncertainty
 
 :::{important}
 **Minimum Sample Size Guidelines:**
-- For meaningful statistics: $n \geq 10$
-- For reliable standard deviation estimates: $n \geq 20$
-- For precise confidence intervals: $n \geq 30$
+- For meaningful statistics: $N \geq 10$
+- For reliable standard deviation estimates: $N \geq 20$
+- For precise confidence intervals: $N \geq 30$
 :::
 
 ## Combining Different Types of Uncertainty
@@ -256,27 +274,13 @@ Simple tests for Gaussian behavior:
 
 ## Practical Measurement Strategy
 
-### Planning Measurements
+A well-planned measurement strategy can minimize uncertainties and improve data quality.
 
 Before starting measurements:
 1. **Estimate expected uncertainty** based on instrument resolution and known fluctuations
 2. **Determine required sample size** based on target precision
 3. **Choose measurement sequence** to minimize systematic effects
 4. **Plan for outlier detection** and handling procedures
-
-### During Measurements
-
-- **Record everything**: Don't discard data during collection
-- **Note unusual circumstances**: Environmental changes, equipment behavior
-- **Check for trends**: Look for systematic drifts during measurement sequence
-- **Monitor scatter**: Compare observed scatter to expected uncertainty
-
-### After Measurements
-
-- **Calculate descriptive statistics**: Mean, standard deviation, standard error
-- **Check for outliers**: Apply systematic criteria
-- **Assess Gaussian assumptions**: Plot histograms, check percentile rules
-- **Report uncertainties appropriately**: State confidence level and sample size
 
 ## Glossary
 
@@ -343,7 +347,7 @@ Using Chauvenet's criterion, determine if any of the measurements in Problem 1 s
 ```{exercise}
 :label: prob-propagation
 
-If we measure a rectangle's length as $(25.4 \pm 0.2)$ cm and width as $(18.6 \pm 0.2)$ cm, what is the uncertainty in the area?
+If we measure a rectangle's length as $(12.5 \pm 0.5)$ cm and width as $(18.6 \pm 0.2)$ cm, what is the uncertainty in the perimeter?
 ```
 
 ```{exercise}
