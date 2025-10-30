@@ -15,7 +15,7 @@ Let's assume that preliminary investigation has already identified the significa
 
 :::{admonition} The Primary Goal of Experimentation
 :class: important
-When you already have a theoretical model—whether it's a simple relationship like Hooke's Law (F = kx) or Ohm's Law (V = IR), or something derived from a sophisticated theory like Einstein's general relativity—the model's properties will typically take the form of functional relationships between variables.
+When you already have a theoretical model—whether it's a simple relationship like Hooke's Law ($F = kx$) or Ohm's Law ($V = IR$), or something derived from a sophisticated theory like Einstein's general relativity—the model's properties will typically take the form of functional relationships between variables.
 
 Your primary goal remains comparing the model's properties with those of the physical system. Only after verifying through experimentation that the system and model properties overlap adequately (at least within some range) can you confidently proceed with measuring the quantities of interest.
 :::
@@ -138,10 +138,10 @@ $$h^2 = \frac{g}{4\pi^2}T^2h - k^2$$
 
 This gives us a linear equation where:
 
-- Vertical variable = h²
-- Horizontal variable = T²h
-- Slope = g/4π²
-- Intercept = -k²
+- Vertical variable = $h²$
+- Horizontal variable = $T²h$
+- Slope = $g/4π²$
+- Intercept = $-k²$
 
 :::{admonition} The Power of Linear Analysis
 :class: important
@@ -151,7 +151,7 @@ This example demonstrates the superiority of linear analysis. The traditional ap
 2. It allows reliable uncertainty estimation
 3. It avoids the unreliability of shallow-angle intercepts
 4. It utilizes all data points rather than just those near intercepts
-5. It determines g and k independently, preventing error propagation
+5. It determines $g$ and $k$ independently, preventing error propagation
    :::
 
 Compound variables also prove valuable with multiple input variables. When measuring specific heat using flow calorimetry, the heat balance equation is:
@@ -222,7 +222,7 @@ The planning process includes:
 
 4. **Determine variable ranges**: Plan for an input variable range spanning at least a factor of 10. Wider ranges provide better basis for comparing system and model behaviors. While you can't directly control output variable ranges, carefully consider instrument limitations. Circuit components have maximum current ratings, materials have elastic limits, and sensors have operating ranges. Perform trial measurements to determine input variable ranges that avoid damaging equipment or exceeding measurement capabilities.
 
-5. **Consider experimental precision**: Begin with a target precision level for your final result. This guides your measurement method selection. A request to "measure g using a pendulum" is meaningless without specifying whether you need 10% precision (achievable with simple equipment in minutes) or 0.01% precision (requiring sophisticated apparatus and days of work).
+5. **Consider experimental precision**: Begin with a target precision level for your final result. This guides your measurement method selection. A request to "measure $g$ using a pendulum" is meaningless without specifying whether you need 10% precision (achievable with simple equipment in minutes) or 0.01% precision (requiring sophisticated apparatus and days of work).
 
    With a clear precision goal—say, measuring $g$ within 2%—you can work backward to determine requirements for each component measurement. For a pendulum experiment, if you need $g$ within 2%, you might aim for uncertainties in length ($\ell$) and period-squared ($T^2$) below 1% each.
 
@@ -273,9 +273,9 @@ Even without established theories, consider any available hints about potentiall
 
 :::{admonition} The Power of Dimensional Analysis
 :class: important
-Even without a complete theory, dimensional analysis can provide valuable guidance by examining the physical dimensions of quantities involved in your experiment. Physical quantities are expressed in terms of basic dimensions: mass (M), length (L), and time (T).
+Even without a complete theory, dimensional analysis can provide valuable guidance by examining the physical dimensions of quantities involved in your experiment. Physical quantities are expressed in terms of basic dimensions: mass ($M$), length ($L$), and time ($T$).
 
-The fundamental principle: dimensional consistency must exist between both sides of any physical equation. For instance, if gravitational acceleration (g) relates to pendulum length ($\ell$) and period (T), dimensional analysis reveals that g (with dimensions LT⁻²) must incorporate length to first power (L¹) and period squared (T⁻²):
+The fundamental principle: dimensional consistency must exist between both sides of any physical equation. For instance, if gravitational acceleration (g) relates to pendulum length ($\ell$) and period ($T$), dimensional analysis reveals that $g$ (with dimensions $LT⁻²$) must incorporate length to first power ($L¹$) and period squared ($T⁻²$):
 
 $$g = (\text{dimensionless constant})\times\frac{\text{length}}{\text{period}^2}$$
 :::
