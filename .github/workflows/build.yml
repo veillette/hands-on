@@ -1,15 +1,49 @@
-name: MyST GitHub Pages Deploy with Multiple Exports
+name: Build and Deploy MyST Site
 
 on:
   push:
     branches: [main]
+    paths:
+      - 'content/**'
+      - 'figures/**'
+      - 'plugins/**'
+      - 'scripts/**'
+      - 'myst.yml'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/build.yml'
+      - '.github/actions/**'
   pull_request:
-    branches: [main]
+    branches: ['*']
+    paths:
+      - 'content/**'
+      - 'figures/**'
+      - 'plugins/**'
+      - 'scripts/**'
+      - 'myst.yml'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/build.yml'
+      - '.github/actions/**'
   workflow_dispatch:
+    inputs:
+      deploy:
+        description: 'Deploy to GitHub Pages'
+        required: false
+        default: false
+        type: boolean
+      build-exports:
+        description: 'Build export formats (PDF, DOCX, MD)'
+        required: false
+        default: true
+        type: boolean
 
 env:
+  # Repository-agnostic base URL derived from repository name
   BASE_URL: /${{ github.event.repository.name }}
   NODE_VERSION: '22.x'
+  # Default branch for deployment - can be overridden
+  DEPLOY_BRANCH: 'main'
 
 permissions:
   contents: read
@@ -17,94 +51,121 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'pages'
-  cancel-in-progress: false
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  # Build job - runs on all branches
+  build:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
+    outputs:
+      should-deploy: ${{ steps.check-deploy.outputs.should-deploy }}
+      build-duration: ${{ steps.timing.outputs.duration }}
     steps:
+      - name: Record start time
+        id: start
+        run: echo "time=$(date +%s)" >> $GITHUB_OUTPUT
+
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup build environment
+        uses: ./.github/actions/setup-build-environment
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Cache LaTeX packages
-        uses: actions/cache@v4
-        id: cache-latex
+      - name: Build MyST content
+        uses: ./.github/actions/build-myst
         with:
-          path: /var/lib/apt/lists
-          key: ${{ runner.os }}-latex-${{ hashFiles('**/*.tex') }}
+          build-html: 'true'
+          build-exports: ${{ github.event_name == 'workflow_dispatch' && inputs.build-exports || 'true' }}
 
-      - name: Install XeTeX and ImageMagick
-        if: steps.cache-latex.outputs.cache-hit != 'true'
+      - name: Check if should deploy
+        id: check-deploy
         run: |
-          sudo apt-get update
-          sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-fonts-extra
-          sudo apt-get install -y imagemagick
+          # Deploy on push to default branch or manual trigger with deploy=true
+          if [[ "${{ github.event_name }}" == "push" && "${{ github.ref }}" == "refs/heads/${{ env.DEPLOY_BRANCH }}" ]]; then
+            echo "should-deploy=true" >> $GITHUB_OUTPUT
+          elif [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.deploy }}" == "true" ]]; then
+            echo "should-deploy=true" >> $GITHUB_OUTPUT
+          else
+            echo "should-deploy=false" >> $GITHUB_OUTPUT
+          fi
 
-      - name: Install Typst
-        uses: typst-community/setup-typst@v4
-        with:
-          cache-dependency-path: requirements.typ
-      
-      - name: Cache build artifacts
-        uses: actions/cache@v4
-        with:
-          path: ./_build
-          key: myst-build-${{ github.sha }}
-          restore-keys: |
-            myst-build-
-
-      - name: Add frontmatter to markdown files
+      - name: Calculate build timing
+        id: timing
         run: |
-          node scripts/addFrontMatter.js
+          end=$(date +%s)
+          duration=$((end - ${{ steps.start.outputs.time }}))
+          minutes=$((duration / 60))
+          seconds=$((duration % 60))
+          echo "duration=${minutes}m ${seconds}s" >> $GITHUB_OUTPUT
+          echo "seconds=${duration}" >> $GITHUB_OUTPUT
 
-      - name: Create downloads directory
-        run: |
-          mkdir -p _build/downloads
-          mkdir -p _build/html/downloads
+      - name: Setup Pages
+        if: steps.check-deploy.outputs.should-deploy == 'true'
+        uses: actions/configure-pages@v5
 
-      - name: Build PDF, DOCX, and md Assets
-        run: |
-          echo "Build PDF Assets, docx, and md"
-          npx myst build -a
-
-      - name: Build HTML Assets
-        run: |
-          echo "Building site with BASE_URL: $BASE_URL"
-          npx myst build --html
-        env:
-          NODE_OPTIONS: "--max-old-space-size=4096"
-
-      - name: Clean up frontmatter to markdown files
-        run: |
-          node scripts/removeFrontMatter.js
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload Pages artifact
+        if: steps.check-deploy.outputs.should-deploy == 'true'
+        uses: actions/upload-pages-artifact@v4
         with:
           path: '_build/html'
 
+      - name: Upload build artifacts (for non-deploy builds)
+        if: steps.check-deploy.outputs.should-deploy != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-build
+          path: '_build/html'
+          retention-days: 7
+
+      - name: Build summary
+        run: |
+          echo "## Build Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Duration | ${{ steps.timing.outputs.duration }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Branch | \`${{ github.ref_name }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| Commit | \`${{ github.sha }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| Will Deploy | ${{ steps.check-deploy.outputs.should-deploy }} |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          # Performance indicator
+          duration=${{ steps.timing.outputs.seconds }}
+          timeout=1200  # 20 minutes in seconds
+          percentage=$((duration * 100 / timeout))
+          if [ $percentage -lt 50 ]; then
+            echo "⚡ **Performance:** Excellent ($percentage% of timeout)" >> $GITHUB_STEP_SUMMARY
+          elif [ $percentage -lt 75 ]; then
+            echo "✅ **Performance:** Good ($percentage% of timeout)" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "⚠️ **Performance:** Consider optimization ($percentage% of timeout)" >> $GITHUB_STEP_SUMMARY
+          fi
+
+  # Deploy job - only runs when deploying
+  deploy:
+    needs: build
+    if: needs.build.outputs.should-deploy == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        
+
       - name: Deployment summary
         run: |
-          echo "🚀 Successfully deployed to https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
-          echo "Build completed at $(date)"
+          echo "## Deployment Successful" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "🚀 **Site deployed to:** ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Detail | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Build Duration | ${{ needs.build.outputs.build-duration }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Deployed At | $(date -u '+%Y-%m-%d %H:%M:%S UTC') |" >> $GITHUB_STEP_SUMMARY
+          echo "| Commit | \`${{ github.sha }}\` |" >> $GITHUB_STEP_SUMMARY

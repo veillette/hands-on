@@ -13,7 +13,7 @@ By the end of this chapter, you will be able to:
 - Transform nonlinear relationships into linear form for easier analysis
 - Perform interpolation and extrapolation while recognizing their limitations
 - Determine unknown model parameters from experimental data using graphical analysis
-:::
+  :::
 
 ## The Interplay Between Observation and Understanding
 

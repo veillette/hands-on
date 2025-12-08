@@ -13,7 +13,7 @@ By the end of this chapter, you will be able to:
 - Use Chauvenet's criterion to systematically identify potential outliers
 - Construct and interpret confidence intervals for experimental results
 - Determine appropriate sample sizes for achieving target precision levels
-:::
+  :::
 
 ## Understanding Random Variation
 
@@ -26,7 +26,7 @@ These variations can arise from many sources:
 - Instrument limitations (finite resolution, electronic noise)
 - Human factors (reaction time variations, reading parallax)
 - Quantum effects (in some cases, such as radioactive decay)
-:::
+  :::
 
 Consider measuring the radioactivity of a sample. Even with perfect equipment, the number of counts in a fixed time interval will vary randomly due to the inherent stochastic nature of radioactive decay. Similarly, optical measurements might show fluctuations due to air currents causing refractive index variations or thermal effects causing mechanical instabilities in the apparatus.
 
@@ -54,7 +54,7 @@ where $\mu$ is the population mean and $\sigma$ is the population standard devia
 - About 95% fall within $\pm 2\sigma$
 - About 99.7% fall within $\pm 3\sigma$
 - The total area under the curve equals 1 (representing 100% probability)
-:::
+  :::
 
 These percentages are crucial for understanding measurement uncertainty. The 68-95-99.7 rule (sometimes called the empirical rule) provides a quick way to assess the likelihood that a measurement falls within certain bounds of the true value.
 
@@ -75,7 +75,7 @@ When we make measurements, we're typically working with a sample from a larger p
 - **Sample standard deviation** ($s$) estimates **population standard deviation** ($\sigma$)
 - **Standard error of the mean** (SEM) = $\frac{s}{\sqrt{N}}$
 - **Sample size** ($N$) affects the precision of our estimates
-:::
+  :::
 
 The **sample mean** is calculated as:
 $$\bar{x} = \frac{1}{N}\sum_{i=1}^{N} x_i$$
@@ -102,6 +102,7 @@ This distinction is crucial and frequently misunderstood:
 - **Standard Error of the Mean ($s_m = s/\sqrt{N}$)**: Describes the uncertainty in our estimate of the population mean. It tells us how precisely we know the "true" value.
 
 For example, if we measure the same quantity 25 times and get $s = 2.0$ units:
+
 - The standard deviation remains 2.0 units (describing individual measurement scatter)
 - The standard error of the mean is $2.0/\sqrt{25} = 0.4$ units (our uncertainty in the mean)
 
@@ -131,21 +132,26 @@ $$\frac{\sigma_z}{z} = |n| \frac{\sigma_x}{x}$$
 These rules assume the measurements are independent and the uncertainties are random (not systematic). For systematic errors, the propagation rules are different.
 :::
 
-:::{example}
+:::{admonition} Example
+:class: example
+
 If we measure a rectangle's length as $(25.4 \pm 0.2)$ cm and width as $(18.6 \pm 0.2)$ cm, what is the uncertainty in the area?
+
 **Solution**:
+
 1. Calculate the area: $A = L \times W = 25.4 \text{cm} \times 18.6 \text{cm} = 472.44 \text{cm}^2$
-2. Calculate relative uncertainties:    
-   - $\frac{\sigma_L}{L} = \frac{0.2}{25.4} \approx 0.00787$  
-   - $\frac{\sigma_W}{W} = \frac{0.2}{18.6} \approx 0.01075$           
+2. Calculate relative uncertainties:
+   - $\frac{\sigma_L}{L} = \frac{0.2}{25.4} \approx 0.00787$
+   - $\frac{\sigma_W}{W} = \frac{0.2}{18.6} \approx 0.01075$
 3. Combine relative uncertainties: Then use the multiplication rule:
    $$\left(\frac{\sigma_A}{A}\right)^2 = (0.00787)^2 + (0.01075)^2 \approx 0.0000619 + 0.0001156 = 0.0001775$$
    $$\frac{\sigma_A}{A} = \sqrt{0.0001775} \approx 0.0133$$
-   $$\sigma_A = 0.0133 \times 472.44 \approx
+   $$
+   \sigma_A = 0.0133 \times 472.44 \approx
    $$\sigma_A = \sqrt{0.0001775} \times 472.44 \text{cm}^2 \approx 6.3 \ \text{cm}^2$$
+   $$
 4. Final result: $A = (472 \pm 6) \ \text{cm}^2$
 :::
-
 
 ### Statistical vs. Estimated Uncertainties
 
@@ -184,7 +190,7 @@ For $N = 20$ measurements, reject if probability < 0.025 (about $2.2\sigma$)
 3. **Apply statistical criteria systematically, not arbitrarily**
 4. **Document all rejected data with reasoning**
 5. **Remember that outliers sometimes indicate important physics**
-:::
+   :::
 
 ### Systematic Approach to Outliers
 
@@ -197,6 +203,7 @@ When handling potential outliers, follow this systematic approach:
 5. **Never reject data simply because it doesn't fit expectations**
 
 The probability guidelines from the Gaussian distribution help us make these decisions:
+
 - Outside $2\sigma$ limits: 5% probability (might be legitimate outlier)
 - Outside $3\sigma$ limits: 0.3% probability (likely candidate for rejection)
 - Outside $4\sigma$ limits: 0.006% probability (very likely experimental error)
@@ -216,6 +223,7 @@ This means we're 95% confident the true population mean lies within this range.
 ### Proper Uncertainty Statements
 
 When reporting results:
+
 - **68% confidence**: $\bar{x} \pm s_m$ (1 standard error)
 - **95% confidence**: $\bar{x} \pm 1.96 \times s_m$ (≈ 2 standard errors)
 - **99.7% confidence**: $\bar{x} \pm 3 \times s_m$ (3 standard errors)
@@ -227,6 +235,7 @@ The size of our sample dramatically affects the reliability of our statistical e
 ### Effect on Standard Error
 
 The standard error of the mean decreases as $1/\sqrt{N}$:
+
 - To halve the uncertainty in the mean, need 4 times as many measurements
 - To reduce uncertainty by factor of 10, need 100 times as many measurements
 
@@ -237,16 +246,18 @@ For small samples, our estimate of the population standard deviation is quite un
 $$\sigma_s \approx \frac{\sigma}{\sqrt{2(n-1)}}$$
 
 This means:
+
 - With $N = 5$: our $s$ estimate has ~35% uncertainty
-- With $N = 10$: our $s$ estimate has ~25% uncertainty  
+- With $N = 10$: our $s$ estimate has ~25% uncertainty
 - With $N = 25$: our $s$ estimate has ~15% uncertainty
 
 :::{important}
 **Minimum Sample Size Guidelines:**
+
 - For meaningful statistics: $N \geq 10$
 - For reliable standard deviation estimates: $N \geq 20$
 - For precise confidence intervals: $N \geq 30$
-:::
+  :::
 
 ## Combining Different Types of Uncertainty
 
@@ -266,6 +277,7 @@ For independent uncertainties of the same confidence level:
 $$\sigma_{total} = \sqrt{\sigma_1^2 + \sigma_2^2 + \sigma_3^2 + \ldots}$$
 
 This assumes the uncertainties are:
+
 - Independent (not correlated)
 - Random (not systematic)
 - Of the same confidence level
@@ -283,6 +295,7 @@ While we often assume Gaussian distributions, real measurements may deviate from
 ### Checking Gaussian Assumptions
 
 Simple tests for Gaussian behavior:
+
 - Plot histogram of residuals from the mean
 - Check if ~68% fall within 1 standard deviation
 - Look for systematic patterns in the data
@@ -292,6 +305,7 @@ Simple tests for Gaussian behavior:
 A well-planned measurement strategy can minimize uncertainties and improve data quality.
 
 Before starting measurements:
+
 1. **Estimate expected uncertainty** based on instrument resolution and known fluctuations
 2. **Determine required sample size** based on target precision
 3. **Choose measurement sequence** to minimize systematic effects

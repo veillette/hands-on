@@ -43,7 +43,6 @@ We employ a systematic approach to experimental design following established bes
    $$m = \frac{k}{4\pi^2}T^2 + b$$
 
    Where:
-
    - Vertical axis variable = $m$
    - Horizontal axis variable = $T^2$
    - Slope = $\frac{k}{4 \pi^2}$
@@ -52,7 +51,6 @@ We employ a systematic approach to experimental design following established bes
    This transformation allows us to determine k directly from the slope using linear regression techniques.
 
 4. **Measurement range optimization**: We carefully consider:
-
    - The available calibrated weights (0.05 kg to 0.50 kg)
    - The spring's elastic limit (determined through preliminary testing to be approximately 0.60 kg)
    - Practical constraints on timing oscillations (targeting relative timing uncertainty <1%)
@@ -80,13 +78,11 @@ We employ a systematic approach to experimental design following established bes
 We developed a comprehensive measurement protocol:
 
 1. **System calibration**:
-
    - Zero the digital scale used to verify weights
    - Calibrate the digital stopwatch against a reference timekeeper
    - Measure the unloaded spring length as reference
 
 2. **Data collection procedure**:
-
    - Attach the weight pan (mass recorded separately)
    - Add calibrated weights incrementally
    - For each load, displace the system 2 cm from equilibrium
@@ -227,7 +223,6 @@ This gives us a relative uncertainty of 1.8%, significantly better than our targ
 Our experimental procedure followed these detailed steps:
 
 1. **Equipment preparation and verification:**
-
    - The spring was examined for damage or permanent deformation
    - The spring was pre-stretched with a 0.6 kg load for 30 minutes to minimize hysteresis effects
    - Weight calibration was verified using an analytical balance (±0.1 mg precision)
@@ -235,21 +230,18 @@ Our experimental procedure followed these detailed steps:
    - Level adjustment was performed using a spirit level
 
 2. **Environmental control:**
-
    - Room temperature maintained at 22.0 ± 0.5°C
    - Airflow minimized by closing vents and doors
    - Barometric pressure recorded (101.3 kPa)
    - Relative humidity monitored (45%)
 
 3. **Preliminary measurements:**
-
    - The unloaded length of the spring was measured (15.3 ± 0.1 cm)
    - The mass of the empty pan was determined (0.023 ± 0.0001 kg)
    - The spring's elastic limit was assessed through static loading tests
    - Natural frequency of the laboratory bench was measured to identify potential resonance issues
 
 4. **Measurement procedure:**
-
    - The pan was attached to the spring and allowed to reach equilibrium
    - The initial position was marked on a background grid for reference
    - Calibrated weights were added incrementally (0.05 kg steps)
@@ -263,7 +255,6 @@ Our experimental procedure followed these detailed steps:
    - Between measurement sets, the spring was inspected for signs of fatigue
 
 5. **Data analysis methodology:**
-
    - Statistical treatment applied to repeated measurements:
      - Mean values calculated for each measurement set
      - Standard deviation determined as a measure of random uncertainty

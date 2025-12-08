@@ -1,0 +1,113 @@
+name: Validate Pull Request
+permissions:
+  contents: read
+
+on:
+  pull_request:
+    branches: ['*']
+    paths:
+      - 'content/**'
+      - 'scripts/**'
+      - 'plugins/**'
+      - 'myst.yml'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '22.x'
+
+jobs:
+  lint:
+    name: Lint & Format Check
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check formatting
+        id: format-check
+        run: |
+          echo "## Format Check" >> $GITHUB_STEP_SUMMARY
+          if npm run format:check; then
+            echo "✅ All files are properly formatted" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ Some files need formatting. Run \`npm run format\` locally." >> $GITHUB_STEP_SUMMARY
+            exit 1
+          fi
+
+      - name: Lint markdown
+        id: lint-md
+        run: |
+          echo "## Markdown Lint" >> $GITHUB_STEP_SUMMARY
+          if npm run lint:md 2>&1 | tee lint-output.txt; then
+            echo "✅ No markdown linting issues found" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ Markdown linting issues found:" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            cat lint-output.txt >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            exit 1
+          fi
+
+  build-test:
+    name: Build Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    needs: lint
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup build environment
+        uses: ./.github/actions/setup-build-environment
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          install-latex: 'false'
+          install-typst: 'false'
+
+      - name: Record start time
+        id: start-time
+        run: echo "start=$(date +%s)" >> $GITHUB_OUTPUT
+
+      - name: Build HTML (validation only)
+        run: |
+          npx myst build --html
+        env:
+          NODE_OPTIONS: "--max-old-space-size=4096"
+
+      - name: Calculate build duration
+        id: duration
+        run: |
+          end=$(date +%s)
+          duration=$((end - ${{ steps.start-time.outputs.start }}))
+          minutes=$((duration / 60))
+          seconds=$((duration % 60))
+          echo "duration=${minutes}m ${seconds}s" >> $GITHUB_OUTPUT
+
+      - name: Build summary
+        run: |
+          echo "## Build Test Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ **HTML build completed successfully**" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- Build duration: ${{ steps.duration.outputs.duration }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Output directory: \`_build/html\`" >> $GITHUB_STEP_SUMMARY
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-preview
+          path: '_build/html'
+          retention-days: 5

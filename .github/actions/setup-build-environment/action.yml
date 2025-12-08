@@ -1,0 +1,50 @@
+name: 'Setup Build Environment'
+description: 'Sets up Node.js, LaTeX, and Typst for MyST builds'
+
+inputs:
+  node-version:
+    description: 'Node.js version to use'
+    required: false
+    default: '22.x'
+  install-latex:
+    description: 'Whether to install LaTeX packages'
+    required: false
+    default: 'true'
+  install-typst:
+    description: 'Whether to install Typst'
+    required: false
+    default: 'true'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: 'npm'
+
+    - name: Install npm dependencies
+      shell: bash
+      run: npm ci
+
+    - name: Cache LaTeX packages
+      if: inputs.install-latex == 'true'
+      uses: actions/cache@v4
+      id: cache-latex
+      with:
+        path: |
+          /usr/share/texlive
+          /usr/share/texmf
+        key: ${{ runner.os }}-latex-v1
+
+    - name: Install XeTeX and ImageMagick
+      if: inputs.install-latex == 'true'
+      shell: bash
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-fonts-extra imagemagick
+
+    - name: Install Typst
+      if: inputs.install-typst == 'true'
+      uses: typst-community/setup-typst@v4

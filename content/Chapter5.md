@@ -13,7 +13,7 @@ By the end of this chapter, you will be able to:
 - Develop a systematic measurement program with appropriate precision targets
 - Apply null-effect measurement techniques to detect subtle effects
 - Distinguish between experimental and control groups in biological and observational studies
-:::
+  :::
 
 ## Introduction to Experimental Design
 
