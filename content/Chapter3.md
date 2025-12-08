@@ -132,8 +132,11 @@ $$\frac{\sigma_z}{z} = |n| \frac{\sigma_x}{x}$$
 These rules assume the measurements are independent and the uncertainties are random (not systematic). For systematic errors, the propagation rules are different.
 :::
 
-:::{example}
+:::{admonition} Example
+:class: example
+
 If we measure a rectangle's length as $(25.4 \pm 0.2)$ cm and width as $(18.6 \pm 0.2)$ cm, what is the uncertainty in the area?
+
 **Solution**:
 
 1. Calculate the area: $A = L \times W = 25.4 \text{cm} \times 18.6 \text{cm} = 472.44 \text{cm}^2$
@@ -148,7 +151,7 @@ If we measure a rectangle's length as $(25.4 \pm 0.2)$ cm and width as $(18.6 \p
    $$\sigma_A = \sqrt{0.0001775} \times 472.44 \text{cm}^2 \approx 6.3 \ \text{cm}^2$$
    $$
 4. Final result: $A = (472 \pm 6) \ \text{cm}^2$
-   :::
+:::
 
 ### Statistical vs. Estimated Uncertainties
 

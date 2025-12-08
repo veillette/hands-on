@@ -91,15 +91,15 @@ This uncertainty value (±0.2 cm) represents the **absolute uncertainty** of our
 :::{list-table} Impact of Uncertainty in Different Contexts
 :header-rows: 1
 
-- - Context
-- Impact of ±0.2 cm
-- - Measuring microchip components
-- Substantial
-- - Measuring furniture
-- Acceptable
-- - Measuring astronomical distances
+* - Context
+  - Impact of ±0.2 cm
+* - Measuring microchip components
+  - Substantial
+* - Measuring furniture
+  - Acceptable
+* - Measuring astronomical distances
   - Negligible
-    :::
+:::
 
 To better evaluate a measurement's quality, we use **relative uncertainty**, defined as:
 
@@ -241,6 +241,8 @@ This accounts for the worst case where uncertainties combine to maximize the tot
 
 :::{iframe} https://preview.p5js.org/veillette/embed/0tDJ0eSDw
 :width: 800
+
+Interactive demonstration of uncertainty propagation in addition and subtraction.
 :::
 
 ### Products and Quotients
