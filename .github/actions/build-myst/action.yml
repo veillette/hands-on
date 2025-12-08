@@ -1,0 +1,72 @@
+name: 'Build MyST Content'
+description: 'Builds MyST content with frontmatter management and multiple export formats'
+
+inputs:
+  build-html:
+    description: 'Build HTML output'
+    required: false
+    default: 'true'
+  build-exports:
+    description: 'Build export formats (PDF, DOCX, MD)'
+    required: false
+    default: 'true'
+  node-memory:
+    description: 'Node.js max memory allocation in MB'
+    required: false
+    default: '4096'
+  content-dir:
+    description: 'Directory containing markdown content'
+    required: false
+    default: 'content'
+
+outputs:
+  html-path:
+    description: 'Path to built HTML output'
+    value: ${{ steps.paths.outputs.html-path }}
+  exports-path:
+    description: 'Path to export files'
+    value: ${{ steps.paths.outputs.exports-path }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Set output paths
+      id: paths
+      shell: bash
+      run: |
+        echo "html-path=_build/html" >> $GITHUB_OUTPUT
+        echo "exports-path=exports" >> $GITHUB_OUTPUT
+
+    - name: Cache build artifacts
+      uses: actions/cache@v4
+      with:
+        path: ./_build
+        key: myst-build-${{ github.sha }}
+        restore-keys: |
+          myst-build-
+
+    - name: Add frontmatter to markdown files
+      shell: bash
+      run: node scripts/addFrontMatter.js
+
+    - name: Create output directories
+      shell: bash
+      run: |
+        mkdir -p _build/downloads
+        mkdir -p _build/html/downloads
+
+    - name: Build export formats (PDF, DOCX, MD)
+      if: inputs.build-exports == 'true'
+      shell: bash
+      run: npx myst build -a
+
+    - name: Build HTML
+      if: inputs.build-html == 'true'
+      shell: bash
+      env:
+        NODE_OPTIONS: "--max-old-space-size=${{ inputs.node-memory }}"
+      run: npx myst build --html
+
+    - name: Clean up frontmatter
+      shell: bash
+      run: node scripts/removeFrontMatter.js

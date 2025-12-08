@@ -1,15 +1,24 @@
-name: MyST GitHub Pages Deploy with Multiple Exports
+name: Build and Deploy MyST Site
 
 on:
   push:
-    branches: [main]
+    branches: ['*']
   pull_request:
-    branches: [main]
+    branches: ['*']
   workflow_dispatch:
+    inputs:
+      deploy:
+        description: 'Deploy to GitHub Pages'
+        required: false
+        default: false
+        type: boolean
 
 env:
+  # Repository-agnostic base URL derived from repository name
   BASE_URL: /${{ github.event.repository.name }}
   NODE_VERSION: '22.x'
+  # Default branch for deployment - can be overridden
+  DEPLOY_BRANCH: 'main'
 
 permissions:
   contents: read
@@ -17,94 +26,78 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'pages'
-  cancel-in-progress: false
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  # Build job - runs on all branches
+  build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    outputs:
+      should-deploy: ${{ steps.check-deploy.outputs.should-deploy }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup build environment
+        uses: ./.github/actions/setup-build-environment
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Cache LaTeX packages
-        uses: actions/cache@v4
-        id: cache-latex
+      - name: Build MyST content
+        uses: ./.github/actions/build-myst
         with:
-          path: /var/lib/apt/lists
-          key: ${{ runner.os }}-latex-${{ hashFiles('**/*.tex') }}
+          build-html: 'true'
+          build-exports: 'true'
 
-      - name: Install XeTeX and ImageMagick
-        if: steps.cache-latex.outputs.cache-hit != 'true'
+      - name: Check if should deploy
+        id: check-deploy
         run: |
-          sudo apt-get update
-          sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-fonts-extra
-          sudo apt-get install -y imagemagick
+          # Deploy on push to default branch or manual trigger with deploy=true
+          if [[ "${{ github.event_name }}" == "push" && "${{ github.ref }}" == "refs/heads/${{ env.DEPLOY_BRANCH }}" ]]; then
+            echo "should-deploy=true" >> $GITHUB_OUTPUT
+          elif [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.deploy }}" == "true" ]]; then
+            echo "should-deploy=true" >> $GITHUB_OUTPUT
+          else
+            echo "should-deploy=false" >> $GITHUB_OUTPUT
+          fi
 
-      - name: Install Typst
-        uses: typst-community/setup-typst@v4
-        with:
-          cache-dependency-path: requirements.typ
-      
-      - name: Cache build artifacts
-        uses: actions/cache@v4
-        with:
-          path: ./_build
-          key: myst-build-${{ github.sha }}
-          restore-keys: |
-            myst-build-
+      - name: Setup Pages
+        if: steps.check-deploy.outputs.should-deploy == 'true'
+        uses: actions/configure-pages@v4
 
-      - name: Add frontmatter to markdown files
-        run: |
-          node scripts/addFrontMatter.js
-
-      - name: Create downloads directory
-        run: |
-          mkdir -p _build/downloads
-          mkdir -p _build/html/downloads
-
-      - name: Build PDF, DOCX, and md Assets
-        run: |
-          echo "Build PDF Assets, docx, and md"
-          npx myst build -a
-
-      - name: Build HTML Assets
-        run: |
-          echo "Building site with BASE_URL: $BASE_URL"
-          npx myst build --html
-        env:
-          NODE_OPTIONS: "--max-old-space-size=4096"
-
-      - name: Clean up frontmatter to markdown files
-        run: |
-          node scripts/removeFrontMatter.js
-
-      - name: Upload artifact
+      - name: Upload Pages artifact
+        if: steps.check-deploy.outputs.should-deploy == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: '_build/html'
 
+      - name: Upload build artifacts (for non-deploy builds)
+        if: steps.check-deploy.outputs.should-deploy != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-build
+          path: '_build/html'
+          retention-days: 7
+
+  # Deploy job - only runs when deploying
+  deploy:
+    needs: build
+    if: needs.build.outputs.should-deploy == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        
+
       - name: Deployment summary
         run: |
-          echo "🚀 Successfully deployed to https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
-          echo "Build completed at $(date)"
+          echo "## Deployment Successful" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Site deployed to: ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Build completed at: $(date)" >> $GITHUB_STEP_SUMMARY
