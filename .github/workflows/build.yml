@@ -2,15 +2,40 @@ name: Build and Deploy MyST Site
 
 on:
   push:
-    branches: ['*']
+    branches: [main]
+    paths:
+      - 'content/**'
+      - 'figures/**'
+      - 'plugins/**'
+      - 'scripts/**'
+      - 'myst.yml'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/build.yml'
+      - '.github/actions/**'
   pull_request:
     branches: ['*']
+    paths:
+      - 'content/**'
+      - 'figures/**'
+      - 'plugins/**'
+      - 'scripts/**'
+      - 'myst.yml'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/build.yml'
+      - '.github/actions/**'
   workflow_dispatch:
     inputs:
       deploy:
         description: 'Deploy to GitHub Pages'
         required: false
         default: false
+        type: boolean
+      build-exports:
+        description: 'Build export formats (PDF, DOCX, MD)'
+        required: false
+        default: true
         type: boolean
 
 env:
@@ -33,10 +58,15 @@ jobs:
   # Build job - runs on all branches
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     outputs:
       should-deploy: ${{ steps.check-deploy.outputs.should-deploy }}
+      build-duration: ${{ steps.timing.outputs.duration }}
     steps:
+      - name: Record start time
+        id: start
+        run: echo "time=$(date +%s)" >> $GITHUB_OUTPUT
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -49,7 +79,7 @@ jobs:
         uses: ./.github/actions/build-myst
         with:
           build-html: 'true'
-          build-exports: 'true'
+          build-exports: ${{ github.event_name == 'workflow_dispatch' && inputs.build-exports || 'true' }}
 
       - name: Check if should deploy
         id: check-deploy
@@ -62,6 +92,16 @@ jobs:
           else
             echo "should-deploy=false" >> $GITHUB_OUTPUT
           fi
+
+      - name: Calculate build timing
+        id: timing
+        run: |
+          end=$(date +%s)
+          duration=$((end - ${{ steps.start.outputs.time }}))
+          minutes=$((duration / 60))
+          seconds=$((duration % 60))
+          echo "duration=${minutes}m ${seconds}s" >> $GITHUB_OUTPUT
+          echo "seconds=${duration}" >> $GITHUB_OUTPUT
 
       - name: Setup Pages
         if: steps.check-deploy.outputs.should-deploy == 'true'
@@ -81,6 +121,30 @@ jobs:
           path: '_build/html'
           retention-days: 7
 
+      - name: Build summary
+        run: |
+          echo "## Build Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Duration | ${{ steps.timing.outputs.duration }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Branch | \`${{ github.ref_name }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| Commit | \`${{ github.sha }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| Will Deploy | ${{ steps.check-deploy.outputs.should-deploy }} |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          # Performance indicator
+          duration=${{ steps.timing.outputs.seconds }}
+          timeout=1200  # 20 minutes in seconds
+          percentage=$((duration * 100 / timeout))
+          if [ $percentage -lt 50 ]; then
+            echo "⚡ **Performance:** Excellent ($percentage% of timeout)" >> $GITHUB_STEP_SUMMARY
+          elif [ $percentage -lt 75 ]; then
+            echo "✅ **Performance:** Good ($percentage% of timeout)" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "⚠️ **Performance:** Consider optimization ($percentage% of timeout)" >> $GITHUB_STEP_SUMMARY
+          fi
+
   # Deploy job - only runs when deploying
   deploy:
     needs: build
@@ -98,6 +162,10 @@ jobs:
         run: |
           echo "## Deployment Successful" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Site deployed to: ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
+          echo "🚀 **Site deployed to:** ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Build completed at: $(date)" >> $GITHUB_STEP_SUMMARY
+          echo "| Detail | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Build Duration | ${{ needs.build.outputs.build-duration }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Deployed At | $(date -u '+%Y-%m-%d %H:%M:%S UTC') |" >> $GITHUB_STEP_SUMMARY
+          echo "| Commit | \`${{ github.sha }}\` |" >> $GITHUB_STEP_SUMMARY
