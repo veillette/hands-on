@@ -21,7 +21,7 @@
     "name": "Martin Veillette",
     "url": "https://github.com/veillette"
   },
-  "license": "Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+  "license": "CC-BY-NC-SA-4.0",
   "dependencies": {
     "mystmd": "^1.3.25"
   },

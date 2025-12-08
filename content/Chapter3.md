@@ -1,5 +1,20 @@
 # Statistics of Measurement
 
+:::{admonition} Learning Objectives
+:class: note
+
+By the end of this chapter, you will be able to:
+
+- Recognize and characterize random variations in repeated measurements
+- Describe the properties of the Gaussian (normal) distribution and apply the 68-95-99.7 rule
+- Calculate sample mean, standard deviation, and standard error of the mean
+- Distinguish between standard deviation (spread of data) and standard error (uncertainty in the mean)
+- Apply statistical error propagation rules for addition, subtraction, multiplication, division, and powers
+- Use Chauvenet's criterion to systematically identify potential outliers
+- Construct and interpret confidence intervals for experimental results
+- Determine appropriate sample sizes for achieving target precision levels
+:::
+
 ## Understanding Random Variation
 
 When we make measurements, we often observe that repeated measurements of the same quantity show random variations. This is a fundamental aspect of experimental science that we must understand and account for.

@@ -1,5 +1,18 @@
 # Approach to Laboratory Work
 
+:::{admonition} Learning Objectives
+:class: note
+
+By the end of this chapter, you will be able to:
+
+- Define experimentation as the process of identifying, gathering information about, and interpreting observations of the world
+- Distinguish between a physical system (the actual phenomenon being studied) and a model (the conceptual representation we create)
+- Explain why scientific conclusions are provisional rather than absolute proofs
+- Recognize that all measurements contain inherent uncertainty
+- Articulate the purpose of physics laboratories as training grounds for developing experimental skills applicable to complex real-world systems
+- Evaluate scientific claims by categorizing them as observations, model statements, or system-model relationships
+:::
+
 :::{important}
 Beyond Physics: A Universal Approach
 

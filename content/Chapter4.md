@@ -1,5 +1,20 @@
 # The Nature of Scientific Thinking
 
+:::{admonition} Learning Objectives
+:class: note
+
+By the end of this chapter, you will be able to:
+
+- Explain the distinction between physical systems and conceptual models
+- Describe how models serve as tools for understanding, not perfect representations of reality
+- Apply the iterative process of model testing and refinement
+- Distinguish between empirical models (derived from data) and theoretical models (derived from principles)
+- Use graphical methods to compare model predictions with experimental observations
+- Transform nonlinear relationships into linear form for easier analysis
+- Perform interpolation and extrapolation while recognizing their limitations
+- Determine unknown model parameters from experimental data using graphical analysis
+:::
+
 ## The Interplay Between Observation and Understanding
 
 :::{important}

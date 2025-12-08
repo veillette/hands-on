@@ -6,7 +6,7 @@ A comprehensive guide to advanced laboratory techniques and scientific thinking 
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 ![PRs](https://img.shields.io/badge/PRs-Welcome-brightgreen)
 ![mystmd](https://img.shields.io/badge/Built%20with-mystmd-8A2BE2)
-![License](https://img.shields.io/badge/License-CC--BY--4.0-green)
+![License](https://img.shields.io/badge/License-CC--BY--NC--SA--4.0-green)
 
 ## 📚 Overview
 
@@ -77,7 +77,7 @@ Types of contributions we're looking for:
 
 ## 📄 License
 
-This work is licensed under a [Creative Commons Attribution 4.0 International License](LICENSE).
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](LICENSE).
 
 ## 📬 Contact
 

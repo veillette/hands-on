@@ -1,5 +1,20 @@
 # Evaluating Experimental Results
 
+:::{admonition} Learning Objectives
+:class: note
+
+By the end of this chapter, you will be able to:
+
+- Calculate values and uncertainties of basic measured quantities using both estimated and statistical methods
+- Create effective graphs that clearly display data with appropriate uncertainty indicators
+- Compare experimental observations with model predictions and assess correspondence quality
+- Determine slope and intercept values from straight-line graphs with appropriate uncertainty estimates
+- Apply the least squares method to find best-fit lines and calculate uncertainties in slope and intercept
+- Recognize situations where least squares fitting is inappropriate and exercise appropriate caution
+- Find empirical functions (power laws, exponentials, polynomials) when no theoretical model exists
+- Assess overall experimental precision and report results with appropriate significant figures
+:::
+
 Experimental data alone tells only part of the story. The ability to properly evaluate results is what transforms raw measurements into meaningful scientific knowledge - a fundamental skill that distinguishes casual observations from rigorous scientific inquiry. This chapter focuses on why this evaluation process is crucial: it validates your measurements through uncertainty analysis, connects physical systems with theoretical models, and ultimately determines whether your findings represent substantiated scientific knowledge or merely unverified observations.
 
 ## The Essential Final Analysis
