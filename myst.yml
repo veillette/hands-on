@@ -91,7 +91,7 @@ project:
         - file: content/Appendix3.md
           title: Appendix 3 - Python and Jupyter
         - file: content/Appendix4.md
-          title: Appendix 4 - Sample Laboratory Report
+          title: Appendix 4 - Model Experiment
 site:
   template: book-theme
   title: "Advanced Laboratory Methods in Physics"
