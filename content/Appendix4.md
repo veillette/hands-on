@@ -105,6 +105,7 @@ This structured methodology ensures reproducibility and minimizes both random an
 The measurements are presented in Table 1, with each entry including its associated uncertainty determined through statistical analysis of repeated measurements.
 
 **Table 1: Variation of Oscillation Period with Load**
+
 | Load, m (kg) | # of Osc. | Time, t (s) | Period, T (s) | Period², T² (s²) | ΔT² (s²) |
 |-------------|-----------|-------------|---------------|-------------------|----------|
 | 0.10 ± 0.0001 | 10 | 8.20 ± 0.03 | 0.820 ± 0.003 | 0.672 | 0.005 |
@@ -329,6 +330,7 @@ Data analysis employed numerical methods using Python with scientific computing 
 The measured relationship between load and oscillation period is presented in Table 2, with uncertainties determined through statistical analysis of repeated measurements.
 
 **Table 2: Variation of Oscillation Period with Load**
+
 | Load, m (kg) | # of Osc. | Time, t (s) | Period, T (s) | Period², T² (s²) |
 |-------------|-----------|-------------|---------------|-------------------|
 | 0.10 ± 0.0001 | 10 | 8.20 ± 0.03 | 0.820 ± 0.003 | 0.672 ± 0.005 |

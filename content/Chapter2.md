@@ -239,7 +239,7 @@ $$\delta z = |\delta x| + |\delta y|$$
 This accounts for the worst case where uncertainties combine to maximize the total uncertainty.
 :::
 
-:::{iframe} https://preview.p5js.org/veillette/embed/0tDJ0eSDw
+:::{iframe} <https://preview.p5js.org/veillette/embed/0tDJ0eSDw>
 :width: 800
 
 Interactive demonstration of uncertainty propagation in addition and subtraction.
