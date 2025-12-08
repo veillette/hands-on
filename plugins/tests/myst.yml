@@ -1,0 +1,34 @@
+# MyST Configuration for Plugin Tests
+# Run with: npx myst build (or npx myst start for dev server)
+
+version: 1
+
+project:
+  title: Plugin Tests
+  description: Test files for verifying MyST plugin functionality
+
+  # Register parent directory plugins
+  plugins:
+    - type: javascript
+      path: ../phet.mjs
+    - type: javascript
+      path: ../geogebra.mjs
+    - type: javascript
+      path: ../youtube.mjs
+    - type: javascript
+      path: ../jupyterlite.mjs
+    - type: javascript
+      path: ../pyodide.mjs
+
+  # Table of contents for test files
+  toc:
+    - file: index.md
+    - file: test-phet.md
+    - file: test-geogebra.md
+    - file: test-youtube.md
+    - file: test-jupyterlite.md
+    - file: test-pyodide.md
+
+site:
+  title: Plugin Tests
+  template: book-theme

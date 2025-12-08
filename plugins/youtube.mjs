@@ -1,24 +1,64 @@
 /**
- * MyST Plugin for embedding YouTube videos
- * Usage: {youtube} video-id
- * Options:
- *   width: Width of the iframe (default: 560px)
- *   height: Height of the iframe (default: 315px)
- *   placeholder: Path to placeholder image for static exports
- *   title: Title attribute for the iframe (accessibility)
- *   start: Start time in seconds
- *   end: End time in seconds
- *   autoplay: Autoplay the video (default: false)
- *   controls: Show video controls (default: true)
- *   cc_load_policy: Show closed captions (default: false)
- *   modestbranding: Hide YouTube logo (default: true)
- *   loop: Loop the video (default: false)
- *   mute: Mute the video (default: false)
- *   rel: Show related videos (default: false)
- * Directive Body (parsed)
- *   If provided, this will be the iframe caption.
+ * @fileoverview MyST Plugin for embedding YouTube Videos
+ *
+ * This plugin provides a custom MyST directive for embedding YouTube videos
+ * into MyST documents. It uses the YouTube IFrame Player API and supports
+ * various playback options including start/end times, autoplay, looping,
+ * closed captions, and more.
+ *
+ * @module plugins/youtube
+ * @see {@link https://www.youtube.com/ YouTube}
+ * @see {@link https://developers.google.com/youtube/player_parameters YouTube IFrame API}
+ * @see {@link https://mystmd.org/guide/plugins MyST Plugin Documentation}
+ *
+ * @example
+ * // Basic usage with a video ID:
+ * ```{youtube} dQw4w9WgXcQ
+ * ```
+ *
+ * @example
+ * // With custom dimensions and caption:
+ * ```{youtube} dQw4w9WgXcQ
+ * :width: 100%
+ * :height: 400px
+ * :title: Never Gonna Give You Up
+ *
+ * A classic music video from Rick Astley
+ * ```
+ *
+ * @example
+ * // Start at a specific time with closed captions:
+ * ```{youtube} jNQXAC9IVRw
+ * :start: 30
+ * :end: 60
+ * :cc_load_policy: true
+ * :loop: true
+ * ```
+ *
+ * @example
+ * // Autoplay muted (required for autoplay in most browsers):
+ * ```{youtube} dQw4w9WgXcQ
+ * :autoplay: true
+ * :mute: true
+ * ```
  */
 
+/**
+ * YouTube video directive configuration object.
+ *
+ * This directive embeds YouTube videos as iframes within MyST documents.
+ * It constructs the appropriate embed URL with query parameters based on
+ * the provided options. The video ID is the 11-character string found in
+ * YouTube URLs (e.g., youtube.com/watch?v=VIDEO_ID).
+ *
+ * @type {Object}
+ * @property {string} name - The directive name used in MyST markdown
+ * @property {string} doc - Human-readable description of the directive
+ * @property {Object} arg - Configuration for the required argument
+ * @property {Object} body - Configuration for the optional body content
+ * @property {Object} options - Available options for the directive
+ * @property {Function} run - The function that processes the directive
+ */
 const youtubeDirective = {
   name: 'youtube',
   doc: 'Embed a YouTube video',
@@ -84,6 +124,29 @@ const youtubeDirective = {
       doc: 'Show related videos (default: false)'
     }
   },
+  /**
+   * Processes the YouTube directive and returns AST nodes.
+   *
+   * @function run
+   * @param {Object} data - The directive data provided by MyST
+   * @param {string} data.arg - The YouTube video ID (required)
+   * @param {Array} [data.body] - Optional markdown content for caption
+   * @param {Object} [data.options] - Configuration options
+   * @param {string} [data.options.width='560px'] - Width of the iframe
+   * @param {string} [data.options.height='315px'] - Height of the iframe
+   * @param {string} [data.options.title='YouTube video'] - Iframe title for accessibility
+   * @param {number} [data.options.start] - Start time in seconds
+   * @param {number} [data.options.end] - End time in seconds
+   * @param {boolean} [data.options.autoplay=false] - Autoplay the video
+   * @param {boolean} [data.options.controls=true] - Show video controls
+   * @param {boolean} [data.options.cc_load_policy=false] - Show closed captions
+   * @param {boolean} [data.options.modestbranding=true] - Hide YouTube logo
+   * @param {boolean} [data.options.loop=false] - Loop the video
+   * @param {boolean} [data.options.mute=false] - Mute the video
+   * @param {boolean} [data.options.rel=false] - Show related videos
+   * @param {string} [data.options.placeholder] - Path to placeholder image
+   * @returns {Array<Object>} Array of AST nodes (iframe and optional caption)
+   */
   run: function(data) {
     // Extract the video ID from the argument
     const videoId = data.arg;
@@ -159,7 +222,17 @@ const youtubeDirective = {
   }
 };
 
-// Export the plugin
+/**
+ * MyST plugin export object.
+ *
+ * This object is the default export and conforms to the MyST plugin specification.
+ * It registers the youtube directive with MyST, making it available for use in
+ * MyST markdown documents.
+ *
+ * @type {Object}
+ * @property {string} name - Human-readable name of the plugin
+ * @property {Array<Object>} directives - Array of directive configurations
+ */
 const plugin = {
   name: 'YouTube Videos',
   directives: [youtubeDirective]
