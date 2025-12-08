@@ -1,16 +1,52 @@
 /**
- * MyST Plugin for embedding PhET simulations
- * Usage: {phet} simulation-name
- * Options:
- *   width: Width of the iframe (default: 800px)
- *   height: Height of the iframe (default: 600px)
- *   placeholder: Path to placeholder image for static exports
- *   lang: Language code (default: en)
- *   urlOptions: Additional URL parameters
- * Directive Body (parsed)
- *   If provided, this will be the iframe caption.
+ * @fileoverview MyST Plugin for embedding PhET Interactive Simulations
+ *
+ * This plugin provides a custom MyST directive for embedding interactive physics
+ * simulations from PhET (Physics Education Technology) at the University of Colorado Boulder.
+ * PhET simulations are free, research-based, and designed to engage students in learning
+ * through exploration and discovery.
+ *
+ * @module plugins/phet
+ * @see {@link https://phet.colorado.edu/ PhET Interactive Simulations}
+ * @see {@link https://mystmd.org/guide/plugins MyST Plugin Documentation}
+ *
+ * @example
+ * // Basic usage in MyST markdown:
+ * ```{phet} geometric-optics
+ * ```
+ *
+ * @example
+ * // With custom dimensions and caption:
+ * ```{phet} projectile-motion
+ * :width: 100%
+ * :height: 500px
+ * :lang: es
+ *
+ * Explore the physics of projectile motion!
+ * ```
+ *
+ * @example
+ * // With URL options to select specific screens:
+ * ```{phet} circuit-construction-kit-dc
+ * :urlOptions: ?screens=2
+ * ```
  */
 
+/**
+ * PhET simulation directive configuration object.
+ *
+ * This directive embeds PhET simulations as iframes within MyST documents.
+ * It constructs the appropriate URL based on the simulation name and options,
+ * and returns an AST node that MyST can render.
+ *
+ * @type {Object}
+ * @property {string} name - The directive name used in MyST markdown
+ * @property {string} doc - Human-readable description of the directive
+ * @property {Object} arg - Configuration for the required argument
+ * @property {Object} body - Configuration for the optional body content
+ * @property {Object} options - Available options for the directive
+ * @property {Function} run - The function that processes the directive
+ */
 const phetDirective = {
   name: 'phet',
   doc: 'Embed a PhET simulation from phet.colorado.edu',
@@ -44,6 +80,21 @@ const phetDirective = {
       doc: 'Additional URL parameters, e.g. ?screens=2'
     },
   },
+  /**
+   * Processes the PhET directive and returns AST nodes.
+   *
+   * @function run
+   * @param {Object} data - The directive data provided by MyST
+   * @param {string} data.arg - The simulation name (required)
+   * @param {Array} [data.body] - Optional markdown content for caption
+   * @param {Object} [data.options] - Configuration options
+   * @param {string} [data.options.width='800px'] - Width of the iframe
+   * @param {string} [data.options.height='600px'] - Height of the iframe
+   * @param {string} [data.options.lang='en'] - Language code for the simulation
+   * @param {string} [data.options.placeholder] - Path to placeholder image
+   * @param {string} [data.options.urlOptions] - Additional URL query parameters
+   * @returns {Array<Object>} Array of AST nodes (iframe and optional caption)
+   */
   run: function( data ) {
     // Extract the simulation name from the argument
     const simulationName = data.arg;
@@ -99,7 +150,17 @@ const phetDirective = {
   }
 };
 
-// Export the plugin
+/**
+ * MyST plugin export object.
+ *
+ * This object is the default export and conforms to the MyST plugin specification.
+ * It registers the phet directive with MyST, making it available for use in
+ * MyST markdown documents.
+ *
+ * @type {Object}
+ * @property {string} name - Human-readable name of the plugin
+ * @property {Array<Object>} directives - Array of directive configurations
+ */
 const plugin = {
   name: 'PhET Simulations',
   directives: [phetDirective]

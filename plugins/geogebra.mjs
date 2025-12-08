@@ -1,22 +1,56 @@
 /**
- * MyST Plugin for embedding GeoGebra simulations
- * Usage: {geogebra} material-id
- * Options:
- *   width: Width of the iframe (default: 800px)
- *   height: Height of the iframe (default: 600px)
- *   placeholder: Path to placeholder image for static exports
- *   appName: GeoGebra app to use (default: classic, options: graphing, geometry, 3d, cas, classic)
- *   showToolBar: Show the toolbar (default: false)
- *   showAlgebraInput: Show the algebra input (default: false)
- *   showMenuBar: Show the menu bar (default: false)
- *   showResetIcon: Show the reset icon (default: true)
- *   enableLabelDrags: Enable label drags (default: false)
- *   enableShiftDragZoom: Enable shift-drag zoom (default: true)
- *   enableRightClick: Enable right-click menu (default: false)
- * Directive Body (parsed)
- *   If provided, this will be the iframe caption.
+ * @fileoverview MyST Plugin for embedding GeoGebra Interactive Mathematics
+ *
+ * This plugin provides a custom MyST directive for embedding interactive mathematics
+ * visualizations from GeoGebra. GeoGebra is a dynamic mathematics software that brings
+ * together geometry, algebra, spreadsheets, graphing, statistics, and calculus.
+ *
+ * @module plugins/geogebra
+ * @see {@link https://www.geogebra.org/ GeoGebra Website}
+ * @see {@link https://wiki.geogebra.org/en/Reference:Material_Embedding GeoGebra Embedding Reference}
+ * @see {@link https://mystmd.org/guide/plugins MyST Plugin Documentation}
+ *
+ * @example
+ * // Basic usage with a GeoGebra material ID:
+ * ```{geogebra} agxadfzzivgh
+ * ```
+ *
+ * @example
+ * // Using the graphing calculator app with custom dimensions:
+ * ```{geogebra} pythagorean-theorem
+ * :appName: graphing
+ * :width: 100%
+ * :height: 500px
+ * :showToolBar: true
+ *
+ * Interactive demonstration of the Pythagorean theorem
+ * ```
+ *
+ * @example
+ * // 3D geometry with full controls:
+ * ```{geogebra} 3d-vectors
+ * :appName: 3d
+ * :showAlgebraInput: true
+ * :showMenuBar: true
+ * :enableRightClick: true
+ * ```
  */
 
+/**
+ * GeoGebra simulation directive configuration object.
+ *
+ * This directive embeds GeoGebra materials as iframes within MyST documents.
+ * It supports both material IDs (short strings) and base64-encoded GeoGebra files.
+ * The URL is constructed with various parameters to control the GeoGebra interface.
+ *
+ * @type {Object}
+ * @property {string} name - The directive name used in MyST markdown
+ * @property {string} doc - Human-readable description of the directive
+ * @property {Object} arg - Configuration for the required argument
+ * @property {Object} body - Configuration for the optional body content
+ * @property {Object} options - Available options for the directive
+ * @property {Function} run - The function that processes the directive
+ */
 const geogebraDirective = {
   name: 'geogebra',
   doc: 'Embed a GeoGebra simulation from geogebra.org',
@@ -74,6 +108,27 @@ const geogebraDirective = {
       doc: 'Enable right-click menu (default: false)'
     }
   },
+  /**
+   * Processes the GeoGebra directive and returns AST nodes.
+   *
+   * @function run
+   * @param {Object} data - The directive data provided by MyST
+   * @param {string} data.arg - The material ID or base64-encoded GeoGebra file (required)
+   * @param {Array} [data.body] - Optional markdown content for caption
+   * @param {Object} [data.options] - Configuration options
+   * @param {string} [data.options.width='800px'] - Width of the iframe
+   * @param {string} [data.options.height='600px'] - Height of the iframe
+   * @param {string} [data.options.appName='classic'] - GeoGebra app type
+   * @param {boolean} [data.options.showToolBar=false] - Show the toolbar
+   * @param {boolean} [data.options.showAlgebraInput=false] - Show algebra input
+   * @param {boolean} [data.options.showMenuBar=false] - Show the menu bar
+   * @param {boolean} [data.options.showResetIcon=true] - Show reset icon
+   * @param {boolean} [data.options.enableLabelDrags=false] - Enable label dragging
+   * @param {boolean} [data.options.enableShiftDragZoom=true] - Enable shift-drag zoom
+   * @param {boolean} [data.options.enableRightClick=false] - Enable right-click menu
+   * @param {string} [data.options.placeholder] - Path to placeholder image
+   * @returns {Array<Object>} Array of AST nodes (iframe and optional caption)
+   */
   run: function(data) {
     // Extract the material ID from the argument
     const materialId = data.arg;
@@ -144,7 +199,17 @@ const geogebraDirective = {
   }
 };
 
-// Export the plugin
+/**
+ * MyST plugin export object.
+ *
+ * This object is the default export and conforms to the MyST plugin specification.
+ * It registers the geogebra directive with MyST, making it available for use in
+ * MyST markdown documents.
+ *
+ * @type {Object}
+ * @property {string} name - Human-readable name of the plugin
+ * @property {Array<Object>} directives - Array of directive configurations
+ */
 const plugin = {
   name: 'GeoGebra Simulations',
   directives: [geogebraDirective]
