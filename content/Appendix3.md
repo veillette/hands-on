@@ -405,31 +405,26 @@ plt.show()
 When approaching data analysis for physics experiments, a systematic workflow is helpful:
 
 1. **Data Import and Organization**
-
    - Import raw data (CSV, Excel, etc.)
    - Organize into appropriate data structures
    - Perform basic validation and cleaning
 
 2. **Exploratory Analysis**
-
    - Calculate basic statistics (mean, standard deviation)
    - Create initial visualizations
    - Identify potential outliers or issues
 
 3. **Data Transformation**
-
    - Convert units if necessary
    - Create derived quantities
    - Apply appropriate transformations (e.g., linearization)
 
 4. **Model Fitting**
-
    - Define theoretical model
    - Perform regression or curve fitting
    - Extract parameters and their uncertainties
 
 5. **Visualization**
-
    - Create publication-quality plots
    - Include error bars and uncertainty ranges
    - Compare experimental results with theoretical predictions
@@ -567,11 +562,9 @@ def analyze_pendulum_data(filepath, output_folder=None):
 Jupyter Notebooks can be shared in various ways:
 
 1. **Export as HTML, PDF, or other formats**
-
    - In Jupyter: File > Export Notebook As...
 
 2. **Version control with Git/GitHub**
-
    - Notebooks are text files that can be tracked with version control
    - GitHub renders notebooks directly in the browser
 
