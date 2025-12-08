@@ -52,7 +52,7 @@ There are several ways you can contribute to this project:
 
 ## Licensing
 
-By contributing to this project, you agree that your contributions will be licensed under the same license as the main project (CC-BY-4.0). All contributors will be acknowledged in the Contributors section.
+By contributing to this project, you agree that your contributions will be licensed under the same license as the main project (CC-BY-NC-SA-4.0). All contributors will be acknowledged in the Contributors section.
 
 ## Development Environment
 
