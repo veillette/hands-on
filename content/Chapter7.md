@@ -13,7 +13,7 @@ By the end of this chapter, you will be able to:
 - Create apparatus diagrams that enhance reader understanding
 - Write discussions that objectively compare model predictions with experimental observations
 - Speculate constructively about sources of discrepancies between models and systems
-:::
+  :::
 
 ## Why Quality Scientific Writing Matters
 

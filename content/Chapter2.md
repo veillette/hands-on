@@ -13,7 +13,7 @@ By the end of this chapter, you will be able to:
 - Use calculus-based methods to calculate uncertainties in derived quantities
 - Apply significant figures appropriately to communicate measurement precision
 - Report experimental results with properly matched uncertainty values
-:::
+  :::
 
 ## Understanding the Measuring Process
 
@@ -99,7 +99,7 @@ This uncertainty value (±0.2 cm) represents the **absolute uncertainty** of our
 - Acceptable
 - - Measuring astronomical distances
   - Negligible
-      :::
+    :::
 
 To better evaluate a measurement's quality, we use **relative uncertainty**, defined as:
 
