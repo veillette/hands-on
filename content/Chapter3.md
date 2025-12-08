@@ -151,7 +151,7 @@ If we measure a rectangle's length as $(25.4 \pm 0.2)$ cm and width as $(18.6 \p
    $$\sigma_A = \sqrt{0.0001775} \times 472.44 \text{cm}^2 \approx 6.3 \ \text{cm}^2$$
    $$
 4. Final result: $A = (472 \pm 6) \ \text{cm}^2$
-:::
+   :::
 
 ### Statistical vs. Estimated Uncertainties
 
