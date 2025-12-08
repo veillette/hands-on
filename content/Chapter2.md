@@ -1,5 +1,20 @@
 # Measurement and Uncertainty
 
+:::{admonition} Learning Objectives
+:class: note
+
+By the end of this chapter, you will be able to:
+
+- Describe measurement as a process of determining intervals rather than exact values
+- Interpret digital readouts and understand rounding uncertainty
+- Calculate and distinguish between absolute uncertainty and relative uncertainty (precision)
+- Identify common sources of systematic errors, including calibration and zero errors
+- Apply uncertainty propagation rules to single-variable and multi-variable functions
+- Use calculus-based methods to calculate uncertainties in derived quantities
+- Apply significant figures appropriately to communicate measurement precision
+- Report experimental results with properly matched uncertainty values
+:::
+
 ## Understanding the Measuring Process
 
 ```{epigraph}

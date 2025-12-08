@@ -1,5 +1,20 @@
 # Writing Scientific Reports
 
+:::{admonition} Learning Objectives
+:class: note
+
+By the end of this chapter, you will be able to:
+
+- Write clear, informative titles that convey the experiment's scope and methodology
+- Structure a scientific report with appropriate sections: Introduction, Procedure, Results, and Discussion
+- Compose an introduction that provides context, reviews relevant theory, and states experimental purpose
+- Describe experimental procedures with sufficient detail for reproducibility
+- Present results clearly using well-formatted tables and graphs with proper uncertainty notation
+- Create apparatus diagrams that enhance reader understanding
+- Write discussions that objectively compare model predictions with experimental observations
+- Speculate constructively about sources of discrepancies between models and systems
+:::
+
 ## Why Quality Scientific Writing Matters
 
 :::{important}

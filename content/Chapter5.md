@@ -1,5 +1,20 @@
 # Designing Experiments: Principles and Methods
 
+:::{admonition} Learning Objectives
+:class: note
+
+By the end of this chapter, you will be able to:
+
+- Articulate that the fundamental goal of experimentation is comparing physical systems with theoretical models
+- Convert equations into straight-line form using appropriate variable transformations
+- Apply logarithmic transformations for power law and exponential relationships
+- Use dimensional analysis to derive functional relationships between physical quantities
+- Design experiments that isolate individual variables while controlling others
+- Develop a systematic measurement program with appropriate precision targets
+- Apply null-effect measurement techniques to detect subtle effects
+- Distinguish between experimental and control groups in biological and observational studies
+:::
+
 ## Introduction to Experimental Design
 
 In the previous chapter, we explored the various ways researchers compare models with real-world systems. The diversity we encountered suggests a crucial insight: there is no universal approach to planning experiments. The techniques and methodologies researchers employ necessarily depend on specific circumstances and objectives.
