@@ -13,7 +13,7 @@ By the end of this chapter, you will be able to:
 - Use Chauvenet's criterion to systematically identify potential outliers
 - Construct and interpret confidence intervals for experimental results
 - Determine appropriate sample sizes for achieving target precision levels
-  :::
+:::
 
 ## Understanding Random Variation
 
@@ -26,7 +26,7 @@ These variations can arise from many sources:
 - Instrument limitations (finite resolution, electronic noise)
 - Human factors (reaction time variations, reading parallax)
 - Quantum effects (in some cases, such as radioactive decay)
-  :::
+:::
 
 Consider measuring the radioactivity of a sample. Even with perfect equipment, the number of counts in a fixed time interval will vary randomly due to the inherent stochastic nature of radioactive decay. Similarly, optical measurements might show fluctuations due to air currents causing refractive index variations or thermal effects causing mechanical instabilities in the apparatus.
 
@@ -54,7 +54,7 @@ where $\mu$ is the population mean and $\sigma$ is the population standard devia
 - About 95% fall within $\pm 2\sigma$
 - About 99.7% fall within $\pm 3\sigma$
 - The total area under the curve equals 1 (representing 100% probability)
-  :::
+:::
 
 These percentages are crucial for understanding measurement uncertainty. The 68-95-99.7 rule (sometimes called the empirical rule) provides a quick way to assess the likelihood that a measurement falls within certain bounds of the true value.
 
@@ -75,7 +75,7 @@ When we make measurements, we're typically working with a sample from a larger p
 - **Sample standard deviation** ($s$) estimates **population standard deviation** ($\sigma$)
 - **Standard error of the mean** (SEM) = $\frac{s}{\sqrt{N}}$
 - **Sample size** ($N$) affects the precision of our estimates
-  :::
+:::
 
 The **sample mean** is calculated as:
 $$\bar{x} = \frac{1}{N}\sum_{i=1}^{N} x_i$$
@@ -148,7 +148,7 @@ If we measure a rectangle's length as $(25.4 \pm 0.2)$ cm and width as $(18.6 \p
    $$\frac{\sigma_A}{A} = \sqrt{0.0001775} \approx 0.0133$$
    $$\sigma_A = 0.0133 \times 472.44 \ \text{cm}^2 \approx 6.3 \ \text{cm}^2$$
 4. Final result: $A = (472 \pm 6) \ \text{cm}^2$
-   :::
+:::
 
 ### Statistical vs. Estimated Uncertainties
 
@@ -187,7 +187,7 @@ For $N = 20$ measurements, reject if probability < 0.025 (about $2.2\sigma$)
 3. **Apply statistical criteria systematically, not arbitrarily**
 4. **Document all rejected data with reasoning**
 5. **Remember that outliers sometimes indicate important physics**
-   :::
+:::
 
 ### Systematic Approach to Outliers
 
@@ -254,7 +254,7 @@ This means:
 - For meaningful statistics: $N \geq 10$
 - For reliable standard deviation estimates: $N \geq 20$
 - For precise confidence intervals: $N \geq 30$
-  :::
+:::
 
 ## Combining Different Types of Uncertainty
 
@@ -346,7 +346,6 @@ central limit theorem
 
 ```{exercise}
 :label: prob-histogram
-:class: exercises
 
 Construct a histogram of the following measurements (in cm):
 12.3, 12.5, 12.4, 12.6, 12.3, 12.4, 12.5, 12.4, 12.3, 12.5
