@@ -35,6 +35,10 @@ project:
   authors:
     - name: "Martin Veillette"
   date: 2025-01-01
+  abstract: |
+    This comprehensive textbook provides a practical guide to advanced laboratory techniques
+    and scientific thinking for physics students. It covers experimental design, data analysis,
+    statistical methods, and scientific writing, with hands-on examples and model experiments.
   abbreviations:
       EMF: Electromotive Force - The electrical potential energy provided by a non-electrical source per unit of charge.
       RPM: Revolutions Per Minute - A measure of rotational speed.
