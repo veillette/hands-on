@@ -24,7 +24,7 @@ This textbook provides a thorough introduction to advanced laboratory methods in
 ## 📋 Table of Contents
 
 - [**Preface**](https://veillette.github.io/hands-on/)
- [**Chapter 1: Approach to Laboratory Work**](/hands-on/chapter1)
+- [**Chapter 1: Approach to Laboratory Work**](https://veillette.github.io/hands-on/chapter1)
 - [**Chapter 2: Measurement and Uncertainty**](https://veillette.github.io/hands-on/chapter2)
 - [**Chapter 3: Statistics of Measurement**](https://veillette.github.io/hands-on/chapter3)
 - [**Chapter 4: The Nature of Scientific Thinking**](https://veillette.github.io/hands-on/chapter4)
