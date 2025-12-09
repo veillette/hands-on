@@ -129,7 +129,13 @@ After describing measurement methods, readers may wonder about potential errors 
 
 Well-executed apparatus diagrams substantially enhance report quality. While professional publications require polished illustrations, even student reports benefit from careful diagramming. Use straightforward tools like rulers to ensure neatness, with clear labels to aid comprehension. Good diagrams save considerable explanatory text and provide details that would be tedious to describe verbally. Reference diagrams at appropriate points in your text; an overview diagram works particularly well when introducing the procedure section: "Using the apparatus shown in Figure 1, we measured ball bearing fall times over heights ranging from 20 cm to 150 cm." Figure 1 demonstrates an acceptable apparatus diagram.
 
-![A completed free-fall apparatus diagram.](../figures/ch7/free_fall_apparatus.png)
+:::{figure} ../figures/ch7/free_fall_apparatus.png
+:label: fig-free-fall-apparatus
+:alt: A completed free-fall apparatus diagram showing the experimental setup for measuring fall times
+:width: 70%
+
+A free-fall apparatus diagram illustrating the experimental setup for measuring the fall times of objects dropped from various heights.
+:::
 
 ## Results
 
@@ -167,7 +173,13 @@ Report graphs should be clean, clear, and uncluttered. Plot points with visible 
 
 The graphs you created during analysis served as computational tools, potentially requiring large formats and precise drawing for accurate measurement. However, graphs included in your report serve a different purpose—they illustrate results rather than providing readers raw analytical material. They help readers visualize system behavior and evaluate your interpretations.
 
-![A completed graph.](../figures/ch7/Fig7_2.png)
+:::{figure} ../figures/ch7/Fig7_2.png
+:label: fig-sample-results-graph
+:alt: A completed graph showing experimental results with properly labeled axes, error bars, and a best-fit line
+:width: 80%
+
+An example of a well-formatted results graph with clearly labeled axes, visible uncertainty indicators (error bars), and a properly identified best-fit line.
+:::
 
 Report graphs should be clean, clear, and uncluttered. Plot points with visible uncertainty indicators (boxes or crosses) and clearly label axes. Identify uncertainty types and axis symbols directly on or near the graph to avoid forcing readers to search the text for interpretation. Avoid cluttering graphs with calculation details. Each graph should have a descriptive title or extended caption that can also incorporate important technical details. Figure 2 demonstrates acceptable graph formatting.
 

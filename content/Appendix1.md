@@ -65,8 +65,13 @@ $$\int_1^n \ln x \, dx = [x\ln x - x]_1^n = n\ln n - n + 1$$
 
 The integral approximates the sum $\ln 1 + \ln 2 + \ln 3 + ... + \ln n$, which equals $\ln(n!)$.
 
-![Logarithm approximation](../figures/A1/FigA1_1.png)
-_The area under the curve of ln(x) approximates the sum of logarithms_
+:::{figure} ../figures/A1/FigA1_1.png
+:label: fig-stirling-approximation
+:alt: Graph showing how the area under the curve of ln(x) approximates the sum of logarithms used in Stirling's approximation
+:width: 70%
+
+The area under the curve of ln(x) approximates the sum of logarithms, forming the basis for Stirling's approximation of n!.
+:::
 
 Therefore:
 $$\ln(n!) \approx n\ln n - n$$
@@ -240,8 +245,13 @@ plt.show()
 
 :::
 
-![Gaussian Distribution Area](../figures/A1/gaussian_area.svg)
-_Figure A1.1: The shaded area represents the probability of a deviation falling between 0 and x._
+:::{figure} ../figures/A1/gaussian_area.svg
+:label: fig-gaussian-area
+:alt: Graph showing the Gaussian distribution curve with shaded area representing the probability of a deviation falling between 0 and x
+:width: 80%
+
+The shaded area under the Gaussian distribution curve represents the probability of a deviation falling between 0 and x. This integral cannot be evaluated in closed form and must be computed numerically.
+:::
 
 For the probability that a measurement falls within $\pm x/\sigma$ of the mean (the symmetric interval), we double these values.
 

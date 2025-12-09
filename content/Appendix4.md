@@ -104,19 +104,71 @@ This structured methodology ensures reproducibility and minimizes both random an
 
 The measurements are presented in Table 1, with each entry including its associated uncertainty determined through statistical analysis of repeated measurements.
 
-**Table 1: Variation of Oscillation Period with Load**
+:::{list-table} Variation of Oscillation Period with Load
+:label: tbl-oscillation-period-1
+:header-rows: 1
 
-| Load, m (kg)  | # of Osc. | Time, t (s)  | Period, T (s) | Period², T² (s²) | ΔT² (s²) |
-| ------------- | --------- | ------------ | ------------- | ---------------- | -------- |
-| 0.10 ± 0.0001 | 10        | 8.20 ± 0.03  | 0.820 ± 0.003 | 0.672            | 0.005    |
-| 0.15 ± 0.0001 | 10        | 9.80 ± 0.03  | 0.980 ± 0.003 | 0.960            | 0.006    |
-| 0.20 ± 0.0001 | 10        | 10.70 ± 0.03 | 1.070 ± 0.003 | 1.145            | 0.006    |
-| 0.25 ± 0.0001 | 10        | 11.50 ± 0.03 | 1.150 ± 0.003 | 1.323            | 0.007    |
-| 0.30 ± 0.0001 | 10        | 12.50 ± 0.03 | 1.250 ± 0.003 | 1.563            | 0.008    |
-| 0.35 ± 0.0001 | 10        | 13.00 ± 0.03 | 1.300 ± 0.003 | 1.690            | 0.008    |
-| 0.40 ± 0.0001 | 10        | 13.80 ± 0.03 | 1.380 ± 0.003 | 1.904            | 0.008    |
-| 0.45 ± 0.0001 | 10        | 14.50 ± 0.03 | 1.450 ± 0.003 | 2.103            | 0.009    |
-| 0.50 ± 0.0001 | 10        | 15.20 ± 0.03 | 1.520 ± 0.003 | 2.310            | 0.009    |
+- - Load, m (kg)
+  - \# of Osc.
+  - Time, t (s)
+  - Period, T (s)
+  - Period², T² (s²)
+  - ΔT² (s²)
+- - 0.10 ± 0.0001
+  - 10
+  - 8.20 ± 0.03
+  - 0.820 ± 0.003
+  - 0.672
+  - 0.005
+- - 0.15 ± 0.0001
+  - 10
+  - 9.80 ± 0.03
+  - 0.980 ± 0.003
+  - 0.960
+  - 0.006
+- - 0.20 ± 0.0001
+  - 10
+  - 10.70 ± 0.03
+  - 1.070 ± 0.003
+  - 1.145
+  - 0.006
+- - 0.25 ± 0.0001
+  - 10
+  - 11.50 ± 0.03
+  - 1.150 ± 0.003
+  - 1.323
+  - 0.007
+- - 0.30 ± 0.0001
+  - 10
+  - 12.50 ± 0.03
+  - 1.250 ± 0.003
+  - 1.563
+  - 0.008
+- - 0.35 ± 0.0001
+  - 10
+  - 13.00 ± 0.03
+  - 1.300 ± 0.003
+  - 1.690
+  - 0.008
+- - 0.40 ± 0.0001
+  - 10
+  - 13.80 ± 0.03
+  - 1.380 ± 0.003
+  - 1.904
+  - 0.008
+- - 0.45 ± 0.0001
+  - 10
+  - 14.50 ± 0.03
+  - 1.450 ± 0.003
+  - 2.103
+  - 0.009
+- - 0.50 ± 0.0001
+  - 10
+  - 15.20 ± 0.03
+  - 1.520 ± 0.003
+  - 2.310
+  - 0.009
+:::
 
 ### Computational Analysis
 
@@ -196,8 +248,13 @@ The analysis yielded a coefficient of determination (R²) of 0.9996, indicating 
 
 Figure 1 shows the results of our computational analysis, including the experimental data points with uncertainties, the best-fit line, and the 95% confidence intervals derived from our statistical analysis.
 
-![Graph of m vs. T² with statistical analysis](../figures/A4/spring_constant_analysis.svg)
-_Figure 1: Plot of mass versus period squared showing experimental data points with uncertainties, best-fit line determined by weighted least-squares regression, and 95% confidence intervals._
+:::{figure} ../figures/A4/spring_constant_analysis.svg
+:label: fig-spring-constant-analysis
+:alt: Graph showing mass versus period squared with experimental data points, error bars, weighted least-squares regression line, and 95% confidence intervals
+:width: 90%
+
+Plot of mass versus period squared showing experimental data points with uncertainties, best-fit line determined by weighted least-squares regression, and 95% confidence intervals.
+:::
 
 ### Parameter Determination
 
@@ -300,8 +357,13 @@ We can apply weighted least-squares regression analysis to determine k from the 
 
 We established a precision measurement system consisting of a helical spring suspended from a vibration-isolated support structure (Figure 2). The experimental apparatus included:
 
-![Experimental setup diagram](../figures/A4/FigA4_1R.jpg)
-_Figure 2: Schematic diagram of the experimental apparatus showing the spring suspension system, digital measurement tools, and vibration isolation measures._
+:::{figure} ../figures/A4/FigA4_1R.jpg
+:label: fig-spring-apparatus
+:alt: Schematic diagram of the experimental apparatus showing the spring suspension system, digital measurement tools, and vibration isolation measures
+:width: 70%
+
+Schematic diagram of the experimental apparatus showing the spring suspension system, digital measurement tools, and vibration isolation measures.
+:::
 
 The apparatus featured:
 
@@ -329,27 +391,74 @@ Data analysis employed numerical methods using Python with scientific computing 
 
 The measured relationship between load and oscillation period is presented in Table 2, with uncertainties determined through statistical analysis of repeated measurements.
 
-**Table 2: Variation of Oscillation Period with Load**
+:::{list-table} Variation of Oscillation Period with Load
+:label: tbl-oscillation-period-2
+:header-rows: 1
 
-| Load, m (kg)  | # of Osc. | Time, t (s)  | Period, T (s) | Period², T² (s²) |
-| ------------- | --------- | ------------ | ------------- | ---------------- |
-| 0.10 ± 0.0001 | 10        | 8.20 ± 0.03  | 0.820 ± 0.003 | 0.672 ± 0.005    |
-| 0.15 ± 0.0001 | 10        | 9.80 ± 0.03  | 0.980 ± 0.003 | 0.960 ± 0.006    |
-| 0.20 ± 0.0001 | 10        | 10.70 ± 0.03 | 1.070 ± 0.003 | 1.145 ± 0.006    |
-| 0.25 ± 0.0001 | 10        | 11.50 ± 0.03 | 1.150 ± 0.003 | 1.323 ± 0.007    |
-| 0.30 ± 0.0001 | 10        | 12.50 ± 0.03 | 1.250 ± 0.003 | 1.563 ± 0.008    |
-| 0.35 ± 0.0001 | 10        | 13.00 ± 0.03 | 1.300 ± 0.003 | 1.690 ± 0.008    |
-| 0.40 ± 0.0001 | 10        | 13.80 ± 0.03 | 1.380 ± 0.003 | 1.904 ± 0.008    |
-| 0.45 ± 0.0001 | 10        | 14.50 ± 0.03 | 1.450 ± 0.003 | 2.103 ± 0.009    |
-| 0.50 ± 0.0001 | 10        | 15.20 ± 0.03 | 1.520 ± 0.003 | 2.310 ± 0.009    |
+- - Load, m (kg)
+  - \# of Osc.
+  - Time, t (s)
+  - Period, T (s)
+  - Period², T² (s²)
+- - 0.10 ± 0.0001
+  - 10
+  - 8.20 ± 0.03
+  - 0.820 ± 0.003
+  - 0.672 ± 0.005
+- - 0.15 ± 0.0001
+  - 10
+  - 9.80 ± 0.03
+  - 0.980 ± 0.003
+  - 0.960 ± 0.006
+- - 0.20 ± 0.0001
+  - 10
+  - 10.70 ± 0.03
+  - 1.070 ± 0.003
+  - 1.145 ± 0.006
+- - 0.25 ± 0.0001
+  - 10
+  - 11.50 ± 0.03
+  - 1.150 ± 0.003
+  - 1.323 ± 0.007
+- - 0.30 ± 0.0001
+  - 10
+  - 12.50 ± 0.03
+  - 1.250 ± 0.003
+  - 1.563 ± 0.008
+- - 0.35 ± 0.0001
+  - 10
+  - 13.00 ± 0.03
+  - 1.300 ± 0.003
+  - 1.690 ± 0.008
+- - 0.40 ± 0.0001
+  - 10
+  - 13.80 ± 0.03
+  - 1.380 ± 0.003
+  - 1.904 ± 0.008
+- - 0.45 ± 0.0001
+  - 10
+  - 14.50 ± 0.03
+  - 1.450 ± 0.003
+  - 2.103 ± 0.009
+- - 0.50 ± 0.0001
+  - 10
+  - 15.20 ± 0.03
+  - 1.520 ± 0.003
+  - 2.310 ± 0.009
+:::
 
 Computational analysis of this data using weighted least-squares regression yielded:
 $$k = 9.81 \pm 0.18 \text{ N/m}$$
 
 With a coefficient of determination R² = 0.9996, demonstrating excellent agreement with our linear model. Figure 3 presents the graphical analysis of our results.
 
-![Graph of statistical analysis results](../figures/A4/spring_constant_analysis.svg)
-_Figure 3: Statistical analysis of the T² vs m relationship showing experimental data points with error bars, weighted least-squares regression line, and 95% confidence intervals._
+:::{figure} ../figures/A4/spring_constant_analysis.svg
+:label: fig-spring-analysis-results
+:alt: Statistical analysis graph showing the T² versus m relationship with experimental data points, error bars, weighted least-squares regression line, and 95% confidence intervals
+:width: 90%
+
+Statistical analysis of the T² vs m relationship showing experimental data points with error bars, weighted least-squares regression line, and 95% confidence intervals.
+:::
 
 ### Discussion
 

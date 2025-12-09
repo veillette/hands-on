@@ -143,7 +143,13 @@ Consider a simple experiment: an elastic band suspended from above, with weights
 
 However, to make this vague notion useful for detailed comparison with reality, we need mathematical precision. We might measure the elastic band's extension as a function of load, collecting data like that shown in Table 4.1.
 
-![](../figures/ch4/Fig4_1.png)
+:::{figure} ../figures/ch4/Fig4_1.png
+:label: fig-elastic-band-extension
+:alt: Graph showing elastic band extension versus applied load with data points and uncertainty ranges
+:width: 80%
+
+Extension of an elastic band as a function of load, showing central values (data points) and uncertainty ranges (error bars). This graphical representation reveals patterns that are difficult to discern from tabular data alone.
+:::
 
 :::{note}
 While we've now collected measurements, a table of numbers doesn't readily reveal patterns or relationships. Visual representation helps tremendously. By plotting these measurements on a graph (Figure 4.1), including both central values and uncertainty ranges, we can more easily judge the system's behavior.
@@ -174,38 +180,74 @@ Suppose we've collected measurements (like our elastic band data) for a system w
 **Verbal Description**: The simplest model might be a verbal characterization, such as "The extension increases smoothly with load in an S-shaped curve." While basic, even this represents a conceptual shift from discussing individual data points to proposing a continuous relationship. This construction might later prove inadequate if, for instance, the actual relationship involves discrete steps rather than smooth changes.
 :::
 
-**Smooth Curve Fitting**: A more sophisticated approach involves drawing a smooth curve through observed points (Figure 4.2). This assumes the system's behavior is continuous and regular despite measurement uncertainty and scatter.
+**Smooth Curve Fitting**: A more sophisticated approach involves drawing a smooth curve through observed points ({numref}`fig-smooth-curve-fitting`). This assumes the system's behavior is continuous and regular despite measurement uncertainty and scatter.
 
-![](../figures/ch4/Fig4_2.png)
+:::{figure} ../figures/ch4/Fig4_2.png
+:label: fig-smooth-curve-fitting
+:alt: Graph showing experimental data points with a smooth curve drawn through them
+:width: 80%
+
+A smooth curve fitted through experimental observations, representing an empirical model of the system's continuous behavior.
+:::
 
 :::{warning}
 This assumption often holds for physical systems (like planetary motion), but responsibility for making this judgment rests with the experimenter based on knowledge of the system.
 :::
 
-The smooth curve approach offers practical benefits, particularly for interpolation and extrapolation. If we need to estimate extension at a load between measured values, the curve provides a systematic method (Figure 4.3).
+The smooth curve approach offers practical benefits, particularly for interpolation and extrapolation. If we need to estimate extension at a load between measured values, the curve provides a systematic method ({numref}`fig-interpolation`).
 
-![](../figures/ch4/Fig4_3.png)
+:::{figure} ../figures/ch4/Fig4_3.png
+:label: fig-interpolation
+:alt: Graph demonstrating interpolation between measured data points using a smooth curve
+:width: 80%
 
-:::{caution}
-Similarly, we might attempt to estimate values beyond our measurement range (Figure 4.4), though extrapolation is inherently less reliable than interpolation. We should have strong reasons to believe the system's behavior remains consistent beyond measured ranges, as smooth behavior within measured regions doesn't guarantee similar behavior beyond them (Figure 4.5).
+Interpolation: using a smooth curve to estimate values between measured data points.
 :::
 
-![](../figures/ch4/Fig4_4.png)
+:::{caution}
+Similarly, we might attempt to estimate values beyond our measurement range ({numref}`fig-extrapolation`), though extrapolation is inherently less reliable than interpolation. We should have strong reasons to believe the system's behavior remains consistent beyond measured ranges, as smooth behavior within measured regions doesn't guarantee similar behavior beyond them ({numref}`fig-extrapolation-danger`).
+:::
 
-![](../figures/ch4/Fig4_5.png)
+:::{figure} ../figures/ch4/Fig4_4.png
+:label: fig-extrapolation
+:alt: Graph showing extrapolation of a curve beyond the measured data range
+:width: 80%
+
+Extrapolation: extending the smooth curve beyond the range of measured data points.
+:::
+
+:::{figure} ../figures/ch4/Fig4_5.png
+:label: fig-extrapolation-danger
+:alt: Graph illustrating how extrapolation can fail when system behavior changes beyond the measured range
+:width: 80%
+
+The danger of extrapolation: system behavior may change dramatically beyond the measured range, causing extrapolated predictions to diverge from reality.
+:::
 
 Mathematical interpolation/extrapolation methods can perform these estimates without physically drawing curves, but they still depend fundamentally on assumptions about the system's regularity.
 
 :::{admonition} The Pitfalls of Interpolation
 :class: warning
-Without careful consideration, interpolation and extrapolation can lead to serious errors. Consider Figure 4.6, showing temperature measurements against time. If asked to interpolate between points without knowing the context, someone might draw a smooth curve. Revealing that these are noontime temperatures for successive days would demonstrate the error – interpolating would estimate midnight temperatures!
+Without careful consideration, interpolation and extrapolation can lead to serious errors. Consider {numref}`fig-interpolation-pitfall`, showing temperature measurements against time. If asked to interpolate between points without knowing the context, someone might draw a smooth curve. Revealing that these are noontime temperatures for successive days would demonstrate the error – interpolating would estimate midnight temperatures!
 :::
 
-![](../figures/ch4/Fig4_6.png)
+:::{figure} ../figures/ch4/Fig4_6.png
+:label: fig-interpolation-pitfall
+:alt: Graph of temperature versus time showing daily noontime measurements that appear continuous but have gaps
+:width: 80%
 
-A common but problematic practice is connecting measured points with straight-line segments (Figure 4.7). Computer graphics often do this automatically. But such representations satisfy neither the requirements of observation (they're not data points) nor modeling (they don't represent our conceptual understanding of the system).
+A cautionary example: these temperature measurements represent noontime readings on successive days. Interpolating between points would incorrectly estimate midnight temperatures.
+:::
 
-![](../figures/ch4/Fig4_7.png)
+A common but problematic practice is connecting measured points with straight-line segments ({numref}`fig-line-segments`). Computer graphics often do this automatically. But such representations satisfy neither the requirements of observation (they're not data points) nor modeling (they don't represent our conceptual understanding of the system).
+
+:::{figure} ../figures/ch4/Fig4_7.png
+:label: fig-line-segments
+:alt: Graph showing data points connected by straight line segments instead of a smooth curve
+:width: 80%
+
+A problematic representation: connecting data points with straight-line segments neither represents raw observations nor a meaningful model of system behavior.
+:::
 
 :::{admonition} Mathematical Function Fitting
 :class: tip
@@ -231,9 +273,15 @@ Let's illustrate this with an example:
 
 :::{admonition} The Free-Fall Example
 :class: example
-Consider measuring the fall time of a steel ball dropped from various heights. For an empirical approach, we would simply measure fall times at different heights and plot the results (Figure 4.8), perhaps fitting a curve.
+Consider measuring the fall time of a steel ball dropped from various heights. For an empirical approach, we would simply measure fall times at different heights and plot the results ({numref}`fig-free-fall-empirical`), perhaps fitting a curve.
 
-![](../figures/ch4/Fig4_8.png)
+:::{figure} ../figures/ch4/Fig4_8.png
+:label: fig-free-fall-empirical
+:alt: Graph showing measured fall times versus drop height for a free-falling object
+:width: 80%
+
+Empirical data from a free-fall experiment: measured fall times plotted against drop heights.
+:::
 
 For a theoretical approach, we'd begin with fundamental principles. We might hypothesize constant gravitational acceleration:
 
@@ -267,9 +315,15 @@ Let's examine actual measurements from our free-fall experiment, shown in Table 
 How should we compare these measurements with our theoretical prediction? We could calculate theoretical times for each distance and compare numerically, but this approach has limitations. Small uncertainties in measurements make exact agreement unlikely, and more importantly, our model likely contains systematic approximations.
 :::
 
-A more effective approach uses visual comparison. Figure 4.9 shows: (a) a graph of our experimental measurements as points, (b) our theoretical model as a continuous curve, and (c) both superimposed for direct comparison.
+A more effective approach uses visual comparison. {numref}`fig-model-comparison` shows: (a) a graph of our experimental measurements as points, (b) our theoretical model as a continuous curve, and (c) both superimposed for direct comparison.
 
-![](../figures/ch4/Fig4_9.png)
+:::{figure} ../figures/ch4/Fig4_9.png
+:label: fig-model-comparison
+:alt: Three-panel figure showing experimental data, theoretical model curve, and their superposition for comparison
+:width: 100%
+
+Comparing model predictions with experimental observations: (a) experimental measurements as data points, (b) theoretical model as a continuous curve, and (c) superposition of both for direct comparison.
+:::
 
 :::{important}
 This visual comparison allows us to judge overall correspondence between model and reality. We can immediately see whether they agree, where discrepancies exist, and their magnitude relative to measurement uncertainty.
@@ -316,9 +370,15 @@ Where:
 
 :::{admonition} The Power of Linearization
 :class: important
-Table 4.3 shows these transformed values, and Figure 4.10 displays both the measurements and theoretical line in this format. The transformation dramatically simplifies comparison, making correspondence or discrepancy immediately apparent.
+Table 4.3 shows these transformed values, and {numref}`fig-linearized-analysis` displays both the measurements and theoretical line in this format. The transformation dramatically simplifies comparison, making correspondence or discrepancy immediately apparent.
 
-![](../figures/ch4/Fig4_10.png)
+:::{figure} ../figures/ch4/Fig4_10.png
+:label: fig-linearized-analysis
+:alt: Graph showing linearized data with fall time versus square root of height, demonstrating linear relationship
+:width: 80%
+
+Linearized analysis: plotting fall time versus the square root of drop height transforms the parabolic relationship into a straight line, simplifying model-data comparison.
+:::
 :::
 
 Alternative transformations could work equally well – plotting $t^2$ versus $x$ instead of $t$ versus $x^{1/2}$ would also yield a straight line with different slope. The choice depends on convenience and which approach provides clearer comparison for a particular experiment.
@@ -332,9 +392,15 @@ Often our theoretical models contain unknown constants that must be determined e
 $$x = \text{constant} \times W$$
 :::
 
-After measuring extension versus load and plotting the results (Figure 4.11a), how do we represent this model? The equation actually represents an infinite family of straight lines passing through the origin, with slopes representing all possible spring constant values.
+After measuring extension versus load and plotting the results ({numref}`fig-unknown-constant`a), how do we represent this model? The equation actually represents an infinite family of straight lines passing through the origin, with slopes representing all possible spring constant values.
 
-![](../figures/ch4/Fig4_11.png)
+:::{figure} ../figures/ch4/Fig4_11.png
+:label: fig-unknown-constant
+:alt: Multi-panel figure showing how to determine unknown constants from graphical analysis by finding compatible lines through experimental data
+:width: 100%
+
+Determining unknown constants from graphical analysis: (a) experimental data plotted, (b) family of possible model lines, (c) identifying the range of lines consistent with experimental uncertainties.
+:::
 
 :::{admonition} The Graphical Approach to Parameter Determination
 :class: tip
