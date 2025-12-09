@@ -615,24 +615,47 @@ residuals
 
 ## Problems
 
-1. A student measures the terminal velocity of different objects falling through a viscous fluid. The data is stored in a CSV file with columns for 'Radius (mm)', 'Mass (g)', and 'Velocity (cm/s)'. Write Python code to:
-   a. Load the data
-   b. Convert to SI units
-   c. Test if the velocity is proportional to the square of the radius, as predicted by Stokes' Law
-   d. Determine the viscosity of the fluid
+```{exercise}
+:label: prob-stokes-law-analysis
 
-2. Using the pendulum example from this appendix, modify the code to:
-   a. Add a random error to each period measurement
-   b. Run the analysis 1000 times with different random errors
-   c. Create a histogram of the resulting g values
-   d. Determine if the uncertainty estimated by curve_fit matches the standard deviation of your Monte Carlo simulation
+A student measures the terminal velocity of different objects falling through a viscous fluid. The data is stored in a CSV file with columns for 'Radius (mm)', 'Mass (g)', and 'Velocity (cm/s)'. Write Python code to:
 
-3. A student measures the distance vs. time for a cart rolling down an inclined plane. Write code to:
-   a. Create a scatter plot of distance vs. time
-   b. Fit both a linear model ($d = vt$) and a quadratic model ($d = \frac{1}{2}at^2$)
-   c. Compare the models using residual analysis
-   d. Determine which model better describes the motion
+a. Load the data
+b. Convert to SI units
+c. Test if the velocity is proportional to the square of the radius, as predicted by Stokes' Law
+d. Determine the viscosity of the fluid
+```
 
-4. Create a Jupyter notebook that demonstrates the propagation of uncertainties for different mathematical operations (addition, multiplication, powers, etc.) using both analytical formulas and Monte Carlo simulation.
+```{exercise}
+:label: prob-monte-carlo-pendulum
 
-5. Using the least squares method described in Appendix 2, implement the weighted least squares algorithm in Python and compare its results with those from SciPy's curve_fit function.
+Using the pendulum example from this appendix, modify the code to:
+
+a. Add a random error to each period measurement
+b. Run the analysis 1000 times with different random errors
+c. Create a histogram of the resulting g values
+d. Determine if the uncertainty estimated by curve_fit matches the standard deviation of your Monte Carlo simulation
+```
+
+```{exercise}
+:label: prob-inclined-plane-fitting
+
+A student measures the distance vs. time for a cart rolling down an inclined plane. Write code to:
+
+a. Create a scatter plot of distance vs. time
+b. Fit both a linear model ($d = vt$) and a quadratic model ($d = \frac{1}{2}at^2$)
+c. Compare the models using residual analysis
+d. Determine which model better describes the motion
+```
+
+```{exercise}
+:label: prob-uncertainty-propagation-notebook
+
+Create a Jupyter notebook that demonstrates the propagation of uncertainties for different mathematical operations (addition, multiplication, powers, etc.) using both analytical formulas and Monte Carlo simulation.
+```
+
+```{exercise}
+:label: prob-weighted-least-squares
+
+Using the least squares method described in Appendix 2, implement the weighted least squares algorithm in Python and compare its results with those from SciPy's curve_fit function.
+```

@@ -241,3 +241,80 @@ conclusion
 error bar
 : A graphical representation of the variability of data used on graphs to indicate the uncertainty in a reported measurement.
 :::
+
+## Problems
+
+```{exercise}
+:label: prob-report-title
+
+For each of the following experiments, write an appropriate title that addresses the three key questions: (1) Is this experimental or theoretical work? (2) What specific topic does it address? (3) What methodology was employed?
+
+a. Measuring the speed of sound in air using resonance tubes
+b. Investigating how temperature affects the resistance of a copper wire
+c. Determining the focal length of a converging lens using object-image distances
+```
+
+```{exercise}
+:label: prob-introduction-structure
+
+A student writes the following introduction for a pendulum experiment:
+
+"We measured the period of a pendulum at different lengths. The equation is $T = 2\pi\sqrt{L/g}$. We got good results."
+
+Identify the deficiencies in this introduction and rewrite it to include all essential components: topic statement, review of existing information, application to the specific experiment, and summary of experimental intention.
+```
+
+```{exercise}
+:label: prob-procedure-clarity
+
+The following procedure description appears in a lab report:
+
+"We set up the circuit and measured the voltage and current. Then we changed the resistance and repeated."
+
+Explain why this description is inadequate for a scientific report and describe what additional information should be included for reproducibility.
+```
+
+```{exercise}
+:label: prob-graph-critique
+
+A student presents a graph with the following characteristics:
+- Axis labels show only "V" and "I" without units
+- Data points are shown but without error bars
+- The scale starts at zero for both axes, leaving most of the graph area empty
+- No title or caption is provided
+
+List the improvements needed to make this an acceptable scientific graph and explain why each change is important.
+```
+
+```{exercise}
+:label: prob-discussion-objectivity
+
+After measuring the acceleration due to gravity and obtaining $g = 9.60 \pm 0.15$ m/s², a student writes in the discussion:
+
+"Our result of 9.60 m/s² is wrong because it should be 9.81 m/s². The experiment failed due to errors."
+
+Critique this discussion and rewrite it to demonstrate proper objective analysis of experimental results.
+```
+
+```{exercise}
+:label: prob-apparatus-diagram
+
+Describe the essential elements that should be included in an apparatus diagram for an experiment measuring the specific heat of a metal using the method of mixtures. Explain how each element contributes to the reader's understanding.
+```
+
+```{exercise}
+:label: prob-results-presentation
+
+A student has collected the following data for a cooling curve experiment and needs to present it in a report:
+- 20 temperature measurements taken at 30-second intervals
+- Each measurement has an uncertainty of ±0.5°C
+- The initial temperature was 95°C and the final was 25°C
+
+Describe how this data should be presented in the Results section, including recommendations for tables, graphs, and uncertainty notation.
+```
+
+```{exercise}
+:label: prob-discrepancy-speculation
+
+In an experiment to verify Snell's law, a student finds that the measured refractive index of glass is consistently 3% higher than the accepted value, despite the uncertainty being only 1%. Write a paragraph for the Discussion section that appropriately addresses this discrepancy, following the guidelines for speculation about model-system differences.
+```
