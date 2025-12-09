@@ -11,7 +11,7 @@ By the end of this chapter, you will be able to:
 - Recognize that all measurements contain inherent uncertainty
 - Articulate the purpose of physics laboratories as training grounds for developing experimental skills applicable to complex real-world systems
 - Evaluate scientific claims by categorizing them as observations, model statements, or system-model relationships
-:::
+  :::
 
 :::{important}
 Beyond Physics: A Universal Approach
