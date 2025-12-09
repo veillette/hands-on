@@ -13,7 +13,7 @@ By the end of this chapter, we will be able to:
 - Develop a systematic measurement program with appropriate precision targets
 - Apply null-effect measurement techniques to detect subtle effects
 - Distinguish between experimental and control groups in biological and observational studies
-  :::
+:::
 
 ## Introduction to Experimental Design
 
@@ -137,7 +137,7 @@ Where:
 - $h$ = distance from center of mass to support point (input)
 - $g$ = gravitational acceleration (unknown constant)
 - $k$ = radius of gyration about center of mass (unknown constant)
-  :::
+:::
 
 Converting this to linear form using single-variable functions of h and T proves impossible. However, using compound variables makes it possible. Starting by squaring both sides:
 
@@ -167,7 +167,7 @@ This example demonstrates the superiority of linear analysis. The traditional ap
 3. It avoids the unreliability of shallow-angle intercepts
 4. It utilizes all data points rather than just those near intercepts
 5. It determines $g$ and $k$ independently, preventing error propagation
-   :::
+:::
 
 Compound variables also prove valuable with multiple input variables. When measuring specific heat using flow calorimetry, the heat balance equation is:
 
@@ -212,7 +212,7 @@ This approach offers two key advantages over plotting y versus xⁿ directly:
 
 1. It accommodates very large variable ranges on reasonably sized graph paper
 2. It reveals when data follows a power law with an unexpected exponent
-   :::
+:::
 
 For instance, if measurements follow y = x¹·⁸ rather than y = x², plotting y versus x² would show systematic deviation from linearity without revealing the true relationship. A log-log plot would still produce a straight line, immediately indicating a power relationship, with the slope revealing the actual exponent (1.8).
 
@@ -274,7 +274,7 @@ Without an existing model to test, our motivations might include:
 - Practical information needs
 - Seeking guidance for theoretical model construction
 - Developing an empirical model for calculation purposes
-  :::
+:::
 
 Even without detailed theoretical understanding, empirical models prove extremely valuable. They help organize thinking about complex systems and enable mathematical operations like interpolation, extrapolation, and forecasting.
 
@@ -305,7 +305,7 @@ The general method:
 2. Write dimensions of both sides using M, L, and T
 3. Create equations by matching powers of M, L, and T
 4. Solve for the unknown exponents
-   :::
+:::
 
 For example, analyzing the velocity ($v$) of waves on a string under tension ($T$) with mass per unit length ($m$):
 
@@ -395,7 +395,7 @@ These questions present multiple challenges:
 - Delayed responses to interventions
 - Inability to observe true null effects (we rarely have baseline measurements before interventions)
 - Numerous confounding factors
-  :::
+:::
 
 The best approach: meticulous sampling procedures. Create artificial null-effect measurements by constructing treatment groups under the influence we're studying and control groups exempt from it but otherwise matched as closely as possible.
 

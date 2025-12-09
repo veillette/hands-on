@@ -407,7 +407,7 @@ This example demonstrates how to:
 - Visualize results with appropriate error bars
 - Compare fitted results with expected values
 - Analyze residuals to evaluate the quality of the fit
-  :::
+:::
 
 ## Data Analysis Workflow for Physics Experiments
 

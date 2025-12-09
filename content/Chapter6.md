@@ -54,7 +54,7 @@ By the end of this chapter, we will be able to:
 - Recognize situations where least squares fitting is inappropriate and exercise appropriate caution
 - Find empirical functions (power laws, exponentials, polynomials) when no theoretical model exists
 - Assess overall experimental precision and report results with appropriate significant figures
-  :::
+:::
 
 Experimental data alone tells only part of the story. The ability to properly evaluate results is what transforms raw measurements into meaningful scientific knowledge - a fundamental skill that distinguishes casual observations from rigorous scientific inquiry. This chapter focuses on why this evaluation process is crucial: it validates measurements through uncertainty analysis, connects physical systems with theoretical models, and ultimately determines whether findings represent substantiated scientific knowledge or merely unverified observations.
 
@@ -99,7 +99,7 @@ The complete evaluation process consists of four key stages:
 2. Assess correspondence between experimental system and theoretical model
 3. Calculate values of the properties we set out to measure
 4. Estimate the overall precision of the experiment
-   :::
+:::
 
 Let's examine each stage in detail.
 
