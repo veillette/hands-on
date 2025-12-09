@@ -1,17 +1,44 @@
 # Evaluating Experimental Results
 
-<!-- TODO: Add missing figures referenced in this chapter:
-     - Figure 6.1(a-g): Various model-system comparison scenarios
-     - Figure 6.2(a-b): Data points and best-fit line determination
-     - Figure 6.3: Slope calculation from graph coordinates
-     - Figure 6.4: Least squares method illustration (P₁Q₁, P₂Q₂ deviations)
-     - Figure 6.5: Correlation coefficient examples
-     - Figure 6.6(a-b): Clear vs ambiguous data relationships
-     - Figure 6.7(a-c): Residual analysis patterns
-     - Figure 6.8: Linearization examples
-     - Figure 6.9: Exponential fitting via semi-log plot
-     - Figure 6.10(a-b): Power law fitting via log-log plot
-     - Figure 6.11-6.12: Additional graphical analysis examples
+<!--
+NOTE: This chapter requires figures that have not yet been created.
+When figures are added, they should use MyST figure directives with proper labels for cross-referencing.
+
+Required figures (with suggested labels):
+- fig-model-comparison-scenarios (Figure 6.1a-g): Various model-system comparison scenarios
+  - (a) Good correspondence: model passes through all uncertainty regions
+  - (b) Partial correspondence at low values only
+  - (c) Partial correspondence at high values only
+  - (d) Unexpected positive intercept
+  - (e) Unexpected negative intercept
+  - (f) Excessive scatter beyond predicted uncertainty
+  - (g) Complete non-correspondence
+
+- fig-best-fit-line (Figure 6.2a-b): Data points and best-fit line determination
+  - (a) Raw data points with uncertainties
+  - (b) Best-fit line with limiting lines showing uncertainty range
+
+- fig-slope-calculation (Figure 6.3): Slope calculation from graph coordinates
+  - Shows points (I₁, V₁) and (I₂, V₂) with slope calculation method
+
+- fig-least-squares (Figure 6.4): Least squares method illustration
+  - Shows vertical deviations P₁Q₁, P₂Q₂, etc. from data points to best-fit line
+
+- fig-correlation-examples (Figure 6.5): Correlation coefficient examples
+  - Shows how blind least squares can produce meaningless results with non-linear data
+
+- fig-data-relationships (Figure 6.6a-b): Clear vs ambiguous data relationships
+  - (a) Clear resistor V-I relationship
+  - (b) Ambiguous vitamin C vs cold frequency relationship
+
+Example MyST figure directive format:
+:::{figure} ../figures/ch6/Fig6_1.png
+:label: fig-model-comparison-scenarios
+:alt: Description of the figure content
+:width: 80%
+
+Caption text describing the figure.
+:::
 -->
 
 :::{admonition} Learning Objectives
