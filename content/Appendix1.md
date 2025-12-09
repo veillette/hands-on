@@ -1,4 +1,4 @@
-# Appendix I: The Gaussian Distribution - Mathematical Properties and Derivation
+# Appendix 1: The Gaussian Distribution - Mathematical Properties and Derivation
 
 ## The Equation of the Gaussian Distribution Curve
 
@@ -261,7 +261,7 @@ For the probability that a measurement falls within $\pm x/\sigma$ of the mean (
 - Approximately 68% of all measurements fall within $\pm 1\sigma$ of the mean
 - Approximately 95% fall within $\pm 2\sigma$
 - Approximately 99.7% fall within $\pm 3\sigma$ (the "three-sigma rule")
-  :::
+:::
 
 These probabilities form the foundation of statistical inference. When we make statements about the uncertainty of measurements, we often use these standard intervals - particularly the 68% confidence interval ($\pm 1\sigma$) and the 95% confidence interval ($\pm 2\sigma$).
 

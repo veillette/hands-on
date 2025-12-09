@@ -11,7 +11,7 @@ By the end of this chapter, you will be able to:
 - Recognize that all measurements contain inherent uncertainty
 - Articulate the purpose of physics laboratories as training grounds for developing experimental skills applicable to complex real-world systems
 - Evaluate scientific claims by categorizing them as observations, model statements, or system-model relationships
-  :::
+:::
 
 :::{important}
 Beyond Physics: A Universal Approach
@@ -142,7 +142,7 @@ scientific literacy
 ```{exercise}
 :label: prob-system-model
 
-1. For each scenario, identify whether the statement refers to a system or a model:
+For each scenario, identify whether the statement refers to a system or a model:
    a) The temperature readings from a weather station
    b) The equations describing planetary motion
    c) A computer simulation of protein folding
@@ -152,7 +152,7 @@ scientific literacy
 ```{exercise}
 :label: prob-experimental-design
 
-2. Design a simple experiment to test how string length affects a pendulum's period. Include:
+Design a simple experiment to test how string length affects a pendulum's period. Include:
    a) The system under study
    b) Input variables you'll control
    c) Output variables you'll measure
@@ -162,7 +162,7 @@ scientific literacy
 ```{exercise}
 :label: prob-scientific-literacy
 
-3. Find a scientific claim in a news article and analyze it by:
+Find a scientific claim in a news article and analyze it by:
    a) Identifying the system being studied
    b) Describing how measurements were likely made
    c) Assessing potential sources of uncertainty
@@ -172,7 +172,7 @@ scientific literacy
 ```{exercise}
 :label: prob-uncertainty
 
-4. A student measures a block's length five times:
+A student measures a block's length five times:
    10.2 cm, 10.4 cm, 10.3 cm, 10.5 cm, 10.3 cm
    a) Calculate the mean length
    b) Estimate the uncertainty range
@@ -183,7 +183,7 @@ scientific literacy
 ```{exercise}
 :label: prob-model-evaluation
 
-5. Evaluate this statement: "The model predicted temperatures within 2°C of actual measurements."
+Evaluate this statement: "The model predicted temperatures within 2°C of actual measurements."
    a) What does this tell us about the model's accuracy?
    b) What additional information would help assess the model's quality?
    c) How might the model be improved?
@@ -193,7 +193,7 @@ scientific literacy
 ```{exercise}
 :label: prob-experimental-thinking
 
-6. Choose a common household appliance and analyze it as an experimental system:
+Choose a common household appliance and analyze it as an experimental system:
    a) Identify its key components
    b) Describe inputs you can control
    c) Describe outputs you can measure
