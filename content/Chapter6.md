@@ -536,3 +536,96 @@ goodness of fit
 degrees of freedom
 : The number of values in the final calculation that are free to vary.
 :::
+
+## Problems
+
+```{exercise}
+:label: prob-best-fit-line
+
+A student measures the voltage across a resistor at different currents and obtains the following data:
+
+| Current (mA) | Voltage (V) |
+|--------------|-------------|
+| 10 ± 1       | 2.1 ± 0.1   |
+| 20 ± 1       | 4.0 ± 0.1   |
+| 30 ± 1       | 6.2 ± 0.1   |
+| 40 ± 1       | 8.1 ± 0.1   |
+| 50 ± 1       | 10.0 ± 0.1  |
+
+Draw a best-fit line through the data and determine the resistance with its uncertainty using the graphical method described in this chapter.
+```
+
+```{exercise}
+:label: prob-least-squares-slope
+
+Using the data from the previous problem, apply the least squares method to find:
+a. The best-fit slope and intercept
+b. The standard deviations of the slope and intercept
+c. Compare your results with those obtained from the graphical method.
+```
+
+```{exercise}
+:label: prob-model-correspondence
+
+An experiment investigating the relationship between pendulum period $T$ and length $L$ yields the following results:
+
+| Length (cm) | Period (s) |
+|-------------|------------|
+| 20          | 0.91       |
+| 40          | 1.28       |
+| 60          | 1.54       |
+| 80          | 1.78       |
+| 100         | 1.99       |
+
+The theoretical model predicts $T = 2\pi\sqrt{L/g}$. Assess the correspondence between this model and the experimental data, and determine a value for $g$ with appropriate uncertainty.
+```
+
+```{exercise}
+:label: prob-unexpected-intercept
+
+A student plots voltage versus current for a circuit element and obtains a straight line with a non-zero intercept on the voltage axis. List three possible physical causes for this unexpected intercept and explain how each would affect the interpretation of the results.
+```
+
+```{exercise}
+:label: prob-power-law
+
+The following data relates the intensity of light at various distances from a point source:
+
+| Distance (m) | Intensity (W/m²) |
+|--------------|------------------|
+| 1.0          | 100              |
+| 1.5          | 44               |
+| 2.0          | 25               |
+| 2.5          | 16               |
+| 3.0          | 11               |
+
+Use a logarithmic plot to determine if this data follows a power law relationship $I = kd^n$, and find the values of $k$ and $n$.
+```
+
+```{exercise}
+:label: prob-exponential-decay
+
+A radioactive sample produces the following count rates at different times:
+
+| Time (min) | Count rate (counts/s) |
+|------------|----------------------|
+| 0          | 1000                 |
+| 5          | 607                  |
+| 10         | 368                  |
+| 15         | 223                  |
+| 20         | 135                  |
+
+Use a semi-log plot to verify the exponential decay model and determine the half-life of the sample.
+```
+
+```{exercise}
+:label: prob-scatter-assessment
+
+When plotting experimental data, you observe that the scatter of points about the best-fit line is significantly larger than expected from your estimated measurement uncertainties. Describe three approaches you might take to address this situation and explain the advantages and limitations of each.
+```
+
+```{exercise}
+:label: prob-correlation-causation
+
+A study finds a strong correlation between ice cream sales and drowning incidents. Explain why correlation does not imply causation in this case, and describe what additional information or experimental design would be needed to establish a causal relationship.
+```
