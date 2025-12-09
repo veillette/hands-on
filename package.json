@@ -32,7 +32,7 @@
   },
   "scripts": {
     "export": "myst build -a",
-    "build": "myst build --html",
+    "build": "myst build --html && mkdir -p _build/html/public && cp -f public/textbook.pdf _build/html/public/ 2>/dev/null || true",
     "clean": "myst clean",
     "serve": "npx serve _build/html",
     "pdf": "myst build --pdf",
@@ -40,7 +40,7 @@
     "addFrontMatter": "node scripts/addFrontMatter.js",
     "removeFrontMatter": "node scripts/removeFrontMatter.js",
     "prebuild:full": "npm run removeFrontMatter && npm run clean && npm run addFrontMatter",
-    "build:full": "npm run export && npm run build",
+    "build:full": "npm run pdf && npm run export && npm run build",
     "postbuild:full": "npm run removeFrontMatter",
     "all": "npm run prebuild:full && npm run build:full && npm run postbuild:full",
     "format": "prettier --write \"content/**/*.md\"",

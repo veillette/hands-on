@@ -104,6 +104,8 @@ This structured methodology ensures reproducibility and minimizes both random an
 
 The measurements are presented in Table 1, with each entry including its associated uncertainty determined through statistical analysis of repeated measurements.
 
+<!-- prettier-ignore-start -->
+
 :::{list-table} Variation of Oscillation Period with Load
 :label: tbl-oscillation-period-1
 :header-rows: 1
@@ -163,12 +165,14 @@ The measurements are presented in Table 1, with each entry including its associa
   - 2.103
   - 0.009
 - - 0.50 ± 0.0001
-    - 10
-    - 15.20 ± 0.03
-    - 1.520 ± 0.003
-    - 2.310
-    - 0.009
-      :::
+  - 10
+  - 15.20 ± 0.03
+  - 1.520 ± 0.003
+  - 2.310
+  - 0.009
+:::
+
+<!-- prettier-ignore-end -->
 
 ### Computational Analysis
 
@@ -391,6 +395,8 @@ Data analysis employed numerical methods using Python with scientific computing 
 
 The measured relationship between load and oscillation period is presented in Table 2, with uncertainties determined through statistical analysis of repeated measurements.
 
+<!-- prettier-ignore-start -->
+
 :::{list-table} Variation of Oscillation Period with Load
 :label: tbl-oscillation-period-2
 :header-rows: 1
@@ -441,11 +447,13 @@ The measured relationship between load and oscillation period is presented in Ta
   - 1.450 ± 0.003
   - 2.103 ± 0.009
 - - 0.50 ± 0.0001
-    - 10
-    - 15.20 ± 0.03
-    - 1.520 ± 0.003
-    - 2.310 ± 0.009
-      :::
+  - 10
+  - 15.20 ± 0.03
+  - 1.520 ± 0.003
+  - 2.310 ± 0.009
+:::
+
+<!-- prettier-ignore-end -->
 
 Computational analysis of this data using weighted least-squares regression yielded:
 $$k = 9.81 \pm 0.18 \text{ N/m}$$

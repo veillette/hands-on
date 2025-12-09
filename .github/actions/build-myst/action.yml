@@ -47,7 +47,7 @@ runs:
 
     - name: Add frontmatter to markdown files
       shell: bash
-      run: node scripts/addFrontMatter.js
+      run: npm run addFrontMatter
 
     - name: Create output directories
       shell: bash
@@ -58,15 +58,15 @@ runs:
     - name: Build export formats (PDF, DOCX, MD)
       if: inputs.build-exports == 'true'
       shell: bash
-      run: npx myst build -a
+      run: npm run export
 
     - name: Build HTML
       if: inputs.build-html == 'true'
       shell: bash
       env:
         NODE_OPTIONS: "--max-old-space-size=${{ inputs.node-memory }}"
-      run: npx myst build --html
+      run: npm run build
 
     - name: Clean up frontmatter
       shell: bash
-      run: node scripts/removeFrontMatter.js
+      run: npm run removeFrontMatter

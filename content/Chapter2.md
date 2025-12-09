@@ -88,6 +88,8 @@ This notation provides two advantages:
 
 This uncertainty value (±0.2 cm) represents the **absolute uncertainty** of our measurement. However, the significance of any uncertainty depends on the measurement's magnitude. An uncertainty of ±0.2 cm would be:
 
+<!-- prettier-ignore-start -->
+
 :::{list-table} Impact of Uncertainty in Different Contexts
 :label: tbl-uncertainty-impact
 :header-rows: 1
@@ -101,6 +103,8 @@ This uncertainty value (±0.2 cm) represents the **absolute uncertainty** of our
 - - Measuring astronomical distances
   - Negligible
 :::
+
+<!-- prettier-ignore-end -->
 
 To better evaluate a measurement's quality, we use **relative uncertainty**, defined as:
 

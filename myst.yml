@@ -29,9 +29,6 @@ project:
       path: ./plugins/jupyterlite.mjs
     - type: javascript
       path: ./plugins/pyodide.mjs
-  downloads:
-    - id: typstpdf
-      title: "Download PDF"
   authors:
     - name: "Martin Veillette"
   date: 2025-01-01
@@ -53,7 +50,7 @@ project:
     - format: typst
       id: typstpdf
       # template: https://github.com/rowanc1/typst-book.git
-      output: exports/textbook.pdf
+      output: public/textbook.pdf
       articles:
         - content/Preface.md
         - content/Chapter1.md
@@ -101,8 +98,8 @@ site:
   title: "Advanced Laboratory Methods in Physics"
   description: "A comprehensive guide to advanced laboratory techniques and methods in physics"
   actions:
-    - title: "PDF"
-      url: exports/textbook.pdf
+    - title: "Download PDF"
+      url: public/textbook.pdf
   nav:
     - title: "Contribute"
       children:
