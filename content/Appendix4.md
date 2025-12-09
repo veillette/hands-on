@@ -163,12 +163,12 @@ The measurements are presented in Table 1, with each entry including its associa
   - 2.103
   - 0.009
 - - 0.50 ± 0.0001
-  - 10
-  - 15.20 ± 0.03
-  - 1.520 ± 0.003
-  - 2.310
-  - 0.009
-:::
+    - 10
+    - 15.20 ± 0.03
+    - 1.520 ± 0.003
+    - 2.310
+    - 0.009
+      :::
 
 ### Computational Analysis
 
@@ -441,11 +441,11 @@ The measured relationship between load and oscillation period is presented in Ta
   - 1.450 ± 0.003
   - 2.103 ± 0.009
 - - 0.50 ± 0.0001
-  - 10
-  - 15.20 ± 0.03
-  - 1.520 ± 0.003
-  - 2.310 ± 0.009
-:::
+    - 10
+    - 15.20 ± 0.03
+    - 1.520 ± 0.003
+    - 2.310 ± 0.009
+      :::
 
 Computational analysis of this data using weighted least-squares regression yielded:
 $$k = 9.81 \pm 0.18 \text{ N/m}$$

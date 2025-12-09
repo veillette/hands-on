@@ -3,7 +3,7 @@
 :::{admonition} Learning Objectives
 :class: note
 
-By the end of this chapter, you will be able to:
+By the end of this chapter, we will be able to:
 
 - Articulate that the fundamental goal of experimentation is comparing physical systems with theoretical models
 - Convert equations into straight-line form using appropriate variable transformations
@@ -19,20 +19,20 @@ By the end of this chapter, you will be able to:
 
 In the previous chapter, we explored the various ways researchers compare models with real-world systems. The diversity we encountered suggests a crucial insight: there is no universal approach to planning experiments. The techniques and methodologies researchers employ necessarily depend on specific circumstances and objectives.
 
-Despite this diversity, certain fundamental principles remain valid across virtually all experimental situations. Perhaps most important among these is keeping your experimental purpose clearly in mind: **the fundamental requirement in experimentation, regardless of what else is happening, is to compare the properties of a physical system with the properties of one or more theoretical models**.
+Despite this diversity, certain fundamental principles remain valid across virtually all experimental situations. Perhaps most important among these is keeping our experimental purpose clearly in mind: **the fundamental requirement in experimentation, regardless of what else is happening, is to compare the properties of a physical system with the properties of one or more theoretical models**.
 
 :::{admonition} The Nature of Variables in Experiments
 :class: note
-Let's assume that preliminary investigation has already identified the significant variables in your system. Some variables will be under your control (input variables), while others will be determined by the system itself (output variables). We'll primarily focus on situations where input variables can be isolated and controlled independently. When everything varies simultaneously, interpreting results becomes significantly more challenging—a common obstacle in professional research, but one we'll avoid for now by focusing on fully controlled experimental scenarios.
+Let's assume that preliminary investigation has already identified the significant variables in our system. Some variables will be under our control (input variables), while others will be determined by the system itself (output variables). We'll primarily focus on situations where input variables can be isolated and controlled independently. When everything varies simultaneously, interpreting results becomes significantly more challenging—a common obstacle in professional research, but one we'll avoid for now by focusing on fully controlled experimental scenarios.
 :::
 
 ## Testing an Existing Model
 
 :::{admonition} The Primary Goal of Experimentation
 :class: important
-When you already have a theoretical model—whether it's a simple relationship like Hooke's Law ($F = kx$) or Ohm's Law ($V = IR$), or something derived from a sophisticated theory like Einstein's general relativity—the model's properties will typically take the form of functional relationships between variables.
+When we already have a theoretical model—whether it's a simple relationship like Hooke's Law ($F = kx$) or Ohm's Law ($V = IR$), or something derived from a sophisticated theory like Einstein's general relativity—the model's properties will typically take the form of functional relationships between variables.
 
-Your primary goal remains comparing the model's properties with those of the physical system. Only after verifying through experimentation that the system and model properties overlap adequately (at least within some range) can you confidently proceed with measuring the quantities of interest.
+Our primary goal remains comparing the model's properties with those of the physical system. Only after verifying through experimentation that the system and model properties overlap adequately (at least within some range) can we confidently proceed with measuring the quantities of interest.
 :::
 
 Remember that determining whether a model is appropriate for a given system must be based on experimental evidence. We aren't attempting to decide whether models are "true" or "false" in some absolute sense—all models are imperfect approximations. Rather, we need to determine if a particular model is adequate for our specific purposes at our desired level of precision.
@@ -47,7 +47,7 @@ Since conventional graphs are two-dimensional, we initially need to limit oursel
 This approach assumes we can hold input variables constant independently of one another. When this isn't possible, more sophisticated techniques become necessary, which we'll touch on later.
 :::
 
-For now, assuming we're working with a single input variable (either because only one exists or because we've isolated one by controlling the others), our procedure is straightforward: measure how the output variable changes with the input variable, then plot these measurements for comparison with the model's predictions. As noted earlier, the advantages of linear representation are so significant that we'll focus primarily on transforming our data into straight-line form.
+For now, assuming we're working with a single input variable (either because only one exists or because we've isolated one by controlling the others), the procedure is straightforward: measure how the output variable changes with the input variable, then plot these measurements for comparison with the model's predictions. As noted earlier, the advantages of linear representation are so significant that we'll focus primarily on transforming data into straight-line form.
 
 ## Converting Equations to Straight-Line Form
 
@@ -72,7 +72,7 @@ $$\text{slope} = 0.4515$$
 $$\text{intercept} = 0$$
 
 :::{note}
-There's no single formula for these transformations. The most effective approach is keeping the target form clearly in mind while rearranging the original equation until you achieve the desired structure.
+There's no single formula for these transformations. The most effective approach is keeping the target form clearly in mind while rearranging the original equation until we achieve the desired structure.
 :::
 
 Multiple valid transformations often exist for a given equation. The function above could be equivalently expressed as:
@@ -80,13 +80,13 @@ $$x^{1/2} = \frac{1}{0.4515}t$$
 $$t^2 = 0.2309x$$
 $$x = 4.905t^2$$
 
-While convention often suggests plotting input variables horizontally and output variables vertically, there's no strict requirement to do so. Choose the representation that best serves your analytical purposes.
+While convention often suggests plotting input variables horizontally and output variables vertically, there's no strict requirement to do so. Choose the representation that best serves our analytical purposes.
 
 ### Practical Considerations
 
-:::{admonition} Simplifying Your Analysis
+:::{admonition} Simplifying the Analysis
 :class: tip
-Your plotting choices should consider both experimental requirements and practical convenience. Generally, plot variables in their simplest form, leaving complex arithmetic for the final calculation stage.
+Plotting choices should consider both experimental requirements and practical convenience. Generally, plot variables in their simplest form, leaving complex arithmetic for the final calculation stage.
 :::
 
 For example, when analyzing the period of a physical pendulum, the equation is given by:
@@ -108,20 +108,20 @@ Where:
 - $k_i$ = length of each component (for extended objects)
 
 :::{warning}
-You might be tempted to plot $T$ versus $\sqrt{\frac{1}{d}}$ for different configurations, but this would require calculating the complex moment of inertia for each data point and introduce compounded uncertainties.
+We might be tempted to plot $T$ versus $\sqrt{\frac{1}{d}}$ for different configurations, but this would require calculating the complex moment of inertia for each data point and introduce compounded uncertainties.
 :::
 
 A better approach: square both sides of the original equation to get:
 $$T^2 = 4\pi^2\frac{I}{mgd}$$
 
-Then plot $T^2$ versus $\frac{1}{d}$ for a fixed configuration. This gives a straight line with slope $4\pi^2\frac{I}{mg}$. After measuring the slope, you can calculate the moment of inertia using:
+Then plot $T^2$ versus $\frac{1}{d}$ for a fixed configuration. This gives a straight line with slope $4\pi^2\frac{I}{mg}$. After measuring the slope, we can calculate the moment of inertia using:
 $$I = \frac{mg \times \text{slope}}{4\pi^2}$$
 
 :::{important}
-This method simplifies your data collection and analysis while providing direct insight into the system's physical properties. By postponing the calculation of the moment of inertia until after finding the slope, you reduce error propagation and gain a clearer understanding of the pendulum's behavior.
+This method simplifies data collection and analysis while providing direct insight into the system's physical properties. By postponing the calculation of the moment of inertia until after finding the slope, we reduce error propagation and gain a clearer understanding of the pendulum's behavior.
 :::
 
-This principle—plot variables in their simplest form and leave arithmetic for the final calculation—will serve you well in experimental design.
+This principle—plot variables in their simplest form and leave arithmetic for the final calculation—serves well in experimental design.
 
 ### Working with Compound Variables
 
@@ -176,10 +176,10 @@ $$Q = mC\Delta T$$
 Where $Q$ is heat generation rate, $m$ is mass flow rate, $C$ is specific heat, and $\Delta T$ is temperature difference.
 
 :::{tip}
-Rather than plotting $\Delta T$ versus $1/m$ (with separate curves for different $Q$ values) or $\Delta T$ versus $Q$ (with separate curves for different $m$ values), you could plot $m\Delta T$ versus $Q$. This creates a single graph incorporating both input variables simultaneously, with slope $C$, enabling efficient model testing and parameter determination.
+Rather than plotting $\Delta T$ versus $1/m$ (with separate curves for different $Q$ values) or $\Delta T$ versus $Q$ (with separate curves for different $m$ values), we could plot $m\Delta T$ versus $Q$. This creates a single graph incorporating both input variables simultaneously, with slope $C$, enabling efficient model testing and parameter determination.
 :::
 
-If plotting with compound variables reveals unexpected patterns (scattered data or nonlinearity), you can always revert to plotting individual variable pairs to investigate further.
+If plotting with compound variables reveals unexpected patterns (scattered data or nonlinearity), we can always revert to plotting individual variable pairs to investigate further.
 
 ### Logarithmic Transformations
 
@@ -222,26 +222,26 @@ We'll explore log-log plotting further when discussing empirical model construct
 
 :::{admonition} The Importance of Planning
 :class: important
-Let's examine the practical steps for preparing an experiment. While these may seem excessive for simple teaching laboratory exercises, they represent essential practices for serious research. The simple experiments in educational settings simulate more complex situations you'll encounter in professional work, where inadequate planning can have serious consequences.
+Let's examine the practical steps for preparing an experiment. While these may seem excessive for simple teaching laboratory exercises, they represent essential practices for serious research. The simple experiments in educational settings simulate more complex situations we'll encounter in professional work, where inadequate planning can have serious consequences.
 :::
 
 The planning process includes:
 
-1. **Identify system and model**: This seemingly obvious step can be surprisingly challenging. The phenomenon under study is often surrounded by measurement apparatus, obscuring the fundamental system. If you struggle to identify your system, ask: "What entity's properties does my model describe?"
+1. **Identify system and model**: This seemingly obvious step can be surprisingly challenging. The phenomenon under study is often surrounded by measurement apparatus, obscuring the fundamental system. If we struggle to identify the system, ask: "What entity's properties does the model describe?"
 
-   Similarly, clearly define your model's limitations. When studying falling objects, will you account for air resistance? Neglecting air resistance isn't irresponsible—it's defining one aspect of your model. The experiment itself will reveal whether this simplification is justified at your desired precision level.
+   Similarly, clearly define the model's limitations. When studying falling objects, will we account for air resistance? Neglecting air resistance isn't irresponsible—it's defining one aspect of the model. The experiment itself will reveal whether this simplification is justified at the desired precision level.
 
-2. **Select variables**: Typically, one quantity presents itself as the natural output variable. If there's only one input variable, selection is straightforward. With multiple input variables, identify your primary independent variable and vary others in discrete steps.
+2. **Select variables**: Typically, one quantity presents itself as the natural output variable. If there's only one input variable, selection is straightforward. With multiple input variables, identify the primary independent variable and vary others in discrete steps.
 
-3. **Transform the equation**: Put your model equation into straight-line form as described earlier. Remember, multiple valid transformations usually exist. Choose one that serves your purposes effectively. When the equation contains unknown parameters to be determined experimentally, structure your transformation to place these unknowns in the slope rather than the intercept whenever possible. Intercepts are more susceptible to systematic errors from instrument defects.
+3. **Transform the equation**: Put the model equation into straight-line form as described earlier. Remember, multiple valid transformations usually exist. Choose one that serves our purposes effectively. When the equation contains unknown parameters to be determined experimentally, structure the transformation to place these unknowns in the slope rather than the intercept whenever possible. Intercepts are more susceptible to systematic errors from instrument defects.
 
-4. **Determine variable ranges**: Plan for an input variable range spanning at least a factor of 10. Wider ranges provide better basis for comparing system and model behaviors. While you can't directly control output variable ranges, carefully consider instrument limitations. Circuit components have maximum current ratings, materials have elastic limits, and sensors have operating ranges. Perform trial measurements to determine input variable ranges that avoid damaging equipment or exceeding measurement capabilities.
+4. **Determine variable ranges**: Plan for an input variable range spanning at least a factor of 10. Wider ranges provide better basis for comparing system and model behaviors. While we can't directly control output variable ranges, carefully consider instrument limitations. Circuit components have maximum current ratings, materials have elastic limits, and sensors have operating ranges. Perform trial measurements to determine input variable ranges that avoid damaging equipment or exceeding measurement capabilities.
 
-5. **Consider experimental precision**: Begin with a target precision level for your final result. This guides your measurement method selection. A request to "measure $g$ using a pendulum" is meaningless without specifying whether you need 10% precision (achievable with simple equipment in minutes) or 0.01% precision (requiring sophisticated apparatus and days of work).
+5. **Consider experimental precision**: Begin with a target precision level for the final result. This guides measurement method selection. A request to "measure $g$ using a pendulum" is meaningless without specifying whether we need 10% precision (achievable with simple equipment in minutes) or 0.01% precision (requiring sophisticated apparatus and days of work).
 
-   With a clear precision goal—say, measuring $g$ within 2%—you can work backward to determine requirements for each component measurement. For a pendulum experiment, if you need $g$ within 2%, you might aim for uncertainties in length ($\ell$) and period-squared ($T^2$) below 1% each.
+   With a clear precision goal—say, measuring $g$ within 2%—we can work backward to determine requirements for each component measurement. For a pendulum experiment, if we need $g$ within 2%, we might aim for uncertainties in length ($\ell$) and period-squared ($T^2$) below 1% each.
 
-   If you can measure length with ±1mm uncertainty, the minimum acceptable length measurement would be:
+   If we can measure length with ±1mm uncertainty, the minimum acceptable length measurement would be:
    $$\frac{0.001 \text{m}}{\ell} = 0.01$$
    $$\ell = 0.1 \text{ m}$$
 
@@ -249,26 +249,26 @@ The planning process includes:
    $$\frac{0.2 \text{s} }{t} = 0.005$$
    $$t = 40 \text{ seconds}$$
 
-   This analysis helps ensure all measurements contribute meaningfully to your desired final precision. If any measurement appears limited to uncertainties exceeding your target, you'll need either more precise measurement methods or a revised precision goal.
+   This analysis helps ensure all measurements contribute meaningfully to the desired final precision. If any measurement appears limited to uncertainties exceeding the target, we'll need either more precise measurement methods or a revised precision goal.
 
 :::{admonition} Creating a Measurement Program
 :class: tip
-After completing these planning steps, create a comprehensive measurement program—typically a table listing all quantities to be measured and providing space for calculations needed in graphing. This allows you to focus on conducting the experiment without constantly deciding what to measure next, and helps prevent accidentally omitting crucial measurements.
+After completing these planning steps, create a comprehensive measurement program—typically a table listing all quantities to be measured and providing space for calculations needed in graphing. This allows us to focus on conducting the experiment without constantly deciding what to measure next, and helps prevent accidentally omitting crucial measurements.
 :::
 
 The complete experiment design process is illustrated in Appendix A4 with a sample experiment.
 
 :::{warning}
-While this planning may seem excessive for simple laboratory exercises, it represents the minimum preparation required for serious research. Resist the temptation to rush into measurements and figure out analysis later—developing good planning habits now will serve you well throughout your scientific career.
+While this planning may seem excessive for simple laboratory exercises, it represents the minimum preparation required for serious research. Resist the temptation to rush into measurements and figure out analysis later—developing good planning habits now will serve us well throughout our scientific careers.
 :::
 
 ## Designing Experiments Without Existing Models
 
 :::{admonition} The Challenge of Novel Phenomena
 :class: note
-When investigating phenomena so new that theoretical models don't exist, or systems so complex that constructing theoretical models seems impossible (like national economies or biological systems), your experimental approach necessarily differs.
+When investigating phenomena so new that theoretical models don't exist, or systems so complex that constructing theoretical models seems impossible (like national economies or biological systems), the experimental approach necessarily differs.
 
-Without an existing model to test, your motivations might include:
+Without an existing model to test, our motivations might include:
 
 - Simple curiosity
 - Practical information needs
@@ -279,16 +279,16 @@ Without an existing model to test, your motivations might include:
 Even without detailed theoretical understanding, empirical models prove extremely valuable. They help organize thinking about complex systems and enable mathematical operations like interpolation, extrapolation, and forecasting.
 
 :::{tip}
-In model-free situations, experiment design becomes more straightforward if input variables can be isolated. Simply measure the output variable across suitable ranges of input variables to construct a comprehensive picture of system behavior. When input variables can't be isolated, we encounter more complex challenges discussed in a later section.
+In model-free situations, experiment design becomes more straightforward if input variables can be isolated. Simply measure the output variable across suitable ranges of input variables to construct a comprehensive picture of system behavior. When input variables can't be isolated, more complex challenges arise, as discussed in a later section.
 :::
 
-Even without established theories, consider any available hints about potentially applicable functions, testing them against your observations. One powerful technique for obtaining such hints is dimensional analysis.
+Even without established theories, consider any available hints about potentially applicable functions, testing them against our observations. One powerful technique for obtaining such hints is dimensional analysis.
 
 ## Dimensional Analysis
 
 :::{admonition} The Power of Dimensional Analysis
 :class: important
-Even without a complete theory, dimensional analysis can provide valuable guidance by examining the physical dimensions of quantities involved in your experiment. Physical quantities are expressed in terms of basic dimensions: mass ($M$), length ($L$), and time ($T$).
+Even without a complete theory, dimensional analysis can provide valuable guidance by examining the physical dimensions of quantities involved in an experiment. Physical quantities are expressed in terms of basic dimensions: mass ($M$), length ($L$), and time ($T$).
 
 The fundamental principle: dimensional consistency must exist between both sides of any physical equation. For instance, if gravitational acceleration (g) relates to pendulum length ($\ell$) and period ($T$), dimensional analysis reveals that $g$ (with dimensions $LT⁻²$) must incorporate length to first power ($L¹$) and period squared ($T⁻²$):
 
@@ -343,29 +343,29 @@ We can determine some relationships ($Q$ contains $P/η$ and $r^3$) but not all 
 
 :::{admonition} When Relationships Are Not Clear
 :class: note
-Sometimes clear relationships between variables are not readily apparent, or input variables can't be easily isolated. The system might be influenced by many factors, making it difficult to detect the specific effect you're studying.
+Sometimes clear relationships between variables are not readily apparent, or input variables can't be easily isolated. The system might be influenced by many factors, making it difficult to detect the specific effect we're studying.
 :::
 
 ### Null-Effect Measurements in Physical Sciences
 
 :::{admonition} The Power of Null-Effect Measurements
 :class: tip
-When studying subtle effects potentially masked by external factors (like measuring tiny extensions in steel wire affected by temperature fluctuations), use **null-effect** measurements. Study two identical specimens simultaneously—one exposed to your variable of interest, one not—and measure the difference between them.
+When studying subtle effects potentially masked by external factors (like measuring tiny extensions in steel wire affected by temperature fluctuations), use **null-effect** measurements. Study two identical specimens simultaneously—one exposed to the variable of interest, one not—and measure the difference between them.
 :::
 
-For steel wires, you might cut a single wire in half, load one piece while leaving the other unloaded, and measure the difference in length. Both experience identical temperature variations, but only one responds to loading. This approach reveals small effects that would otherwise be lost in environmental noise.
+For steel wires, we might cut a single wire in half, load one piece while leaving the other unloaded, and measure the difference in length. Both experience identical temperature variations, but only one responds to loading. This approach reveals small effects that would otherwise be lost in environmental noise.
 
 :::{warning}
-Always check system performance both with and without the influence you're studying. Wilson's humorous observation is worth remembering: "It has been conclusively proved by numerous tests that the beating of drums and gongs during a solar eclipse causes the sun's brightness to return."
+Always check system performance both with and without the influence we're studying. Wilson's humorous observation is worth remembering: "It has been conclusively proved by numerous tests that the beating of drums and gongs during a solar eclipse causes the sun's brightness to return."
 :::
 
 ### Control Groups in Biological Sciences
 
 :::{admonition} The Challenge of Biological Variability
 :class: important
-Biological systems present additional challenges—you can't simply "cut a specimen in half" when testing drug effectiveness. Human subjects show inherent variability that would overwhelm the effects you're studying if comparing individuals.
+Biological systems present additional challenges—we can't simply "cut a specimen in half" when testing drug effectiveness. Human subjects show inherent variability that would overwhelm the effects we're studying if comparing individuals.
 
-The solution: compensate with numbers. Create an **experimental group** receiving the treatment and a **control group** that's as similar as possible but doesn't receive the treatment. Both groups experience the same external influences, but only one receives the intervention you're studying.
+The solution: compensate with numbers. Create an **experimental group** receiving the treatment and a **control group** that's as similar as possible but doesn't receive the treatment. Both groups experience the same external influences, but only one receives the intervention we're studying.
 :::
 
 This approach often requires refinements like placebo treatments and double-blinding (keeping both experimenters and subjects unaware of group assignments) to prevent psychological effects from contaminating results.
@@ -378,7 +378,7 @@ Such experimental designs—pairing treatment groups with carefully matched cont
 
 :::{admonition} The Challenge of Uncontrollable Systems
 :class: caution
-Sometimes you must study systems offering no experimental control whatsoever. Astronomers can't manipulate celestial bodies, public health researchers can't randomly assign people to "smoking" and "non-smoking" groups, and environmental scientists can't create control planets.
+Sometimes we must study systems offering no experimental control whatsoever. Astronomers can't manipulate celestial bodies, public health researchers can't randomly assign people to "smoking" and "non-smoking" groups, and environmental scientists can't create control planets.
 :::
 
 In such cases, careful observational techniques become crucial. With well-defined systems and models (like celestial mechanics), precise measurements may still allow meaningful conclusions—determining that general relativity better explains Mercury's orbit than Newtonian mechanics, for instance.
@@ -397,7 +397,7 @@ These questions present multiple challenges:
 - Numerous confounding factors
   :::
 
-Your best approach: meticulous sampling procedures. Create artificial null-effect measurements by constructing treatment groups under the influence you're studying and control groups exempt from it but otherwise matched as closely as possible.
+The best approach: meticulous sampling procedures. Create artificial null-effect measurements by constructing treatment groups under the influence we're studying and control groups exempt from it but otherwise matched as closely as possible.
 
 :::{important}
 The validity of such studies depends entirely on sampling quality. Effects are often subtle enough that different sampling approaches can yield contradictory conclusions. This reality explains why public policy debates featuring scientific components often present competing "scientific" evidence—different sampling approaches can support opposing conclusions.
@@ -470,7 +470,7 @@ A torsional oscillator's period depends on the support's torsional stiffness coe
 The central deflection of a beam with circular cross-section, supported at both ends and loaded at its center, depends on the applied force, distance between supports, beam radius, and the material's Young's modulus. Use dimensional analysis to determine the relationship.
 ```
 
-_For problems 6-23, state which variables or combinations of variables should be plotted to verify the proposed relationship, and explain how to determine the unknown parameter(s) from your graph (slope, intercept, etc.)._
+_For problems 6-23, state which variables or combinations of variables should be plotted to verify the proposed relationship, and explain how to determine the unknown parameter(s) from the graph (slope, intercept, etc.)._
 
 ```{exercise}
 :label: prob-constant-acceleration
