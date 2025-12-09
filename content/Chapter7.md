@@ -25,14 +25,6 @@ The value of excellent scientific writing cannot be overstated. Even groundbreak
 Learning to write well cannot be reduced to a simple checklist. Each person develops their own distinctive writing style through practice. The introductory physics laboratory provides an excellent opportunity to develop these skills. Our writing styles may differ, but clarity remains the essential common element that makes diverse approaches valuable rather than problematic.
 :::
 
-:::{tip}
-When approaching scientific report writing, one guiding principle stands above all others: focus on your reader. Whether preparing an internal technical document or a manuscript for publication, prioritize the needs of the person who will read your work. From their perspective, you are communicating across distance and time, with only your written words to convey your message.
-:::
-
-:::{note}
-Contemporary scientific writing has largely moved away from impersonal, passive constructions. Instead, straightforward language often works best: "We measured the fall time using a millisecond-precision electronic timer." With no single "correct" approach to report writing, choose language that communicates most clearly and engagingly.
-:::
-
 When approaching scientific report writing, one guiding principle stands above all others: focus on your reader. Whether preparing an internal technical document or a manuscript for publication, prioritize the needs of the person who will read your work. From their perspective, you are communicating across distance and time, with only your written words to convey your message. You cannot clarify misunderstandings or add explanations as they read. Your report must stand independently and communicate effectively on first reading. The reception of your work, its scientific impact, and potentially your professional advancement may hinge on how effectively readers understand your report during their brief engagement with it. This perspective should emphasize the importance of taking writing seriously.
 
 Contemporary scientific writing has largely moved away from impersonal, passive constructions. Instead, straightforward language often works best: "We measured the fall time using a millisecond-precision electronic timer." With no single "correct" approach to report writing, choose language that communicates most clearly and engagingly. For additional guidance on effective writing, consider consulting Strunk and White's classic text referenced in the Bibliography.
@@ -51,7 +43,7 @@ While keeping it concise, make the topic explicit. For instance, if measuring a 
 1. Is this experimental or theoretical work?
 2. What specific topic does it address?
 3. What methodology was employed?
-   :::
+:::
 
 Addressing these elements typically results in an effective title.
 
@@ -89,7 +81,7 @@ An effective introduction typically includes these components in sequence:
 - Review of Existing Information
 - Application of Information to Specific Experiment
 - Summary of Experimental Intention
-  :::
+:::
 
 ### Topic Statement
 

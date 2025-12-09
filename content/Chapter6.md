@@ -72,7 +72,7 @@ The complete evaluation process consists of four key stages:
 2. Assess correspondence between experimental system and theoretical model
 3. Calculate values of the properties you set out to measure
 4. Estimate the overall precision of your experiment
-   :::
+:::
 
 Let's examine each stage in detail.
 
@@ -480,7 +480,7 @@ Consider two experimental scenarios. First, measuring current through a resistor
 
 Philosophers have warned for centuries that simultaneous events aren't necessarily causally related. However, accumulated experience with this experiment, involving multiple repetitions and careful control of other variables, gradually convinces us potential difference and current are genuinely related. Only philosophical purists would dispute that potential difference causes current flow.
 
-The situation differs dramatically in less clear-cut cases. Another experiment might yield results like Figure 6.6(b), typical when studying, for instance, university student cold incidence versus daily vitamin C consumption. Can we conclude cold frequency depends on vitamin C dosage? We might conduct a well-designed experiment with 100 students receiving vitamin
+The situation differs dramatically in less clear-cut cases. Another experiment might yield results like Figure 6.6(b), typical when studying, for instance, university student cold incidence versus daily vitamin C consumption. Can we conclude cold frequency depends on vitamin C dosage? We might conduct a well-designed experiment with 100 students receiving vitamin C supplements versus a control group receiving placebos, but multiple confounding factors could mask any real effect—or create apparent effects where none exist.
 
 ## Glossary
 
