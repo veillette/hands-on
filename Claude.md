@@ -22,7 +22,7 @@ hands-on/
 │   └── Appendix1.md - Appendix4.md
 ├── figures/              # Images organized by chapter (ch1/, ch2/, etc.)
 ├── plugins/              # MyST plugins for interactive elements
-├── scripts/              # Build automation scripts
+├── scripts/              # Build automation scripts (JavaScript only)
 ├── myst.yml              # MyST configuration
 ├── package.json          # npm dependencies and scripts
 ├── .prettierrc           # Prettier formatting configuration
@@ -236,6 +236,15 @@ npm run docx
 5. **Follow MyST syntax**: Use proper MyST directives, not GitHub-flavored markdown alternatives
 
 ## Common Patterns in This Repository
+
+### Scripts and Automation
+
+**IMPORTANT**: All scripts in the `scripts/` directory must be written in **JavaScript** (Node.js). Do not create Python scripts or scripts in other languages.
+
+- Scripts should use `#!/usr/bin/env node` shebang
+- Use Node.js built-in modules where possible (fs, path, etc.)
+- Include proper JSDoc comments for functions
+- Export functions for testing when appropriate
 
 ### Uncertainty Notation
 

@@ -1,0 +1,2 @@
+# Run formatting check on markdown files
+npm run format:check

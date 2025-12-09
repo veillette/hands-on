@@ -26,6 +26,7 @@
     "mystmd": "^1.7.0"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
     "markdownlint-cli": "^0.46.0",
     "prettier": "^3.7.4"
   },
@@ -45,6 +46,7 @@
     "format": "prettier --write \"content/**/*.md\"",
     "format:check": "prettier --check \"content/**/*.md\"",
     "lint:md": "markdownlint \"content/**/*.md\" --config .markdownlint.json",
-    "lint:md:fix": "markdownlint \"content/**/*.md\" --config .markdownlint.json --fix"
+    "lint:md:fix": "markdownlint \"content/**/*.md\" --config .markdownlint.json --fix",
+    "prepare": "husky"
   }
 }
