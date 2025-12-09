@@ -84,7 +84,7 @@ This notation provides two advantages:
 
 1. It gives us a central value (152.9 cm) for calculations
 2. It explicitly states the uncertainty (±0.2 cm) for quality assessment
-   :::
+:::
 
 This uncertainty value (±0.2 cm) represents the **absolute uncertainty** of our measurement. However, the significance of any uncertainty depends on the measurement's magnitude. An uncertainty of ±0.2 cm would be:
 

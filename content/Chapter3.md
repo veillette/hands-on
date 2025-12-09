@@ -146,10 +146,7 @@ If we measure a rectangle's length as $(25.4 \pm 0.2)$ cm and width as $(18.6 \p
 3. Combine relative uncertainties: Then use the multiplication rule:
    $$\left(\frac{\sigma_A}{A}\right)^2 = (0.00787)^2 + (0.01075)^2 \approx 0.0000619 + 0.0001156 = 0.0001775$$
    $$\frac{\sigma_A}{A} = \sqrt{0.0001775} \approx 0.0133$$
-   $$
-   \sigma_A = 0.0133 \times 472.44 \approx
-   $$\sigma_A = \sqrt{0.0001775} \times 472.44 \text{cm}^2 \approx 6.3 \ \text{cm}^2$$
-   $$
+   $$\sigma_A = 0.0133 \times 472.44 \ \text{cm}^2 \approx 6.3 \ \text{cm}^2$$
 4. Final result: $A = (472 \pm 6) \ \text{cm}^2$
    :::
 

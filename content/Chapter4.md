@@ -246,7 +246,7 @@ Through mathematical derivation (integration), we obtain:
 
 $$v = 9.8t \text{ (assuming } v=0 \text{ at } t=0\text{)}$$
 
-And:
+And (taking downward as the positive direction):
 
 $$x = \frac{9.8}{2}t^2 \text{ (assuming } x=0 \text{ at } t=0\text{)}$$
 

@@ -4,8 +4,9 @@
 
 Modern physics laboratories have been transformed by computational tools that allow for efficient data processing, powerful visualizations, and sophisticated statistical analysis. Two of the most valuable tools in a physicist's computational toolkit are Python and Jupyter Notebooks.
 
-> [!note]
-> This appendix assumes no prior programming experience. We'll start with the fundamentals and build toward practical applications for physics laboratory data analysis.
+:::{note}
+This appendix assumes no prior programming experience. We'll start with the fundamentals and build toward practical applications for physics laboratory data analysis.
+:::
 
 ## Getting Started with Python
 
@@ -15,8 +16,9 @@ Python has become the de facto standard programming language for scientific comp
 
 Before diving into coding, you'll need to set up a Python environment:
 
-> [!tip]
-> The easiest way to get started is by installing Anaconda, a distribution that includes Python, Jupyter, and many scientific packages. Download it from [anaconda.com](https://www.anaconda.com/download/).
+:::{tip}
+The easiest way to get started is by installing Anaconda, a distribution that includes Python, Jupyter, and many scientific packages. Download it from [anaconda.com](https://www.anaconda.com/download/).
+:::
 
 Once installed, you can verify your installation by opening a terminal (Command Prompt on Windows, Terminal on macOS/Linux) and typing:
 
@@ -102,8 +104,9 @@ while count < 5:
     count += 1  # Shorthand for count = count + 1
 ```
 
-> [!warning]
-> Indentation in Python is not just for readability—it's how Python identifies code blocks. Inconsistent indentation will cause syntax errors.
+:::{warning}
+Indentation in Python is not just for readability—it's how Python identifies code blocks. Inconsistent indentation will cause syntax errors.
+:::
 
 #### Functions
 
@@ -121,8 +124,9 @@ energy = calculate_kinetic_energy(mass, velocity)
 print(f"The kinetic energy is {energy} J")
 ```
 
-> [!note]
-> The triple-quoted string after the function definition is called a "docstring." It documents the function's purpose and is good practice in scientific code.
+:::{note}
+The triple-quoted string after the function definition is called a "docstring." It documents the function's purpose and is good practice in scientific code.
+:::
 
 ## Scientific Computing Libraries
 
@@ -249,8 +253,9 @@ A Jupyter Notebook consists of cells that can contain:
 2. **Markdown** - Text with formatting, equations, and links
 3. **Raw** - Plain text without formatting
 
-> [!tip]
-> Press `Shift+Enter` to run a cell and move to the next one. Press `Ctrl+Enter` to run a cell and stay on it.
+:::{tip}
+Press `Shift+Enter` to run a cell and move to the next one. Press `Ctrl+Enter` to run a cell and stay on it.
+:::
 
 ### Markdown and LaTeX in Jupyter
 
@@ -278,15 +283,18 @@ Display equation:
 $$F = G\frac{m_1 m_2}{r^2}$$
 ```
 
-> [!important]
-> The ability to mix explanatory text, mathematical equations, code, and visualizations makes Jupyter ideal for documenting laboratory experiments and analysis.
+:::{important}
+The ability to mix explanatory text, mathematical equations, code, and visualizations makes Jupyter ideal for documenting laboratory experiments and analysis.
+:::
 
 ## Practical Example: Analyzing Pendulum Data
 
 Let's walk through a complete example of analyzing pendulum period data using Python and Jupyter.
 
-> [!example]
-> In this example, we'll analyze measurements of a pendulum's period as a function of length, using the equation $T = 2\pi\sqrt{\frac{L}{g}}$.
+:::{admonition} Example
+:class: example
+In this example, we'll analyze measurements of a pendulum's period as a function of length, using the equation $T = 2\pi\sqrt{\frac{L}{g}}$.
+:::
 
 ```python
 import numpy as np
@@ -390,15 +398,16 @@ plt.tight_layout()
 plt.show()
 ```
 
-> [!note]
-> This example demonstrates how to:
->
-> - Organize experimental data
-> - Propagate uncertainties
-> - Fit a theoretical model to data
-> - Visualize results with appropriate error bars
-> - Compare fitted results with expected values
-> - Analyze residuals to evaluate the quality of the fit
+:::{note}
+This example demonstrates how to:
+
+- Organize experimental data
+- Propagate uncertainties
+- Fit a theoretical model to data
+- Visualize results with appropriate error bars
+- Compare fitted results with expected values
+- Analyze residuals to evaluate the quality of the fit
+:::
 
 ## Data Analysis Workflow for Physics Experiments
 
@@ -435,8 +444,9 @@ When approaching data analysis for physics experiments, a systematic workflow is
    - Calculate derived quantities with proper uncertainty propagation
    - Compare results with established values or theories
 
-> [!tip]
-> For reproducibility, document each step of your analysis in your Jupyter Notebook with clear markdown explanations. This makes it easier to trace your reasoning and catch potential errors.
+:::{tip}
+For reproducibility, document each step of your analysis in your Jupyter Notebook with clear markdown explanations. This makes it easier to trace your reasoning and catch potential errors.
+:::
 
 ## Tips for Efficient Data Analysis
 
@@ -571,8 +581,9 @@ Jupyter Notebooks can be shared in various ways:
 3. **Interactive sharing with Binder**
    - Share executable versions of your notebooks online
 
-> [!important]
-> When sharing your analysis, include the raw data files or clear instructions on how to obtain them.
+:::{important}
+When sharing your analysis, include the raw data files or clear instructions on how to obtain them.
+:::
 
 ## Glossary
 

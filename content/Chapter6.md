@@ -1,5 +1,19 @@
 # Evaluating Experimental Results
 
+<!-- TODO: Add missing figures referenced in this chapter:
+     - Figure 6.1(a-g): Various model-system comparison scenarios
+     - Figure 6.2(a-b): Data points and best-fit line determination
+     - Figure 6.3: Slope calculation from graph coordinates
+     - Figure 6.4: Least squares method illustration (P₁Q₁, P₂Q₂ deviations)
+     - Figure 6.5: Correlation coefficient examples
+     - Figure 6.6(a-b): Clear vs ambiguous data relationships
+     - Figure 6.7(a-c): Residual analysis patterns
+     - Figure 6.8: Linearization examples
+     - Figure 6.9: Exponential fitting via semi-log plot
+     - Figure 6.10(a-b): Power law fitting via log-log plot
+     - Figure 6.11-6.12: Additional graphical analysis examples
+-->
+
 :::{admonition} Learning Objectives
 :class: note
 
@@ -133,7 +147,7 @@ Once your observations are plotted, you're ready for the crucial step—comparin
 :::{note}
 If you're working with a completely specified model without undetermined parameters, your goal is simply assessing how well model predictions match experimental observations. Draw the model's function on the same graph as your experimental points, using identical scales. This approach was illustrated earlier with falling object observations compared to the theoretical expression:
 
-$$t = 0.4515 x^(1/2)$$
+$$t = 0.4515 x^{1/2}$$
 :::
 
 How do you judge correspondence quality? This is where uncertainty intervals become crucial. Without them, the inevitable scatter in experimental points would make meaningful comparison impossible—what are the chances of a theoretical line passing exactly through multiple scattered points? When points represent possible value intervals rather than single values, logical assessment becomes possible.
@@ -271,7 +285,6 @@ All previously described procedures share a common limitation—they rely on exp
 :::
 
 The method meeting these needs is based on the statistical principle of least squares. We'll focus primarily on its application to straight-line fitting, though it can be extended to other functions.
-:::
 
 :::{note}
 Consider a set of N (x,y) measurement pairs where uncertainty is confined to the y-dimension—we'll assume x values are exactly known or sufficiently more precise than y values that x-dimension uncertainty can be neglected. This assumption is reasonable for many experimental situations where one variable is significantly more precise than the other. If both variables have comparable uncertainty, more complex treatments are needed (see Wilson's text in the Bibliography).
