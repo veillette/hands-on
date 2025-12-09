@@ -43,7 +43,7 @@ While keeping it concise, make the topic explicit. For instance, if measuring a 
 1. Is this experimental or theoretical work?
 2. What specific topic does it address?
 3. What methodology was employed?
-:::
+   :::
 
 Addressing these elements typically results in an effective title.
 
@@ -81,7 +81,7 @@ An effective introduction typically includes these components in sequence:
 - Review of Existing Information
 - Application of Information to Specific Experiment
 - Summary of Experimental Intention
-:::
+  :::
 
 ### Topic Statement
 
