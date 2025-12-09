@@ -27,8 +27,7 @@ hands-on/
 ├── package.json          # npm dependencies and scripts
 ├── .prettierrc           # Prettier formatting configuration
 ├── .markdownlint.json    # Markdown linting rules
-├── CONTRIBUTING.md       # Contribution guidelines
-└── REVIEW-TECHNICAL-FORMATTING.md  # Known issues and formatting standards
+└── CONTRIBUTING.md       # Contribution guidelines
 ```
 
 ## Content Conventions
@@ -258,14 +257,9 @@ Python code should:
 
 Figures are referenced in text as "Figure X.Y" where X is chapter number and Y is figure number within that chapter.
 
-## Known Issues and Review Standards
+## Quality Standards and Common Issues
 
-See `REVIEW-TECHNICAL-FORMATTING.md` for:
-- Documented technical accuracy issues
-- Formatting inconsistencies being addressed
-- Standards for reviewing and improving content
-
-Priority issues to avoid:
+When working on this repository, avoid these common issues:
 - ❌ Broken LaTeX calculations
 - ❌ GitHub-style callouts (`> [!note]`) instead of MyST directives
 - ❌ Unlabeled equations that are referenced by number
