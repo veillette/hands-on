@@ -1,6 +1,6 @@
 # Appendix 4: Model Experiment
 
-## 4.1 Experiment Design
+## Experiment Design
 
 ### System
 
@@ -98,7 +98,7 @@ We developed a comprehensive measurement protocol:
 
 This structured methodology ensures reproducibility and minimizes both random and systematic uncertainties in our measurements.
 
-## 4.2 Experimental Results
+## Experimental Results
 
 ### Raw Measurements
 
@@ -276,7 +276,7 @@ $$k = 9.81 \pm 0.18 \text{ N/m}$$
 
 This gives us a relative uncertainty of 1.8%, significantly better than our target of 10%.
 
-## 4.3 Extended Procedure
+## Extended Procedure
 
 Our experimental procedure followed these detailed steps:
 
@@ -337,7 +337,7 @@ Our experimental procedure followed these detailed steps:
 
 This comprehensive procedure ensured high-quality data collection with minimized uncertainties and thorough validation of our results.
 
-## 4.4 Report
+## Report
 
 # MEASUREMENT OF A SPRING CONSTANT BY AN OSCILLATION METHOD
 
