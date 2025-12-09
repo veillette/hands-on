@@ -44,7 +44,7 @@ Caption text describing the figure.
 :::{admonition} Learning Objectives
 :class: note
 
-By the end of this chapter, you will be able to:
+By the end of this chapter, we will be able to:
 
 - Calculate values and uncertainties of basic measured quantities using both estimated and statistical methods
 - Create effective graphs that clearly display data with appropriate uncertainty indicators
@@ -56,38 +56,38 @@ By the end of this chapter, you will be able to:
 - Assess overall experimental precision and report results with appropriate significant figures
   :::
 
-Experimental data alone tells only part of the story. The ability to properly evaluate results is what transforms raw measurements into meaningful scientific knowledge - a fundamental skill that distinguishes casual observations from rigorous scientific inquiry. This chapter focuses on why this evaluation process is crucial: it validates your measurements through uncertainty analysis, connects physical systems with theoretical models, and ultimately determines whether your findings represent substantiated scientific knowledge or merely unverified observations.
+Experimental data alone tells only part of the story. The ability to properly evaluate results is what transforms raw measurements into meaningful scientific knowledge - a fundamental skill that distinguishes casual observations from rigorous scientific inquiry. This chapter focuses on why this evaluation process is crucial: it validates measurements through uncertainty analysis, connects physical systems with theoretical models, and ultimately determines whether findings represent substantiated scientific knowledge or merely unverified observations.
 
 ## The Essential Final Analysis
 
-Your primary objective in conducting an experiment is to make substantive statements about relationships between physical systems and theoretical models. This involves:
+The primary objective in conducting an experiment is to make substantive statements about relationships between physical systems and theoretical models. This involves:
 
-The evaluation process involves several key analytical steps. First, you must identify patterns and trends in your data that either align with or deviate from theoretical predictions. Next, it's essential to quantify the strength of relationships between your measured variables to understand how they interact. You'll need to determine whether any observed effects are statistically significant, that is, ensuring your findings aren't simply due to random chance. Additionally, accounting for experimental uncertainties and understanding how they impact your conclusions is crucial for reliable results. Finally, you must critically assess whether your results support, refute, or suggest necessary modifications to existing theoretical models. This comprehensive analysis ensures your experimental findings contribute meaningful insights to scientific understanding.
+The evaluation process involves several key analytical steps. First, we must identify patterns and trends in data that either align with or deviate from theoretical predictions. Next, it's essential to quantify the strength of relationships between measured variables to understand how they interact. We'll need to determine whether any observed effects are statistically significant, that is, ensuring findings aren't simply due to random chance. Additionally, accounting for experimental uncertainties and understanding how they impact conclusions is crucial for reliable results. Finally, we must critically assess whether results support, refute, or suggest necessary modifications to existing theoretical models. This comprehensive analysis ensures experimental findings contribute meaningful insights to scientific understanding.
 
 :::{important}
-Even after you've completed all the measurements for your experiment, an equally important phase still remains: evaluating what your results actually mean. This evaluation phase transforms raw data into meaningful scientific conclusions. The analysis stage is where you determine whether your experimental results validate or challenge existing theories, and potentially uncover new physical insights.
+Even after completing all the measurements for an experiment, an equally important phase still remains: evaluating what the results actually mean. This evaluation phase transforms raw data into meaningful scientific conclusions. The analysis stage is where we determine whether experimental results validate or challenge existing theories, and potentially uncover new physical insights.
 :::
 
 ## Approaching Evaluation with the Right Mindset
 
 :::{important}
-Before diving into specific evaluation techniques, two essential principles should guide your approach:
+Before diving into specific evaluation techniques, two essential principles should guide the approach:
 
-First, recognize that experimental results are precious resources. Whether they come from a multi-million dollar research program or a simple classroom exercise, your results represent unique, sometimes irreplaceable information. Honor this by extracting every possible insight from your observations and ensuring your final conclusions are as complete as possible.
+First, recognize that experimental results are precious resources. Whether they come from a multi-million dollar research program or a simple classroom exercise, results represent unique, sometimes irreplaceable information. Honor this by extracting every possible insight from observations and ensuring final conclusions are as complete as possible.
 
-Second, maintain unwavering objectivity. It's nearly impossible to approach an experiment without some preconceptions about what "should" happen. However, you must discipline yourself to assess results objectively. If outcomes differ from your expectations or hopes, report them honestly and use them constructively to guide future investigations.
+Second, maintain unwavering objectivity. It's nearly impossible to approach an experiment without some preconceptions about what "should" happen. However, we must discipline ourselves to assess results objectively. If outcomes differ from expectations or hopes, report them honestly and use them constructively to guide future investigations.
 :::
 
 :::{tip}
-In academic settings, students sometimes misunderstand experimental objectives, believing the goal is to reproduce known values. If your measurement of gravitational acceleration yields 9.60 m/s² instead of the textbook 9.80 m/s², you haven't failed—you've simply produced a measurement with its own characteristics and uncertainties. Rather than fretting over differences from established values, focus on making your own measurements as reliable as possible and accurately assessing their uncertainties.
+In academic settings, students sometimes misunderstand experimental objectives, believing the goal is to reproduce known values. If a measurement of gravitational acceleration yields 9.60 m/s² instead of the textbook 9.80 m/s², this isn't a failure—it's simply a measurement with its own characteristics and uncertainties. Rather than fretting over differences from established values, focus on making measurements as reliable as possible and accurately assessing their uncertainties.
 :::
 
 :::{note}
-When you measure quantities with established values, resist comparing your results until your analysis is complete. This builds confidence in your experimental process—confidence you'll need when eventually measuring previously unmeasured quantities during professional research.
+When measuring quantities with established values, resist comparing results until analysis is complete. This builds confidence in the experimental process—confidence we'll need when eventually measuring previously unmeasured quantities during professional research.
 :::
 
 :::{important}
-If your gravitational acceleration measurement is $9.60 \pm 0.30$ m/s², recognize that the uncertainty is as significant as the central value. The 3% uncertainty might reflect equipment limitations rather than experimental shortcomings. Textbook values often appear without context about the sophisticated methods and equipment used to obtain them. Your aim should be honest, objective reporting of results with appropriate uncertainty limits—not perfect reproduction of established values in limited laboratory time.
+If a gravitational acceleration measurement is $9.60 \pm 0.30$ m/s², recognize that the uncertainty is as significant as the central value. The 3% uncertainty might reflect equipment limitations rather than experimental shortcomings. Textbook values often appear without context about the sophisticated methods and equipment used to obtain them. The aim should be honest, objective reporting of results with appropriate uncertainty limits—not perfect reproduction of established values in limited laboratory time.
 :::
 
 ## The Evaluation Process: Four Essential Stages
@@ -97,8 +97,8 @@ The complete evaluation process consists of four key stages:
 
 1. Calculate the values and uncertainties of basic measured quantities
 2. Assess correspondence between experimental system and theoretical model
-3. Calculate values of the properties you set out to measure
-4. Estimate the overall precision of your experiment
+3. Calculate values of the properties we set out to measure
+4. Estimate the overall precision of the experiment
 :::
 
 Let's examine each stage in detail.
@@ -106,59 +106,59 @@ Let's examine each stage in detail.
 ### Stage 1: Calculating Elementary Quantities
 
 :::{note}
-Your first task is determining the values and uncertainties of the fundamental quantities involved in your experiment. Consider a pendulum experiment designed to determine gravitational acceleration. You'll likely have measurements of pendulum length (ℓ) as your input variable and time measurements for multiple oscillations as your output, from which you'll calculate oscillation period (T).
+The first task is determining the values and uncertainties of the fundamental quantities involved in the experiment. Consider a pendulum experiment designed to determine gravitational acceleration. We'll likely have measurements of pendulum length (ℓ) as the input variable and time measurements for multiple oscillations as the output, from which we'll calculate oscillation period (T).
 :::
 
-Your approach depends on whether you're working with estimated uncertainties or statistical treatment of random fluctuations.
+The approach depends on whether we're working with estimated uncertainties or statistical treatment of random fluctuations.
 
 #### Working with Estimated Uncertainties
 
 :::{tip}
-For pendulum length measurements using a meter stick, you've likely determined intervals within which you're confident your true values lie. Your results would appear as a set of values in the form: value ± uncertainty.
+For pendulum length measurements using a meter stick, we've likely determined intervals within which we're confident the true values lie. Results would appear as a set of values in the form: value ± uncertainty.
 :::
 
-Similarly, if you've counted oscillations and timed them with a stopwatch, you might express time measurements with their uncertainty ranges. However, the oscillation period $T$ (your actual variable of interest) must be calculated from these measurements. If you counted 15 oscillations that took $18.4 \pm 0.2$ seconds, the period for a single oscillation would be:
+Similarly, if we've counted oscillations and timed them with a stopwatch, we might express time measurements with their uncertainty ranges. However, the oscillation period $T$ (the actual variable of interest) must be calculated from these measurements. If we counted 15 oscillations that took $18.4 \pm 0.2$ seconds, the period for a single oscillation would be:
 
 $(1/15)(18.4 \pm 0.2) = 1.227 \pm 0.013$ seconds
 
-Notice that both the central value and uncertainty must be calculated through this division. This significant modification of uncertainty values is necessary whenever you perform arithmetic operations on basic measurements.
+Notice that both the central value and uncertainty must be calculated through this division. This significant modification of uncertainty values is necessary whenever we perform arithmetic operations on basic measurements.
 
-Your final result will be a set of $\ell$ and $T$ values with their associated uncertainties, preparing you for graphical analysis.
+The final result will be a set of $\ell$ and $T$ values with their associated uncertainties, preparing us for graphical analysis.
 
 #### Working with Statistical Uncertainties
 
 :::{important}
-If repeated measurements show random fluctuations, you may have collected multiple readings for statistical analysis. You'll need to express these as central values with uncertainties suitable for plotting.
+If repeated measurements show random fluctuations, we may have collected multiple readings for statistical analysis. We'll need to express these as central values with uncertainties suitable for plotting.
 :::
 
 :::{note}
-As discussed in earlier chapters, sample means and standard deviations of means provide readily interpretable statistical significance. When reporting results, clearly indicate that you're quoting sample means and standard deviations so readers understand you're specifying intervals with 68% probability of containing the true value.
+As discussed in earlier chapters, sample means and standard deviations of means provide readily interpretable statistical significance. When reporting results, clearly indicate that we're quoting sample means and standard deviations so readers understand we're specifying intervals with 68% probability of containing the true value.
 :::
 
 :::{warning}
-Remember that laboratory samples are often too small for definitive assessment of the underlying distribution. You're making an assumption when applying Gaussian distribution properties to your sample, though it's usually reasonable.
+Remember that laboratory samples are often too small for definitive assessment of the underlying distribution. We're making an assumption when applying Gaussian distribution properties to the sample, though it's usually reasonable.
 
 Also recall warnings about small-sample statistics—generally, statistical approaches aren't worthwhile with fewer than 10 observations.
 :::
 
-Consider how uncertainty regions will be interpreted on your graph. If both variables have similar statistical character, each point's uncertainty rectangle will have clear interpretation. If variables have different uncertainty types (estimated versus statistical), interpretation becomes problematic. You might need to standardize them—perhaps using twice the standard deviation of the mean (95% probability) to make them comparable to estimated uncertainties.
+Consider how uncertainty regions will be interpreted on the graph. If both variables have similar statistical character, each point's uncertainty rectangle will have clear interpretation. If variables have different uncertainty types (estimated versus statistical), interpretation becomes problematic. We might need to standardize them—perhaps using twice the standard deviation of the mean (95% probability) to make them comparable to estimated uncertainties.
 
-At this stage, every experimental quantity should have a central value and uncertainty, but you're not quite ready for graphing. If you need to plot derived variables (like T² vs. ℓ for a pendulum), you must calculate these through arithmetic operations. Remember to properly propagate uncertainties—if plotting T² values, uncertainty bars must represent the actual interval over which T² is uncertain.
+At this stage, every experimental quantity should have a central value and uncertainty, but we're not quite ready for graphing. If we need to plot derived variables (like T² vs. ℓ for a pendulum), we must calculate these through arithmetic operations. Remember to properly propagate uncertainties—if plotting T² values, uncertainty bars must represent the actual interval over which T² is uncertain.
 
 ### Stage 2: Creating Effective Graphs
 
 :::{important}
-Whether your graph serves as a simple illustration or as the key analytical tool, your goal is displaying results so their characteristics are immediately apparent. This requires thoughtful choices about scale, proportions, and presentation.
+Whether the graph serves as a simple illustration or as the key analytical tool, the goal is displaying results so their characteristics are immediately apparent. This requires thoughtful choices about scale, proportions, and presentation.
 :::
 
 :::{tip}
-First, ensure your graph paper is sufficiently large. Plotting high-precision observations (0.1%) on standard letter-sized paper is futile when graphing uncertainty is around 2%. Unless uncertainties are clearly visible, you'll lose valuable information. Similarly, make your graph fill the available area by choosing appropriate scales and suppressing zero when necessary. When plotting copper wire resistance versus temperature with values ranging from 57-62 ohms, starting your resistance scale at 55 rather than zero creates a meaningful display instead of a "flat roof" over empty graph paper.
+First, ensure graph paper is sufficiently large. Plotting high-precision observations (0.1%) on standard letter-sized paper is futile when graphing uncertainty is around 2%. Unless uncertainties are clearly visible, we'll lose valuable information. Similarly, make the graph fill the available area by choosing appropriate scales and suppressing zero when necessary. When plotting copper wire resistance versus temperature with values ranging from 57-62 ohms, starting the resistance scale at 55 rather than zero creates a meaningful display instead of a "flat roof" over empty graph paper.
 :::
 
 There are exceptions where preserving the origin is important—when examining behavior near zero or when illustrating variation relative to baseline values. Generally, however, maximize use of graph space.
 
 :::{important}
-Clearly indicate uncertainty ranges for each measurement. You might use crosses with horizontal and vertical bars showing uncertainty ranges, or small rectangles encompassing the measurement with dimensions indicating coordinate uncertainties. The specific method matters less than consistently marking uncertainties on every graph. Note the nature of these uncertainties (estimated limits, standard deviations, etc.) on the graph itself or in its caption to prevent readers from hunting through text for interpretation guidance.
+Clearly indicate uncertainty ranges for each measurement. We might use crosses with horizontal and vertical bars showing uncertainty ranges, or small rectangles encompassing the measurement with dimensions indicating coordinate uncertainties. The specific method matters less than consistently marking uncertainties on every graph. Note the nature of these uncertainties (estimated limits, standard deviations, etc.) on the graph itself or in its caption to prevent readers from hunting through text for interpretation guidance.
 :::
 
 If plotting multiple datasets on one graph, differentiate them clearly through different symbols, colors, or other distinguishing features.
@@ -166,33 +166,33 @@ If plotting multiple datasets on one graph, differentiate them clearly through d
 ### Stage 3: Comparing Models with Experimental Data
 
 :::{important}
-Once your observations are plotted, you're ready for the crucial step—comparing system properties with model predictions. The approach varies by circumstance, but we'll assume you've arranged variables for linear graphical representation.
+Once observations are plotted, we're ready for the crucial step—comparing system properties with model predictions. The approach varies by circumstance, but we'll assume we've arranged variables for linear graphical representation.
 :::
 
 #### Scenario 1: Fully Specified Model
 
 :::{note}
-If you're working with a completely specified model without undetermined parameters, your goal is simply assessing how well model predictions match experimental observations. Draw the model's function on the same graph as your experimental points, using identical scales. This approach was illustrated earlier with falling object observations compared to the theoretical expression:
+If we're working with a completely specified model without undetermined parameters, the goal is simply assessing how well model predictions match experimental observations. Draw the model's function on the same graph as experimental points, using identical scales. This approach was illustrated earlier with falling object observations compared to the theoretical expression:
 
 $$t = 0.4515 x^{1/2}$$
 :::
 
-How do you judge correspondence quality? This is where uncertainty intervals become crucial. Without them, the inevitable scatter in experimental points would make meaningful comparison impossible—what are the chances of a theoretical line passing exactly through multiple scattered points? When points represent possible value intervals rather than single values, logical assessment becomes possible.
+How do we judge correspondence quality? This is where uncertainty intervals become crucial. Without them, the inevitable scatter in experimental points would make meaningful comparison impossible—what are the chances of a theoretical line passing exactly through multiple scattered points? When points represent possible value intervals rather than single values, logical assessment becomes possible.
 
 :::{tip}
-If the line representing the model passes through each point's uncertainty region (as in the earlier example), you can state this observation directly. This doesn't "prove" the equation is "true" or "correct"—it merely indicates the model and system are "consistent," "in agreement," or "compatible" within your measurement precision. Using appropriate language prevents misrepresentation and potential misunderstanding.
+If the line representing the model passes through each point's uncertainty region (as in the earlier example), we can state this observation directly. This doesn't "prove" the equation is "true" or "correct"—it merely indicates the model and system are "consistent," "in agreement," or "compatible" within our measurement precision. Using appropriate language prevents misrepresentation and potential misunderstanding.
 :::
 
-Also recognize that agreement exists only at your current precision level. At higher precision, discrepancies might appear that weren't detectable in your experiment.
+Also recognize that agreement exists only at our current precision level. At higher precision, discrepancies might appear that weren't detectable in the experiment.
 
 #### Scenario 2: Partial Correspondence
 
 :::{note}
-Sometimes a model adequately describes a system only within certain parameter ranges. Your graphical comparison might resemble Figure 6.1(b) or 6.1(c), showing agreement over limited ranges. For instance, fluid flow through a pipe might follow a linear pressure-flow relationship only below turbulence onset, or metal resistivity might follow a linear temperature model except at very low temperatures.
+Sometimes a model adequately describes a system only within certain parameter ranges. The graphical comparison might resemble Figure 6.1(b) or 6.1(c), showing agreement over limited ranges. For instance, fluid flow through a pipe might follow a linear pressure-flow relationship only below turbulence onset, or metal resistivity might follow a linear temperature model except at very low temperatures.
 :::
 
 :::{tip}
-In such cases, report your comparison using language like: "We observed agreement between model and observations only over the range X to Y" or "The properties diverged significantly beyond value Z."
+In such cases, report the comparison using language like: "We observed agreement between model and observations only over the range X to Y" or "The properties diverged significantly beyond value Z."
 :::
 
 :::{important}
@@ -202,7 +202,7 @@ Resist thinking something is "wrong" when models and systems don't correspond co
 #### Scenario 3: Unexpected Intercepts
 
 :::{note}
-You'll frequently encounter situations where a model's behavior passes through the origin, but experimental observations don't, as shown in Figures 6.1(d) and 6.1(e). Such discrepancies can arise from various model-system mismatches and provide valuable analytical insights.
+We'll frequently encounter situations where a model's behavior passes through the origin, but experimental observations don't, as shown in Figures 6.1(d) and 6.1(e). Such discrepancies can arise from various model-system mismatches and provide valuable analytical insights.
 :::
 
 :::{tip}
@@ -212,14 +212,14 @@ When drawing graphs, check behavior at the origin. As previously discussed, grap
 #### Scenario 4: Unexpected Data Scatter
 
 :::{important}
-During experiment planning, you should have carefully assessed measurement uncertainties and chosen appropriate methods to achieve your target precision. If you've done this properly, the scatter in your plotted points should be consistent with your estimated measurement uncertainties, as in Figure 6.1(a).
+During experiment planning, we should have carefully assessed measurement uncertainties and chosen appropriate methods to achieve the target precision. If we've done this properly, the scatter in plotted points should be consistent with estimated measurement uncertainties, as in Figure 6.1(a).
 :::
 
 :::{warning}
-However, reality often deviates from expectations, and you may find yourself facing a situation like Figure 6.1(f), where scatter exceeds predicted uncertainty. This usually indicates unforeseen factors in your measurement process that weren't accounted for in your initial uncertainty assessment.
+However, reality often deviates from expectations, and we may find ourselves facing a situation like Figure 6.1(f), where scatter exceeds predicted uncertainty. This usually indicates unforeseen factors in the measurement process that weren't accounted for in the initial uncertainty assessment.
 :::
 
-Don't leave such discrepancies unaddressed. Check your apparatus to identify potential fluctuation sources—perhaps a loose electrical connection or unstirred heating bath. Resolving such issues is always satisfying. If continuing the experiment isn't possible, work with your existing results and make the best assessment you can of correspondence between model and system, perhaps noting that observations distribute uniformly around the model line.
+Don't leave such discrepancies unaddressed. Check the apparatus to identify potential fluctuation sources—perhaps a loose electrical connection or unstirred heating bath. Resolving such issues is always satisfying. If continuing the experiment isn't possible, work with existing results and make the best assessment possible of correspondence between model and system, perhaps noting that observations distribute uniformly around the model line.
 
 #### Scenario 5: Complete Non-correspondence
 
@@ -227,27 +227,27 @@ Don't leave such discrepancies unaddressed. Check your apparatus to identify pot
 It's rare to encounter situations where system behavior bears no resemblance whatsoever to model behavior [Figure 6.1(g)]. With properly functioning equipment, this outcome is highly unlikely. Models may be imperfect representations of physical reality, but they wouldn't qualify as models if they performed as poorly as this scenario suggests.
 :::
 
-Such complete correspondence failure usually indicates experimental error—misinterpreting variables, incorrectly transforming equations, improper equipment setup, or mistakes in observation, calculation, or graphing. If possible, review everything from the beginning. If equipment access isn't possible, check all analytical and arithmetic processes. If all error-finding attempts fail, report your results honestly and objectively. You may have discovered something novel, and an honest account of puzzling results from well-checked equipment will interest others in your field.
+Such complete correspondence failure usually indicates experimental error—misinterpreting variables, incorrectly transforming equations, improper equipment setup, or mistakes in observation, calculation, or graphing. If possible, review everything from the beginning. If equipment access isn't possible, check all analytical and arithmetic processes. If all error-finding attempts fail, report results honestly and objectively. We may have discovered something novel, and an honest account of puzzling results from well-checked equipment will interest others in the field.
 
 :::{important}
-Throughout this assessment process, remember: experiments don't give "right" or "wrong" results. Your responsibility is conducting experiments carefully and reporting outcomes honestly and objectively. Occasional reminders that models provide only partially satisfactory representations of physical systems are healthy. Understanding model validity limits and failure modes provides invaluable evidence for those seeking to improve them.
+Throughout this assessment process, remember: experiments don't give "right" or "wrong" results. Our responsibility is conducting experiments carefully and reporting outcomes honestly and objectively. Occasional reminders that models provide only partially satisfactory representations of physical systems are healthy. Understanding model validity limits and failure modes provides invaluable evidence for those seeking to improve them.
 :::
 
 ### Stage 4: Determining Values from Straight-Line Analysis
 
 :::{note}
-In previous sections, we discussed comparing fully specified models (including all numerical values) with experimental systems. However, as explained in earlier chapters, straight-line analysis frequently serves to determine unknown model parameters appropriate for your system.
+In previous sections, we discussed comparing fully specified models (including all numerical values) with experimental systems. However, as explained in earlier chapters, straight-line analysis frequently serves to determine unknown model parameters appropriate for the system.
 :::
 
-In these cases, the model contains initially unknown quantities, so you cannot draw a complete model graph for comparison with experimental points. Your graph initially contains only the points themselves, as shown in Figure 6.2(a).
+In these cases, the model contains initially unknown quantities, so we cannot draw a complete model graph for comparison with experimental points. The graph initially contains only the points themselves, as shown in Figure 6.2(a).
 
 Consider measuring current through and potential difference across a resistor to test Ohm's Law (V = IR). Without knowing resistance R, the model behavior encompasses all lines through the origin on the I-V plane described by:
 
 $$V = constant × I$$
 
-where the constant could be any positive value. In principle, you could draw all possible lines on your graph and determine: (1) the extent to which system and model behaviors overlap, and (2) the range of R values appropriate for your system (as illustrated in Figure 4.11).
+where the constant could be any positive value. In principle, we could draw all possible lines on the graph and determine: (1) the extent to which system and model behaviors overlap, and (2) the range of R values appropriate for the system (as illustrated in Figure 4.11).
 
-In practice, this is complicated by the fact that, based on measurements shown in Figure 6.2(a), you cannot assume system behavior passes through the origin. It's best to defer the intercept question and simply determine which straight lines are consistent with your observations.
+In practice, this is complicated by the fact that, based on measurements shown in Figure 6.2(a), we cannot assume system behavior passes through the origin. It's best to defer the intercept question and simply determine which straight lines are consistent with observations.
 
 #### Finding the "Best" Line and Uncertainty Range
 
@@ -256,51 +256,51 @@ Several approaches exist for line-fitting. The most rigorous statistical method 
 :::
 
 :::{tip}
-This requires mechanical aids that don't obscure half your data points. Avoid opaque rulers; use transparent straight edges or, better yet, dark thread that can be stretched across points and easily repositioned. If visually judging point trends is difficult, hold the graph at eye level and sight along the points—this makes clustering around a straight line or systematic deviations much more apparent than direct viewing.
+This requires mechanical aids that don't obscure half the data points. Avoid opaque rulers; use transparent straight edges or, better yet, dark thread that can be stretched across points and easily repositioned. If visually judging point trends is difficult, hold the graph at eye level and sight along the points—this makes clustering around a straight line or systematic deviations much more apparent than direct viewing.
 :::
 
-Identify several significant lines: the "best" straight line by your judgment, plus the limiting lines representing how far you can reasonably rotate your "best" line before it no longer acceptably fits the data. These extremes provide uncertainty values for your slope.
+Identify several significant lines: the "best" straight line by judgment, plus the limiting lines representing how far we can reasonably rotate the "best" line before it no longer acceptably fits the data. These extremes provide uncertainty values for the slope.
 
-If wide point scatter makes identifying best-fit and limiting lines difficult, remember that your measured points represent samples from a continuous distribution band. The sparse population of this band (due to limited observations) can complicate line selection. Visualize the band populated by millions of potential readings your apparatus might produce, then estimate the center and edges of that distribution, allowing you to select appropriate lines.
+If wide point scatter makes identifying best-fit and limiting lines difficult, remember that measured points represent samples from a continuous distribution band. The sparse population of this band (due to limited observations) can complicate line selection. Visualize the band populated by millions of potential readings the apparatus might produce, then estimate the center and edges of that distribution, allowing us to select appropriate lines.
 
-In Figure 6.2(b), you might choose AB as your "best" line and determine that lines CD and EF would contain almost all possible points from an infinite measurement set. Lines CF and ED (not shown) would represent the steepest and shallowest slopes consistent with your observations.
+In Figure 6.2(b), we might choose AB as the "best" line and determine that lines CD and EF would contain almost all possible points from an infinite measurement set. Lines CF and ED (not shown) would represent the steepest and shallowest slopes consistent with observations.
 
-Once you've selected appropriate lines, determine their slopes numerically to calculate your desired parameter (like resistance R in our Ohm's Law example). For slope calculation, angle is irrelevant—you need the quantitative relationship between measured variables. For a line like AB in Figure 6.3, identify precise coordinates where it crosses graph grid intersections near its endpoints. If these coordinates are (I₁, V₁) and (I₂, V₂), calculate:
+Once we've selected appropriate lines, determine their slopes numerically to calculate the desired parameter (like resistance R in our Ohm's Law example). For slope calculation, angle is irrelevant—we need the quantitative relationship between measured variables. For a line like AB in Figure 6.3, identify precise coordinates where it crosses graph grid intersections near its endpoints. If these coordinates are (I₁, V₁) and (I₂, V₂), calculate:
 
 $$slope = (V_2 - V_1)/(I_2 - I_1)$$
 
-For our example, $R$ equals this slope directly. In more complex cases, you might need additional calculations involving other measured quantities to determine your final answer.
+For our example, $R$ equals this slope directly. In more complex cases, we might need additional calculations involving other measured quantities to determine the final answer.
 
-Perform this process three times: once for your "best" line (AB) and once each for your upper and lower limiting lines (CF and ED). This gives your best value for R plus upper and lower limits beyond which you're "almost certain" the true value doesn't lie. Typically, these extreme values are roughly equidistant from your central value, allowing you to express your result as:
+Perform this process three times: once for the "best" line (AB) and once each for upper and lower limiting lines (CF and ED). This gives the best value for R plus upper and lower limits beyond which we're "almost certain" the true value doesn't lie. Typically, these extreme values are roughly equidistant from the central value, allowing us to express the result as:
 
 $$R = value \pm uncertainty$$
 
-Sometimes your "best" line and limiting lines won't appear equally spaced, usually because too few points prevent good line assessment. While sometimes experimenters feel compelled to express asymmetric uncertainties as:
+Sometimes the "best" line and limiting lines won't appear equally spaced, usually because too few points prevent good line assessment. While sometimes experimenters feel compelled to express asymmetric uncertainties as:
 
 $$value (+ uncertainty_1 / - uncertainty_2)$$
 
-visual graph judgment rarely justifies such precision. If identifying a clear "best" line proves genuinely difficult, you can simply delineate the edges of the value band (lines ED and CF in Figure 6.3), calculate maximum and minimum slopes, and express your experimental result as the interval between these slopes, or as their average ± half their difference.
+visual graph judgment rarely justifies such precision. If identifying a clear "best" line proves genuinely difficult, we can simply delineate the edges of the value band (lines ED and CF in Figure 6.3), calculate maximum and minimum slopes, and express the experimental result as the interval between these slopes, or as their average ± half their difference.
 
-If your desired answer isn't directly equal to the slope, but requires calculation using additional quantities with their own uncertainties, combine the slope uncertainty with these other uncertainties using methods described in Chapter 2.
+If the desired answer isn't directly equal to the slope, but requires calculation using additional quantities with their own uncertainties, combine the slope uncertainty with these other uncertainties using methods described in Chapter 2.
 
-The significance of uncertainty values obtained from graphs depends on how you marked uncertainty on your original data points. If your bars represented outer limits of possible variation (either subjectively assessed or 2Sₘ for statistical fluctuations), your slope limits have similar interpretation. If points were marked with 1Sₘ limits, the limiting slopes probably represent better than 68% probability because of the conservative approach used in drawing limiting lines.
+The significance of uncertainty values obtained from graphs depends on how we marked uncertainty on original data points. If the bars represented outer limits of possible variation (either subjectively assessed or 2Sₘ for statistical fluctuations), the slope limits have similar interpretation. If points were marked with 1Sₘ limits, the limiting slopes probably represent better than 68% probability because of the conservative approach used in drawing limiting lines.
 
-This analysis assumes that actual data scatter falls within predicted uncertainty ranges. If scatter greatly exceeds expected uncertainty (due to unforeseen fluctuation sources), you may have difficulty establishing lines that contain "almost all" possible values with confidence. In such cases and for all precision work, least squares analysis (discussed later) becomes essential.
+This analysis assumes that actual data scatter falls within predicted uncertainty ranges. If scatter greatly exceeds expected uncertainty (due to unforeseen fluctuation sources), we may have difficulty establishing lines that contain "almost all" possible values with confidence. In such cases and for all precision work, least squares analysis (discussed later) becomes essential.
 
-When selecting your three lines, deliberately exclude the origin from consideration, as system behavior at the origin may be one aspect you wish to examine. If your model should pass through the origin, check whether the area between your limiting lines includes the origin. If so, your model and system show consistency at your precision level. Only if both limiting lines clearly intersect an axis on the same side of origin can you confidently identify an unexpected intercept.
+When selecting the three lines, deliberately exclude the origin from consideration, as system behavior at the origin may be one aspect we wish to examine. If the model should pass through the origin, check whether the area between limiting lines includes the origin. If so, the model and system show consistency at our precision level. Only if both limiting lines clearly intersect an axis on the same side of origin can we confidently identify an unexpected intercept.
 
-If your model predicts an intercept from which you hope to determine some quantity, the intersection of your three lines with the relevant axis directly provides that intercept as: value ± uncertainty.
+If the model predicts an intercept from which we hope to determine some quantity, the intersection of the three lines with the relevant axis directly provides that intercept as: value ± uncertainty.
 
 ## Handling Imperfect Model-System Correspondence
 
 :::{important}
-When model and system correspond only partially, exercise care to avoid introducing systematic errors from these discrepancies into your results. Consider first cases where measurements align with the model's straight line only over limited ranges [Figures 6.1(b) and 6.1(c)].
+When model and system correspond only partially, exercise care to avoid introducing systematic errors from these discrepancies into results. Consider first cases where measurements align with the model's straight line only over limited ranges [Figures 6.1(b) and 6.1(c)].
 :::
 
-Obviously, restrict your slope evaluations to regions where system and model are compatible. Points systematically deviating from the straight line reflect physical circumstances not included in your model, making them inappropriate for model-based calculations. Disregard all points deviating systematically from straight-line behavior by amounts clearly exceeding estimated uncertainties and observed scatter, limiting your slope and uncertainty calculations to the linear region.
+Obviously, restrict slope evaluations to regions where system and model are compatible. Points systematically deviating from the straight line reflect physical circumstances not included in the model, making them inappropriate for model-based calculations. Disregard all points deviating systematically from straight-line behavior by amounts clearly exceeding estimated uncertainties and observed scatter, limiting slope and uncertainty calculations to the linear region.
 
 :::{tip}
-A second consideration involves intercepts. Even when your model passes through the origin, graphs frequently show intercepts. Such deviations arise from various causes, but many prove harmless. If the intercept-causing discrepancy affects all readings equally (like undetected zero error in an instrument or constant spurious EMF in an electrical circuit), the graph's slope remains free from the systematic error that would otherwise contaminate your results.
+A second consideration involves intercepts. Even when the model passes through the origin, graphs frequently show intercepts. Such deviations arise from various causes, but many prove harmless. If the intercept-causing discrepancy affects all readings equally (like undetected zero error in an instrument or constant spurious EMF in an electrical circuit), the graph's slope remains free from the systematic error that would otherwise contaminate results.
 :::
 
 Therefore, design experiments so answers come from graph slopes, while quantities potentially subject to undetermined systematic errors appear as intercepts. This capability to provide answers free from many systematic error types represents one of graphical analysis's principal advantages.
@@ -376,25 +376,25 @@ In all cases, experimenters are responsible for choosing appropriate functions�
 ## Important Cautions When Using Least Squares
 
 :::{warning}
-Least squares mathematical procedures are entirely objective and impartial. Equations for linear fitting will drive a straight line through any dataset, regardless of whether a straight-line function is appropriate. If your experiment produces observations clearly showing breakdown of a linear model (Figure 6.5), blindly applying least squares to all observations will yield parameters for line AB that have no significance for either model or system. Thoughtless application of least squares methods must be scrupulously avoided.
+Least squares mathematical procedures are entirely objective and impartial. Equations for linear fitting will drive a straight line through any dataset, regardless of whether a straight-line function is appropriate. If the experiment produces observations clearly showing breakdown of a linear model (Figure 6.5), blindly applying least squares to all observations will yield parameters for line AB that have no significance for either model or system. Thoughtless application of least squares methods must be scrupulously avoided.
 :::
 
 :::{important}
-This warning is particularly important given easy access to calculators and computers that generate least squares parameters for any inputted numbers with a few button presses. Remember that we compare straight lines with observations because we've judged this comparison reasonable. Therefore, never use least squares procedures before plotting observations and visually confirming linear fitting's appropriateness. As mentioned earlier, you may need to exclude observations outside the model's scope from best-line determination.
+This warning is particularly important given easy access to calculators and computers that generate least squares parameters for any inputted numbers with a few button presses. Remember that we compare straight lines with observations because we've judged this comparison reasonable. Therefore, never use least squares procedures before plotting observations and visually confirming linear fitting's appropriateness. As mentioned earlier, we may need to exclude observations outside the model's scope from best-line determination.
 :::
 
-Only after carefully considering the entire situation graphically and visually, and confirming linear fitting's appropriateness over all or part of the observation range, are you justified in applying least squares. Ignoring this warning can cause serious experiment interpretation errors.
+Only after carefully considering the entire situation graphically and visually, and confirming linear fitting's appropriateness over all or part of the observation range, are we justified in applying least squares. Ignoring this warning can cause serious experiment interpretation errors.
 
 ## Finding Functions When No Model Exists
 
 :::{note}
-Our previous discussion assumed you possessed a model to compare with your system. While this is common, sometimes you encounter observation sets with no available model—perhaps when researching previously unobserved phenomena or studying systems too complex for theoretical modeling. When plotted, such observations typically show curves with no readily identifiable pattern. Without a model, what approaches are available?
+Our previous discussion assumed we possessed a model to compare with the system. While this is common, sometimes we encounter observation sets with no available model—perhaps when researching previously unobserved phenomena or studying systems too complex for theoretical modeling. When plotted, such observations typically show curves with no readily identifiable pattern. Without a model, what approaches are available?
 :::
 
-One option is finding functions with some correspondence to your observations. This can be valuable in complex systems where theoretical modeling seems hopeless. Even if your "model" is merely a mathematical function restating the system's behavior, it facilitates computer processing and enables interpolation, extrapolation, and similar operations. Such empirical models help predict national economic responses to taxation changes or determine temperatures from resistance thermometer calibration curves.
+One option is finding functions with some correspondence to observations. This can be valuable in complex systems where theoretical modeling seems hopeless. Even if the "model" is merely a mathematical function restating the system's behavior, it facilitates computer processing and enables interpolation, extrapolation, and similar operations. Such empirical models help predict national economic responses to taxation changes or determine temperatures from resistance thermometer calibration curves.
 
 :::{warning}
-In simpler systems where theoretical modeling seems possible, functions showing good correspondence with observations may guide model building by suggesting underlying physical processes. However, caution is essential. Finding a function consistent with observations at a particular precision level doesn't "prove" you've discovered the "right" function. Different function types often show similar behavior over limited variable ranges, and guidance from incorrectly identified functions can be misleading, potentially impeding theoretical progress for years. The physics history contains many examples where researchers failed to recognize empirical function choices must remain provisional.
+In simpler systems where theoretical modeling seems possible, functions showing good correspondence with observations may guide model building by suggesting underlying physical processes. However, caution is essential. Finding a function consistent with observations at a particular precision level doesn't "prove" we've discovered the "right" function. Different function types often show similar behavior over limited variable ranges, and guidance from incorrectly identified functions can be misleading, potentially impeding theoretical progress for years. The physics history contains many examples where researchers failed to recognize empirical function choices must remain provisional.
 :::
 
 With appropriate caution regarding potential limitations, here are some common function-finding approaches:
@@ -410,7 +410,7 @@ Taking logarithms of both sides:
 
 $$log y = a·log x$$
 
-A graph of log y versus log x produces a straight line with slope a. To test whether observations follow a power law, plot them as log y versus log x. If points align with a straight line, you can conclude a simple power function (positive/negative, integral/fractional as determined by the graph) fits your observations well. The appropriate power value comes from the graph's slope, with uncertainty limits depending on plotted point uncertainties.
+A graph of log y versus log x produces a straight line with slope a. To test whether observations follow a power law, plot them as log y versus log x. If points align with a straight line, we can conclude a simple power function (positive/negative, integral/fractional as determined by the graph) fits observations well. The appropriate power value comes from the graph's slope, with uncertainty limits depending on plotted point uncertainties.
 :::
 
 Such graphs can use ordinary paper (plotting actual log x and log y values) or logarithmic graph paper (with rulings proportional to logarithms, allowing direct plotting of original values).
@@ -426,13 +426,13 @@ Taking natural logarithms:
 
 $$\ln y = \ln a + bx$$
 
-This creates a straight line when plotting ln y versus x (a "semi-log plot"). If you suspect an exponential function might apply to your system, create a semi-log plot using either ordinary graph paper (calculating ln y values) or semi-log paper (with one logarithmic and one linear scale). Appropriate a and b values come from the intercept and slope, with uncertainties determined by measurement precision.
+This creates a straight line when plotting ln y versus x (a "semi-log plot"). If we suspect an exponential function might apply to the system, create a semi-log plot using either ordinary graph paper (calculating ln y values) or semi-log paper (with one logarithmic and one linear scale). Appropriate a and b values come from the intercept and slope, with uncertainties determined by measurement precision.
 :::
 
 ### Polynomial Approximations
 
 :::{note}
-If neither power laws nor exponential functions adequately match your observations, the chances of finding a more complex function that fits well are slim. In such cases, polynomial approximations often prove useful:
+If neither power laws nor exponential functions adequately match observations, the chances of finding a more complex function that fits well are slim. In such cases, polynomial approximations often prove useful:
 
 $$y = a_0 + a_1 x + a_2 x^2 + \cdots $$
 
@@ -446,11 +446,11 @@ Similar approaches apply when observation scatter isn't severe and highest preci
 ## Assessing Overall Experimental Precision
 
 :::{important}
-At experiment initiation, you estimated likely uncertainties to guide your experimental approach. After completion, you should retrospectively evaluate actually achieved precision through critical results assessment. The specific uncertainty type matters less than clearly stating what you're reporting—whether estimated ranges, standard deviations, standard deviations of means, or other measures.
+At experiment initiation, we estimated likely uncertainties to guide the experimental approach. After completion, we should retrospectively evaluate actually achieved precision through critical results assessment. The specific uncertainty type matters less than clearly stating what we're reporting—whether estimated ranges, standard deviations, standard deviations of means, or other measures.
 :::
 
 :::{warning}
-For meaningful application, overall uncertainty figures must be realistic and honest, even when experimental outcomes are less favorable than hoped. Include all identifiable uncertainty sources in your assessment. If balance points cannot be identified within 2-3 mm or slide wire non-uniformities introduce errors, claiming 0.2% precision for slide-wire potentiometer readings becomes meaningless, regardless of millimeter-graduated scales.
+For meaningful application, overall uncertainty figures must be realistic and honest, even when experimental outcomes are less favorable than hoped. Include all identifiable uncertainty sources in the assessment. If balance points cannot be identified within 2-3 mm or slide wire non-uniformities introduce errors, claiming 0.2% precision for slide-wire potentiometer readings becomes meaningless, regardless of millimeter-graduated scales.
 :::
 
 Known systematic error contributions should be excluded at this stage, as appropriate measurement corrections should already have been applied. However, suspected systematic error sources whose contributions cannot be accurately evaluated should be described with appropriate allowances in overall uncertainty ranges. Final statement format depends on circumstances:
@@ -468,16 +468,16 @@ If graphical analysis wasn't possible and results come algebraically from severa
 ### For Results from Graphical Analysis
 
 :::{note}
-If your straight line was established through least squares, constant uncertainties (m and b) will have been directly determined. These uncertainties advantageously derive from actual point scatter, independent of estimated uncertainties. (This doesn't mean you should skip plotting uncertainties or drawing graphs when using least squares—as emphasized earlier, graphs with plotted uncertainties remain essential for judging model-system correspondence ranges before least squares calculations).
+If the straight line was established through least squares, constant uncertainties (m and b) will have been directly determined. These uncertainties advantageously derive from actual point scatter, independent of estimated uncertainties. (This doesn't mean we should skip plotting uncertainties or drawing graphs when using least squares—as emphasized earlier, graphs with plotted uncertainties remain essential for judging model-system correspondence ranges before least squares calculations).
 :::
 
-If you've drawn your line by eye, the limiting possibility lines will give slope and intercept ranges. This slope uncertainty may need combining with other quantity uncertainties before stating final answer uncertainty.
+If we've drawn the line by eye, the limiting possibility lines will give slope and intercept ranges. This slope uncertainty may need combining with other quantity uncertainties before stating final answer uncertainty.
 
 :::{tip}
-As mentioned previously, the specific uncertainty type matters less than clearly stating what you're reporting. When working through lengthy uncertainty calculations, you can simplify by dropping insignificant contributions—adding 0.01% uncertainty to 5% offers negligible benefit since the 5% value lacks three-digit precision. Final uncertainty statements rarely justify more than two significant figures; only highly significant statistical work warrants greater precision.
+As mentioned previously, the specific uncertainty type matters less than clearly stating what we're reporting. When working through lengthy uncertainty calculations, we can simplify by dropping insignificant contributions—adding 0.01% uncertainty to 5% offers negligible benefit since the 5% value lacks three-digit precision. Final uncertainty statements rarely justify more than two significant figures; only highly significant statistical work warrants greater precision.
 :::
 
-Once you've determined overall answer uncertainty, consider how many significant figures to retain. This was covered in Section 2.11, but bears repeating in the context of experiment evaluation.
+Once we've determined overall answer uncertainty, consider how many significant figures to retain. This was covered in Section 2.11, but bears repeating in the context of experiment evaluation.
 
 :::{important}
 No unique answer exists for significant figure questions, but generally avoid retaining figures beyond the first uncertain digit. For example, 5.4387 ± 0.2 should be reported as 5.4 ± 0.2, since uncertainty in the tenths position makes subsequent digits meaningless. If uncertainty is known more precisely, retaining one additional figure might be justified—if uncertainty were 0.15, reporting 5.44 ± 0.15 would be valid.
@@ -495,7 +495,7 @@ Finally, always ensure answer and uncertainty expressions are consistent—neith
 Thus far, we've considered experimental interpretation involving relatively precise observations and satisfactory models. Reality is often messier, and much modern experimentation is less clear-cut than previous sections might suggest.
 :::
 
-Many scientific fields deal with subtle phenomena where effects can be partially or completely masked by statistical fluctuations or other perturbations. In these scenarios, detailed model-system comparisons may be impossible—you might struggle even to establish whether the effect you're studying exists at all. This scenario commonly occurs in biological, medical, and environmental studies.
+Many scientific fields deal with subtle phenomena where effects can be partially or completely masked by statistical fluctuations or other perturbations. In these scenarios, detailed model-system comparisons may be impossible—we might struggle even to establish whether the effect we're studying exists at all. This scenario commonly occurs in biological, medical, and environmental studies.
 
 Consider familiar public health debates about smoking's role in lung cancer, low-level radiation's relationship to leukemia, or dietary influences on cardiovascular disease. In these contexts, "proof" frequently enters discussion: "We haven't proved smoking causes lung cancer" or "Can we prove heart attacks are less frequent with margarine versus butter consumption?"
 
