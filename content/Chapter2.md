@@ -98,8 +98,9 @@ This uncertainty value (±0.2 cm) represents the **absolute uncertainty** of our
   - Substantial
 - - Measuring furniture
   - Acceptable
-- - Measuring astronomical distances - Negligible
-    :::
+- - Measuring astronomical distances
+  - Negligible
+:::
 
 To better evaluate a measurement's quality, we use **relative uncertainty**, defined as:
 
