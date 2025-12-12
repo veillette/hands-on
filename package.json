@@ -23,7 +23,7 @@
   },
   "license": "CC-BY-NC-SA-4.0",
   "dependencies": {
-    "mystmd": "^1.7.0"
+    "mystmd": "^1.7.1"
   },
   "devDependencies": {
     "husky": "^9.1.7",
