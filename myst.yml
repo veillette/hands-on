@@ -29,6 +29,8 @@ project:
       path: ./plugins/jupyterlite.mjs
     - type: javascript
       path: ./plugins/pyodide.mjs
+    - type: javascript
+      path: ./plugins/h5p.mjs
   authors:
     - name: "Martin Veillette"
   date: 2025-01-01
@@ -67,6 +69,8 @@ project:
   toc:
     - file: content/Preface.md
       title: Preface
+    - file: content/H5P-Demo.md
+      title: H5P Questions Demo
     - title: Chapters
       children:
         - file: content/Chapter1.md
