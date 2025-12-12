@@ -1,8 +1,3 @@
----
-title: H5P Interactive Questions Demo
-description: Demonstration of H5P-style interactive questions for self-assessment
----
-
 # H5P Interactive Questions Demo
 
 This page demonstrates the H5P-style interactive question types available in this textbook. These questions provide immediate feedback to help students assess their understanding of key concepts.
