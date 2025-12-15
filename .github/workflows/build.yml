@@ -117,7 +117,7 @@ jobs:
 
       - name: Upload build artifacts (for non-deploy builds)
         if: steps.check-deploy.outputs.should-deploy != 'true'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: site-build
           path: '_build/html'
