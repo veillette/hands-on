@@ -105,7 +105,7 @@ jobs:
           echo "- Output directory: \`_build/html\`" >> $GITHUB_STEP_SUMMARY
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: html-preview
           path: '_build/html'
