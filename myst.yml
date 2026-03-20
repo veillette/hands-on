@@ -69,8 +69,6 @@ project:
   toc:
     - file: content/Preface.md
       title: Preface
-    - file: content/H5P-Demo.md
-      title: H5P Questions Demo
     - title: Chapters
       children:
         - file: content/Chapter1.md
