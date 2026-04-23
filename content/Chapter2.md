@@ -244,7 +244,7 @@ $$\delta z = |\delta x| + |\delta y|$$
 This accounts for the worst case where uncertainties combine to maximize the total uncertainty.
 :::
 
-:::{iframe} <https://preview.p5js.org/veillette/embed/0tDJ0eSDw>
+:::{iframe} https://preview.p5js.org/veillette/embed/0tDJ0eSDw
 :width: 800
 
 Interactive demonstration of uncertainty propagation in addition and subtraction.
@@ -396,6 +396,28 @@ zero error
 uncertainty propagation
 : The process of determining how uncertainties in individual measurements combine to affect the uncertainty in a calculated result.
 :::
+
+## Quick Check
+
+The following interactive exercises use the standalone H5P player. They cover
+kinematics concepts that involve derived quantities and unit conversions —
+ideas closely related to the measurement skills developed in this chapter.
+
+```{h5p} body-density-27
+:height: 420px
+```
+
+```{h5p} average-speed-and-velocity-58
+:height: 420px
+```
+
+```{h5p} acceleration-59
+:height: 360px
+```
+
+```{h5p} ball-launch-86
+:height: 360px
+```
 
 ## Problems
 

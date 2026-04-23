@@ -1,3 +1,5 @@
+import { relative } from 'node:path';
+
 /**
  * @fileoverview MyST Plugin for embedding H5P interactive questions
  *
@@ -61,70 +63,54 @@ function srcdocIframe(html, width, height) {
 }
 
 /**
- * H5P embed directive - embeds content from h5p.org
+ * H5P embed directive — local .h5p packages or h5p.org fallback.
+ *
+ * Local usage:  {h5p} acceleration-59        (name of the .h5p file without extension)
+ * Remote usage: {h5p} 1234567                (h5p.org content ID)
+ *               {h5p} https://h5p.org/…      (full embed URL)
+ *
+ * Local packages must be placed in the project's h5p/ directory.  The build
+ * script (scripts/extract-h5p.mjs) extracts them to _build/html/h5p-content/
+ * and writes a player.html per package that uses h5p-standalone via CDN.
  */
 const h5pEmbedDirective = {
   name: 'h5p',
-  doc: 'Embed H5P content from h5p.org or other H5P servers',
+  doc: 'Embed a local H5P activity or an h5p.org content ID / URL',
   arg: {
     type: String,
-    doc: 'The H5P content ID or full embed URL',
-  },
-  body: {
-    type: 'markdown',
-    doc: 'Optional caption for the embedded content',
+    doc: 'Local activity name (without .h5p), h5p.org numeric ID, or full embed URL',
   },
   options: {
-    width: {
-      type: String,
-      doc: 'Width of the iframe (default: 100%)'
-    },
-    height: {
-      type: String,
-      doc: 'Height of the iframe (default: 400px)'
-    },
-    placeholder: {
-      type: String,
-      doc: 'Path to placeholder image for static exports'
-    }
+    width: { type: String, doc: 'Width of the iframe (default: 100%)' },
+    height: { type: String, doc: 'Height of the iframe (default: 500px)' },
   },
-  run: function(data) {
-    const contentId = data.arg;
+  run: function (data, vfile) {
+    const arg = (data.arg || '').trim();
 
-    if (!contentId) {
-      return [{
-        type: 'paragraph',
-        children: [{ type: 'text', value: 'Error: H5P content ID is required.' }]
-      }];
+    if (!arg) {
+      return [{ type: 'paragraph', children: [{ type: 'text', value: 'Error: h5p directive requires an activity name or content ID.' }] }];
     }
 
     const width = data.options?.width || '100%';
-    const height = data.options?.height || '400px';
+    const height = data.options?.height || '500px';
 
-    // Determine the embed URL
-    let embedUrl;
-    if (contentId.startsWith('http')) {
-      embedUrl = contentId;
-    } else {
-      embedUrl = `https://h5p.org/h5p/embed/${contentId}`;
+    // External URL — embed directly
+    if (arg.startsWith('http')) {
+      return [{ type: 'iframe', src: arg, width, height }];
     }
 
-    const iframe = {
-      type: 'iframe',
-      src: embedUrl,
-      width,
-      height
-    };
-
-    if (data.options?.placeholder) {
-      iframe.placeholder = data.options.placeholder;
+    // Numeric h5p.org ID — embed from h5p.org
+    if (/^\d+$/.test(arg)) {
+      return [{ type: 'iframe', src: `https://h5p.org/h5p/embed/${arg}`, width, height }];
     }
 
-    if (data.body && data.body.length > 0) {
-      return [iframe, { type: 'caption', children: data.body }];
-    }
+    // Local activity name — compute depth relative to project root (vfile.path may be absolute)
+    const srcPath = vfile?.path || '';
+    const relPath = srcPath.startsWith('/') ? relative(process.cwd(), srcPath) : srcPath;
+    const depth = relPath ? Math.max(0, relPath.split('/').filter(Boolean).length - 1) : 1;
+    const prefix = depth > 0 ? '../'.repeat(depth) : '';
 
-    return [iframe];
+    return [{ type: 'iframe', src: `${prefix}h5p-content/${arg}/player.html`, width, height }];
   }
 };
 
