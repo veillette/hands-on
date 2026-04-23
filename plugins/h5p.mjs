@@ -46,10 +46,18 @@ function escapeHtml(unsafe) {
 }
 
 /**
- * Escapes content for use in a data URI
+ * Wraps self-contained HTML in an iframe using a base64 data URI as src.
+ * MyST's iframe node only renders the `src` property, so srcdoc is not an option.
+ * Data URIs work in all modern browsers and provide the same JS isolation.
  */
-function escapeForDataUri(str) {
-  return encodeURIComponent(str);
+function srcdocIframe(html, width, height) {
+  const encoded = Buffer.from(html, 'utf8').toString('base64');
+  return {
+    type: 'iframe',
+    src: `data:text/html;base64,${encoded}`,
+    width,
+    height
+  };
 }
 
 /**
@@ -329,14 +337,7 @@ const h5pMultichoiceDirective = {
 </body>
 </html>`;
 
-    // Return an iframe with srcdoc
-    return [{
-      type: 'iframe',
-      srcdoc: iframeContent,
-      width: '100%',
-      height: height,
-      style: { border: 'none', borderRadius: '8px' }
-    }];
+    return [srcdocIframe(iframeContent, '100%', height)];
   }
 };
 
@@ -482,13 +483,7 @@ const h5pTrueFalseDirective = {
 </body>
 </html>`;
 
-    return [{
-      type: 'iframe',
-      srcdoc: iframeContent,
-      width: '100%',
-      height: height,
-      style: { border: 'none', borderRadius: '8px' }
-    }];
+    return [srcdocIframe(iframeContent, '100%', height)];
   }
 };
 
@@ -649,13 +644,412 @@ const h5pFillBlanksDirective = {
 </body>
 </html>`;
 
-    return [{
-      type: 'iframe',
-      srcdoc: iframeContent,
-      width: '100%',
-      height: height,
-      style: { border: 'none', borderRadius: '8px' }
-    }];
+    return [srcdocIframe(iframeContent, '100%', height)];
+  }
+};
+
+/**
+ * Sort the Items directive — drag-and-drop ordering activity
+ */
+const h5pSortDirective = {
+  name: 'h5p-sort',
+  doc: 'Create a drag-and-drop sorting activity',
+  arg: { type: String, doc: 'Title of the activity' },
+  body: { type: 'markdown', doc: 'Optional instructions shown above the list' },
+  options: {
+    items: { type: String, doc: 'JSON array of items (shuffled for display)' },
+    correct: { type: String, doc: 'JSON array of items in correct order' },
+    height: { type: String, doc: 'Height of the container (default: 440px)' }
+  },
+  run: function(data) {
+    const title = data.arg || 'Sort the Items';
+    let items = [];
+    let correct = [];
+    try { items = JSON.parse(data.options?.items || '[]'); } catch(e) {}
+    try { correct = JSON.parse(data.options?.correct || '[]'); } catch(e) {}
+    if (correct.length === 0) correct = [...items];
+    const height = data.options?.height || '440px';
+
+    const iframeContent = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: white; }
+    .h5p-container { border: 1px solid #ccc; border-radius: 8px; overflow: hidden; }
+    .h5p-header { background: linear-gradient(135deg, #00796b, #26a69a); color: white; padding: 1rem 1.25rem; }
+    .h5p-header h4 { margin: 0; font-size: 1.1rem; font-weight: 600; }
+    .h5p-content { padding: 1.25rem; }
+    .h5p-instructions { font-size: 0.9rem; color: #555; margin-bottom: 0.75rem; }
+    .sortable-list { list-style: none; padding: 0; }
+    .sort-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.65rem 1rem; margin: 0.35rem 0; background: #f8f9fa; border: 2px solid #e0e0e0; border-radius: 8px; cursor: grab; user-select: none; transition: border-color 0.15s, background 0.15s; }
+    .sort-item.dragging { opacity: 0.35; cursor: grabbing; }
+    .sort-item.drag-over { border-color: #00796b; background: #e0f2f1; }
+    .sort-item.correct  { border-color: #34a853; background: #e6f4ea; }
+    .sort-item.incorrect { border-color: #ea4335; background: #fce8e6; }
+    .drag-handle { color: #bbb; font-size: 1.1rem; flex-shrink: 0; }
+    .item-text { flex: 1; font-size: 0.95rem; color: #333; }
+    .h5p-feedback { display: none; margin-top: 0.75rem; padding: 0.85rem 1rem; border-radius: 6px; font-size: 0.9rem; }
+    .h5p-actions { margin-top: 0.85rem; display: flex; gap: 0.65rem; flex-wrap: wrap; }
+    .btn-primary { padding: 0.55rem 1.4rem; background: #00796b; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 500; }
+    .btn-primary:hover { background: #005b4f; }
+    .btn-secondary { padding: 0.55rem 1.4rem; background: #f5f5f5; color: #333; border: 1px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 0.9rem; display: none; }
+    .btn-secondary:hover { background: #e8e8e8; }
+  </style>
+</head>
+<body>
+  <div class="h5p-container">
+    <div class="h5p-header"><h4>${escapeHtml(title)}</h4></div>
+    <div class="h5p-content">
+      <p class="h5p-instructions">Drag the items into the correct order.</p>
+      <ul class="sortable-list" id="sortList"></ul>
+      <div class="h5p-feedback" id="feedback"></div>
+      <div class="h5p-actions">
+        <button class="btn-primary"    id="checkBtn">Check Order</button>
+        <button class="btn-secondary"  id="showBtn">Show Solution</button>
+        <button class="btn-secondary"  id="retryBtn">Try Again</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const ITEMS   = ${JSON.stringify(items)};
+    const CORRECT = ${JSON.stringify(correct)};
+
+    const list      = document.getElementById('sortList');
+    const checkBtn  = document.getElementById('checkBtn');
+    const showBtn   = document.getElementById('showBtn');
+    const retryBtn  = document.getElementById('retryBtn');
+    const feedbackEl = document.getElementById('feedback');
+    let dragSrc = null;
+
+    function escText(t) { return t.replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+    function buildList(arr) {
+      list.innerHTML = '';
+      arr.forEach(text => {
+        const li = document.createElement('li');
+        li.className = 'sort-item';
+        li.draggable = true;
+        li.innerHTML = '<span class="drag-handle">&#8999;</span><span class="item-text">' + escText(text) + '</span>';
+        li.addEventListener('dragstart', () => { dragSrc = li; requestAnimationFrame(() => li.classList.add('dragging')); });
+        li.addEventListener('dragend',   () => { dragSrc = null; li.classList.remove('dragging'); list.querySelectorAll('.sort-item').forEach(i => i.classList.remove('drag-over')); });
+        li.addEventListener('dragover',  e => { e.preventDefault(); if (dragSrc !== li) li.classList.add('drag-over'); });
+        li.addEventListener('dragleave', () => li.classList.remove('drag-over'));
+        li.addEventListener('drop', e => {
+          e.preventDefault();
+          li.classList.remove('drag-over');
+          if (dragSrc && dragSrc !== li) {
+            const nodes = [...list.querySelectorAll('.sort-item')];
+            nodes.indexOf(dragSrc) < nodes.indexOf(li)
+              ? list.insertBefore(dragSrc, li.nextSibling)
+              : list.insertBefore(dragSrc, li);
+          }
+        });
+        list.appendChild(li);
+      });
+    }
+
+    buildList([...ITEMS].sort(() => Math.random() - 0.5));
+
+    checkBtn.addEventListener('click', () => {
+      const order = [...list.querySelectorAll('.item-text')].map(s => s.textContent);
+      const allOk = order.length === CORRECT.length && order.every((t, i) => t === CORRECT[i]);
+      list.querySelectorAll('.sort-item').forEach((li, i) => {
+        const t = li.querySelector('.item-text').textContent;
+        li.classList.toggle('correct',   t === CORRECT[i]);
+        li.classList.toggle('incorrect', t !== CORRECT[i]);
+        li.draggable = false;
+      });
+      feedbackEl.style.display = 'block';
+      if (allOk) {
+        feedbackEl.style.cssText += 'background:#e6f4ea;color:#1e7e34;';
+        feedbackEl.innerHTML = '<strong>Correct!</strong> The items are in the right order.';
+      } else {
+        feedbackEl.style.cssText += 'background:#fce8e6;color:#c62828;';
+        feedbackEl.innerHTML = '<strong>Not quite.</strong> Green items are placed correctly; red ones need to move.';
+      }
+      checkBtn.style.display   = 'none';
+      showBtn.style.display    = 'inline-block';
+      retryBtn.style.display   = 'inline-block';
+    });
+
+    showBtn.addEventListener('click', () => {
+      buildList(CORRECT);
+      list.querySelectorAll('.sort-item').forEach(li => { li.classList.add('correct'); li.draggable = false; });
+      showBtn.style.display = 'none';
+    });
+
+    retryBtn.addEventListener('click', () => {
+      buildList([...ITEMS].sort(() => Math.random() - 0.5));
+      feedbackEl.style.display = 'none';
+      checkBtn.style.display   = 'inline-block';
+      showBtn.style.display    = 'none';
+      retryBtn.style.display   = 'none';
+    });
+  </script>
+</body>
+</html>`;
+
+    return [srcdocIframe(iframeContent, '100%', height)];
+  }
+};
+
+/**
+ * Quiz Question Set directive — shows multiple questions in sequence with a final score.
+ * The body must be a JSON array of question objects. Each object has a `type` field:
+ *   multichoice: { type, title, question, choices[], correct, feedback[] }
+ *   truefalse:   { type, title, statement, correct, feedbackTrue, feedbackFalse }
+ *   blanks:      { type, title, text }   — blanks marked with *answer* or *a|b*
+ */
+const h5pQuizDirective = {
+  name: 'h5p-quiz',
+  doc: 'Multi-question quiz set (multichoice, truefalse, blanks)',
+  arg: { type: String, doc: 'Title of the quiz' },
+  body: { type: 'string', doc: 'JSON array of question objects' },
+  options: {
+    height: { type: String, doc: 'Height of the container (default: 500px)' }
+  },
+  run: function(data) {
+    const title = data.arg || 'Quiz';
+    const height = data.options?.height || '500px';
+
+    // body may arrive as a string or as parsed markdown nodes
+    let bodyText = '';
+    if (typeof data.body === 'string') {
+      bodyText = data.body;
+    } else if (Array.isArray(data.body)) {
+      function nodeText(n) { return n.type === 'text' ? (n.value || '') : (n.children || []).map(nodeText).join(''); }
+      bodyText = data.body.map(nodeText).join('\n');
+    }
+
+    let questions = [];
+    try { questions = JSON.parse(bodyText); } catch(e) {}
+
+    if (!questions.length) {
+      return [{ type: 'paragraph', children: [{ type: 'text', value: 'Error: h5p-quiz body must be a JSON array of question objects.' }] }];
+    }
+
+    const iframeContent = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: white; }
+    .quiz-wrap  { border: 1px solid #ccc; border-radius: 8px; overflow: hidden; height: 100vh; display: flex; flex-direction: column; }
+    .quiz-header { background: linear-gradient(135deg, #5c35a0, #7c4dce); color: white; padding: 0.85rem 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
+    .quiz-header h4 { margin: 0; font-size: 1.05rem; font-weight: 600; }
+    .progress-text { font-size: 0.85rem; opacity: 0.85; }
+    .progress-bar-outer { background: rgba(255,255,255,.3); height: 4px; flex-shrink: 0; }
+    .progress-bar-inner { background: white; height: 4px; transition: width 0.3s; }
+    .quiz-body  { flex: 1; overflow-y: auto; padding: 1.1rem 1.25rem; }
+    .q-title    { font-size: 0.8rem; font-weight: 600; color: #7c4dce; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 0.4rem; }
+    .q-text     { font-size: 1rem; font-weight: 500; color: #222; margin-bottom: 1rem; line-height: 1.45; }
+    /* multichoice */
+    .choice     { display: flex; align-items: center; gap: 0.65rem; padding: 0.6rem 0.9rem; margin: 0.3rem 0; border: 2px solid #e0e0e0; border-radius: 8px; cursor: pointer; background: #fafafa; transition: all 0.15s; font-size: 0.95rem; }
+    .choice:hover:not(.locked) { border-color: #7c4dce; background: #f3eeff; }
+    .choice input { transform: scale(1.15); flex-shrink: 0; }
+    .choice.correct   { border-color: #34a853; background: #e6f4ea; }
+    .choice.incorrect { border-color: #ea4335; background: #fce8e6; }
+    /* truefalse */
+    .tf-row     { display: flex; gap: 1rem; justify-content: center; margin-top: 0.5rem; }
+    .tf-btn     { flex: 1; max-width: 140px; padding: 0.65rem; border-radius: 8px; cursor: pointer; font-size: 0.95rem; font-weight: 600; transition: transform 0.15s; }
+    .tf-btn:hover:not(:disabled) { transform: scale(1.03); }
+    #trueBtn  { border: 2px solid #4caf50; background: #f9fbe7; color: #2e7d32; }
+    #falseBtn { border: 2px solid #f44336; background: #fff3e0; color: #c62828; }
+    /* blanks */
+    .blank-input { padding: 0.2rem 0.45rem; border: 2px solid #bbb; border-radius: 4px; font-size: inherit; text-align: center; transition: border-color 0.2s; }
+    .blank-input:focus { border-color: #7c4dce; outline: none; }
+    .blank-input.correct   { border-color: #34a853; background: #e6f4ea; }
+    .blank-input.incorrect { border-color: #ea4335; background: #fce8e6; }
+    /* feedback */
+    .feedback   { display: none; margin-top: 0.85rem; padding: 0.8rem 1rem; border-radius: 6px; font-size: 0.9rem; }
+    /* footer */
+    .quiz-footer { flex-shrink: 0; padding: 0.75rem 1.25rem; border-top: 1px solid #eee; display: flex; gap: 0.65rem; }
+    .btn-primary   { padding: 0.55rem 1.35rem; background: #7c4dce; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 500; }
+    .btn-primary:hover { background: #5c35a0; }
+    .btn-secondary { padding: 0.55rem 1.35rem; background: #f5f5f5; color: #333; border: 1px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 0.9rem; }
+    /* results */
+    .results    { display: none; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; text-align: center; flex: 1; }
+    .score-ring { width: 90px; height: 90px; border-radius: 50%; border: 6px solid #7c4dce; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; color: #7c4dce; margin-bottom: 1rem; }
+    .results h3 { font-size: 1.15rem; color: #222; margin-bottom: 0.4rem; }
+    .results p  { font-size: 0.9rem; color: #666; margin-bottom: 1.25rem; }
+  </style>
+</head>
+<body>
+  <div class="quiz-wrap" id="quizWrap">
+    <div class="quiz-header">
+      <h4>${escapeHtml(title)}</h4>
+      <span class="progress-text" id="progressText"></span>
+    </div>
+    <div class="progress-bar-outer"><div class="progress-bar-inner" id="progressBar" style="width:0%"></div></div>
+    <div class="quiz-body" id="quizBody"></div>
+    <div class="quiz-footer" id="quizFooter">
+      <button class="btn-primary" id="checkBtn">Check Answer</button>
+      <button class="btn-primary" id="nextBtn" style="display:none">Next Question</button>
+    </div>
+    <div class="results" id="results">
+      <div class="score-ring" id="scoreRing"></div>
+      <h3 id="resultTitle"></h3>
+      <p id="resultMsg"></p>
+      <button class="btn-secondary" id="retryBtn">Try Again</button>
+    </div>
+  </div>
+  <script>
+    const QUESTIONS = ${JSON.stringify(questions)};
+    let idx = 0, score = 0;
+
+    const quizBody    = document.getElementById('quizBody');
+    const quizFooter  = document.getElementById('quizFooter');
+    const checkBtn    = document.getElementById('checkBtn');
+    const nextBtn     = document.getElementById('nextBtn');
+    const retryBtn    = document.getElementById('retryBtn');
+    const progressText = document.getElementById('progressText');
+    const progressBar  = document.getElementById('progressBar');
+    const resultsDiv   = document.getElementById('results');
+
+    function esc(t) { return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+    function updateProgress() {
+      progressText.textContent = 'Question ' + (idx + 1) + ' of ' + QUESTIONS.length;
+      progressBar.style.width  = ((idx / QUESTIONS.length) * 100) + '%';
+    }
+
+    function renderQuestion() {
+      const q = QUESTIONS[idx];
+      updateProgress();
+      checkBtn.style.display = 'inline-block';
+      nextBtn.style.display  = 'none';
+
+      if (q.type === 'multichoice') {
+        const choices = (q.choices || []).map((c, i) =>
+          '<label class="choice"><input type="radio" name="mc" value="' + i + '">' + esc(c) + '</label>'
+        ).join('');
+        quizBody.innerHTML =
+          '<div class="q-title">' + esc(q.title || 'Multiple Choice') + '</div>' +
+          '<div class="q-text">' + esc(q.question || '') + '</div>' +
+          '<div id="choices">' + choices + '</div>' +
+          '<div class="feedback" id="feedback"></div>';
+
+      } else if (q.type === 'truefalse') {
+        quizBody.innerHTML =
+          '<div class="q-title">' + esc(q.title || 'True or False') + '</div>' +
+          '<p class="q-text" style="padding:0.85rem;background:#f8f9fa;border-radius:6px;border-left:4px solid #7c4dce">' + esc(q.statement || '') + '</p>' +
+          '<div class="tf-row">' +
+            '<button id="trueBtn" class="tf-btn" onclick="handleTF(true)">&#10003; True</button>' +
+            '<button id="falseBtn" class="tf-btn" onclick="handleTF(false)">&#10007; False</button>' +
+          '</div>' +
+          '<div class="feedback" id="feedback"></div>';
+        checkBtn.style.display = 'none';
+
+      } else if (q.type === 'blanks') {
+        const html = (q.text || '').replace(/\\*([^*]+)\\*/g, (_, ans) => {
+          const alts = ans.split('|').map(a => a.trim());
+          const w = Math.max(...alts.map(a => a.length)) + 3;
+          return '<input type="text" class="blank-input" data-answers="' + esc(JSON.stringify(alts)) + '" style="width:' + w + 'ch;min-width:70px" placeholder="...">';
+        });
+        quizBody.innerHTML =
+          '<div class="q-title">' + esc(q.title || 'Fill in the Blanks') + '</div>' +
+          '<div class="q-text" style="line-height:2.3">' + html + '</div>' +
+          '<div class="feedback" id="feedback"></div>';
+      }
+    }
+
+    window.handleTF = function(answer) {
+      const q = QUESTIONS[idx];
+      const correct = q.correct === true || q.correct === 'true';
+      const isOk = answer === correct;
+      if (isOk) score++;
+      const tb = document.getElementById('trueBtn');
+      const fb = document.getElementById('falseBtn');
+      tb.disabled = true; fb.disabled = true;
+      (correct ? tb : fb).style.cssText += 'background:#e6f4ea;border-color:#34a853;';
+      if (!isOk) (answer ? tb : fb).style.cssText += 'background:#fce8e6;border-color:#ea4335;';
+      showFeedback(isOk, answer ? (q.feedbackTrue || '') : (q.feedbackFalse || ''));
+      checkBtn.style.display = 'none';
+      nextBtn.style.display  = 'inline-block';
+    };
+
+    checkBtn.addEventListener('click', () => {
+      const q = QUESTIONS[idx];
+      const feedbackEl = document.getElementById('feedback');
+
+      if (q.type === 'multichoice') {
+        const selected = document.querySelector('input[name="mc"]:checked');
+        if (!selected) { feedbackEl.style.cssText='display:block;background:#fff3cd;color:#856404;'; feedbackEl.textContent='Please select an answer.'; return; }
+        const sel = parseInt(selected.value);
+        const isOk = sel === q.correct;
+        if (isOk) score++;
+        document.querySelectorAll('.choice').forEach((el, i) => {
+          el.classList.add('locked');
+          el.querySelector('input').disabled = true;
+          if (i === q.correct) el.classList.add('correct');
+          else if (i === sel)  el.classList.add('incorrect');
+        });
+        showFeedback(isOk, (q.feedback || [])[sel] || '');
+
+      } else if (q.type === 'blanks') {
+        const inputs = document.querySelectorAll('.blank-input');
+        let correct = 0;
+        inputs.forEach(inp => {
+          const alts = JSON.parse(inp.dataset.answers || '[]');
+          const isOk = alts.map(a => a.toLowerCase().trim()).includes(inp.value.toLowerCase().trim());
+          inp.disabled = true;
+          inp.classList.toggle('correct',   isOk);
+          inp.classList.toggle('incorrect', !isOk);
+          if (isOk) correct++;
+        });
+        const allOk = correct === inputs.length;
+        if (allOk) score++;
+        showFeedback(allOk, allOk ? 'All blanks filled correctly.' : correct + ' of ' + inputs.length + ' correct.');
+      }
+
+      nextBtn.style.display  = 'inline-block';
+      checkBtn.style.display = 'none';
+    });
+
+    function showFeedback(isOk, msg) {
+      const el = document.getElementById('feedback');
+      el.style.display = 'block';
+      if (isOk) { el.style.cssText = 'display:block;background:#e6f4ea;color:#1e7e34;padding:.8rem 1rem;border-radius:6px;margin-top:.85rem;font-size:.9rem;'; el.innerHTML = '<strong>Correct!</strong> ' + esc(msg); }
+      else       { el.style.cssText = 'display:block;background:#fce8e6;color:#c62828;padding:.8rem 1rem;border-radius:6px;margin-top:.85rem;font-size:.9rem;'; el.innerHTML = '<strong>Not quite.</strong> ' + esc(msg); }
+    }
+
+    nextBtn.addEventListener('click', () => {
+      idx++;
+      if (idx >= QUESTIONS.length) showResults();
+      else renderQuestion();
+    });
+
+    function showResults() {
+      quizBody.style.display   = 'none';
+      quizFooter.style.display = 'none';
+      resultsDiv.style.display = 'flex';
+      progressBar.style.width  = '100%';
+      progressText.textContent = 'Complete';
+      const pct = Math.round((score / QUESTIONS.length) * 100);
+      document.getElementById('scoreRing').textContent  = score + '/' + QUESTIONS.length;
+      document.getElementById('resultTitle').textContent = pct === 100 ? 'Perfect score!' : pct >= 60 ? 'Good work!' : 'Keep practising!';
+      document.getElementById('resultMsg').textContent   = 'You answered ' + score + ' of ' + QUESTIONS.length + ' questions correctly (' + pct + '%).';
+    }
+
+    retryBtn.addEventListener('click', () => {
+      idx = 0; score = 0;
+      quizBody.style.display   = '';
+      quizFooter.style.display = '';
+      resultsDiv.style.display = 'none';
+      renderQuestion();
+    });
+
+    renderQuestion();
+  </script>
+</body>
+</html>`;
+
+    return [srcdocIframe(iframeContent, '100%', height)];
   }
 };
 
@@ -668,7 +1062,9 @@ const plugin = {
     h5pEmbedDirective,
     h5pMultichoiceDirective,
     h5pTrueFalseDirective,
-    h5pFillBlanksDirective
+    h5pFillBlanksDirective,
+    h5pSortDirective,
+    h5pQuizDirective
   ]
 };
 

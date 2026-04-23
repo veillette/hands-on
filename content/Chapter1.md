@@ -137,6 +137,67 @@ scientific literacy
 : The ability to understand and evaluate scientific information and methodology.
 :::
 
+## Quick Check
+
+```{h5p-multichoice} System vs. Model
+:question: A physicist writes equations describing how a pendulum swings. These equations represent:
+:choices: ["The physical pendulum itself", "A model of the pendulum", "An observation of the pendulum", "A measurement of the pendulum"]
+:correct: 1
+:feedback: ["Incorrect — the physical pendulum is the system, not the equations.", "Correct! The equations are a conceptual representation (model) of the real pendulum.", "Incorrect — an observation is a direct measurement, not a mathematical description.", "Incorrect — a measurement is a recorded data value, not a set of equations."]
+```
+
+```{h5p-truefalse} Scientific Proof
+:statement: Scientists can prove a theory to be absolutely and permanently correct.
+:correct: false
+:feedbackTrue: Scientific conclusions are always provisional — they represent our best current understanding but remain open to revision as new evidence emerges.
+:feedbackFalse: Correct! Scientific knowledge is always provisional. Even well-supported theories can be revised or overturned by new evidence.
+```
+
+```{h5p-blanks} Measurement Uncertainty
+:text: All measurements contain inherent *uncertainty*. This arises from instrumental *limitations* or statistical *variations* in the measured quantity. Acknowledging uncertainty allows us to properly *evaluate* measured values.
+```
+
+```{h5p-sort} Complexity of Systems
+:items: ["Simple pendulum", "Automobile engine", "Electrical power grid", "Earth's climate system"]
+:correct: ["Simple pendulum", "Automobile engine", "Electrical power grid", "Earth's climate system"]
+```
+
+```{h5p-quiz} Chapter 1 Review
+[
+  {
+    "type": "multichoice",
+    "title": "Observations vs. Model Statements",
+    "question": "Which of the following is a direct observation rather than a model statement?",
+    "choices": [
+      "The climate model predicts 2 °C of warming by 2100",
+      "The thermometer reads 23.4 °C at 9:00 am",
+      "Temperature follows a sinusoidal annual pattern",
+      "Heat flows spontaneously from hot to cold"
+    ],
+    "correct": 1,
+    "feedback": [
+      "That is a model prediction, not a direct observation.",
+      "Correct! A thermometer reading is a direct measurement — an observation of the system.",
+      "That is a model statement summarising a pattern, not a single observation.",
+      "That is a theoretical principle (model), not a direct observation."
+    ]
+  },
+  {
+    "type": "truefalse",
+    "title": "Uncertainty in Measurement",
+    "statement": "Using a sufficiently precise instrument can reduce measurement uncertainty to zero.",
+    "correct": false,
+    "feedbackTrue": "Incorrect. Uncertainty is inherent in all measurements regardless of instrument precision.",
+    "feedbackFalse": "Correct! No instrument can eliminate uncertainty entirely; it can only reduce it."
+  },
+  {
+    "type": "blanks",
+    "title": "Systems and Experiments",
+    "text": "In an experiment we influence a system through *inputs* and observe the system's *outputs*. The physics laboratory uses *simple* systems to build skills applicable to *complex* real-world problems."
+  }
+]
+```
+
 ## Problems
 
 ```{exercise}
