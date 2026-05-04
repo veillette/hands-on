@@ -16,7 +16,7 @@ jupyterlab>=3.0 # JupyterLab interface (if used)
 
 # Optional but useful for interactive work
 ipympl>=0.9.3 # Interactive Matplotlib plots in Jupyter
-ipywidgets>=8.0 # Interactive widgets for Jupyter
+ipywidgets>=8.1.8 # Interactive widgets for Jupyter
 bqplot>=0.12.45 # Interactive plots for Jupyter
 
 # Miscellaneous and utilities
