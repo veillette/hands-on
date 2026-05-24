@@ -12,7 +12,7 @@ uncertainties>=3.1.7 # Handling measurements with uncertainties.
 jupyter>=1.0 # Core Jupyter components
 ipykernel>=7.2.0 # IPython kernel for Jupyter
 notebook>=6.0 # Jupyter Notebook interface
-jupyterlab>=3.0 # JupyterLab interface (if used)
+jupyterlab>=4.5.7 # JupyterLab interface (if used)
 
 # Optional but useful for interactive work
 ipympl>=0.9.3 # Interactive Matplotlib plots in Jupyter
