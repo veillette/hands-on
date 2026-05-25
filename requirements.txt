@@ -1,7 +1,7 @@
 # Core Scientific Python Packages
 numpy>=2.4.5  # Fundamental numerical computing
 scipy>=1.17.1    # Advanced scientific computing
-pandas>=3.0.2   # Data analysis and manipulation
+pandas>=3.0.3   # Data analysis and manipulation
 matplotlib>=3.10.9 # Plotting and visualization
 seaborn>=0.13.2 # Statistical data visualization (built on matplotlib)
 
