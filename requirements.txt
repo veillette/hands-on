@@ -9,7 +9,7 @@ seaborn>=0.13.2 # Statistical data visualization (built on matplotlib)
 uncertainties>=3.1.7 # Handling measurements with uncertainties.
 
 # Jupyter and Notebook Extensions
-jupyter>=1.0 # Core Jupyter components
+jupyter>=1.1.1 # Core Jupyter components
 ipykernel>=7.2.0 # IPython kernel for Jupyter
 notebook>=7.5.6 # Jupyter Notebook interface
 jupyterlab>=4.5.7 # JupyterLab interface (if used)
