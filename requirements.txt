@@ -6,7 +6,7 @@ matplotlib>=3.10.9 # Plotting and visualization
 seaborn>=0.13.2 # Statistical data visualization (built on matplotlib)
 
 # Physics-Specific Packages (if needed)
-uncertainties>=3.1.7 # Handling measurements with uncertainties.
+uncertainties>=3.2.3 # Handling measurements with uncertainties.
 
 # Jupyter and Notebook Extensions
 jupyter>=1.1.1 # Core Jupyter components
