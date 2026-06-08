@@ -21,4 +21,4 @@ bqplot>=0.13.1 # Interactive plots for Jupyter
 
 # Miscellaneous and utilities
 requests>=2.34.2 # HTTP requests (if fetching data from the web)
-tqdm>=4.67.3 # Progress bars for long computations
+tqdm>=4.68.1 # Progress bars for long computations
