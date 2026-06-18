@@ -2,7 +2,7 @@
 numpy>=2.4.6  # Fundamental numerical computing
 scipy>=1.17.1    # Advanced scientific computing
 pandas>=3.0.3   # Data analysis and manipulation
-matplotlib>=3.10.9 # Plotting and visualization
+matplotlib>=3.11.0 # Plotting and visualization
 seaborn>=0.13.2 # Statistical data visualization (built on matplotlib)
 
 # Physics-Specific Packages (if needed)
@@ -10,7 +10,7 @@ uncertainties>=3.2.3 # Handling measurements with uncertainties.
 
 # Jupyter and Notebook Extensions
 jupyter>=1.1.1 # Core Jupyter components
-ipykernel>=7.2.0 # IPython kernel for Jupyter
+ipykernel>=7.3.0 # IPython kernel for Jupyter
 notebook>=7.5.7 # Jupyter Notebook interface
 jupyterlab>=4.5.8 # JupyterLab interface (if used)
 
@@ -21,4 +21,4 @@ bqplot>=0.13.1 # Interactive plots for Jupyter
 
 # Miscellaneous and utilities
 requests>=2.34.2 # HTTP requests (if fetching data from the web)
-tqdm>=4.68.1 # Progress bars for long computations
+tqdm>=4.68.2 # Progress bars for long computations
