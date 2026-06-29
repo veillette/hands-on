@@ -1,7 +1,7 @@
 # Core Scientific Python Packages
 numpy>=2.5.0  # Fundamental numerical computing
 scipy>=1.18.0    # Advanced scientific computing
-pandas>=3.0.3   # Data analysis and manipulation
+pandas>=3.0.4   # Data analysis and manipulation
 matplotlib>=3.11.0 # Plotting and visualization
 
 # Jupyter (for running scripts/CreateFigures.ipynb and Binder/JupyterLite sessions)
