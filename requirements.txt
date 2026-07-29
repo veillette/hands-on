@@ -5,5 +5,5 @@ pandas>=3.0.4   # Data analysis and manipulation
 matplotlib>=3.11.1 # Plotting and visualization
 
 # Jupyter (for running scripts/CreateFigures.ipynb and Binder/JupyterLite sessions)
-jupyterlab>=4.6.1 # JupyterLab interface
+jupyterlab>=4.6.2 # JupyterLab interface
 ipykernel>=7.3.0 # IPython kernel for Jupyter
