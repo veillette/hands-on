@@ -2,7 +2,7 @@
 numpy>=2.5.2  # Fundamental numerical computing
 scipy>=1.18.0    # Advanced scientific computing
 pandas>=3.0.5   # Data analysis and manipulation
-matplotlib>=3.11.1 # Plotting and visualization
+matplotlib>=3.11.2 # Plotting and visualization
 
 # Jupyter (for running scripts/CreateFigures.ipynb and Binder/JupyterLite sessions)
 jupyterlab>=4.6.3 # JupyterLab interface
