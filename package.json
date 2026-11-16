@@ -29,7 +29,7 @@
     "h5p-standalone": "^3.8.2",
     "husky": "^9.1.7",
     "markdownlint-cli": "^0.50.0",
-    "prettier": "^3.9.10"
+    "prettier": "^3.10.1"
   },
   "scripts": {
     "export": "myst build -a",
